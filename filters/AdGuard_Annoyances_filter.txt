@@ -1700,6 +1700,7 @@
 !
 ! SECTION: Cookies - General URL
 !
+||collector.appconsent.io^
 ||cdn.cookiesuit.com^$third-party
 /wp-content/plugins/consent-magic-pro/*
 ||transcend-cdn.com^$third-party
@@ -2440,6 +2441,7 @@ consent-pref.trustarc.com#%#//scriptlet('trusted-click-element', 'div[aria-label
 !
 ! NOTE: Regular rules
 !
+servustv.com#%#//scriptlet('trusted-click-element', 'button[onclick="OneTrust.AllowAll()"]')
 lustery.com##div[class^="CookieConsentBanner_"]
 /cookieconsentmanager/modernCookieModal.js$domain=swiatbaterii.pl|batteryempire.de|batteryempire.fr|batteryempire.it|batteryempire.co.uk|batteryempire.es|batteryempire.sk|batteryempire.nl|batteryempire.lt|batteryempire.hu|batteryempire.ro|batteryempire.pt|batteryempire.dk|batteryempire.be|batteryempire.se|batteryempire.fi|batteryempire.gr
 kamami.pl###megacookieeu
@@ -15507,6 +15509,9 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ||geolocation.onetrust.com/cookieconsentpub/*/geo/location$xmlhttprequest,redirect-rule=noopjson
 !
 !
+! servustv.com - unable to play video
+@@||cdn.cookielaw.org/scripttemplates/otSDKStub.js$domain=servustv.com
+servustv.com#@##onetrust-consent-sdk
 ! https://github.com/AdguardTeam/AdguardFilters/issues/182328
 nowymarketing.pl#@##cmplz-cookiebanner-container
 ! https://github.com/AdguardTeam/AdguardFilters/issues/182275
@@ -24147,6 +24152,8 @@ api.flocktory.com
 !
 ! SECTION: Popups - Regular rules
 !
+ishachoku.com##.fix-ad
+jpsk.jp###footer-popup
 doubleblindmag.com##div:not([class]):has(> div.needsclick div[aria-label="FLYOUT Form"])
 doubleblindmag.com##div:not([class]):has(.needsclick div[data-testid="animated-teaser"])
 doubleblindmag.com###page div.websitesignup
@@ -30946,6 +30953,8 @@ kurashiru.com#$#html.dly-modal-active { overflow: auto !important; }
 ! SECTION: Popups - Mobile sites only
 !#if (adguard_app_android || adguard_app_ios || adguard_ext_android_cb || ext_ublock)
 !
+life-techs.jp###content-bottom
+k-wifi.com##.fixBtn
 re-tool.net##[id^="froat-nav"]
 kawashima-ya.jp###fix_bottom_menu
 fdoc.jp##.un_floatUnit
@@ -39404,6 +39413,8 @@ turkishairlines.com,atmos-tokyo.com,radarbox.com,ciceksepeti.com,rabota.by,temp-
 ! https://github.com/AdguardTeam/AdguardFilters/issues/161301
 temu.com#?#div[role="main"] div[style] > div[style]:has(> div[style] div[js-selector="mobile-download-ui"])
 !
+news.sky.com##.ui-app-promo
+finance.sina.com.cn###pv_tag
 typhoon.yahoo.co.jp##img[alt="Yahoo!天気アプリ"]
 weathernews.jp##.adApp__img
 carsensor.net##.fixedAppBanner
@@ -46570,6 +46581,8 @@ www.kinopoisk.ru##div[class^="trailer-promo"]
 ! END: Yandex
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/182425
+dealmoon.com##.dm-event-tip-wrap
 ! https://github.com/AdguardTeam/AdguardFilters/issues/182223
 gnu.org###fundraiser
 ! https://github.com/AdguardTeam/AdguardFilters/issues/182179
@@ -46625,9 +46638,6 @@ filmora.wondershare.com##aside[data-recommend="section-product-logo"]
 ka-style.jp##.l-footerBanner
 ka-style.jp##nav.p-columnCategory ~ .p-footerEditable
 ka-style.jp##.p-postHeaderBanner
-! https://github.com/AdguardTeam/AdguardFilters/issues/174939
-! TODO: check after 2024 May 1.
-yahoo.co.jp###Topics ~ div[data-rma-pos] ~ #PayPayFes
 ! https://github.com/AdguardTeam/AdguardFilters/issues/174892
 ag.ru#%#//scriptlet('set-cookie', 'articlesRead', '1')
 ag.ru#%#//scriptlet('set-cookie', 'headercoin', '1')
@@ -48373,6 +48383,7 @@ theguardian.com##.contributions__adblock
 !
 ! SECTION: Self-promo - Regular rules
 !
+finance.sina.com.cn##.wrap > div[style^="margin-top:"]:has(> a[href][target="_blank"] > img)
 ||camonster.io/streams/streams_live.php$domain=nsfwmonster.com
 ||player.cnevids.com/interlude/$domain=wired.it|wired.com|vogue.de
 ||creative.cams.gifsauce.com/widgets/
