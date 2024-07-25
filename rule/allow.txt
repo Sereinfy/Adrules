@@ -2,9 +2,9 @@
 ! Title: GOODBYEADS
 ! Homepage: https://github.com/8680/GOODBYEADS
 ! Expires: 12 Hours
-! Version: 2024-07-24 20:34:49（北京时间）
+! Version: 2024-07-25 21:50:27（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 14540
+! Total count: 14538
 @@#.banner%20ad.$image,domain=dokuo666.blog98.fc2.com
 @@$csp=worker-src 'none',domain=uptostream.com
 @@$generichide,domain=stfly.cc
@@ -763,6 +763,7 @@
 @@||a.realsrv.com/video-slider.js$domain=manga1000.com
 @@||a.spolecznosci.net/pet?s=Shinden$domain=shinden.pl
 @@||a.trk-imps.com/loader?$domain=new.lewd.ninja|lewdninja.com
+@@||a.usafacts.org/api/v4/Metrics$~third-party
 @@||a.visualrevenue.com/vrs.js$domain=nydailynews.com
 @@||a.visualrevenue.com/vrs.js$domain=t-online.de
 @@||a1.itc.cn/pv/js/spv.
@@ -796,7 +797,7 @@
 @@||ac*.namu.la^$domain=arca.live,media,image,stealth
 @@||ac.kr^$stealth=dpi
 @@||ac.namu.la^$domain=arca.live,media,image,stealth
-@@||acacdn.com/script/ippg.js$domain=japaneseasmr.top|vgfplay.com|vgembed.com|gaystream.online|v6embed.xyz|vid-guard.com|vembed.net|embedv.net|fslinks.org|bembed.net|listeamed.net|tioplayer.com|elbailedeltroleo.site|vgfplay.xyz
+@@||acacdn.com/script/ippg.js$domain=japaneseasmr.top|vgfplay.com|vgembed.com|gaystream.online|v6embed.xyz|vid-guard.com|vembed.net|embedv.net|fslinks.org|bembed.net|listeamed.net|tioplayer.com|elbailedeltroleo.site|vgfplay.xyz|go-streamer.net
 @@||acacdn.com/script/ippg.jsdomain=dflix.top
 @@||acapellas.eu^$generichide
 @@||accaii.com^$domain=kyuusai2nd.net
@@ -1475,6 +1476,7 @@
 @@||amazonaws.com/graphql$stealth
 @@||amazonaws.com/images.filepuma.com^$stealth,domain=filepuma.com
 @@||amazonaws.com/pictures.tradee.com/ads^$domain=tradee.com
+@@||amazonaws.com/prod.iqdcontroller.iqdigital/cdn_iqdspiegel/live/iqadcontroller.js.gz$domain=spiegel.de
 @@||amazonaws.com/static.madlan.co.il/*/heatmap.json?$xmlhttprequest
 @@||amazonaws.com/storage.liveabc.com/ads/$domain=store.liveabc.com
 @@||amazonaws.com/zeroistanbulplaylist/$stealth,domain=zeroistanbul.com
@@ -1954,7 +1956,6 @@
 @@||arkadiumhosted.com/API/$generichide
 @@||arkforum.de^$generichide
 @@||arlnigh.me/*.m3u8$stealth
-@@||armada.defensa.gob.es^$stealth=dpi
 @@||armyranger.com^$generichide
 @@||arnhemland-safaris.com/images/made/$image,~third-party
 @@||arnolds.com.br^$stealth
@@ -3977,6 +3978,7 @@
 @@||deepbrid.com/backend-dl/app/views/site/default/ads/advertisement.js
 @@||deezer.com^$generichide
 @@||defconlevel.com^$generichide
+@@||defensa.gob.es^$stealth=dpi
 @@||definitions.net^$generichide
 @@||dekhvhai.net^$generichide
 @@||delfi.lv/celojumi^$elemhide
@@ -4216,8 +4218,6 @@
 @@||doubleclick.net/ddm/$image,domain=aetv.com|fyi.tv|history.com|mylifetime.com
 @@||doubleclick.net/ddm/trackclk/$popup,domain=hongkongcard.com
 @@||doubleclick.net/favicon.ico$domain=primetechieforum.com
-@@||doubleclick.net/gampad/*adPositionName%3Dsuperbanner_$xmlhttprequest,domain=spiegel.de
-@@||doubleclick.net/getconfig$xmlhttprequest,domain=spiegel.de
 @@||doubleclick.net/gpt/pubads_impl$domain=www.gamer.com.tw
 @@||doubleclick.net/gpt/pubads_impl_$domain=corporate.com|findthebest.com|findthecompany.com|findthedata.com|platform.com
 @@||doubleclick.net/ssai/*/streams$xmlhttprequest,domain=snippet.univtec.com
@@ -5078,30 +5078,27 @@
 @@||g.doubleclick.net/gampad/ads*%20Web%20Player$domain=imasdk.googleapis.com
 @@||g.doubleclick.net/gampad/ads?$domain=edy.rakuten.co.jp|tv-tokyo.co.jp|voici.fr
 @@||g.doubleclick.net/gampad/ads?$xmlhttprequest,domain=soranews24.com
+@@||g.doubleclick.net/gampad/ads?*&prev_scp=kw%3Diqdspiegel%2Cdigtransform%2Ciqadtile4%2$xmlhttprequest,domain=spiegel.de
 @@||g.doubleclick.net/gampad/ads?*&url=https%3A%2F%2Fgames.poki.com$xmlhttprequest,domain=imasdk.googleapis.com
 @@||g.doubleclick.net/gampad/ads?*&url=https%3A%2F%2Frepuls.io$xmlhttprequest,domain=imasdk.googleapis.com
 @@||g.doubleclick.net/gampad/ads?*.crunchyroll.com$xmlhttprequest,domain=imasdk.googleapis.com
 @@||g.doubleclick.net/gampad/ads?*RakutenShowtime$xmlhttprequest,domain=imasdk.googleapis.com
-@@||g.doubleclick.net/gampad/ads?*superbanner_3$xmlhttprequest,domain=spiegel.de
-@@||g.doubleclick.net/gampad/ads?*wallpaper_1$xmlhttprequest,domain=spiegel.de
 @@||g.doubleclick.net/gampad/adx?$xmlhttprequest,domain=v.ifeng.com
 @@||g.doubleclick.net/gampad/adx?*/sparta/*&t=ad_type%3Dtoolbar%26$document,subdocument,domain=wetter.com,badfilter
 @@||g.doubleclick.net/gampad/live/ads?*tver.$xmlhttprequest,domain=imasdk.googleapis.com
 @@||g.doubleclick.net/gpt/pubads_impl_$domain=accuweather.com|blastingnews.com|bloomberg.com|chelseafc.com|chromatographyonline.com|digitaltrends.com|downdetector.com|edy.rakuten.co.jp|epaper.timesgroup.com|formularywatch.com|game.anymanager.io|games.coolgames.com|managedhealthcareexecutive.com|mediaite.com|medicaleconomics.com|nationalreview.com|nationalworld.com|nbcsports.com|nycgo.com|physicianspractice.com|scotsman.com|telsu.fi|voici.fr|weather.com
-@@||g.doubleclick.net/gpt/pubads_impl_$script,domain=spiegel.de
 @@||g.doubleclick.net/pagead/ads$subdocument,domain=sudokugame.org
 @@||g.doubleclick.net/pagead/ads?$subdocument,domain=ff14angler.com
 @@||g.doubleclick.net/pagead/ads?*&description_url=https%3A%2F%2Fgames.wkb.jp$xmlhttprequest,domain=imasdk.googleapis.com
 @@||g.doubleclick.net/pagead/images/gmob/close-circle-30x30.png$image,domain=safeframe.googlesyndication.com
-@@||g.doubleclick.net/pagead/managed/js/gpt/$script,domain=adamtheautomator.com|allestoringen.be|allestoringen.nl|aussieoutages.com|canadianoutages.com|downdetector.ae|downdetector.ca|downdetector.co.nz|downdetector.co.uk|downdetector.co.za|downdetector.com|downdetector.com.ar|downdetector.com.br|downdetector.dk|downdetector.es|downdetector.fi|downdetector.fr|downdetector.hk|downdetector.ie|downdetector.in|downdetector.it|downdetector.jp|downdetector.mx|downdetector.no|downdetector.pl|downdetector.pt|downdetector.ru|downdetector.se|downdetector.sg|downdetector.tw|downdetector.web.tr|filmweb.pl|ictnews.org|journaldequebec.com|mediaite.com|thestar.co.uk|xn--allestrungen-9ib.at|xn--allestrungen-9ib.ch|xn--allestrungen-9ib.de|yorkshirepost.co.uk
+@@||g.doubleclick.net/pagead/managed/js/gpt/$script,domain=adamtheautomator.com|allestoringen.be|allestoringen.nl|aussieoutages.com|canadianoutages.com|downdetector.ae|downdetector.ca|downdetector.co.nz|downdetector.co.uk|downdetector.co.za|downdetector.com|downdetector.com.ar|downdetector.com.br|downdetector.dk|downdetector.es|downdetector.fi|downdetector.fr|downdetector.hk|downdetector.ie|downdetector.in|downdetector.it|downdetector.jp|downdetector.mx|downdetector.no|downdetector.pl|downdetector.pt|downdetector.ru|downdetector.se|downdetector.sg|downdetector.tw|downdetector.web.tr|filmweb.pl|ictnews.org|journaldequebec.com|mediaite.com|spiegel.de|thestar.co.uk|xn--allestrungen-9ib.at|xn--allestrungen-9ib.ch|xn--allestrungen-9ib.de|yorkshirepost.co.uk
 @@||g.doubleclick.net/pagead/managed/js/gpt/$script,domain=makeuseof.com|howtogeek.com
 @@||g.doubleclick.net/pagead/managed/js/gpt/*/pubads_impl.js$domain=games.coolgames.com
 @@||g.doubleclick.net/pagead/managed/js/gpt/*/pubads_impl.js$domain=soranews24.com
 @@||g.doubleclick.net/pagead/ppub_config$domain=bloomberg.com|independent.co.uk|repretel.com|telsu.fi|weather.com
 @@||g.doubleclick.net/tag/js/gpt.js$domain=ccthesims.com
 @@||g.doubleclick.net/tag/js/gpt.js$domain=soranews24.com
-@@||g.doubleclick.net/tag/js/gpt.js$domain=spiegel.de
-@@||g.doubleclick.net/tag/js/gpt.js$script,xmlhttprequest,domain=accuweather.com|adamtheautomator.com|bestiefy.com|blastingnews.com|bloomberg.com|chromatographyonline.com|devclass.com|digitaltrends.com|edy.rakuten.co.jp|epaper.timesgroup.com|filmweb.pl|formularywatch.com|games.coolgames.com|gearpatrol.com|indy100.com|journaldequebec.com|managedhealthcareexecutive.com|mediaite.com|medicaleconomics.com|nycgo.com|olx.pl|physicianspractice.com|repretel.com|standard.co.uk|telsu.fi|theta.tv|weather.com
+@@||g.doubleclick.net/tag/js/gpt.js$script,xmlhttprequest,domain=accuweather.com|adamtheautomator.com|bestiefy.com|blastingnews.com|bloomberg.com|chromatographyonline.com|devclass.com|digitaltrends.com|edy.rakuten.co.jp|epaper.timesgroup.com|filmweb.pl|formularywatch.com|games.coolgames.com|gearpatrol.com|indy100.com|journaldequebec.com|managedhealthcareexecutive.com|mediaite.com|medicaleconomics.com|nycgo.com|olx.pl|physicianspractice.com|repretel.com|spiegel.de|standard.co.uk|telsu.fi|theta.tv|weather.com
 @@||g17media.com/detect.html$domain=lcpdfr.com
 @@||g1novelas.org^$generichide
 @@||g2a.com/toolbar/$document
@@ -6482,6 +6479,7 @@
 @@||gymnasedeburier.ch/themes/segment/js/$~third-party
 @@||h-cast.jp^$script,domain=bookoffonline.co.jp
 @@||h.imedia.cz/js/cmp2/scmp.js$domain=seznam.cz
+@@||h.trace.qq.com^
 @@||h1g.jp/img/ad/ad_heigu.html$~third-party
 @@||h5.4j.com/js/ima3.js
 @@||haafedk2.com^$generichide
@@ -6592,7 +6590,7 @@
 @@||healthspiritbody.com^$generichide
 @@||healthyadvertising.es^$~third-party
 @@||healthytotal.net^$generichide
-@@||heardaccumulatebeans.com/*/*/*/*.js$domain=japaneseasmr.top|vgfplay.com|vgembed.com|gaystream.online|v6embed.xyz|vid-guard.com|vembed.net|embedv.net|fslinks.org|bembed.net|listeamed.net|tioplayer.com|elbailedeltroleo.site|vgfplay.xyz
+@@||heardaccumulatebeans.com/*/*/*/*.js$domain=japaneseasmr.top|vgfplay.com|vgembed.com|gaystream.online|v6embed.xyz|vid-guard.com|vembed.net|embedv.net|fslinks.org|bembed.net|listeamed.net|tioplayer.com|elbailedeltroleo.site|vgfplay.xyz|go-streamer.net
 @@||heartyhosting.com^$domain=muscleandfitness.com
 @@||heatmap.it^$domain=heatmap.com
 @@||heatmap.it^$domain=heatmap.com|heatmap.it|heatmap.me|heatmap.org
@@ -7760,7 +7758,7 @@
 @@||kayixin.com^*/advert
 @@||kbjrecord.com/e/*.html$subdocument,stealth=referrer
 @@||kblognext.com^$generichide
-@@||kc.linksgen.com/ads2/$subdocument,~third-party
+@@||kc.linksgen.com^$subdocument,~third-party
 @@||kcjervis.github.io/jervis/static/media/src/images/ships/banner/
 @@||kdpic.pchome.com.tw/img/js/xpcadshow.js$domain=game735.com
 @@||kdpic.pchome.com.tw/img/js/xpcadshow.js$script,domain=10co.xyz|10co.me
@@ -7800,7 +7798,7 @@
 @@||kikupload.xyz^$generichide
 @@||kilimall.co.tz/sensorsdata.min.js$~third-party
 @@||kilimall.com*/js/sensorsdata.min.js$script,domain=kilimall.co.ke
-@@||kimcartoon.li/ads2/$subdocument,~third-party
+@@||kimcartoon.li^$subdocument,~third-party
 @@||kimcartoon.me/Scripts/$~third-party
 @@||kimcartoon.me/Search/$xmlhttprequest
 @@||kimcartoon.me/Special/AreYouHuman$xmlhttprequest
@@ -7827,6 +7825,7 @@
 @@||kisscartoon.ac/ajax/$popup
 @@||kisscartoon.ac/cdn-cgi/l/chk_jschl?jschl_vc=$popup
 @@||kisscartoon.ac/themes/vast/videojs.ads.min.js
+@@||kisscartoon.se^$subdocument,~third-party
 @@||kissjav.com^$generichide
 @@||kissorg.net^$stealth
 @@||kit.fontawesome.com$stealth=referrer,domain=androidacy.com
@@ -9237,7 +9236,7 @@
 @@||o2.pl^$generichide
 @@||o2tvseries.com^$generichide
 @@||oa.tr.line.me^$document
-@@||oaphoace.net/*/$script,domain=japaneseasmr.top|vgfplay.com|vgembed.com|gaystream.online|v6embed.xyz|vid-guard.com|vembed.net|embedv.net|fslinks.org|bembed.net|listeamed.net|tioplayer.com|elbailedeltroleo.site|vgfplay.xyz
+@@||oaphoace.net/*/$script,domain=japaneseasmr.top|vgfplay.com|vgembed.com|gaystream.online|v6embed.xyz|vid-guard.com|vembed.net|embedv.net|fslinks.org|bembed.net|listeamed.net|tioplayer.com|elbailedeltroleo.site|vgfplay.xyz|go-streamer.net
 @@||oasjs.kataweb.it/adsetup*.js$domain=huffingtonpost.it
 @@||oasjs.kataweb.it/adsetup*.js$domain=video.lastampa.it
 @@||oasjs.kataweb.it/adsetup.js$domain=video.capital.it
@@ -9507,7 +9506,6 @@
 @@||pagead2.googleadservices.com^$domain=sportshub.to
 @@||pagead2.googlesyndication.com/favicon.ico$domain=hacksnation.com
 @@||pagead2.googlesyndication.com/getconfig/sodar$domain=forum.release-apk.com
-@@||pagead2.googlesyndication.com/getconfig/sodar?$xmlhttprequest,domain=spiegel.de
 @@||pagead2.googlesyndication.com/pagead/$domain=free-scores.com,image
 @@||pagead2.googlesyndication.com/pagead/$domain=nationalpost.com
 @@||pagead2.googlesyndication.com/pagead/$script,domain=soranews24.com
@@ -12233,7 +12231,7 @@
 @@||speedtestcustom.com^$subdocument,stealth
 @@||speedynews.xyz^$generichide
 @@||spiegel.de/layout/js/http/netmind-$script
-@@||spiegel.de^$genericblock,generichide
+@@||spiegel.de^$generichide
 @@||spiele-umsonst.de^$generichide
 @@||spiele.rtl.de/landingpage/index/$document
 @@||spieletipps.de/js/smb-tracking.js
@@ -13043,7 +13041,7 @@
 @@||thepoorcoder.com^$generichide
 @@||theregister.co.uk/*_adtech_
 @@||therichest.com^$generichide
-@@||thermometerinconceivablewild.com/*/*/*/*.js$domain=japaneseasmr.top|vgfplay.com|vgembed.com|gaystream.online|v6embed.xyz|vid-guard.com|vembed.net|embedv.net|fslinks.org|bembed.net|listeamed.net|tioplayer.com|elbailedeltroleo.site|vgfplay.xyz
+@@||thermometerinconceivablewild.com/*/*/*/*.js$domain=japaneseasmr.top|vgfplay.com|vgembed.com|gaystream.online|v6embed.xyz|vid-guard.com|vembed.net|embedv.net|fslinks.org|bembed.net|listeamed.net|tioplayer.com|elbailedeltroleo.site|vgfplay.xyz|go-streamer.net
 @@||thesaurus.com/assets/ads.js
 @@||theseotools.net^$generichide
 @@||thesouthern.com^$generichide
