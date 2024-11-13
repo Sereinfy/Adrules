@@ -5,11 +5,7 @@ on:
   push:
     branches:
       - main
-    paths:
-      - 'readme/README.md'
-  pull_request:
-    branches:
-      - main
+
 
 jobs:
   copy-readme:
@@ -35,5 +31,7 @@ jobs:
       run: |
         Emoji=("🎉" "🤞" "✨" "🎁" "🎈" "🎄" "🎨" "🍓" "🍕" "🍉" "💐" "🌴" "🚀" "🛸" "🗽" "⛅" "🌈" "🔥" "⛄" "🐶" "🏅" "🦄" "🐤")
         git add .
+        git config --local user.name "github-actions[bot]"
+        git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
         git commit -m "${Emoji[$[$RANDOM % ${#Emoji[@]}]]} Sync $(date +%Y-%m-%d" "%H:%M:%S)"
         git push -f -u origin main
