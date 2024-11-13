@@ -3,7 +3,13 @@ on:
   workflow_dispatch:
   schedule:
     - cron: "0 19 * * *"
+
   push:
+    branches:
+      - main
+    paths:
+      - 'readme/README.md'
+  pull_request:
     branches:
       - main
 jobs:
@@ -11,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Clone Repository
-        uses: actions/checkout@main
+        uses: actions/checkout@v3
 
       - name: Checkout 217heidai/adblockfilters
         uses: actions/checkout@v4
@@ -20,7 +26,7 @@ jobs:
           path:
       - name: Copy README.md to root directory
         run: |
-          cp ./readme/README.md .
+          cp readme/README.md .
       - name: Commit Changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
