@@ -28,8 +28,9 @@ jobs:
         mv community/* ./
         rm -rf community*
         cp readme/README.md .
-
-        
+        curl -sSL -o .github/workflows/blacklist.yml https://github.com/217heidai/adblockfilters/blob/main/.github/workflows/blacklist.yml
+        curl -sSL -o .github/workflows/update.yml https://github.com/217heidai/adblockfilters/blob/main/.github/workflows/update.yml
+  
     - name: Apply
       run: |
         Emoji=("🎉" "🤞" "✨" "🎁" "🎈" "🎄" "🎨" "🍓" "🍕" "🍉" "💐" "🌴" "🚀" "🛸" "🗽" "⛅" "🌈" "🔥" "⛄" "🐶" "🏅" "🦄" "🐤")
