@@ -23,7 +23,7 @@ jobs:
           path:
       - name: Copy README.md to root directory
         run: |
-          cp readme/README.md .
+          cp ./readme/README.md .
       - name: Commit Changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
