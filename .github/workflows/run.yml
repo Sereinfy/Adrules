@@ -23,8 +23,9 @@ jobs:
         
     - name: Copy README.md
       run: |
+        [ -d "rule" ] || mkdir rule
         rm -rf *.*
-        mv community/rules/white.txt
+        mv community/rules/white.txt /rules/white.txt
         mv community/*.* ./
         rm -rf community*
         cp readme/README.md .
