@@ -23,13 +23,11 @@ jobs:
         
     - name: Copy README.md
       run: |
-        if [ -f "readme/README.md" ]; then
-          cp readme/README.md .
-        else
-          echo "File readme/README.md does not exist"
-          exit 1
-        fi
         mv community/* ./
+        rm -rf community*
+        cp readme/README.md .
+
+        
     - name: Apply
       run: |
         Emoji=("🎉" "🤞" "✨" "🎁" "🎈" "🎄" "🎨" "🍓" "🍕" "🍉" "💐" "🌴" "🚀" "🛸" "🗽" "⛅" "🌈" "🔥" "⛄" "🐶" "🏅" "🦄" "🐤")
