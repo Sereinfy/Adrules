@@ -14,9 +14,6 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v3
-    - name: rm
-      run: |
-        rm -rf !(readme)
 
     - name: Checkout 217heidai/adblockfilters
       uses: actions/checkout@v4
@@ -26,6 +23,8 @@ jobs:
         
     - name: Copy README.md
       run: |
+        rm -rf ./rules/*
+        rm -rf *.*
         mv community/* ./
         rm -rf community*
         cp readme/README.md .
