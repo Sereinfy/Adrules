@@ -6,6 +6,7 @@ on:
     branches:
       - main
 
+
 jobs:
   copy-readme:
     runs-on: ubuntu-latest
@@ -19,16 +20,15 @@ jobs:
       with:
         repository: 217heidai/adblockfilters
         path: community
-
+        
     - name: Copy README.md
       run: |
-        if [ -f "community/readme/README.md" ]; then
-          cp community/readme/README.md .
+        if [ -f "readme/README.md" ]; then
+          cp readme/README.md .
         else
-          echo "File community/readme/README.md does not exist"
+          echo "File readme/README.md does not exist"
           exit 1
         fi
-
     - name: Apply
       run: |
         Emoji=("🎉" "🤞" "✨" "🎁" "🎈" "🎄" "🎨" "🍓" "🍕" "🍉" "💐" "🌴" "🚀" "🛸" "🗽" "⛅" "🌈" "🔥" "⛄" "🐶" "🏅" "🦄" "🐤")
