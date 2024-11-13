@@ -1,0 +1,23 @@
+name: Build ruleset and geodata
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 19 * * *"
+  push:
+    branches:
+      - master
+    paths-ignore:
+      - "**/README.md"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone Repository
+        uses: actions/checkout@master
+
+      - name: Checkout 217heidai/adblockfilters
+        uses: actions/checkout@v4
+        with:
+          repository: 217heidai/adblockfilters
+          path:
