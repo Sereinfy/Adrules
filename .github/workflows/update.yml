@@ -6,7 +6,6 @@ on:
     branches:
       - main
 
-
 jobs:
   copy-readme:
     runs-on: ubuntu-latest
@@ -15,15 +14,18 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
 
-    - name: List files in readme directory
-      run: ls -la readme/
+    - name: Checkout 217heidai/adblockfilters
+      uses: actions/checkout@v4
+      with:
+        repository: 217heidai/adblockfilters
+        path: community
 
     - name: Copy README.md
       run: |
-        if [ -f "readme/README.md" ]; then
-          cp readme/README.md .
+        if [ -f "community/readme/README.md" ]; then
+          cp community/readme/README.md .
         else
-          echo "File readme/README.md does not exist"
+          echo "File community/readme/README.md does not exist"
           exit 1
         fi
 
