@@ -23,10 +23,9 @@ jobs:
         
     - name: Copy README.md
       run: |
-        rm -rf ./rules/*
         rm -rf *.*
-        rm -rf community/adblock*
-        mv community/* ./
+        mv community/rules/white.txt
+        mv community/*.* ./
         rm -rf community*
         cp readme/README.md .
   
