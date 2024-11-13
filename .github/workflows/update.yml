@@ -5,10 +5,7 @@ on:
     - cron: "0 19 * * *"
   push:
     branches:
-      - master
-    paths-ignore:
-      - "**/README.md"
-
+      - main
 jobs:
   build:
     runs-on: ubuntu-latest
