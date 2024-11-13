@@ -25,7 +25,7 @@ jobs:
       run: |
         [ -d "rule" ] || mkdir rule
         rm -rf *.*
-        mv community/rules/white.txt /rules/white.txt
+        mv community/rules/white.txt rules/
         mv community/*.* ./
         rm -rf community*
         cp readme/README.md .
