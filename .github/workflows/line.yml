@@ -1,0 +1,36 @@
+name: Update line
+on: 
+  workflow_dispatch:
+  schedule:
+  - cron: 0 */2 * * *
+
+env:
+  TZ: Asia/Shanghai
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Dependencies
+        run: |
+          sudo timedatectl set-timezone "$TZ"
+
+      - name: Update line
+        id: update
+        run: |
+          python readme/line.py
+          rm -rf __pycache__
+          echo "message=$(date)" >> $GITHUB_OUTPUT
+          
+      - name: Commit Changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: ${{ steps.update.outputs.message }}
+          
+      - name: Delete workflow runs
+        uses: Mattraks/delete-workflow-runs@main
+        with:
+          retain_days: 1
+          keep_minimum_runs: 5
