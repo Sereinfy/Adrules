@@ -29,6 +29,9 @@ jobs:
         mv community/*.* ./
         rm -rf community*
         cp readme/README.md .
+        cp readme/readme.py .
+        python readme/filterchange.py
+        rm -rf __pycache__
   
     - name: Apply
       run: |
