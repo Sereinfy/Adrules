@@ -31,6 +31,7 @@ jobs:
         cp readme/README.md .
         cp readme/readme.py .
         python readme/filterchange.py
+        python readme/clean-readme.py
         rm -rf __pycache__
   
     - name: Apply
