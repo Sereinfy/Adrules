@@ -32,7 +32,9 @@ jobs:
         cp readme/readme.py .
         python readme/filterchange.py
         python readme/clean-readme.py
+        python readme/clash.py
         rm -rf __pycache__
+        echo "message=$(date)" >> $GITHUB_OUTPUT
   
     - name: Apply
       run: |
