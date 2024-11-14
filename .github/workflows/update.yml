@@ -8,17 +8,10 @@ env:
   TZ: Asia/Shanghai
 
 jobs:
-  Update_Filters:
+  update:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout Repo
-        uses: actions/checkout@main
-
-      - name: Setup Python 3.9.x
-        uses: actions/setup-python@main
-        with:
-          python-version: '3.9.x'
+      - uses: actions/checkout@v4
 
       - name: Install Dependencies
         run: |
