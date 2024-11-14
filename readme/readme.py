@@ -62,8 +62,8 @@ class ReadMe(object):
             f.write("2. AdGuard 等浏览器插件使用规则1 + 规则2\n\n")
             f.write("| 规则 | 原始链接 | 加速链接 |\n")
             f.write("|:-|:-|:-|\n")
-            f.write("| 规则1：DNS 拦截 | [原始链接](https://raw.githubusercontent.com/Sereinfy/Adblock/main/rules/adblockdns.txt) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Sereinfy/Adblock/main/rules/adblockdns.txt) |\n")
-            f.write("| 规则2：插件拦截 | [原始链接](https://raw.githubusercontent.com/Sereinfy/Adblock/main/rules/adblockfilters.txt) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Sereinfy/Adblock/main/rules/adblockfilters.txt) |\n")
+            f.write("| 规则1：DNS 拦截 | [原始链接](https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/adblockdns.txt) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/adblockdns.txt) |\n")
+            f.write("| 规则2：插件拦截 | [原始链接](https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/adblockfilters.txt) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/adblockfilters.txt) |\n")
             f.write("\n")
             f.write("## 上游规则源\n")
             f.write("1. 感谢各位广告过滤规则维护大佬们的辛苦付出。\n")
@@ -71,4 +71,4 @@ class ReadMe(object):
             f.write("| 规则 | 类型 | 原始链接 | 加速链接 | 更新日期 |\n")
             f.write("|:-|:-|:-|:-|:-|\n")
             for rule in self.ruleList:
-                f.write("| %s | %s | [原始链接](%s) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Sereinfy/Adblock/main/rules/%s) | %s |\n" % (rule.name,rule.type,rule.url,rule.filename,rule.latest))
+                f.write("| %s | %s | [原始链接](%s) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/%s) | %s |\n" % (rule.name,rule.type,rule.url,rule.filename,rule.latest))
