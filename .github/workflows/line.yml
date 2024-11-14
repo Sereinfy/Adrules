@@ -21,6 +21,7 @@ jobs:
         id: update
         run: |
           python readme/line.py
+          python readme/clean-readme.py
           rm -rf __pycache__
           echo "message=$(date)" >> $GITHUB_OUTPUT
           
