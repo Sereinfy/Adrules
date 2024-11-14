@@ -8,10 +8,17 @@ env:
   TZ: Asia/Shanghai
 
 jobs:
-  update:
+  Update_Filters:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout Repo
+        uses: actions/checkout@main
+
+      - name: Setup Python 3.9.x
+        uses: actions/setup-python@main
+        with:
+          python-version: '3.9.x'
 
       - name: Install Dependencies
         run: |
@@ -26,18 +33,6 @@ jobs:
           rm -rf __pycache__
           echo "message=$(date)" >> $GITHUB_OUTPUT
 
-      - name: Update clash
-        run: |
-          python readme/clash.py
-          rm -rf __pycache__
-          echo "message=$(date)" >> $GITHUB_OUTPUT
-          
-      - name: clean data
-        run: |
-          python readme/clean-readme.py
-          rm -rf __pycache__
-          echo "message=$(date)" >> $GITHUB_OUTPUT
-          
       - name: Commit Changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
