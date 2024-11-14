@@ -15,7 +15,7 @@ def modify_filter_file(filename):
                 elif line.startswith('            f.write("! Homepage'):
                     file.write('            f.write("! Homepage: https://github.com/Sereinfy/Adrules\\n")\n')
                 elif line.startswith('            f.write("! Source'):
-                    file.write('            f.write("! Source: https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules\\n")\n') 
+                    file.write('            f.write("! Source: https://github.com/Sereinfy/Adrules/main/rules\\n")\n') 
                 else:
                     file.write(line)
         
