@@ -1,7 +1,7 @@
 ``` 
-更新时间: 2024-11-15 09:02:08 （北京时间） 
-插件拦截规则数量: 162587 
-DNS拦截规则数量: 75433 
+更新时间:
+插件拦截规则数量:
+DNS拦截规则数量:
 ``` 
 适用于AdGuard的去广告合并规则，每8个小时更新一次。
 个人收藏了不少广告过滤规则，但是每次往新设备添加的时候很是头疼，于是写了这个项目，定时自动获取各规则源更新，生成合并规则库。
@@ -39,7 +39,7 @@ DNS拦截规则数量: 75433
 | xinggsf rule | filter | [原始链接](https://raw.githubusercontent.com/xinggsf/Adrules-Plus-Rule/master/rule.txt) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/xinggsf_rule.txt) | 2024/11/02 |
 | SmartTV Blocklist | dns | [原始链接](https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/SmartTV-AGH.txt) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/SmartTV_Blocklist.txt) | 2024/02/15 |
 | AWAvenue Ads Rule | dns | [原始链接](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/AWAvenue_Ads_Rule.txt) | 2024/11/08 |
-| Urlhaus Malicious URL Blocklist | dns | [原始链接](https://malware-filter.gitlab.io/malware-filter/urlhaus-filter-agh-online.txt) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/Urlhaus_Malicious_URL_Blocklist.txt) | 2024/11/13 |
+| Urlhaus Malicious URL Blocklist | dns | [原始链接](https://malware-filter.gitlab.io/malware-filter/urlhaus-filter-agh-online.txt) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/Urlhaus_Malicious_URL_Blocklist.txt) | 2024/11/15 |
 | Nocoin list | host | [原始链接](https://raw.githubusercontent.com/hoshsadiq/Adrules-nocoin-list/master/hosts.txt) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/Nocoin_list.txt) | 2024/09/27 |
 | 1024 hosts | host | [原始链接](https://raw.githubusercontent.com/Goooler/1024_hosts/master/hosts) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/1024_hosts.txt) | 2024/02/15 |
 | ad-wars hosts | host | [原始链接](https://raw.githubusercontent.com/jdlingyu/ad-wars/master/hosts) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/ad-wars_hosts.txt) | 2024/02/15 |
