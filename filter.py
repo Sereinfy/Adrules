@@ -245,7 +245,7 @@ class Filter(object):
             os.remove(fileName)
         with open(fileName, 'a') as f:
             f.write("!\n")
-            f.write("! Title: Sereinfy AdBlock DNS\n")
+            f.write("! Title: Sereinfy AdBlock Filter\n")
             f.write("! Description: 适用于AdGuard的去广告合并规则，每8个小时更新一次。\n")
             f.write("! Homepage: https://github.com/Sereinfy/Adrules\n")
             f.write("! Source: https://github.com/Sereinfy/Adrules/main/rules\n")
@@ -278,7 +278,7 @@ class Filter(object):
             os.remove(fileName)
         with open(fileName, 'a') as f:
             f.write("!\n")
-            f.write("! Title: Sereinfy AdBlock DNS\n")
+            f.write("! Title: Sereinfy AdBlock Filter\n")
             f.write("! Description: 适用于AdGuard的去广告合并规则，每8个小时更新一次。\n")
             f.write("! Homepage: https://github.com/Sereinfy/Adrules\n")
             f.write("! Source: https://github.com/Sereinfy/Adrules/main/rules\n")
