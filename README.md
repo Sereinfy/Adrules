@@ -1,7 +1,7 @@
 ``` 
-更新时间: 2024-11-21 16:16:52 （北京时间） 
-插件拦截规则数量: 162894 
-DNS拦截规则数量: 76552 
+更新时间:
+插件拦截规则数量:
+DNS拦截规则数量:
 ``` 
 适用于AdGuard的去广告合并规则，每8个小时更新一次。
 个人收藏了不少广告过滤规则，但是每次往新设备添加的时候很是头疼，于是写了这个项目，定时自动获取各规则源更新，生成合并规则库。
@@ -25,12 +25,12 @@ DNS拦截规则数量: 76552
 
 | 规则 | 类型 | 原始链接 | 加速链接 | 更新日期 |
 |:-|:-|:-|:-|:-|
-| AdGuard Base filters | filter | [原始链接](https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_2_Base/filter.txt) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/AdGuard_Base_filters.txt) | 2024/11/13 |
-| AdGuard Chinese filters | filter | [原始链接](https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_224_Chinese/filter.txt) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/AdGuard_Chinese_filters.txt) | 2024/11/13 |
-| AdGuard Annoyances filter | filter | [原始链接](https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_14_Annoyances/filter.txt) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/AdGuard_Annoyances_filter.txt) | 2024/11/13 |
+| AdGuard Base filters | filter | [原始链接](https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_2_Base/filter.txt) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/AdGuard_Base_filters.txt) | 2024/11/21 |
+| AdGuard Chinese filters | filter | [原始链接](https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_224_Chinese/filter.txt) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/AdGuard_Chinese_filters.txt) | 2024/11/21 |
+| AdGuard Annoyances filter | filter | [原始链接](https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_14_Annoyances/filter.txt) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/AdGuard_Annoyances_filter.txt) | 2024/11/21 |
 | EasyList China | filter | [原始链接](https://easylist-downloads.Adrulesplus.org/easylistchina.txt) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/EasyList_China.txt) | 2024/11/13 |
 | EasyPrivacy | filter | [原始链接](https://easylist-downloads.Adrulesplus.org/easyprivacy.txt) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/EasyPrivacy.txt) | 2024/11/13 |
-| Fanboy's Annoyance List | filter | [原始链接](https://easylist.to/easylist/fanboy-social.txt) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/Fanboy's_Annoyance_List.txt) | 2024/11/13 |
+| Fanboy's Annoyance List | filter | [原始链接](https://easylist.to/easylist/fanboy-social.txt) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/Fanboy's_Annoyance_List.txt) | 2024/11/21 |
 | CJX's Annoyance List | filter | [原始链接](https://raw.githubusercontent.com/cjx82630/cjxlist/master/cjx-annoyance.txt) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/CJX's_Annoyance_List.txt) | 2024/09/27 |
 | NoAppDownload | filter | [原始链接](https://raw.githubusercontent.com/Noyllopa/NoAppDownload/master/NoAppDownload.txt) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/NoAppDownload.txt) | 2024/10/19 |
 | Adrules Warning Removal List | filter | [原始链接](https://easylist-downloads.Adrulesplus.org/antiAdrules.txt) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/Adrules_Warning_Removal_List.txt) | 2024/09/27 |
