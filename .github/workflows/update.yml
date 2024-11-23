@@ -15,44 +15,22 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@main
 
-      - name: Checkout 217heidai/adblockfilters
-        uses: actions/checkout@v4
+      - name: Setup Python 3.9.x
+        uses: actions/setup-python@main
         with:
-          repository: 217heidai/adblockfilters
-          path: community
+          python-version: '3.9.x'
 
       - name: Install Dependencies
         run: |
           sudo timedatectl set-timezone "$TZ"
           python -m pip install --upgrade pip
           pip install -U tld IPy dnspython httpx loguru
-
-      - name: Copy files
-        run: |
-          [ -d "rules" ] || mkdir rules
-          rm -rf *.*
-          mv community/rules/white.txt rules/
-          mv community/*.* ./
-          rm -rf community*
-          cp readme/README.md .
-          cp readme/readme.py .
-        
       - name: Update Filters
         id: update
         run: |
-          # python readme/filterchange.py
           python adblock.py
-          # python readme/clash.py
-          # python readme/line.py
           rm -rf __pycache__
           echo "message=$(date)" >> $GITHUB_OUTPUT
-
-      - name: clean readme
-        run: |
-          python readme/clean-readme.py
-          rm -rf __pycache__
-          echo "message=$(date)" >> $GITHUB_OUTPUT
-          
       - name: Commit Changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
