@@ -26,3 +26,8 @@ else:
         print(f"已将行数 {line_count} 写入到 readme/line.txt 的第一行。")
     else:
         print(f"行数 {line_count} 已经是 readme/line.txt 的第一行，未做任何修改。")
+    # 如果文件行数超过50行，保留前50行
+    if len(lines) > 50:
+        with open(line_file_path, 'w') as file:
+            file.writelines(lines[:50])  # 只写入前50行
+        print("line.txt 文件行数超过50行，已截取并保存前50行。")
