@@ -15,10 +15,11 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@main
 
-      - name: Setup Python 3.9.x
-        uses: actions/setup-python@main
+      - name: Checkout 217heidai/adblockfilters
+        uses: actions/checkout@v4
         with:
-          python-version: '3.9.x'
+          repository: 217heidai/adblockfilters
+          path: community
 
       - name: Install Dependencies
         run: |
@@ -26,10 +27,23 @@ jobs:
           python -m pip install --upgrade pip
           pip install -U tld IPy dnspython httpx loguru
 
+      - name: Copy files
+        run: |
+          [ -d "rules" ] || mkdir rules
+          rm -rf *.*
+          mv community/rules/white.txt rules/
+          mv community/*.* ./
+          rm -rf community*
+          cp readme/README.md .
+          cp readme/readme.py .
+        
       - name: Update Filters
         id: update
         run: |
+          python readme/filterchange.py
           python adblock.py
+          python readme/clean-readme.py
+          python readme/clash.py
           rm -rf __pycache__
           echo "message=$(date)" >> $GITHUB_OUTPUT
 
