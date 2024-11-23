@@ -21,6 +21,11 @@ jobs:
           repository: 217heidai/adblockfilters
           path: community
 
+      - name: Setup Python 3.9.x
+        uses: actions/setup-python@main
+        with:
+          python-version: '3.9.x'
+          
       - name: Install Dependencies
         run: |
           sudo timedatectl set-timezone "$TZ"
@@ -42,7 +47,6 @@ jobs:
         run: |
           python readme/filterchange.py
           python adblock.py
-          python readme/clean-readme.py
           python readme/clash.py
           python readme/line.py
           rm -rf __pycache__
