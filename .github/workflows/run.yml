@@ -36,7 +36,7 @@ jobs:
         mv community/*.* ./
         rm -rf community*
         cp readme/README.md .
-        cp readme/readme.py . && python readme.py
+        cp readme/readme.py .
         python readme/filterchange.py
         python readme/clean-readme.py
         python readme/clash.py
