@@ -45,10 +45,7 @@ jobs:
       - name: Update Filters
         id: update
         run: |
-          python readme/filterchange.py
           python adblock.py
-          python readme/clash.py
-          python readme/line.py
           rm -rf __pycache__
           echo "message=$(date)" >> $GITHUB_OUTPUT
           
