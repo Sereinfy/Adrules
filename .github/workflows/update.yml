@@ -45,10 +45,13 @@ jobs:
           python readme/clash.py
           rm -rf __pycache__
           echo "message=$(date)" >> $GITHUB_OUTPUT
-      - name: Commit Changes
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: ${{ steps.update.outputs.message }}
+
+      - name: Apply
+        run: |
+          Emoji=("🎉" "🤞" "✨" "🎁" "🎈" "🎄" "🎨" "🍓" "🍕" "🍉" "💐" "🌴" "🚀" "🛸" "🗽" "⛅" "🌈" "🔥" "⛄" "🐶" "🏅" "🦄" "🐤")
+          git add .
+          git commit -m "${Emoji[$[$RANDOM % ${#Emoji[@]}]]} Sync $(date +%Y-%m-%d" "%H:%M:%S)"
+          git push -f -u origin main
           
       - name: Delete workflow runs
         uses: Mattraks/delete-workflow-runs@main
