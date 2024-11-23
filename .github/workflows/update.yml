@@ -14,27 +14,52 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@main
+        
+      - name: Checkout 217heidai/adblockfilters
+        uses: actions/checkout@v4
+        with:
+          repository: 217heidai/adblockfilters
+          path: community
 
       - name: Setup Python 3.9.x
         uses: actions/setup-python@main
         with:
           python-version: '3.9.x'
-
+          
       - name: Install Dependencies
         run: |
           sudo timedatectl set-timezone "$TZ"
           python -m pip install --upgrade pip
           pip install -U tld IPy dnspython httpx loguru
+          
+      - name: Copy files
+        run: |
+          [ -d "rules" ] || mkdir rules
+          rm -rf *.*
+          mv community/rules/white.txt rules/
+          mv community/*.* ./
+          rm -rf community*
+          cp readme/README.md .
+          cp readme/readme.py .
+        
       - name: Update Filters
         id: update
         run: |
+          python readme/filterchange.py
           python adblock.py
+          python readme/clash.py
+          python readme/line.py
           rm -rf __pycache__
           echo "message=$(date)" >> $GITHUB_OUTPUT
+          
       - name: Commit Changes
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: ${{ steps.update.outputs.message }}
+        run: |
+          Emoji=("🎉" "🤞" "✨" "🎁" "🎈" "🎄" "🎨" "🍓" "🍕" "🍉" "💐" "🌴" "🚀" "🛸" "🗽" "⛅" "🌈" "🔥" "⛄" "🐶" "🏅" "🦄" "🐤")
+          git add .
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit -m "${Emoji[$[$RANDOM % ${#Emoji[@]}]]} Sync $(date +%Y-%m-%d" "%H:%M:%S)"
+          git push -f -u origin main
           
       - name: Delete workflow runs
         uses: Mattraks/delete-workflow-runs@main
