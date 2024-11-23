@@ -37,7 +37,6 @@ jobs:
           cp readme/readme.py .
         
       - name: Update Filters
-        id: update
         run: |
           python readme/filterchange.py
           python adblock.py
