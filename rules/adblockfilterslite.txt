@@ -3,8 +3,8 @@
 ! Description: 适用于AdGuard的去广告合并规则，每8个小时更新一次。
 ! Homepage: https://github.com/Sereinfy/Adrules
 ! Source: https://github.com/Sereinfy/Adrules/main/rules
-! Version: 20241123214808
-! Last modified: 2024/11/23 21:48:08
+! Version: 20241123225937
+! Last modified: 2024/11/23 22:59:37
 ! Blocked Filters: 62909
 !
 #%#var AG_abortInlineScript=function(g,b,c){var d=function(){if("currentScript"in document)return document.currentScript;var a=document.getElementsByTagName("script");return a[a.length-1]},e=Math.random().toString(36).substr(2,8),h=d();AG_defineProperty(b,{beforeGet:function(){var a=d();if(a instanceof HTMLScriptElement&&a!==h&&""===a.src&&g.test(a.textContent))throw c&&console.warn("AdGuard aborted execution of an inline script"),new ReferenceError(e);}});var f=window.onerror;window.onerror=function(a){if("string"===typeof a&&-1!==a.indexOf(e))return c&&console.warn("AdGuard has caught window.onerror: "+b),!0;if(f instanceof Function)return f.apply(this,arguments)}};
