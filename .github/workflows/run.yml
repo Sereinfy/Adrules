@@ -21,7 +21,13 @@ jobs:
       with:
         repository: 217heidai/adblockfilters
         path: community
-        
+
+    - name: Install Dependencies
+      run: |
+        sudo timedatectl set-timezone "$TZ"
+        python -m pip install --upgrade pip
+        pip install -U tld IPy dnspython httpx loguru
+          
     - name: Copy
       run: |
         [ -d "rules" ] || mkdir rules
