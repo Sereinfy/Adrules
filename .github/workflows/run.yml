@@ -25,12 +25,15 @@ jobs:
     - name: Copy
       run: |
         [ -d "rules" ] || mkdir rules
-        rm -rf *.* && mv community/rules/white.txt rules/ && mv community/*.* ./ && rm -rf community*
-        if ! grep -q "filter" README.md; then
-          cp readme/README.md .
-        fi
+        rm -rf *.*
+        mv community/rules/white.txt rules/
+        mv community/*.* ./
+        rm -rf community*
+        cp readme/README.md .
         cp readme/readme.py .
-        python readme/filterchange.py && python readme/clean-readme.py && python readme/clash.py
+        python readme/filterchange.py
+        python readme/clean-readme.py
+        python readme/clash.py
         rm -rf __pycache__
   
     - name: Apply
