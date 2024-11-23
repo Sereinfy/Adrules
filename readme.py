@@ -43,11 +43,6 @@ class ReadMe(object):
             os.remove(self.filename)
         
         with open(self.filename, 'a') as f:
-            f.write("``` \n")
-            f.write("更新时间:\n")
-            f.write("插件拦截规则数量:\n")
-            f.write("DNS拦截规则数量:\n")
-            f.write("``` \n")
             f.write("## 说明\n")
             f.write("1. 定时从上游各规则源获取更新，合并去重。\n")
             f.write("2. 使用国内、国外各 3 组 DNS 服务，分别对上游各规则源拦截的域名进行解析，去除已无法解析的域名。（上游各规则源中存在大量已无法解析的域名，无需加入拦截规则）\n")
