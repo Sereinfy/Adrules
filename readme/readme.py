@@ -3,7 +3,7 @@ import os
 from typing import List
 
 from loguru import logger
-
+print("readme.py 正在运行")
 class Rule(object):
     def __init__(self, name:str, type:str, url:str, latest:str, update:bool=False):
         self.name = name
@@ -68,3 +68,4 @@ class ReadMe(object):
             f.write("|:-|:-|:-|:-|:-|\n")
             for rule in self.ruleList:
                 f.write("| %s | %s | [原始链接](%s) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/%s) | %s |\n" % (rule.name,rule.type,rule.url,rule.filename,rule.latest))
+print("readme.py 运行结束")
