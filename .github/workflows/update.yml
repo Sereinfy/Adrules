@@ -42,7 +42,7 @@ jobs:
           cp readme/README.md .
           sed -i 's/217heidai\/adblockfilters/Sereinfy\/Adrules/g' readme.py
           sed -i '/f.write("! Source/d' filter.py
-          sed -i 's/Description.*/Description: 适用于AdGuard的去广告合并规则，每8个小时更新一次。\n")/' filter.py
+          sed -i 's/Description.*/Description: 适用于AdGuard的去广告合并规则，每8个小时更新一次。\\n")/' filter.py
           sed -i 's/217heidai\/adblockfilters/Sereinfy\/Adrules/g' filter.py
           sed -i 's/Title: AdBlock DNS/Sereinfy AdBlock DNS/' filter.py
           sed -i 's/Title: AdBlock Filter/Title: Sereinfy AdBlock Filter/' filter.py
