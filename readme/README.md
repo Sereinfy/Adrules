@@ -1,4 +1,4 @@
-初始化[README.md未更新]
+[README.md未更新]
 
 ## 订阅链接
 1. AdGuard Home 等DNS拦截服务使用规则1
