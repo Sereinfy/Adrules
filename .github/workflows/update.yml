@@ -40,6 +40,9 @@ jobs:
           mv community/*.* ./
           rm -rf community*
           cp readme/README.md .
+
+      - name: Modify source file
+        run: |
           sed -i 's/217heidai\/adblockfilters/Sereinfy\/Adrules/g' readme.py
           sed -i '/f.write("! Source/d' filter.py
           sed -i 's/Description.*/Description: 适用于AdGuard的去广告合并规则，每8个小时更新一次。\\n")/' filter.py
@@ -48,9 +51,13 @@ jobs:
           sed -i 's/Title: AdBlock Filter/Title: Sereinfy AdBlock Filter/' filter.py
         
       - name: Update Filters
-        id: update
         run: |
           python adblock.py
+          rm -rf __pycache__
+          echo "message=$(date)" >> $GITHUB_OUTPUT
+
+      - name: Generate clash file
+        run: |
           python readme/clash.py
           python readme/line.py
           rm -rf __pycache__
