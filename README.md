@@ -28,8 +28,8 @@
 
 | 规则 | 类型 | 原始链接 | 加速链接 | 更新日期 |
 |:-|:-|:-|:-|:-|
-| AdGuard Base filters | filter | [原始链接](https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_2_Base/filter.txt) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/AdGuard_Base_filters.txt) | 2024/11/24 |
-| AdGuard Chinese filters | filter | [原始链接](https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_224_Chinese/filter.txt) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/AdGuard_Chinese_filters.txt) | 2024/11/24 |
+| AdGuard Base filters | filter | [原始链接](https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_2_Base/filter.txt) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/AdGuard_Base_filters.txt) | 2024/11/13 |
+| AdGuard Chinese filters | filter | [原始链接](https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_224_Chinese/filter.txt) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/AdGuard_Chinese_filters.txt) | 2024/11/13 |
 | AdGuard Annoyances filter | filter | [原始链接](https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_14_Annoyances/filter.txt) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/AdGuard_Annoyances_filter.txt) | 2024/11/13 |
 | EasyList China | filter | [原始链接](https://easylist-downloads.Adrulesplus.org/easylistchina.txt) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/EasyList_China.txt) | 2024/11/13 |
 | EasyPrivacy | filter | [原始链接](https://easylist-downloads.Adrulesplus.org/easyprivacy.txt) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/EasyPrivacy.txt) | 2024/11/13 |
@@ -37,7 +37,7 @@
 | CJX's Annoyance List | filter | [原始链接](https://raw.githubusercontent.com/cjx82630/cjxlist/master/cjx-annoyance.txt) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/CJX's_Annoyance_List.txt) | 2024/09/27 |
 | NoAppDownload | filter | [原始链接](https://raw.githubusercontent.com/Noyllopa/NoAppDownload/master/NoAppDownload.txt) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/NoAppDownload.txt) | 2024/10/19 |
 | Adrules Warning Removal List | filter | [原始链接](https://easylist-downloads.Adrulesplus.org/antiAdrules.txt) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/Adrules_Warning_Removal_List.txt) | 2024/09/27 |
-| damengzhu | filter | [原始链接](https://raw.githubusercontent.com/damengzhu/banad/main/jiekouAD.txt) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/damengzhu.txt) | 2024/11/24 |
+| damengzhu | filter | [原始链接](https://raw.githubusercontent.com/damengzhu/banad/main/jiekouAD.txt) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/damengzhu.txt) | 2024/11/13 |
 | xinggsf mv | filter | [原始链接](https://raw.githubusercontent.com/xinggsf/Adrules-Plus-Rule/master/mv.txt) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/xinggsf_mv.txt) | 2024/11/08 |
 | xinggsf rule | filter | [原始链接](https://raw.githubusercontent.com/xinggsf/Adrules-Plus-Rule/master/rule.txt) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/xinggsf_rule.txt) | 2024/11/02 |
 | SmartTV Blocklist | dns | [原始链接](https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/SmartTV-AGH.txt) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/SmartTV_Blocklist.txt) | 2024/02/15 |
