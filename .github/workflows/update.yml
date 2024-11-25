@@ -43,7 +43,7 @@ jobs:
 
       - name: Modify source file
         run: |
-          sed -i '/f.write("Star History/d' readme.py
+          sed -i '/Star History/d' readme.py
           sed -i 's/217heidai\/adblockfilters\/main/Sereinfy\/Adrules\/main/g' readme.py
           sed -i 's/个人收藏了不少广告过滤规则.*/Forked From [217heidai\/adblockfilters](https:\/\/github.com\/217heidai\/adblockfilters) \\n")/' readme.py
           sed -i '/f.write("! Source/d' filter.py
