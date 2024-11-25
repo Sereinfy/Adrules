@@ -55,7 +55,7 @@ jobs:
           python adblock.py
           rm -rf __pycache__
           echo "message=$(date)" >> $GITHUB_OUTPUT
-          sed -i '3a Forked From [217heidai/adblockfilters](https://github.com/217heidai/adblockfilters)' README.md
+          sed -i '3s/.*/Forked From [217heidai/adblockfilters](https://github.com/217heidai/adblockfilters)/' README.md
 
       - name: Generate clash file
         run: |
