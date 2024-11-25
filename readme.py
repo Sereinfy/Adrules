@@ -75,5 +75,3 @@ class ReadMe(object):
             for rule in self.ruleList:
                 f.write("| %s | %s | [原始链接](%s) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/%s) | %s |\n" % (rule.name,rule.type,rule.url,rule.filename,rule.latest))
             f.write("\n")
-            f.write("## Star History\n")
-            f.write("[![Star History Chart](https://api.star-history.com/svg?repos=217heidai/adblockfilters&type=Date)](https://star-history.com/#217heidai/adblockfilters&Date)\n")
