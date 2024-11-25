@@ -1,43 +1,30 @@
-# AdBlock DNS Filters
-适用于AdGuard的去广告合并规则，每8个小时更新一次。
-Forked From [217heidai/adblockfilters](https://github.com/217heidai/adblockfilters) 
+> 若您看到此信息，说明 `readme.md` 文档未能成功更新。但请放心，这不会影响规则文件的`更新`与`使用`。
 
-## 说明
-1. 定时从上游各规则源获取更新，合并去重。
-2. 使用国内、国外各 3 组 DNS 服务，分别对上游各规则源拦截的域名进行解析，去除已无法解析的域名。（上游各规则源中存在大量已无法解析的域名，无需加入拦截规则）
-3. 本项目仅对上游规则进行合并、去重、去除无效域名，不做任何修改。如发现误拦截情况，可临时添加放行规则（如 `@@||www.example.com^$important`），并向上游规则反馈。
 
 ## 订阅链接
-1. AdGuard Home 等 DNS 拦截服务使用规则1
+1. AdGuard Home 等DNS拦截服务使用规则1
 2. AdGuard 等浏览器插件使用规则1 + 规则2
-3. 规则1’、规则2’为相应的 Lite 版，仅针对国内域名拦截
 
 | 规则 | 原始链接 | 加速链接 |
 |:-|:-|:-|
 | 规则1：DNS 拦截 | [原始链接](https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/adblockdns.txt) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/adblockdns.txt) |
-| 规则1'：DNS 拦截 Lite | [原始链接](https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/adblockdnslite.txt) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/adblockdnslite.txt) |
 | 规则2：插件拦截 | [原始链接](https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/adblockfilters.txt) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/adblockfilters.txt) |
-| 规则2'：插件拦截 Lite | [原始链接](https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/adblockfilterslite.txt) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/adblockfilterslite.txt) |
 
 ## 上游规则源
 1. 感谢各位广告过滤规则维护大佬们的辛苦付出。
-2. 不再引用[anti-AD](https://anti-ad.net/adguard.txt)、[yhosts](https://raw.githubusercontent.com/VeleSila/yhosts/master/hosts.txt)，具体原因见[Mosney/anti-anti-AD](https://github.com/Mosney/anti-anti-AD)。
-3. 移除[Notracking blocklist](https://raw.githubusercontent.com/notracking/hosts-blocklists/master/adblock/adblock.txt)，原项目[已停止维护](https://github.com/notracking/hosts-blocklists/issues/900)。
-4. 移除[ADgk](https://raw.githubusercontent.com/banbendalao/ADgk/master/ADgk.txt)，项目超过 1 年未更新。
-5. 不再引用[NEO DEV HOST](https://github.com/neodevpro/neodevhost/blob/master/lite_adblocker)，原因见[Issues 85](https://github.com/Sereinfy/Adrules/issues/85)。
 
 | 规则 | 类型 | 原始链接 | 加速链接 | 更新日期 |
 |:-|:-|:-|:-|:-|
-| AdGuard Base filters | filter | [原始链接](https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_2_Base/filter.txt) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/AdGuard_Base_filters.txt) | 2024/11/25 |
-| AdGuard Chinese filters | filter | [原始链接](https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_224_Chinese/filter.txt) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/AdGuard_Chinese_filters.txt) | 2024/11/25 |
-| AdGuard Annoyances filter | filter | [原始链接](https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_14_Annoyances/filter.txt) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/AdGuard_Annoyances_filter.txt) | 2024/11/25 |
+| AdGuard Base filters | filter | [原始链接](https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_2_Base/filter.txt) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/AdGuard_Base_filters.txt) | 2024/11/13 |
+| AdGuard Chinese filters | filter | [原始链接](https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_224_Chinese/filter.txt) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/AdGuard_Chinese_filters.txt) | 2024/11/13 |
+| AdGuard Annoyances filter | filter | [原始链接](https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_14_Annoyances/filter.txt) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/AdGuard_Annoyances_filter.txt) | 2024/11/13 |
 | EasyList China | filter | [原始链接](https://easylist-downloads.Adrulesplus.org/easylistchina.txt) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/EasyList_China.txt) | 2024/11/13 |
 | EasyPrivacy | filter | [原始链接](https://easylist-downloads.Adrulesplus.org/easyprivacy.txt) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/EasyPrivacy.txt) | 2024/11/13 |
-| Fanboy's Annoyance List | filter | [原始链接](https://easylist.to/easylist/fanboy-social.txt) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/Fanboy's_Annoyance_List.txt) | 2024/11/25 |
+| Fanboy's Annoyance List | filter | [原始链接](https://easylist.to/easylist/fanboy-social.txt) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/Fanboy's_Annoyance_List.txt) | 2024/11/13 |
 | CJX's Annoyance List | filter | [原始链接](https://raw.githubusercontent.com/cjx82630/cjxlist/master/cjx-annoyance.txt) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/CJX's_Annoyance_List.txt) | 2024/09/27 |
 | NoAppDownload | filter | [原始链接](https://raw.githubusercontent.com/Noyllopa/NoAppDownload/master/NoAppDownload.txt) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/NoAppDownload.txt) | 2024/10/19 |
 | Adrules Warning Removal List | filter | [原始链接](https://easylist-downloads.Adrulesplus.org/antiAdrules.txt) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/Adrules_Warning_Removal_List.txt) | 2024/09/27 |
-| damengzhu | filter | [原始链接](https://raw.githubusercontent.com/damengzhu/banad/main/jiekouAD.txt) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/damengzhu.txt) | 2024/11/25 |
+| damengzhu | filter | [原始链接](https://raw.githubusercontent.com/damengzhu/banad/main/jiekouAD.txt) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/damengzhu.txt) | 2024/11/13 |
 | xinggsf mv | filter | [原始链接](https://raw.githubusercontent.com/xinggsf/Adrules-Plus-Rule/master/mv.txt) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/xinggsf_mv.txt) | 2024/11/08 |
 | xinggsf rule | filter | [原始链接](https://raw.githubusercontent.com/xinggsf/Adrules-Plus-Rule/master/rule.txt) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/xinggsf_rule.txt) | 2024/11/02 |
 | SmartTV Blocklist | dns | [原始链接](https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/SmartTV-AGH.txt) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/SmartTV_Blocklist.txt) | 2024/02/15 |
@@ -46,6 +33,3 @@ Forked From [217heidai/adblockfilters](https://github.com/217heidai/adblockfilte
 | Nocoin list | host | [原始链接](https://raw.githubusercontent.com/hoshsadiq/Adrules-nocoin-list/master/hosts.txt) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/Nocoin_list.txt) | 2024/09/27 |
 | 1024 hosts | host | [原始链接](https://raw.githubusercontent.com/Goooler/1024_hosts/master/hosts) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/1024_hosts.txt) | 2024/02/15 |
 | ad-wars hosts | host | [原始链接](https://raw.githubusercontent.com/jdlingyu/ad-wars/master/hosts) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/ad-wars_hosts.txt) | 2024/02/15 |
-
-## Star History
-[![Star History Chart](https://api.star-history.com/svg?repos=Sereinfy/Adrules&type=Date)](https://star-history.com/#Sereinfy/Adrules&Date)
