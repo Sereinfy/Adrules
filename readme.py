@@ -45,7 +45,7 @@ class ReadMe(object):
         with open(self.filename, 'a') as f:
             f.write("# AdBlock DNS Filters\n")
             f.write("适用于AdGuard的去广告合并规则，每8个小时更新一次。\n")
-            f.write("个人收藏了不少广告过滤规则，但是每次往新设备添加的时候很是头疼，于是写了这个项目，定时自动获取各规则源更新，生成合并规则库。\n")
+            f.write("Forked From [217heidai/adblockfilters](https://github.com/217heidai/adblockfilters) \n")
             f.write("\n")
             f.write("## 说明\n")
             f.write("1. 定时从上游各规则源获取更新，合并去重。\n")
