@@ -2,9 +2,9 @@
 ! Title: Sereinfy AdBlock Filter Lite
 ! Description: 适用于AdGuard的去广告合并规则，每8个小时更新一次。
 ! Homepage: https://github.com/Sereinfy/Adrules
-! Version: 20241128002112
-! Last modified: 2024/11/28 00:21:12
-! Blocked Filters: 62958
+! Version: 20241128091852
+! Last modified: 2024/11/28 09:18:52
+! Blocked Filters: 62964
 !
 #%#var AG_abortInlineScript=function(g,b,c){var d=function(){if("currentScript"in document)return document.currentScript;var a=document.getElementsByTagName("script");return a[a.length-1]},e=Math.random().toString(36).substr(2,8),h=d();AG_defineProperty(b,{beforeGet:function(){var a=d();if(a instanceof HTMLScriptElement&&a!==h&&""===a.src&&g.test(a.textContent))throw c&&console.warn("AdGuard aborted execution of an inline script"),new ReferenceError(e);}});var f=window.onerror;window.onerror=function(a){if("string"===typeof a&&-1!==a.indexOf(e))return c&&console.warn("AdGuard has caught window.onerror: "+b),!0;if(f instanceof Function)return f.apply(this,arguments)}};
 #%#var AG_abortOnPropertyRead=function(a,b){var c=Math.random().toString(36).substr(2,8);AG_defineProperty(a,{beforeGet:function(){b&&console.warn("AdGuard aborted property read: "+a);throw new ReferenceError(c);}});var d=window.onerror;window.onerror=function(e){if("string"===typeof e&&-1!==e.indexOf(c))return b&&console.warn("AdGuard has caught window.onerror: "+a),!0;if(d instanceof Function)return d.apply(this,arguments)}};
@@ -27433,6 +27433,7 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 &fp_sid=pop$popup,third-party
 &hitType=pageview&
 &http_referer=$script,xmlhttprequest,domain=~biletomat.pl|~facebook.com|~jobscore.com
+&js_build=iclick-
 &js_build=iclick-$all
 &l=dataLayer&cx=c
 &mi_ecmp=$image
@@ -28598,7 +28599,7 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 .com:8010/cc/
 .com:91/Runtime/js/psCreat.js
 .com:9120/discor_list.js
-.com^|$xmlhttprequest,third-party,domain=kaido.to|swatchseries.is|hianime.*|dbsullca.com|hdtodayz.to|hdtoday.cc
+.com^|$xmlhttprequest,third-party,domain=kaido.to|swatchseries.is|hianime.*|dbsullca.com|hdtodayz.to|hdtoday.cc|myasiantv.ac
 .content_tracking.js
 .cookie-law.$script
 .cookie_law.
@@ -28799,7 +28800,7 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 .net/vh1/$script,third-party
 .net/vh1/1*$third-party
 .net/vj1/$script,third-party
-.net^|$xmlhttprequest,third-party,domain=kaido.to|swatchseries.is|hianime.*|dbsullca.com|hdtodayz.to|hdtoday.cc
+.net^|$xmlhttprequest,third-party,domain=kaido.to|swatchseries.is|hianime.*|dbsullca.com|hdtodayz.to|hdtoday.cc|myasiantv.ac
 .netcologne.de/-open2/$image
 .ng/ads/
 .niusnews.com/upload/banners/
@@ -28913,7 +28914,7 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 .test15./
 .theatlantic.com/email.gif?
 .titus.de/oo/$image
-.to^|$xmlhttprequest,third-party,domain=kaido.to|swatchseries.is|hianime.*|dbsullca.com|hdtodayz.to|hdtoday.cc
+.to^|$xmlhttprequest,third-party,domain=kaido.to|swatchseries.is|hianime.*|dbsullca.com|hdtodayz.to|hdtoday.cc|myasiantv.ac
 .top/*/*.js?ts=$third-party
 .top/*/2022*/.js$third-party
 .top/*q=*form=*&*url=http*$third-party
@@ -40338,7 +40339,6 @@ a2zapk.com$$script[tag-content="'Adblock','Enabled'"][min-length="5000"][max-len
 a2zupload.com,unlockapk.com#$##adsenseimage { height: 1px!important; }
 a2zupload.com,unlockapk.com#$#.adsbygoogle { height: 1px!important; }
 a2zupload.com,unlockapk.com#$#.showads { height: 1px!important; }
-a2zupload.com,unlockapk.com#%#AG_onLoad(function() { var el = document.querySelector('.adsbygoogle'); if(el) el.setAttribute("data-adsbygoogle-status", "done"); });
 a2zupload.com,unlockapk.com#@#.showads
 a9vg.com###guide-download
 a9vg.com###qrcode
@@ -45168,6 +45168,7 @@ echinacities.com##.newVisitor
 echo.msk.ru#$?#.header_top:not(:has(> .wrapper)) { margin-top: -30px !important; }
 echo.msk.ru#$?#span > div[role]:has(> div[class] > section.content) { margin-top: 0 !important; }
 ecologiaverde.com,el9nou.cat,elsaltodiario.com,lanacion.com.ar,laverdad.com,psicologia-online.com,qmusica.tv,revistafamilia.ec##.compartir
+economictimes.com,slashdot.org,sourceforge.net,mynet.com,gazetaprawna.pl,thatgossip.com,infinityfree.com,indiatimes.com,heraldm.com,pravda.com.ua,winfuture.de,text-compare.com,onlinegdb.com,dziennik.pl,inven.co.kr,ff14net.2chblog.jp#%#//scriptlet('abort-on-stack-trace', 'document.getElementById', 'onerror')
 economictimes.indiatimes.com,m.economictimes.com##.du_consent
 ecopayz.com,visitbruges.be##.block-cookie
 ecopoznan.pl,codziennypoznan.pl,motopoznan.com,lifestylepoznan.pl##._ning_cont[data-bid]
@@ -53091,6 +53092,7 @@ plejada.pl,auto-swiat.pl,newsweek.pl,onet.pl,medonet.pl,komputerswiat.pl###onet-
 plejada.pl,onet.pl##.adsContainer
 plenum.de,foodspring.de,m.shop-apotheke.com##.cookie-advice
 plk-sa.pl,dge.de,mohrsiebeck.com,lempertz.com,starnbergammersee.de,merten.de,bwi.de,medizinischerdienst.de,kunstmuseum-moritzburg.de,bmeia.gv.at,integrationsfonds.at,landesentwicklung-bayern.de,landsberg.de,w-hs.de,stmwi.bayern.de,easybell.de###cookieman-modal
+plurall.net,runna.com,vseti.app,identity.digital,import.io,frameright.io,ooux.com,sifugame.com,veed.io##div[fs-cc="banner"]
 plus.nhk.jp,rakuten-card.co.jp,sp.ch.nicovideo.jp,m.economictimes.com,skype.com###appBanner
 plus.nhk.jp,shufoo.net,gran-turismo.com,m.tv.naver.com,m.comic.naver.com,m.bombaytimes.com##.app_banner
 plus.web.de,plus.gmx.net#%#//scriptlet('trusted-click-element', '#save-all-pur')
@@ -54188,7 +54190,6 @@ rulesofcheaters.net,actressgalleryfcs.xyz,visionias.net###HTML11
 rulesofcheaters.net,nurul-huda.or.id,thizissam.in,whatmyuseragent.com,embetronicx.com###LTF_GDPR_Compliant
 rulesofcheaters.net,ontools.net,teknopaid.xyz,redirect.dafontvn.com,5ggyan.com,majidzhacker.com,links.iembra2or.com,ph.apps2app.com#%#AG_onLoad(function(){setTimeout(function(){if("undefined"!==typeof aesCrypto&&"function"===typeof aesCrypto.decrypt&&-1<window.location.href.indexOf("#?o="))try{window.location=aesCrypto.decrypt($.urlParam("o").replace(/^\s+/,"").replace(/\s+$/,""),"root".replace(/^\s+/,"").replace(/\s+$/,""))}catch(a){}},300)});
 rumporn.com,stilltube.com###floaterRight
-runna.com,vseti.app,identity.digital,import.io,frameright.io,ooux.com,sifugame.com,veed.io##div[fs-cc="banner"]
 runoob.com###sidebar-right-re
 runoob.com##.article-heading-ad
 runoob.com##.fixed-btn > .qrcode
@@ -54822,7 +54823,6 @@ slashdot.org,convertcase.net,sourceforge.net,rostercon.com,petitfute.com,talkwit
 slashdot.org,kreuzwortraetsel.de,sourceforge.net,lovelive-petitsoku.com,tportal.hr,cool-style.com.tw,rabitsokuhou.2chblog.jp,infor.pl,forsal.pl,oraridiapertura24.it,suzusoku.blog.jp,yugioh-starlight.com,news4vip.livedoor.biz,onecall2ch.com,laleggepertutti.it,raetsel-hilfe.de,the-crossword-solver.com,allthetests.com,javatpoint.com,globalrph.com,islamicfinder.orgwouldurather.io,economictimes.com,woxikon.de,mynet.com,gazetaprawna.pl,verkaufsoffener-sonntag.com,thatgossip.com,heureka.cz,modhub.us,missyusa.com,cruciverba.it,motscroises.fr,palabr.as,word-grabber.com,wort-suchen.de,issuya.com,pressian.com,pravda.com.ua,lamire.jp,picrew.me,mydaily.co.kr,badmouth1.com,taxguru.in,sportsrec.com,reportera.co.kr,tweaksforgeeks.com,fourfourtwo.co.kr,flatpanelshd.com,wfmz.com,videogamemods.com,dziennik.pl,inven.co.kr,ff14net.2chblog.jp,eurointegration.com.ua,jin115.com,gloria.hr,etnews.com,carscoops.com,sportsseoul.com,onlinegdb.com,text-compare.com,winfuture.de,hoyme.jp,indiatimes.com,blog.esuteru.com,blog.livedoor.jp,itainews.com#$?#iframe[src="about:blank"] { position: absolute !important; left: -3000px !important; }
 slashdot.org,kreuzwortraetsel.de,sourceforge.net,lovelive-petitsoku.com,tportal.hr,cool-style.com.tw,rabitsokuhou.2chblog.jp,infor.pl,forsal.pl,oraridiapertura24.it,suzusoku.blog.jp,yugioh-starlight.com,news4vip.livedoor.biz,onecall2ch.com,laleggepertutti.it,raetsel-hilfe.de,the-crossword-solver.com,allthetests.com,javatpoint.com,globalrph.com,islamicfinder.orgwouldurather.io,economictimes.com,woxikon.de,mynet.com,gazetaprawna.pl,verkaufsoffener-sonntag.com,thatgossip.com,heureka.cz,modhub.us,missyusa.com,cruciverba.it,motscroises.fr,palabr.as,word-grabber.com,wort-suchen.de,issuya.com,pressian.com,pravda.com.ua,lamire.jp,picrew.me,mydaily.co.kr,badmouth1.com,taxguru.in,sportsrec.com,reportera.co.kr,tweaksforgeeks.com,fourfourtwo.co.kr,flatpanelshd.com,wfmz.com,videogamemods.com,dziennik.pl,inven.co.kr,ff14net.2chblog.jp,eurointegration.com.ua,jin115.com,gloria.hr,etnews.com,carscoops.com,sportsseoul.com,onlinegdb.com,text-compare.com,winfuture.de,hoyme.jp,indiatimes.com,blog.esuteru.com,blog.livedoor.jp,itainews.com#$?#iframe[src="about:blank"] { remove: true; }
 slashdot.org,sourceforge.net,lovelive-petitsoku.com,infinityfree.com,tportal.hr,cool-style.com.tw,rabitsokuhou.2chblog.jp,infor.pl,forsal.pl,oraridiapertura24.it,suzusoku.blog.jp,yugioh-starlight.com,news4vip.livedoor.biz,onecall2ch.com,laleggepertutti.it,raetsel-hilfe.de,the-crossword-solver.com,allthetests.com,javatpoint.com,globalrph.com,islamicfinder.orgwouldurather.io,economictimes.com,woxikon.de,mynet.com,gazetaprawna.pl,verkaufsoffener-sonntag.com,thatgossip.com,heureka.cz,modhub.us,missyusa.com,cruciverba.it,motscroises.fr,palabr.as,word-grabber.com,wort-suchen.de,issuya.com,pressian.com,pravda.com.ua,lamire.jp,picrew.me,mydaily.co.kr,badmouth1.com,taxguru.in,sportsrec.com,reportera.co.kr,tweaksforgeeks.com,fourfourtwo.co.kr,flatpanelshd.com,wfmz.com,videogamemods.com,dziennik.pl,inven.co.kr,ff14net.2chblog.jp,eurointegration.com.ua,jin115.com,gloria.hr,etnews.com,carscoops.com,sportsseoul.com,onlinegdb.com,text-compare.com,winfuture.de,hoyme.jp,indiatimes.com,blog.esuteru.com,blog.livedoor.jp,itainews.com##a[target="_blank"][rel="noopener noreferrer"]:has(> div#container > div.img_container > img[src^="https://asset.ad-shield.cc"])
-slashdot.org,sourceforge.net,mynet.com,gazetaprawna.pl,thatgossip.com,infinityfree.com,indiatimes.com,heraldm.com,pravda.com.ua,winfuture.de,text-compare.com,onlinegdb.com,dziennik.pl,inven.co.kr,ff14net.2chblog.jp#%#//scriptlet('abort-on-stack-trace', 'document.getElementById', 'onerror')
 slashdot.org,sourceforge.net,rostercon.com,petitfute.com,talkwithstranger.com,tportal.hr,cool-style.com.tw,rabitsokuhou.2chblog.jp,infor.pl,forsal.pl,winfuture.de,wouldurather.io,blog.esuteru.com,blog.livedoor.jp,itainews.com,jin115.com,oraridiapertura24.it,suzusoku.blog.jp,woxikon.de,yugioh-starlight.com,news4vip.livedoor.biz,onecall2ch.com,ff14net.2chblog.jp,mynet.com,laleggepertutti.it,gazetaprawna.pl,verkaufsoffener-sonntag.com,heureka.cz,raetsel-hilfe.de,word-grabber.com,the-crossword-solver.com,wort-suchen.de,eurointegration.com.ua,gloria.hr,wfmz.com,allthetests.com,javatpoint.com,globalrph.com,carscoops.com,islamicfinder.org#%#//scriptlet('remove-node-text', 'script', 'error-report.com')
 slashfilm.com,healthdigest.com###primis-container
 slashfilm.com,nickiswift.com,grunge.com##.google-ad-placeholder
@@ -55880,8 +55880,8 @@ terbit21.app,lk21static.*#%#//scriptlet('adjust-setInterval', 'time', '*', '0.02
 terrashop.de,arvelle.de###cookie_note_div
 terve.fi,lily.fi,meillakotona.fi,eeva.fi,apu.fi,nokia.com###cmp-modal
 tesco.hu,tesco.pl##.gdpr-cookies
-testpages.eyeo.com/js/test-script-regex
-testpages.eyeo.com/js/test-script.js
+testpages.eyeo.com*js/test-script-regex
+testpages.eyeo.com*js/test-script.js
 tetsudo.com,gamer.no,wcvb.com,wapt.com,kmbc.com,wlky.com,wmur.com,urbanize.city,wbaltv.com,koco.com,clublexus.com,koat.com,wsls.com,fox29.com,13newsnow.com,footballtransfers.com,fox35orlando.com,wlwt.com,kcci.com,fox61.com,time.com,wesh.com,euobserver.com,citynews.ca,fox32chicago.com,nobelprize.org,vice.com,whattowatch.com,asia.nikkei.com,laptopmag.com,musicradar.com,airmail.news,newsweek.com,zeit.de,currentaffairs.org,financefwd.com,wxii12.com,proprivacy.com,bikeperfect.com,bookriot.com,wyff4.com,komando.com,tn.com.ar,wisn.com,kcra.com,whathifi.com,futurestud.io,slate.com,businessinsider.de,fastcompany.com,heise.de,history.com,itprotoday.com,jewishjournal.com,king5.com,mic.com,motherjones.com,nydailynews.com,people.com,skyscanner.com.tw##.newsletter-signup
 textgrid.de,aulss2.veneto.it,gwdg.de,flysaa.com,ou.nl##.privacy-info-message
 textpro.me,ephoto360.com,gamez.de,wallpapershome.com,wallpapershome.ru##.cc-dialog
@@ -62249,6 +62249,12 @@ zzzyk.com###Tinfo
 ||static.youku.com/*/index/js/iresearch.js
 ||static.youku.com/*/js/cps.js
 ||static.yxdown.com/cj/$script
+||static.zongheng.com/*/ad$script
+||static.zongheng.com/upload/*ds/column/$script,image
+||static.zongheng.com/upload/recommend/game/201$image
+||static.zongheng.com^*/adClickStat.js
+||static.zongheng.com^*/ad_click.js
+||static.zongheng.com^*/logger.min.js
 ||staticfile.qq.com/datong/$script
 ||staticfile.qq.com/qimei/$script
 ||stats*.credit-cooperatif.coop^
