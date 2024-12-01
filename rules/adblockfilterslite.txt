@@ -2,9 +2,9 @@
 ! Title: Sereinfy AdBlock Filter Lite
 ! Description: 适用于AdGuard的去广告合并规则，每8个小时更新一次。
 ! Homepage: https://github.com/Sereinfy/Adrules
-! Version: 20241201001857
-! Last modified: 2024/12/01 00:18:57
-! Blocked Filters: 62947
+! Version: 20241201093805
+! Last modified: 2024/12/01 09:38:05
+! Blocked Filters: 62889
 !
 #%#var AG_abortInlineScript=function(g,b,c){var d=function(){if("currentScript"in document)return document.currentScript;var a=document.getElementsByTagName("script");return a[a.length-1]},e=Math.random().toString(36).substr(2,8),h=d();AG_defineProperty(b,{beforeGet:function(){var a=d();if(a instanceof HTMLScriptElement&&a!==h&&""===a.src&&g.test(a.textContent))throw c&&console.warn("AdGuard aborted execution of an inline script"),new ReferenceError(e);}});var f=window.onerror;window.onerror=function(a){if("string"===typeof a&&-1!==a.indexOf(e))return c&&console.warn("AdGuard has caught window.onerror: "+b),!0;if(f instanceof Function)return f.apply(this,arguments)}};
 #%#var AG_abortOnPropertyRead=function(a,b){var c=Math.random().toString(36).substr(2,8);AG_defineProperty(a,{beforeGet:function(){b&&console.warn("AdGuard aborted property read: "+a);throw new ReferenceError(c);}});var d=window.onerror;window.onerror=function(e){if("string"===typeof e&&-1!==e.indexOf(c))return b&&console.warn("AdGuard has caught window.onerror: "+a),!0;if(d instanceof Function)return d.apply(this,arguments)}};
@@ -16603,10 +16603,6 @@
 ##.follow-link-wrapper
 ##.follow-linkedin
 ##.follow-pinterest
-##.follow-property-facebook
-##.follow-property-flickr
-##.follow-property-pinterest
-##.follow-property-twitter
 ##.follow-recirc
 ##.follow-rs
 ##.follow-share
@@ -16766,7 +16762,6 @@
 ##.footer-links-social
 ##.footer-logos--social
 ##.footer-ls-social
-##.footer-main-bottom-social
 ##.footer-main-standard-social-list
 ##.footer-main__socials
 ##.footer-nav-connect
@@ -17447,12 +17442,6 @@
 ##.gtm_footer_facebook
 ##.gtm_footer_instagram
 ##.gtm_footer_twitter
-##.gtm_share_top_facebook
-##.gtm_share_top_google
-##.gtm_share_top_twitter
-##.gtv-mod9-share
-##.gtv-mod9-share-facebook
-##.gtv-mod9-share-twitter
 ##.guanggaoBox
 ##.gui-btn-sm-facebook
 ##.gui-btn-sm-google
@@ -17462,7 +17451,6 @@
 ##.gui-btn-sm-twitter
 ##.gui-btn-sm-youtube
 ##.guide__row--fixed-ad
-##.guides16-social-top
 ##.guj-ad--placeholder
 ##.gujAd
 ##.guruin-ads
@@ -17481,13 +17469,11 @@
 ##.h-social-yt
 ##.h-top-ad
 ##.h11-ad-top
-##.h5ToggleShare
 ##.h5ab-print-button-container
 ##.h_Ads
 ##.h_ad
 ##.haber-sosyal
 ##.haber_sosyal
-##.haberaltshare
 ##.half-ad
 ##.half-page-ad
 ##.half-page-ad-1
@@ -17508,7 +17494,6 @@
 ##.has-button-share
 ##.has-fixed-bottom-ad
 ##.hasAD
-##.hat_social_tab
 ##.hatena-bookmark-button
 ##.hatena-btn-icon
 ##.hatenabutton
@@ -17536,19 +17521,13 @@
 ##.head-share2
 ##.head-social-links
 ##.head-top-ads
-##.head-twt
 ##.headAd
-##.headShare
 ##.headSocialBtnWrap
-##.headSocialLinksListFacebook
-##.headSocialLinksListTwitter
 ##.head_ad
 ##.head_ad_wrapper
 ##.head_ads
 ##.head_adv
 ##.head_advert
-##.head_nav_social_fb
-##.head_nav_social_tw
 ##.headad
 ##.headadcontainer
 ##.header-ad
@@ -17591,14 +17570,9 @@
 ##.header-banner-ad
 ##.header-banner-ads
 ##.header-banner-advertising
-##.header-banner-menu__social
 ##.header-bannerad
 ##.header-bottom-adboard-area
 ##.header-bottom-share-button
-##.header-btn__facebook
-##.header-contact-link--facebook
-##.header-contact-link--twitter
-##.header-controls__share-toggle
 ##.header-cookie-content
 ##.header-cookies
 ##.header-facebook
@@ -17607,8 +17581,6 @@
 ##.header-follow-list
 ##.header-follow-social
 ##.header-follow-us
-##.header-g-plus-share
-##.header-google-plus
 ##.header-icon-instagram
 ##.header-interna-share
 ##.header-item-social
@@ -17678,14 +17650,12 @@
 ##.headerAdvertisement
 ##.headerCookies
 ##.headerFacebook
-##.headerGPlusIcon
 ##.headerShare
 ##.headerShareIconWrap
 ##.headerShareIcons
 ##.headerSocialIcons
 ##.headerSocialLink
 ##.headerSocialLinks
-##.headerSocial__socialLinks
 ##.headerTextAd
 ##.headerTopAd
 ##.headerTopAds
@@ -17693,9 +17663,6 @@
 ##.header__ads
 ##.header__ads-wrapper
 ##.header__advertisement
-##.header__badge--app-share
-##.header__content__social
-##.header__nav-social
 ##.header__sharing-item
 ##.header__social
 ##.header__social-accounts
@@ -17744,12 +17711,10 @@
 ##.headerfacebookicon
 ##.headersocial:not(body):not(html)
 ##.headersocials
-##.headersticky__share
 ##.headertwittericon
 ##.heading-ad-space
 ##.headline-adblock
 ##.headline-ads
-##.headline-sns
 ##.headline_advert
 ##.headsocial
 ##.headsocial-wrapper
@@ -17774,14 +17739,8 @@
 ##.hero-ad
 ##.hero-ad-slot
 ##.hero-advert
-##.hero-player__share
 ##.hero-social
-##.hero-unit__share
 ##.heroAd
-##.hero__share-title
-##.hf--facebook
-##.hf--linkedin
-##.hf--twitter
 ##.hh-facebook
 ##.hh-social-links
 ##.hh-socialmedia
@@ -17794,7 +17753,6 @@
 ##.hide_ad
 ##.hidead
 ##.hideshare-wrap
-##.highlight-menu-twitter
 ##.highlightsAd
 ##.his-sign-cont[data-dysign-adid]
 ##.hld-social-media-component-wrapper
@@ -17959,9 +17917,7 @@
 ##.hs-blog-social-share
 ##.hs-social-block
 ##.hs-sosyal
-##.hsaali-social
 ##.ht-share
-##.htIndexSocialButtons
 ##.ht_facebook_widget
 ##.ht_socials_widget
 ##.htl-ad
@@ -18000,15 +17956,6 @@
 ##.icn_follow_text
 ##.icn_follow_twitter
 ##.ico-adv
-##.icomoon-facebook
-##.icomoon-facebook2
-##.icomoon-google-plus
-##.icomoon-instagram
-##.icomoon-mail
-##.icomoon-pinterest
-##.icomoon-twitter
-##.icomoon-twitter2
-##.icomoon-youtube
 ##.icon--app-store
 ##.icon--dailymotion
 ##.icon--facebook
@@ -20033,6 +19980,7 @@
 ##.ndmadkit
 ##.ndn_icon_share
 ##.ndn_toggleShare
+##.nectar-social
 ##.netPost_ad1
 ##.netPost_ad3
 ##.netPost_socialProfiles
@@ -59430,7 +59378,7 @@ zzzyk.com###Tinfo
 ||antpedia.com/viewnewsrightboxtop.
 ||anyelse.com/stat^
 ||anywlan.com/link/*.gif
-||ao11*kas.top/$script,third-party
+||ao1*kas.top/$script,third-party
 ||aoao11*iis.top/$script,third-party
 ||aoji.cn/default/looyu/
 ||aoji.cn/static/js/pushadv.js
@@ -62233,12 +62181,6 @@ zzzyk.com###Tinfo
 ||static.youku.com/*/index/js/iresearch.js
 ||static.youku.com/*/js/cps.js
 ||static.yxdown.com/cj/$script
-||static.zongheng.com/*/ad$script
-||static.zongheng.com/upload/*ds/column/$script,image
-||static.zongheng.com/upload/recommend/game/201$image
-||static.zongheng.com^*/adClickStat.js
-||static.zongheng.com^*/ad_click.js
-||static.zongheng.com^*/logger.min.js
 ||staticfile.qq.com/datong/$script
 ||staticfile.qq.com/qimei/$script
 ||stats*.credit-cooperatif.coop^
