@@ -33,19 +33,12 @@ def main(input_file, output_file):
     # 读取原始数据
     original_lines = read_file(input_file)
     
-    # 分离IPv4格式的数据行、数字开头的非IPv4格式的行和其他行
+    # 分离IPv4格式的数据行和其他行
     ipv4_lines = [line for line in original_lines if line.strip() and is_ipv4(line.strip())]
-    numeric_lines = [line for line in original_lines if line.strip() and line.strip()[0].isdigit() and not is_ipv4(line.strip())]
-    non_numeric_lines = [line for line in original_lines if line.strip() and not line.strip()[0].isdigit() and not is_ipv4(line.strip())]
+    other_lines = [line for line in original_lines if line.strip() and not is_ipv4(line.strip())]
     
-    # 对数字开头的非IPv4格式的行按字母顺序排序
-    numeric_lines.sort(key=lambda x: x.strip().lower())
-    
-    # 对非数字开头的行按字母顺序排序
-    non_numeric_lines.sort(key=lambda x: x.strip().lower())
-    
-    # 合并：IPv4格式的行、数字开头的非IPv4格式的行和排序后的非数字开头的行
-    sorted_lines = ipv4_lines + numeric_lines + non_numeric_lines
+    # 合并：IPv4格式的行放最前面，其他行保持原顺序
+    sorted_lines = ipv4_lines + other_lines
     
     # 转换数据，忽略不符合格式的行
     converted_lines = [convert_line(line) for line in sorted_lines if convert_line(line)]
