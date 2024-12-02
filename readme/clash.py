@@ -26,7 +26,7 @@ def convert_line(line):
 
 def is_ipv4(line):
     """检查是否为IPv4格式"""
-    pattern = r'^\d{1,3}(\.\d{1,3}){3}$'
+    pattern = r'^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$'
     return re.match(pattern, line.strip()) is not None
 
 def main(input_file, output_file):
