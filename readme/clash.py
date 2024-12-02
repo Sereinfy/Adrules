@@ -4,8 +4,7 @@ import argparse
 def read_file(file_name):
     """读取文件内容，并返回行列表"""
     with open(file_name, 'r', encoding='utf-8') as file:
-        lines = file.readlines()
-    return lines
+        return file.readlines()
 
 def write_file(file_name, lines):
     """将行列表写入到指定文件中"""
@@ -13,55 +12,24 @@ def write_file(file_name, lines):
         file.writelines(lines)
 
 def convert_line(line):
-    """转换单行数据，如果不符合格式则返回空字符串"""
-    pattern = r'\|\|([a-zA-Z0-9.-]+)\^'
-    match = re.match(pattern, line.strip())
+    """转换符合格式的行"""
+    match = re.match(r'\|\|([a-zA-Z0-9.-]+)\^', line.strip())
     if match:
-        # 使用捕获组进行替换
-        new_line = f"  - '{match.group(1)}'\n"
-        return new_line
-    else:
-        # 不符合格式的行返回空字符串
-        return ""
-
-def is_ipv4(line):
-    """检查是否为IPv4格式"""
-    pattern = r'^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$'
-    return re.match(pattern, line.strip()) is not None
+        return f"  - '{match.group(1)}'\n"
+    return ""
 
 def main(input_file, output_file):
-    # 读取原始数据
     original_lines = read_file(input_file)
+    converted_lines = [convert_line(line) for line in original_lines if convert_line(line)]
     
-    # 分离IPv4格式的数据行和其他行
-    ipv4_lines = [line for line in original_lines if line.strip() and is_ipv4(line.strip())]
-    other_lines = [line for line in original_lines if line.strip() and not is_ipv4(line.strip())]
-    
-    # 合并：IPv4格式的行放最前面，其他行保持原顺序
-    sorted_lines = ipv4_lines + other_lines
-    
-    # 转换数据，忽略不符合格式的行
-    converted_lines = [convert_line(line) for line in sorted_lines if convert_line(line)]
-    
-    # 在输出数据的前一行插入 payload:
     if converted_lines:
         converted_lines.insert(0, "payload:\n")
     
-    # 将转换后的数据写入新的文件或覆盖原文件
     write_file(output_file, converted_lines)
-    
-    print(f"转换完成，结果已保存至 {output_file}")
 
 if __name__ == '__main__':
-    # 创建解析器对象
     parser = argparse.ArgumentParser(description="处理adblock文件并转换格式")
-    
-    # 添加输入和输出文件路径的命令行参数
     parser.add_argument('input_file', help='输入文件路径')
     parser.add_argument('output_file', help='输出文件路径')
-    
-    # 解析命令行参数
     args = parser.parse_args()
-    
-    # 调用main函数，传入文件路径
     main(args.input_file, args.output_file)
