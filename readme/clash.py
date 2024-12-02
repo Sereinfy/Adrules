@@ -24,19 +24,26 @@ def convert_line(line):
         # 不符合格式的行返回空字符串
         return ""
 
+def is_ipv4(line):
+    """检查是否为IPv4格式"""
+    pattern = r'^\d{1,3}(\.\d{1,3}){3}$'
+    return re.match(pattern, line.strip()) is not None
+
 def main(input_file, output_file):
     # 读取原始数据
     original_lines = read_file(input_file)
     
-    # 分离数字开头的行和非数字开头的行
+    # 分离IPv4格式的数据行、数字开头的行和其他行
+    ipv4_lines = [line for line in original_lines if line.strip() and is_ipv4(line.strip())]
     numeric_lines = [line for line in original_lines if line.strip() and line.strip()[0].isdigit()]
-    non_numeric_lines = [line for line in original_lines if line.strip() and not line.strip()[0].isdigit()]
+    non_numeric_lines = [line for line in original_lines if line.strip() and not line.strip()[0].isdigit() and not is_ipv4(line.strip())]
     
-    # 对非数字开头的行按字母顺序排序
+    # 对数字开头的行和其他行按字母顺序排序
+    numeric_lines.sort(key=lambda x: x.strip().lower())
     non_numeric_lines.sort(key=lambda x: x.strip().lower())
     
-    # 合并数字开头的行和排序后的非数字开头的行
-    sorted_lines = numeric_lines + non_numeric_lines
+    # 合并IPv4格式的数据行、数字开头的行和排序后的其他行
+    sorted_lines = ipv4_lines + numeric_lines + non_numeric_lines
     
     # 转换数据，忽略不符合格式的行
     converted_lines = [convert_line(line) for line in sorted_lines if convert_line(line)]
