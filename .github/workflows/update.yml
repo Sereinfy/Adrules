@@ -60,7 +60,7 @@ jobs:
 
       - name: Generate clash file
         run: |
-          python readme/clash.py
+          python readme/clash.py rules/adblockdnslite.txt rules/dnslite_for_clash.yaml
           python readme/line.py
           rm -rf __pycache__
           echo "message=$(date)" >> $GITHUB_OUTPUT
