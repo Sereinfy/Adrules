@@ -25,7 +25,7 @@ def convert_line(line):
 
 def main():
     # 读取原始数据
-    original_lines = read_file('rules/adblockdns.txt')
+    original_lines = read_file('rules/adblockdnslite.txt')
     
     # 转换数据，忽略不符合格式的行
     converted_lines = [convert_line(line) for line in original_lines if convert_line(line)]
@@ -35,7 +35,7 @@ def main():
         converted_lines.insert(0, "payload:\n")
     
     # 将转换后的数据写入新的文件或覆盖原文件
-    write_file('rules/dns_clash.yaml', converted_lines)
+    write_file('rules/dnslite_for_clash.yaml', converted_lines)
     
     print("转换完成，结果已保存至 dns_clash.yaml")
 
