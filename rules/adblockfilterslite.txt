@@ -2,9 +2,9 @@
 ! Title: Sereinfy AdBlock Filter Lite
 ! Description: 适用于AdGuard的去广告合并规则，每8个小时更新一次。
 ! Homepage: https://github.com/Sereinfy/Adrules
-! Version: 20241210002215
-! Last modified: 2024/12/10 00:22:15
-! Blocked Filters: 62788
+! Version: 20241210092119
+! Last modified: 2024/12/10 09:21:19
+! Blocked Filters: 62790
 !
 #%#var AG_abortInlineScript=function(g,b,c){var d=function(){if("currentScript"in document)return document.currentScript;var a=document.getElementsByTagName("script");return a[a.length-1]},e=Math.random().toString(36).substr(2,8),h=d();AG_defineProperty(b,{beforeGet:function(){var a=d();if(a instanceof HTMLScriptElement&&a!==h&&""===a.src&&g.test(a.textContent))throw c&&console.warn("AdGuard aborted execution of an inline script"),new ReferenceError(e);}});var f=window.onerror;window.onerror=function(a){if("string"===typeof a&&-1!==a.indexOf(e))return c&&console.warn("AdGuard has caught window.onerror: "+b),!0;if(f instanceof Function)return f.apply(this,arguments)}};
 #%#var AG_abortOnPropertyRead=function(a,b){var c=Math.random().toString(36).substr(2,8);AG_defineProperty(a,{beforeGet:function(){b&&console.warn("AdGuard aborted property read: "+a);throw new ReferenceError(c);}});var d=window.onerror;window.onerror=function(e){if("string"===typeof e&&-1!==e.indexOf(c))return b&&console.warn("AdGuard has caught window.onerror: "+a),!0;if(d instanceof Function)return d.apply(this,arguments)}};
@@ -34838,6 +34838,7 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 /wp-content/uploads/*/download*.jpg$domain=kolompc.com
 /wp-content/uploads/*/download-*.png$domain=kolompc.com
 /wp-content/uploads/an-temp/*$script,stylesheet
+/wp-content/uploads/pum/*$domain=creativecommons.org|real-vin.com|levashove.ru|linuxbabe.com|devapp.it|livenewsnow.com|av-comparatives.org
 /wp-content/uploads/useful_banner_manager_banners/*
 /wp-cookie-allow/*$script,stylesheet
 /wp-js/analytics.js
@@ -55028,6 +55029,7 @@ sparkful.co,mangoai.co#?#.all_websites > .website_background:has(> .website_cont
 sparta.com.pl,sparta-fittings.eu#%#//scriptlet('trusted-set-cookie', 'gdpr', 'eyJhbmFseXRpY3MiOmZhbHNlLCJtYXJrZXRpbmciOmZhbHNlLCJhZHZlcnRpc2VtZW50IjpmYWxzZSwicmVtYXJrZXRpbmciOmZhbHNlLCJ2aWV3ZWQiOnRydWV9')
 spartoo.de,debeste.de,gov.pl##.cookies_info
 sparwelt.de,asklepios.com,digi.com###cookie-acceptance
+spawtech.pl#$?#.x13eucookies-block { overflow: auto !important; }
 spaziogames.it,maerklinshop.de,wizcase.com,walletinvestor.com#$##bio_ep { display: none!important; }
 spaziogames.it,maerklinshop.de,wizcase.com,walletinvestor.com#$##bio_ep_bg { display: none!important; }
 spaziogames.it,maerklinshop.de,wizcase.com,walletinvestor.com#$#body { overflow: visible!important; }
