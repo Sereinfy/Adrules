@@ -2,9 +2,9 @@
 ! Title: Sereinfy AdBlock Filter Lite
 ! Description: 适用于AdGuard的去广告合并规则，每8个小时更新一次。
 ! Homepage: https://github.com/Sereinfy/Adrules
-! Version: 20241215001917
-! Last modified: 2024/12/15 00:19:17
-! Blocked Filters: 62796
+! Version: 20241215092543
+! Last modified: 2024/12/15 09:25:43
+! Blocked Filters: 62810
 !
 #%#var AG_abortInlineScript=function(g,b,c){var d=function(){if("currentScript"in document)return document.currentScript;var a=document.getElementsByTagName("script");return a[a.length-1]},e=Math.random().toString(36).substr(2,8),h=d();AG_defineProperty(b,{beforeGet:function(){var a=d();if(a instanceof HTMLScriptElement&&a!==h&&""===a.src&&g.test(a.textContent))throw c&&console.warn("AdGuard aborted execution of an inline script"),new ReferenceError(e);}});var f=window.onerror;window.onerror=function(a){if("string"===typeof a&&-1!==a.indexOf(e))return c&&console.warn("AdGuard has caught window.onerror: "+b),!0;if(f instanceof Function)return f.apply(this,arguments)}};
 #%#var AG_abortOnPropertyRead=function(a,b){var c=Math.random().toString(36).substr(2,8);AG_defineProperty(a,{beforeGet:function(){b&&console.warn("AdGuard aborted property read: "+a);throw new ReferenceError(c);}});var d=window.onerror;window.onerror=function(e){if("string"===typeof e&&-1!==e.indexOf(c))return b&&console.warn("AdGuard has caught window.onerror: "+a),!0;if(d instanceof Function)return d.apply(this,arguments)}};
@@ -27257,11 +27257,13 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 *.chinaih.
 *.cnnetallyads.
 *.cnxad.$third-party
+*.com/|$xmlhttprequest,domain=footyroom.top|miztv.shop
 *.cpm.cm.sandai.net
 *.cpm360.com
 *.cpm9v.
 *.cpp360.
 *.cpp9v.
+*.css$script,third-party,domain=miztv.shop
 *.cssyouxi.
 *.csyouxi.
 *.d9ad.
@@ -27322,6 +27324,7 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 *.myiee.
 *.na7.
 *.name265.
+*.net/|$xmlhttprequest,domain=miztv.shop
 *.nuffnang.
 *.oizu.
 *.op2.web.kuaiwan.
@@ -32062,6 +32065,7 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 /js/ads/yezi
 /js/ads/youxiajiao.js
 /js/ads/zuoxiajiao.js
+/js/adv-slide-toggle.
 /js/advRotator.js$script
 /js/analitics.js
 /js/avia-snippet-cookieconsent.js
@@ -34629,6 +34633,7 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 /web/ads/*$image
 /web/push?
 /web8/ad/*
+/webAdvert.php?ad_name=
 /webAnalytics/*
 /web_ads/*$image
 /web_analytics/*
@@ -34892,6 +34897,7 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 /wutime_adblock/*
 /www.eporner.com\/[^xhr][^comment][1-9]{0,3}[a-z]{0,3}/$script,domain=eporner.com
 /www/delivery/*$script,subdocument
+/www\.[a-z]{5,}\.com\/[A-Za-z]{2,}\/[a-z-]{5,}[\s\S]*\.js/$domain=miztv.shop
 /wwwcount.cgi?
 /wxh_asy.js
 /wxhawkeye.js
@@ -55367,6 +55373,14 @@ study-in-germany.de,daad.de#$#body { overflow: visible!important; }
 study.163.com###j-newpeople
 study.163.com##.ui-common-privacy
 studygolang.com###ad-right1
+studysmarter.*##.bottom-blue-gradient
+studysmarter.*##.va-flashcards-list:has(> div[class] > div[class] > a[href*="app.studysmarter.de/signup"])
+studysmarter.*##.va-footer-sticky-banner
+studysmarter.*##.va-intent-banner
+studysmarter.*##.va-intent-premium
+studysmarter.*##.va-welcome
+studysmarter.*##data-ai-flashcard
+studysmarter.*##img[alt*="Download"]
 stuff.co.nz,thepost.co.nz,thepress.co.nz,waikatotimes.co.nz##.header-ads-block
 stun:1755001826:443$important
 stun:34.70.28.179^$domain=yts.lt
