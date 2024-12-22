@@ -2,9 +2,9 @@
 ! Title: Sereinfy AdBlock Filter Lite
 ! Description: 适用于AdGuard的去广告合并规则，每8个小时更新一次。
 ! Homepage: https://github.com/Sereinfy/Adrules
-! Version: 20241222001752
-! Last modified: 2024/12/22 00:17:52
-! Blocked Filters: 62664
+! Version: 20241222091936
+! Last modified: 2024/12/22 09:19:36
+! Blocked Filters: 62672
 !
 #%#var AG_abortInlineScript=function(g,b,c){var d=function(){if("currentScript"in document)return document.currentScript;var a=document.getElementsByTagName("script");return a[a.length-1]},e=Math.random().toString(36).substr(2,8),h=d();AG_defineProperty(b,{beforeGet:function(){var a=d();if(a instanceof HTMLScriptElement&&a!==h&&""===a.src&&g.test(a.textContent))throw c&&console.warn("AdGuard aborted execution of an inline script"),new ReferenceError(e);}});var f=window.onerror;window.onerror=function(a){if("string"===typeof a&&-1!==a.indexOf(e))return c&&console.warn("AdGuard has caught window.onerror: "+b),!0;if(f instanceof Function)return f.apply(this,arguments)}};
 #%#var AG_abortOnPropertyRead=function(a,b){var c=Math.random().toString(36).substr(2,8);AG_defineProperty(a,{beforeGet:function(){b&&console.warn("AdGuard aborted property read: "+a);throw new ReferenceError(c);}});var d=window.onerror;window.onerror=function(e){if("string"===typeof e&&-1!==e.indexOf(c))return b&&console.warn("AdGuard has caught window.onerror: "+a),!0;if(d instanceof Function)return d.apply(this,arguments)}};
@@ -40628,7 +40628,7 @@ alu.cn##.Tg_260x70
 alu.cn##.Tg_290x60
 alu.cn##.Tg_390x60
 alu.cn##.Tg_590x60
-alwatanvoice.com,atlantablackstar.com,binnews.com,blog.phylum.io,finurah.com,gulf-times.com,iheart.com,jessekellyshow.com,jfrog.com,noticiasaominuto.com,noticiasaominuto.com.br,sciencefocus.com,steveharveyfm.com,thehighwire.com,theshadowleague.com,thewildest.com##.share-icons
+alwatanvoice.com,atlantablackstar.com,binnews.com,blog.phylum.io,dailymail.co.uk,finurah.com,gulf-times.com,iheart.com,jessekellyshow.com,jfrog.com,noticiasaominuto.com,noticiasaominuto.com.br,sciencefocus.com,steveharveyfm.com,thehighwire.com,theshadowleague.com,thewildest.com,thisismoney.co.uk##.share-icons
 alypw.com##.adbkk
 alypw.com##.ceadd
 amagram.amway.*,bischoff-verlag.de###disclaimerCookie
@@ -43903,11 +43903,19 @@ dailyboulder.com,echonewshub.com,jugomobile.com,thartribune.com,thegamepost.com,
 dailycamera.com,bocopreps.com,buffzone.com,bocopreps.com,greeleytribune.com,broomfieldenterprise.com,coloradohometownweekly.com##.dfm-sidebar-top-flex-container > a[target="_blank"]
 dailydot.com,verbraucherzentrale.de,verbraucherzentrale.nrw##.newsletter-button
 dailyegyptian.com,northernstar.info,theorion.com,theprospectordaily.com##.leaderboardwrap
+dailymail.co.uk,gizmodo.com,nymag.com,thisismoney.co.uk,zapimoveis.com.br##.share-link
 dailymail.co.uk,namesecure.com#@#.adHolder
 dailymail.co.uk,oogtv.nl##.whatsapp
+dailymail.co.uk,thisismoney.co.uk###dms-txt
 dailymail.co.uk,thisismoney.co.uk###sky-left-container
 dailymail.co.uk,thisismoney.co.uk###sky-right-container
 dailymail.co.uk,thisismoney.co.uk##.connatix-wrapper
+dailymail.co.uk,thisismoney.co.uk##.share-email
+dailymail.co.uk,thisismoney.co.uk##.share-facebook-long
+dailymail.co.uk,thisismoney.co.uk##.share-fbmessenger
+dailymail.co.uk,thisismoney.co.uk##.share-flipboard
+dailymail.co.uk,thisismoney.co.uk##.share-twitter
+dailymail.co.uk,thisismoney.co.uk##.share-whatsapp
 dailymail.co.uk,thisismoney.co.uk##.watermark
 dailymail.co.uk,thisismoney.co.uk##ul[class^="linksHolder-"]
 dailymail.co.uk,thisismoney.co.uk#@#.article-advert
@@ -45807,7 +45815,7 @@ flash.pt,vodafone.ua#$#.smartbanner-show { margin-top: 0 !important; }
 flash.pt,vodafone.ua#$#div.smartbanner { display: none !important; }
 flashbang.sh,trashbytes.net##.mt-5.mx-auto
 flashbang.sh,trashbytes.net,buzzheavier.com#%#//scriptlet('prevent-window-open', '!/(flashbang\.sh|trashbytes\.net|buzzheavier\.com)/')
-flashbang.sh,trashbytes.net,buzzheavier.com#%#//scriptlet('trusted-replace-xhr-response', 'seen = false', 'seen = true')
+flashbang.sh,trashbytes.net,buzzheavier.com#%#//scriptlet('trusted-click-element', '.link-button','','200')
 flashscore.*,horseracing24.com,darts24.com,handball24.com,volleyball24.com,motorsport24.com,golflive24.com,baseball24.com,cricket24.com,icehockey24.com,basketball24.com,tennis24.com,diretta.it,livescore.in,soccer24.com,soccerstand.com,livesport.com,scoreboard.com###box-over-content-a
 flashscore.*,horseracing24.com,darts24.com,handball24.com,volleyball24.com,motorsport24.com,golflive24.com,baseball24.com,cricket24.com,icehockey24.com,basketball24.com,tennis24.com,diretta.it,livescore.in,soccer24.com,soccerstand.com,livesport.com,scoreboard.com###detail > .detailLeaderboard
 flashscore.*,horseracing24.com,darts24.com,handball24.com,volleyball24.com,motorsport24.com,golflive24.com,baseball24.com,cricket24.com,icehockey24.com,basketball24.com,tennis24.com,diretta.it,livescore.in,soccer24.com,soccerstand.com,livesport.com,scoreboard.com###notifications-alert-wrapper
@@ -46254,6 +46262,7 @@ gamestar.hu,helloworldonline.hu,pcworld.hu###web-push-popup
 gamestlike.com,vtubersokuhou.com##.maintop-widget
 gaming-age.com,freecoursesite.uk###ai_widget-7
 gaming-age.com,infotelematico.com,thumb8.net,hindian.net,bestjoblive.com,geekermag.com###ai_widget-3
+gamingbible.com,ladbible.com,sportbible.com,tyla.com,unilad.com,uniladtech.com##.share-link_container__q9th7
 gamingbible.com,ladbible.com,unilad.co.uk,unilad.com##div[class*="margin-Advert"]
 gamingbible.com,unilad.com##div[data-cypress^="sticky-header"]
 gamingforecast.com,apps2app.com##.demo-float
@@ -46516,7 +46525,6 @@ gizbot.com,oneindia.com###containerPop
 gizchina.it,sematext.com,serveradmin.ru,ricksdailytips.com,intro4u.ru,get-itsolutions.com###wpfront-notification-bar-spacer
 gizguide.com,techcracked.com,novelasesp.blogspot.com###HTML7
 gizmochina.com,prodesigntools.com###wpfront-notification-bar
-gizmodo.com,nymag.com,thisismoney.co.uk,zapimoveis.com.br##.share-link
 gizmodo.com.au,kotaku.com.au,lifehacker.com.au,pedestrian.tv##.ad-no-mobile
 gizmodo.com.au,kotaku.com.au,lifehacker.com.au,pedestrian.tv##.sidebar-outbrain
 gizmodo.com.au,kotaku.com.au,lifehacker.com.au,pedestrian.tv##.top-ad-leaderboard
