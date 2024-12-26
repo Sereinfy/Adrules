@@ -374,14 +374,15 @@ class Filter(object):
         if os.path.exists(fileName):
             os.remove(fileName)    
         with open(fileName, 'a') as f:
-            f.write("!\n")
+            f.write("#\n")
             f.write("# Title: Sereinfy AdBlock DNSMasq Lite\n")
             f.write("# Description: 适用于AdGuard的去广告合并规则，每8个小时更新一次。\n")
-            f.write("! Homepage: https://github.com/Sereinfy/Adrules\n")
-            f.write("! Version: %s\n"%(time.strftime("%Y%m%d%H%M%S", time.localtime())))
-            f.write("! Last modified: %s\n"%(time.strftime("%Y/%m/%d %H:%M:%S", time.localtime())))
-            f.write("! Blocked domains: %s\n"%(len(blockList_lite)))
-            f.write("!\n")
+            f.write("# Homepage: https://github.com/Sereinfy/Adrules\n")
+            f.write("# Source: https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/adblockdnsmasqlite.txt\n")
+            f.write("# Version: %s\n"%(time.strftime("%Y%m%d%H%M%S", time.localtime())))
+            f.write("# Last modified: %s\n"%(time.strftime("%Y/%m/%d %H:%M:%S", time.localtime())))
+            f.write("# Blocked domains: %s\n"%(len(blockList_lite)))
+            f.write("#\n")
             for domain in blockList_lite:
                 f.write("local=/%s/\n"%(domain))
         
