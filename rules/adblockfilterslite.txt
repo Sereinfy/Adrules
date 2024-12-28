@@ -2,9 +2,9 @@
 ! Title: Sereinfy AdBlock Filter Lite
 ! Description: 适用于AdGuard的去广告合并规则，每8个小时更新一次。
 ! Homepage: https://github.com/Sereinfy/Adrules
-! Version: 20241228161850
-! Last modified: 2024/12/28 16:18:50
-! Blocked Filters: 62737
+! Version: 20241229001804
+! Last modified: 2024/12/29 00:18:04
+! Blocked Filters: 62743
 !
 #%#var AG_abortInlineScript=function(g,b,c){var d=function(){if("currentScript"in document)return document.currentScript;var a=document.getElementsByTagName("script");return a[a.length-1]},e=Math.random().toString(36).substr(2,8),h=d();AG_defineProperty(b,{beforeGet:function(){var a=d();if(a instanceof HTMLScriptElement&&a!==h&&""===a.src&&g.test(a.textContent))throw c&&console.warn("AdGuard aborted execution of an inline script"),new ReferenceError(e);}});var f=window.onerror;window.onerror=function(a){if("string"===typeof a&&-1!==a.indexOf(e))return c&&console.warn("AdGuard has caught window.onerror: "+b),!0;if(f instanceof Function)return f.apply(this,arguments)}};
 #%#var AG_abortOnPropertyRead=function(a,b){var c=Math.random().toString(36).substr(2,8);AG_defineProperty(a,{beforeGet:function(){b&&console.warn("AdGuard aborted property read: "+a);throw new ReferenceError(c);}});var d=window.onerror;window.onerror=function(e){if("string"===typeof e&&-1!==e.indexOf(c))return b&&console.warn("AdGuard has caught window.onerror: "+a),!0;if(d instanceof Function)return d.apply(this,arguments)}};
@@ -43209,6 +43209,8 @@ cine-max.sk,cherytr.com##body .cc-nb-main-container
 cineb.app,f2movies.to,streameast.watch#%#//scriptlet("abort-current-inline-script", "JSON.parse", "getPropertyValue('content')")
 cineb.rs,sflix.to##div[id^="hgiks-"]
 cinelatino.net,flixlatam.com,movierr.site,mlwbd.to,flixhub.*###dt_contenedor + div[id][class*=" "]
+cinema-3d.xyz,androidonepro.com,almafhm.online,egyfalcons.com##.popSc
+cinema-3d.xyz,androidonepro.com,almafhm.online,egyfalcons.com#%#//scriptlet('abort-on-property-write', 'checkAdsStatus')
 cinemablend.com,androidcentral.com,creativebloq.com,tomshardware.com,windowscentral.com###slice-container-newsletterForm-articleInbodyContent
 cinemablend.com,livescience.com,gamesradar.com,tomshardware.com,pcgamer.com,windowscentral.com,laptopmag.com,techradar.com##.related-articles-block
 cinemakottaga.*#$##wpsafe-link { display: block !important; }
@@ -56441,6 +56443,8 @@ tvtv.ca,tvtv.us#$#.css-laxwha { height: 2400px !important; }
 tvtv.ca,tvtv.us#$#.css-uc3mu7 { margin-top: 0 !important; height: 2400px !important; }
 tvtv.ca,tvtv.us#$#.gridRowPad { margin-top: 0 !important; }
 tvtv.ca,tvtv.us#%#//scriptlet('set-constant', 'paAddUnit', 'noopFunc')
+tvtv.us,select.mamastar.jp,wort-suchen.de,woxikon.de,dnevno.hr,game8.jp,tportal.hr,forsal.pl,lacuarta.com,dziennik.pl,syosetu.com,powerpyx.com#%#//scriptlet('remove-node-text', 'script', 'html-load.com')
+tvtv.us,select.mamastar.jp,wort-suchen.de,woxikon.de,dnevno.hr,game8.jp,tportal.hr,forsal.pl,lacuarta.com,dziennik.pl,syosetu.com,powerpyx.com$$script:contains(html-load.com)
 tvyb03.com,yemancomic.com,zkk78.com##div[style^="position:fixed;"]
 tweaksforgeeks.com,thesaurus.net,cboard.net,joongdo.co.kr,viva100.com,thephoblographer.com,gamingdeputy.com,alle-tests.nl,maketecheasier.com,automobile-catalog.com,motorbikecatalog.com,jjang0u.com,interfootball.co.kr$$script[tag-content="KCgpPT57bGV0IGU"]
 twgreatdaily.com$$script[tag-content="indexOf|css|fn|this|attr|unselectable|console|empty|copy|contextmenu"]
@@ -57585,8 +57589,6 @@ worldsextrip.com,eigo.plus###text-27
 worldstar.com,worldstarhiphop.com##div[style^="width:972px;height:250px;"]
 worldstarhiphop.com,worldstar.com#%#(()=>{let e,n=!1;const t=function(){};Object.defineProperty(window,"videojs",{get:function(){return e},set:function(o){e=o,!n&&e&&"function"==typeof e.registerPlugin&&(n=!0,e.registerPlugin("skipIma3Unskippable",t))}}),window.SlotTypeEnum={},window.ANAWeb=function(){},window.ANAWeb.prototype.createVideoSlot=function(){},window.ANAWeb.prototype.createSlot=function(){},window.ANAWeb.VideoPlayerType={},window.addEventListener("load",(function(){document.dispatchEvent(new CustomEvent("ANAReady"))}))})();
 worldstreams.watch,leaknud.com#%#//scriptlet('abort-on-property-write', 'afStorage')
-wort-suchen.de,woxikon.de,dnevno.hr,game8.jp,forsal.pl,lacuarta.com,dziennik.pl,syosetu.com,powerpyx.com#%#//scriptlet('remove-node-text', 'script', 'html-load.com')
-wort-suchen.de,woxikon.de,dnevno.hr,game8.jp,tportal.hr,lacuarta.com,dziennik.pl,syosetu.com,powerpyx.com$$script:contains(html-load.com)
 worthplaying.com,psu.com,waytoomany.games,operationrainfall.com,cogconnected.com#$?##disqus_recommendations > iframe[src*="://disqus.com/recommendations/"] { width: 100% !important; }
 woshipm.com##.article--heroAd
 woshipm.com##.article-bottomAd
@@ -58149,6 +58151,10 @@ yourimageshare.com,ovabee.com#%#//scriptlet('abort-on-property-write', 'detectAd
 yourlust.com,fshare.vn##.banner_right
 yoursports.stream,yrsprts.stream##div[style^="width:300px;height:250px;"]
 yoursports.stream,yrsprts.stream##iframe[src^="http://yoursports.stream/watch/now.php"]
+yourstory.com,ajc.com,inews.co.uk#$#.tp-scroll-prevented { overflow: auto !important; touch-action: auto !important; }
+yourstory.com,ajc.com,inews.co.uk#$#div[class^="tp-modal"][style^="z-index: 300050; display: block;"] { display: none !important; }
+yourstory.com,ajc.com,inews.co.uk#$#div[class^="tp-modal"][style^="z-index: 300050; display: block;"] ~ div.tp-backdrop { display: none !important; }
+yourstory.com,ajc.com,inews.co.uk#$#html > body.tp-modal-open { overflow: auto !important; position: static !important; height: auto !important; touch-action: auto !important; }
 yourstory.com,gardenersworld.com#$#.tp-backdrop { display: none !important; }
 yourstory.com,gardenersworld.com#$?#body > div.tp-modal:has(> div.tp-iframe-wrapper > iframe[id^="offer_"]) { display: none !important; }
 yourstory.com,geek.com###newsletter-widget
