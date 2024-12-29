@@ -2517,6 +2517,7 @@ scootertechno.com#$?#div[consent-skip-blocker] { remove: true; }
 !
 ! NOTE: Regular rules
 !
+foreignaffairs.com##._gdpr-banner
 tracking.postnl.nl##pnl-cookie-wall-widget
 antpool.com##.f-cookie
 infoyatirim.com#$##modal-cookie-policy { display: none !important; }
@@ -21370,9 +21371,10 @@ drive2.ru#?#.js-page > div > div[class="x-box x-box--mh o-f"]:has(> script)
 mail.ru#%#//scriptlet('set-constant', 'Object.prototype.hideTgbAd', '', '', 'asResolved')
 mail.ru##div[slot="main-column"] > div.stripe-wrapper
 ! e.mail.ru
-e.mail.ru,octavius.mail.ru#%#//scriptlet('abort-on-stack-trace', 'Promise', 'onSlotRender')
+news.mail.ru,e.mail.ru,octavius.mail.ru#%#//scriptlet('abort-on-stack-trace', 'Promise', 'onSlotRender')
 e.mail.ru,octavius.mail.ru#%#//scriptlet('remove-class', 'letter-list_top-line-adv-2pane|letter-list_top-line-adv-2pane_pony-mode', '.letter-list')
 mail.ru#?#body > div > style + div:has(> div > div.description:contains(/До[баба]вьт[ее] Mail в исключения/))
+news.mail.ru##body > div:has(> div[id] > div > div.title:contains(блокировщика рекламы))
 ! dzen.ru
 ! Ads in news
 dzen.ru#%#//scriptlet('json-prune', 'ssrData.exportResponse.feedData.adItems')
@@ -25868,6 +25870,7 @@ api.flocktory.com
 !
 ! SECTION: Popups - Regular rules
 !
+r34.app#%#//scriptlet('set-local-storage-item', 'statistics-appOpenedCount', '0')
 yucne.com#%#//scriptlet('prevent-setTimeout', 'showed_system_notice')
 whois.com###offer_bar
 usamart.shop##.umr_bnr_fixed
@@ -34445,6 +34448,7 @@ armidaleexpress.com.au,bendigoadvertiser.com.au,canberratimes.com.au,centralwest
 !
 ! SECTION: Subscriptions - Regular rules
 !
+foreignaffairs.com##.article-newsletter-signup--container
 incrussia.ru##.stk-post > div.stk-grid:has(> div.stk-grid-col a[href^="https://zen.yandex.ru/"])
 gala.fr##.fig-newsletter-box
 yahoo.com##div[data-article-body] > div[class="col-body md:hidden"]:has(form[aria-label="Newsletter sign up form"])
@@ -47330,7 +47334,7 @@ digitalvidya.com###text-13
 digitalvidya.com###text-8
 digitalvidya.com###text-21
 ! "Foreign agents" / "Иностранные агенты"
-levada.ru###ebala
+nasiliu.net,levada.ru###ebala
 verstka.media#?#.vm-single-post-content > p:contains(ИНОСТРАННЫМ АГЕНТОМ)
 kavkaz-uzel.eu#?#.articles-body_contents > p:contains(ИНОСТРАННЫМ АГЕНТОМ)
 thebell.io#?#.post_content > p:contains(ПРОИЗВЕДЕН И РАСПРОСТРАНЕН ИНОСТРАННЫМ АГЕНТОМ)
@@ -51404,6 +51408,7 @@ book.oricon.co.jp##a[href^="https://apay-up-banner.com?merchantId="] > img
 !
 ! SECTION: Self-promo - Regular rules
 !
+r34.app##figure.-mx-1.mt-4:has(> a[href*="&utm_"])
 klerk.ru##.advertising-text-block
 klerk.ru##.w-full > section:has(> ul > li > a[href^="/learn/event/"])
 dzen.ru##div[class*="__bannerContainer-"]
