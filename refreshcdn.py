@@ -22,20 +22,20 @@ class RefreshCDN(object):
 
     def __getRuleList(self, pwd:str) -> List[str]:
         L = []
-        cmd = 'cd %s && ls | grep .txt' %(pwd)
+        cmd = 'cd %s && ls' %(pwd)
         process = os.popen(cmd)
         output = process.read()
         process.close()
         result = output.split("\n")
         for fileName in result:
-            if len(fileName) >0 and fileName not in self.blockList:
+            if os.path.isfile("%s/%s"%(pwd, fileName)) and fileName not in self.blockList:
                 L.append(fileName)
         return L
 
     async def __refresh(self, fileName):
         try:
             async with httpx.AsyncClient() as client:
-                response = await client.get("https://purge.jsdelivr.net/gh/217heidai/adblockfilters@main/rules/%s"%(fileName))
+                response = await client.get("https://purge.jsdelivr.net/gh/Sereinfy/Adrules@main/rules/%s"%(fileName))
                 response.raise_for_status()
                 status = response.json().get("status", "")
                 logger.info(f'%s refresh status: %s' % (fileName, status))
