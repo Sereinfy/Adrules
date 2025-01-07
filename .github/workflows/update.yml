@@ -44,6 +44,7 @@ jobs:
           cp readme/README.md .
           sed -i '/Star History/d' readme.py
           sed -i 's/217heidai\/adblockfilters\/main/Sereinfy\/Adrules\/main/g' readme.py
+          find /community/app -type f -print0 | xargs -0 sed -i 's/217heidai\/adblockfilters/Sereinfy\/Adrules/g'
           sed -i 's/个人收藏了不少广告过滤规则.*/Forked From [217heidai\/adblockfilters](https:\/\/github.com\/217heidai\/adblockfilters) \\n")/' readme.py
           sed -i '/f.write("! Source/d' filter.py
           sed -i 's/Description.*/Description: 适用于AdGuard的去广告合并规则，每8个小时更新一次。\\n")/' filter.py
