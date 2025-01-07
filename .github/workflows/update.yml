@@ -15,24 +15,24 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@main
         
-      - name: Checkout 217heidai/adblockfilters
+      - name: add Checkout 217heidai/adblockfilters
         uses: actions/checkout@v4
         with:
           repository: 217heidai/adblockfilters
           path: community
-
+          
       - name: Setup Python 3.9.x
         uses: actions/setup-python@main
         with:
           python-version: '3.9.x'
-          
+
       - name: Install Dependencies
         run: |
           sudo timedatectl set-timezone "$TZ"
           python -m pip install --upgrade pip
           pip install -U tld IPy dnspython httpx loguru
-          
-      - name: Copy files
+
+      - name: add Modify source file
         run: |
           [ -d "rules" ] || mkdir rules
           rm -rf *.*
@@ -40,9 +40,6 @@ jobs:
           mv community/*.* ./
           rm -rf community*
           cp readme/README.md .
-
-      - name: Modify source file
-        run: |
           sed -i '/Star History/d' readme.py
           sed -i 's/217heidai\/adblockfilters\/main/Sereinfy\/Adrules\/main/g' readme.py
           sed -i 's/个人收藏了不少广告过滤规则.*/Forked From [217heidai\/adblockfilters](https:\/\/github.com\/217heidai\/adblockfilters) \\n")/' readme.py
@@ -51,22 +48,16 @@ jobs:
           sed -i 's/217heidai\/adblockfilters/Sereinfy\/Adrules/g' filter.py
           sed -i 's/Title: AdBlock DNS/Title: Sereinfy AdBlock DNS/' filter.py
           sed -i 's/Title: AdBlock Filter/Title: Sereinfy AdBlock Filter/' filter.py
-        
+          
       - name: Update Filters
+        id: update
         run: |
           python adblock.py
           rm -rf __pycache__
+          rm -rf app/__pycache__
           echo "message=$(date)" >> $GITHUB_OUTPUT
 
-      - name: Generate clash file
-        run: |
-          python readme/clash.py rules/adblockdnslite.txt rules/dnslite_for_clash.yaml
-          python readme/clash.py rules/adblockdns.txt rules/dns_for_clash.yaml
-          python readme/line.py
-          rm -rf __pycache__
-          echo "message=$(date)" >> $GITHUB_OUTPUT
-          
-      - name: Commit Changes
+      - name: add Commit Changes
         run: |
           Emoji=("🎉" "🤞" "✨" "🎁" "🎈" "🎄" "🎨" "🍓" "🍕" "🍉" "💐" "🌴" "🚀" "🛸" "🗽" "⛅" "🌈" "🔥" "⛄" "🐶" "🏅" "🦄" "🐤")
           git add .
@@ -74,7 +65,34 @@ jobs:
           git config --local user.name "GitHub Action"
           git commit -m "${Emoji[$[$RANDOM % ${#Emoji[@]}]]} Sync $(date +%Y-%m-%d" "%H:%M:%S)"
           git push -f -u origin main
-          
+  
+  Refresh_CDN:
+    needs: [ Update_Filters ]
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@main
+      
+      - name: Setup Python 3.9.x
+        uses: actions/setup-python@main
+        with:
+          python-version: '3.9.x'
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -U tld IPy dnspython httpx loguru
+      
+      - name: Refsh CDN Cache
+        run: |
+          python refreshcdn.py
+
+  Delete_Workflow_Runs:
+    needs: [ Refresh_CDN ]
+    runs-on: ubuntu-latest
+
+    steps:
       - name: Delete workflow runs
         uses: Mattraks/delete-workflow-runs@main
         with:
