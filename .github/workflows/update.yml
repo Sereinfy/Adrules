@@ -34,8 +34,8 @@ jobs:
 
       - name: add Modify source file
         run: |
-          find . -mindepth 1 -not -name 'readme' -not -name 'community' -not -name '.*' -exec rm -rf {} +
-          mv community/* ./
+          # find . -mindepth 1 -not -name 'readme' -not -name 'community' -not -name '.*' -exec rm -rf {} +
+          mv -f community/* ./
           rm -rf community*
           cp readme/README.md .
           sed -i '/Star History/d' readme.py
