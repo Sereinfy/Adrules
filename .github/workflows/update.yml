@@ -36,10 +36,11 @@ jobs:
         run: |
           [ -d "rules" ] || mkdir rules
           rm -rf *.*
-          mv community/rules/white.txt rules/
+          # mv community/rules/white.txt rules/
+          mv community/* ./
           # mv community/app/* ./
           # mv community/*.* ./
-          rsync -av --exclude='rules' community/ ./
+          # rsync -av --exclude='rules' community/ ./
           rm -rf community*
           cp readme/README.md .
           sed -i '/Star History/d' readme.py
