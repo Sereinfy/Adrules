@@ -37,7 +37,7 @@ jobs:
           [ -d "rules" ] || mkdir rules
           rm -rf *.*
           mv community/rules/white.txt rules/
-          mv community/app/ ./
+          mv community/app/* ./
           mv community/*.* ./
           rm -rf community*
           cp readme/README.md .
