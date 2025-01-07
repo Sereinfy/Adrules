@@ -33,6 +33,7 @@ class InviZible(APPBase):
                     f.write("! Title: AdBlock InviZible\n")
                     f.write("! Description: 适用于 InviZible Pro、personalDNSfilter 的去广告合并规则，每 8 个小时更新一次。规则源：%s。\n"%(self.sourceRule))
                 f.write("! Homepage: %s\n"%(self.homepage))
+                f.write("! Source: %s/%s\n"%(self.source, os.path.basename(fileName)))
                 f.write("! Version: %s\n"%(self.version))
                 f.write("! Last modified: %s\n"%(self.time))
                 f.write("! Blocked domains: %s\n"%(len(blockList)))
