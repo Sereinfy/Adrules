@@ -45,11 +45,14 @@ jobs:
           sed -i 's/个人收藏了不少广告过滤规则.*/Forked From [217heidai\/adblockfilters](https:\/\/github.com\/217heidai\/adblockfilters) \\n")/' readme.py
           find . -type f -name "*.py" -exec sed -i '/f.write("! Source/d' {} +
           find . -type f -name "*.py" -exec sed -i '/f.write("! Description/d' {} +
-          
+
       - name: Update Filters
         id: update
         run: |
           python adblock.py
+          python readme/clash.py rules/adblockdnslite.txt rules/dnslite_for_clash.yaml
+          python readme/clash.py rules/adblockdns.txt rules/dns_for_clash.yaml
+          python readme/line.py
           rm -rf __pycache__
           rm -rf app/__pycache__
           echo "message=$(date)" >> $GITHUB_OUTPUT
@@ -59,6 +62,33 @@ jobs:
         with:
           commit_message: ${{ steps.update.outputs.message }}
   
+  Refresh_CDN:
+    needs: [ Update_Filters ]
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@main
+      
+      - name: Setup Python 3.9.x
+        uses: actions/setup-python@main
+        with:
+          python-version: '3.9.x'
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -U tld IPy dnspython httpx loguru
+      
+      - name: Refsh CDN Cache
+        run: |
+          python refreshcdn.py
+
+  Delete_Workflow_Runs:
+    needs: [ Refresh_CDN ]
+    runs-on: ubuntu-latest
+
+    steps:
       - name: Delete workflow runs
         uses: Mattraks/delete-workflow-runs@main
         with:
