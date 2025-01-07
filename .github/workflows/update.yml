@@ -35,7 +35,7 @@ jobs:
       - name: add Modify source file
         run: |
           rm -rf app* rules* *.*
-          mv -f community/* ./
+          mv community/* ./
           rm -rf community*
           cp readme/README.md .
           sed -i '/Star History/d' readme.py
