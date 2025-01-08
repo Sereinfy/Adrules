@@ -1,9 +1,9 @@
 !
 ! Title: AdBlock Filter Lite
 ! Homepage: https://github.com/Sereinfy/Adrules
-! Version: 20250108003326
-! Last modified: 2025/01/08 00:33:26
-! Blocked Filters: 62151
+! Version: 20250108091425
+! Last modified: 2025/01/08 09:14:25
+! Blocked Filters: 62150
 !
 #%#var AG_abortInlineScript=function(g,b,c){var d=function(){if("currentScript"in document)return document.currentScript;var a=document.getElementsByTagName("script");return a[a.length-1]},e=Math.random().toString(36).substr(2,8),h=d();AG_defineProperty(b,{beforeGet:function(){var a=d();if(a instanceof HTMLScriptElement&&a!==h&&""===a.src&&g.test(a.textContent))throw c&&console.warn("AdGuard aborted execution of an inline script"),new ReferenceError(e);}});var f=window.onerror;window.onerror=function(a){if("string"===typeof a&&-1!==a.indexOf(e))return c&&console.warn("AdGuard has caught window.onerror: "+b),!0;if(f instanceof Function)return f.apply(this,arguments)}};
 #%#var AG_abortOnPropertyRead=function(a,b){var c=Math.random().toString(36).substr(2,8);AG_defineProperty(a,{beforeGet:function(){b&&console.warn("AdGuard aborted property read: "+a);throw new ReferenceError(c);}});var d=window.onerror;window.onerror=function(e){if("string"===typeof e&&-1!==e.indexOf(c))return b&&console.warn("AdGuard has caught window.onerror: "+a),!0;if(d instanceof Function)return d.apply(this,arguments)}};
@@ -26927,7 +26927,6 @@
 ##section > SPAN[style='display: block; clear: both; overflow: hidden;']
 ##section.global_video_bottom_dbtc
 ##section.wrap > section.f0
-##section[class^="img_"] > div[id^="img_"][class^="img_"][draggable="false"]
 ##section[data-e2e="advertisement"]
 ##share-action
 ##span > A[href='###']
@@ -26949,8 +26948,6 @@
 ##ul.thread_detail_ads
 ##vg-pause-ads
 ##vg-pause-f
-##video[id^="img_"][muted]
-##video[poster*=".html-load.com/contents/"]
 ##wecoma-lite
 ##zeus-ad
 $$script[wildcard="*adcashMacros*zoneSett*"][min-length="2000"][max-length="25000"]
@@ -28546,6 +28543,7 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 .sendibm1.com/*.gif?
 .sendibm1.com/mk/
 .sendibt2.com/tr/op/$image
+.sendibt3.com/tr/op/$image
 .sharebar.js
 .sharecounter.$third-party
 .sharing.js
@@ -31860,7 +31858,7 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 /impression/inline?
 /impression/track?
 /impression?mkevt=
-/impressions?
+/impressions?$~xmlhttprequest
 /in.getclicky.com/*
 /in.gif?url=
 /in.php?referer=
@@ -40279,7 +40277,6 @@ advalue.pl,progesoft.com##.gdpr_cookie_notice
 advancedplm.eu,global-office.de,toplitz-productions.com##.mod_cookiebar_optin
 advancedrenamer.com,androidrepublic.org,anonymousemail.me,apkmirror.com,cdromance.com,demos.krajee.com,epicbundle.com,korail.pe.kr,nextbigtrade.com,phcorner.net,pixiz.com,skmedix.pl,spoilertv.com,teemo.gg,willyoupressthebutton.com#@#ins.adsbygoogle[data-ad-client]
 advancedrenamer.com,androidrepublic.org,anonymousemail.me,apkmirror.com,cdromance.com,demos.krajee.com,epicbundle.com,korail.pe.kr,nextbigtrade.com,phcorner.net,pixiz.com,skmedix.pl,spoilertv.com,teemo.gg,willyoupressthebutton.com#@#ins.adsbygoogle[data-ad-slot]
-advantec.co.jp,fn.se,qbhouse.co.jp,temp.mailsenpai.com,mailtemp.uk,codes.com.ua,gov.hu,cbjinternational.com,garageequipment.co.uk,croatiaairlines.hr,trashinbox.net,proglib.io,trashmail.ws,spambox.xyz,rainmail.xyz,promokod.pravda.com.ua,proantic.com,tel.co.jp,higrosystem.com,tmail.io,ehime-u.ac.jp,webextension.org,dartshopper.it,emecze.pl,oddslivesport.com,tempumail.com,regionalmarke-eifel.de,mennicaeuropejska.pl,supermonety.pl,flowfitonline.com,kolejkowo.pl,disco-polo.eu,bleachpraylove.com,tempinbox.xyz,docmicro.com,kocailem.com,macnica.co.jp,adressmonster.de,bimibrocolis.pt,bimibrocoli.fr,bimiparsakaali.fi,bimi.es,bimibroccoli.*,bimibrokkoli.de,bimibrokkoli.no,fiberatlantic.com,europe-mountains.com,krs-online.com.pl,pap.pl,batimag.ch,hug-baustoffe.ch,mecze24.pl,usehead.ru,plugshare.com,brodrene.eu,taishukan.co.jp,fundacjapolsat.pl,wikibrief.org,bonuspiu.com.tr,order.wreckfestgame.com,brasty.de,goetheweb.jp,prodirectbasketball.com,safe-animal.eu,bangkokbiznews.com,thansettakij.com,komchadluek.net,springnews.co.th,nationtv.tv,tnews.co.th,myoffice.ru,hanet.com.pl,trzmiel.com.pl,1cgames.net,intellinews.com,esselunga.it,vitraglobal.com,uhren4you.de,mecze.com,unwire.hk,daiichisankyo-ep.co.jp,positronx.io,yoyogames.com,logsign.com,astra-honda.com,twist.com.tr,publi24.ro,bauernzeitung.ch,cerrahi.com.tr,lescon.com.tr,europa-lkw.de,kidega.com,kordsa.com,lisacharlotterost.de,lawebdelprogramador.com,lvr.de,ostsee.de,klinik-langenfeld.lvr.de,klinik-koeln.lvr.de,leitz-cloud.com,leib-immobilien.de,activex.com.tr,evyap.com.tr,kobiety.pl,straganzdrowia.pl,e-tesettur.com.tr,suzuki.ch,arkomen.com,deutsches-ausschreibungsblatt.de,negozi.fastweb.it,gaboras.com.tr,sygic.com,turkey.astonmartindealers.com,add0n.com,8gunhaber.com,proglib.io,antonimy.net,gamedot.pl,teamquest.pl,stema.istore.pl,findeks.com,kube.no,sklep.xerima.com.pl,vitra.com.tr###cookie
 advego.com,figshare.com#@#.share-block
 adventisten.de,hopetv.de#%#//scriptlet('trusted-set-local-storage-item', 'CookiesConsent', '{"necessary":true,"functional":true}')
 adventskalender-gewinnspiele.de,weihnachtsmarkt-finder.de##.shr
@@ -42177,6 +42174,7 @@ blackhatworld.com,forum.redfox.bz,macrumors.com,platinmods.com##.notice--enableP
 blackstonefootwear.com,meteomedia.com,theweathernetwork.com##div[data-testid="cookie-bar"]
 blaklader.*#@##onetrust-consent-sdk
 blanktext.co,finbold.com,gizmodo.com,radio.net##.min-h-\[250px\]
+bldmiraishokuhin.jp,advantec.co.jp,fn.se,qbhouse.co.jp,temp.mailsenpai.com,mailtemp.uk,codes.com.ua,gov.hu,cbjinternational.com,garageequipment.co.uk,croatiaairlines.hr,trashinbox.net,proglib.io,trashmail.ws,spambox.xyz,rainmail.xyz,promokod.pravda.com.ua,proantic.com,tel.co.jp,higrosystem.com,tmail.io,ehime-u.ac.jp,webextension.org,dartshopper.it,emecze.pl,oddslivesport.com,tempumail.com,regionalmarke-eifel.de,mennicaeuropejska.pl,supermonety.pl,flowfitonline.com,kolejkowo.pl,disco-polo.eu,bleachpraylove.com,tempinbox.xyz,docmicro.com,kocailem.com,macnica.co.jp,adressmonster.de,bimibrocolis.pt,bimibrocoli.fr,bimiparsakaali.fi,bimi.es,bimibroccoli.*,bimibrokkoli.de,bimibrokkoli.no,fiberatlantic.com,europe-mountains.com,krs-online.com.pl,pap.pl,batimag.ch,hug-baustoffe.ch,mecze24.pl,usehead.ru,plugshare.com,brodrene.eu,taishukan.co.jp,fundacjapolsat.pl,wikibrief.org,bonuspiu.com.tr,order.wreckfestgame.com,brasty.de,goetheweb.jp,prodirectbasketball.com,safe-animal.eu,bangkokbiznews.com,thansettakij.com,komchadluek.net,springnews.co.th,nationtv.tv,tnews.co.th,myoffice.ru,hanet.com.pl,trzmiel.com.pl,1cgames.net,intellinews.com,esselunga.it,vitraglobal.com,uhren4you.de,mecze.com,unwire.hk,daiichisankyo-ep.co.jp,positronx.io,yoyogames.com,logsign.com,astra-honda.com,twist.com.tr,publi24.ro,bauernzeitung.ch,cerrahi.com.tr,lescon.com.tr,europa-lkw.de,kidega.com,kordsa.com,lisacharlotterost.de,lawebdelprogramador.com,lvr.de,ostsee.de,klinik-langenfeld.lvr.de,klinik-koeln.lvr.de,leitz-cloud.com,leib-immobilien.de,activex.com.tr,evyap.com.tr,kobiety.pl,straganzdrowia.pl,e-tesettur.com.tr,suzuki.ch,arkomen.com,deutsches-ausschreibungsblatt.de,negozi.fastweb.it,gaboras.com.tr,sygic.com,turkey.astonmartindealers.com,add0n.com,8gunhaber.com,proglib.io,antonimy.net,gamedot.pl,teamquest.pl,stema.istore.pl,findeks.com,kube.no,sklep.xerima.com.pl,vitra.com.tr###cookie
 bleacherreport.com,coles.com.au##[data-testid="ad"]
 bleedingcool.com,heatmap.news,jamaicaobserver.com###bottom_leaderboard
 bleedingcool.com,jamaicaobserver.com,pastemagazine.com###top_leaderboard
@@ -42536,6 +42534,10 @@ browardpalmbeach.com,dallasobserver.com,miaminewtimes.com,phoenixnewtimes.com,we
 browardpalmbeach.com,dallasobserver.com,miaminewtimes.com,phoenixnewtimes.com,westword.com##.AirMediumRectangleComboInlineContent
 browardpalmbeach.com,dallasobserver.com,miaminewtimes.com,phoenixnewtimes.com,westword.com##.fdn-site-header-ad-block
 browardpalmbeach.com,dallasobserver.com,miaminewtimes.com,phoenixnewtimes.com,westword.com##[apn-ad-hook]
+brr-69xwmut5-moo.com,moo-teau4c9h-mkay.com,6v254h9v.xyz,fle-rvd0i9o8-moo.com,fle-2ggdmu8q-moo.com,u6lyxl0w.xyz,iqksisgw.xyz,filemoon-j0l2wxjk.com,moon-4uemks89-embed.com,4k2h4w04.xyz,file-mi11ljwj-embed.com,moonfile-62es3l9z.com,moon-kg83docx.com,file-1bl9ruic-moon.com,moon-fm43w1qv.com,jmzkzesy.xyz,filemoon-qm3chdkh.xyz,altyazilivipx3.shop,filemoon.*#%#//scriptlet('abort-on-property-read', 'Cuba')
+brr-69xwmut5-moo.com,moo-teau4c9h-mkay.com,6v254h9v.xyz,fle-rvd0i9o8-moo.com,fle-2ggdmu8q-moo.com,u6lyxl0w.xyz,iqksisgw.xyz,filemoon-j0l2wxjk.com,moon-4uemks89-embed.com,4k2h4w04.xyz,file-mi11ljwj-embed.com,moonfile-62es3l9z.com,moon-kg83docx.com,file-1bl9ruic-moon.com,moon-fm43w1qv.com,jmzkzesy.xyz,filemoon-qm3chdkh.xyz,altyazilivipx3.shop,filemoon.*$$script:contains(/\.add\([\s\S]*?under:[\s\S]*?newTab:/)
+brr-69xwmut5-moo.com,moo-teau4c9h-mkay.com,6v254h9v.xyz,fle-rvd0i9o8-moo.com,fle-2ggdmu8q-moo.com,u6lyxl0w.xyz,iqksisgw.xyz,filemoon-j0l2wxjk.com,moon-4uemks89-embed.com,4k2h4w04.xyz,file-mi11ljwj-embed.com,moonfile-62es3l9z.com,moon-kg83docx.com,file-1bl9ruic-moon.com,moon-fm43w1qv.com,jmzkzesy.xyz,filemoon-qm3chdkh.xyz,altyazilivipx3.shop,fmembed.cc,rgeyyddl.skin,kerapoxy.cc,fmoonembed.*,defienietlynotme.com,embedme.*,filemoon.*,finfang.*,hellnaw.*,moonembed.*,sulleiman.com,vpcxz19p.xyz,z12z0vla.*#%#//scriptlet('abort-on-property-read', 'popns')
+brr-69xwmut5-moo.com,moo-teau4c9h-mkay.com,6v254h9v.xyz,fle-rvd0i9o8-moo.com,fle-2ggdmu8q-moo.com,u6lyxl0w.xyz,iqksisgw.xyz,filemoon-j0l2wxjk.com,moon-4uemks89-embed.com,4k2h4w04.xyz,file-mi11ljwj-embed.com,moonfile-62es3l9z.com,moon-kg83docx.com,file-1bl9ruic-moon.com,moon-fm43w1qv.com,jmzkzesy.xyz,filemoon-qm3chdkh.xyz,altyazilivipx3.shop,fmembed.cc,rgeyyddl.skin,kerapoxy.cc,fmoonembed.*,defienietlynotme.com,embedme.*,filemoon.*,finfang.*,hellnaw.*,moonembed.*,sulleiman.com,vpcxz19p.xyz,z12z0vla.*#%#//scriptlet('prevent-window-open')
 brtn.cn,btime.com##.business-box
 brtn.cn,btime.com##.business-item
 brtn.cn,btime.com##.promo-item > a[href^="http"]:not([href*=".b"])
@@ -50895,10 +50897,6 @@ mononews.gr,billboard.com,sakshi.com,natro.com,touristica.com.tr,gramwzielone.pl
 mononews.gr,the-decoder.com,sporx.com,nowymarketing.pl,gsgazete.com,ortacizgi.com,topontiki.gr,pronews.gr,vietnamplus.vn,ultimate-guitar.com,habervitrini.com,dirilispostasi.com,aydinhedef.com.tr,akcakocatv.com,yenibakis.com.tr,teknodiot.com,haber46.com.tr,haberdenizli.com,orduyorum.com,sakaryagazetesi.com.tr,esgazete.com,akdenizgercek.com.tr,sehrivangazetesi.com,diyanethaber.com.tr,trhaber.com,aydinpost.com,fanatik.com.tr,plo.vn,glivice.pl,slazag.pl,bytomski.pl,piekary.info,twojknurow.pl,nowinytyskie.pl,ngs24.pl,24kato.pl,rudzianin.pl,zabrzenews.pl,chorzowski.pl,tarnowskiegory.info,24zaglebie.pl,laodong.vn,wanhaber.com,kazete.com.tr,kanalmaras.com,haber61.net,tv100.com,iscihaber.net,eskisehirhaber.com,elinformador.com.co,emlak365.com,ensonhaber.com,edehaber.com.tr,gazeteyenigun.com.tr,gazetevan.com,tv5.com.tr,kamugundemi.com,playtech.ro,birgun.net,sosyaltv.com.tr,tamindir.com,engelli.com,medyafaresi.com,haberlobi.com,kamudanhaber.net,habervakti.com,ntv.com.tr,ntvspor.net,haberglobal.com.tr,cumhuriyet.com.tr,kyiv.media##.google-news
 monoschinos.com,animeshd.online,streamsport.pro,soccerstreams.net,123mkv.*,bagas31.info,akwam.*,file-upload.com,bacakomik.co,mangasee123.com,anitube.biz,dramacool9.co,downloadhub.*,videomega.co,gdriveplayer.me,vidsrc.*,skymovieshd.*#%#//scriptlet("abort-on-property-write", "GLX_GLOBAL_UUID_RESULT")
 monoschinos2.com,highporn.net,kissanimex.com##._ciw-widget
-moo-teau4c9h-mkay.com,6v254h9v.xyz,fle-rvd0i9o8-moo.com,fle-2ggdmu8q-moo.com,u6lyxl0w.xyz,iqksisgw.xyz,filemoon-j0l2wxjk.com,moon-4uemks89-embed.com,4k2h4w04.xyz,file-mi11ljwj-embed.com,moonfile-62es3l9z.com,moon-kg83docx.com,file-1bl9ruic-moon.com,moon-fm43w1qv.com,jmzkzesy.xyz,filemoon-qm3chdkh.xyz,altyazilivipx3.shop,filemoon.*#%#//scriptlet('abort-on-property-read', 'Cuba')
-moo-teau4c9h-mkay.com,6v254h9v.xyz,fle-rvd0i9o8-moo.com,fle-2ggdmu8q-moo.com,u6lyxl0w.xyz,iqksisgw.xyz,filemoon-j0l2wxjk.com,moon-4uemks89-embed.com,4k2h4w04.xyz,file-mi11ljwj-embed.com,moonfile-62es3l9z.com,moon-kg83docx.com,file-1bl9ruic-moon.com,moon-fm43w1qv.com,jmzkzesy.xyz,filemoon-qm3chdkh.xyz,altyazilivipx3.shop,filemoon.*$$script:contains(/\.add\([\s\S]*?under:[\s\S]*?newTab:/)
-moo-teau4c9h-mkay.com,6v254h9v.xyz,fle-rvd0i9o8-moo.com,fle-2ggdmu8q-moo.com,u6lyxl0w.xyz,iqksisgw.xyz,filemoon-j0l2wxjk.com,moon-4uemks89-embed.com,4k2h4w04.xyz,file-mi11ljwj-embed.com,moonfile-62es3l9z.com,moon-kg83docx.com,file-1bl9ruic-moon.com,moon-fm43w1qv.com,jmzkzesy.xyz,filemoon-qm3chdkh.xyz,altyazilivipx3.shop,fmembed.cc,rgeyyddl.skin,kerapoxy.cc,fmoonembed.*,defienietlynotme.com,embedme.*,filemoon.*,finfang.*,hellnaw.*,moonembed.*,sulleiman.com,vpcxz19p.xyz,z12z0vla.*#%#//scriptlet('abort-on-property-read', 'popns')
-moo-teau4c9h-mkay.com,6v254h9v.xyz,fle-rvd0i9o8-moo.com,fle-2ggdmu8q-moo.com,u6lyxl0w.xyz,iqksisgw.xyz,filemoon-j0l2wxjk.com,moon-4uemks89-embed.com,4k2h4w04.xyz,file-mi11ljwj-embed.com,moonfile-62es3l9z.com,moon-kg83docx.com,file-1bl9ruic-moon.com,moon-fm43w1qv.com,jmzkzesy.xyz,filemoon-qm3chdkh.xyz,altyazilivipx3.shop,fmembed.cc,rgeyyddl.skin,kerapoxy.cc,fmoonembed.*,defienietlynotme.com,embedme.*,filemoon.*,finfang.*,hellnaw.*,moonembed.*,sulleiman.com,vpcxz19p.xyz,z12z0vla.*#%#//scriptlet('prevent-window-open')
 mooc1.chaoxing.com#@#iframe[width="100%"][height="120"]:not([src*="bandcamp.com"])
 moomoo.io,krunker.io###consentBlock
 moonbit.co.in,moondoge.co.in,moonliteco.in,moondash.co.in##.btn-sm.btn-coin
@@ -53743,7 +53741,6 @@ sdzbcg.com##td[width="580"][height="279"] > table:nth-child(2n-1)
 se.pl,eska.pl,eskago.pl,eskarock.pl,fokus.tv,grupazpr.pl,mjakmama24.pl,nowa.tv,radioplus.pl,towideo.pl,voxfm.pl###mpc_cookie_intro
 se.pl,poradnikzdrowie.pl###hook_box_topboard
 sea-group.org###text-7
-seaparadise.co.jp,aqua-park.jp##.el-cookie
 search.bilibili.com##.video-list > div.col_3:has(> div.bili-video-card > div.bili-video-card__wrap > a[href*="&csource="])
 search.bilibili.com#?#.video-list > div.col_3:has(> div.bili-video-card a[href*="//cm.bilibili.com/"])
 search.brave.com,thesportsrush.com##[data-type="ad"]
@@ -56080,6 +56077,7 @@ uktvplay.co.uk,uktvplay.uktv.co.uk#%#//scriptlet('prevent-fetch', 'v.fwmrm.net')
 uktvplay.co.uk,uktvplay.uktv.co.uk#%#//scriptlet('prevent-xhr', 'v.fwmrm.net')
 ultrahorny.com,veporn.com##.ads-on-player
 umaumanews.com,karapaia.com,blog.fc2.com,blog.jp###blogroll
+umigatari.jp,seaparadise.co.jp,aqua-park.jp##.el-cookie
 unblocked.*##div[class="hidden-xs hidden-sm"] > div[class$="-bordered"]
 unblocked.*##script[type="application/javascript"] + div[class$="-bordered"]
 unblocked.*,yifyhdtorrent.org,dudestream.com,webserver.one,eztv.yt,sanoybonito.club,freestreams-live1.com,f1livegp.me,1bit.space,kiwiexploits.com,proxybit.casa,1337x.to,c-ut.com,picbaron.com,imgbaron.com,onlystream.tv,ouo.press,newepisodes.co,mp4upload.com,openloadmovies.ws,yts.mx#%#//scriptlet("abort-on-property-read", "runAdblock")
@@ -61637,6 +61635,7 @@ zzzyk.com###Tinfo
 ||tuyiyi.com/tuyiyi/m.js
 ||tv.sohu.com/upload/csad/admaster/$image
 ||tvhay.*/ads/popup-tt.js$~third-party,script
+||tvwiki*.com/AD
 ||tx-live-cover.msstatic.com/huyalive/*/format,webp/$image
 ||txzqw.*/js/float.js
 ||typeform.com/*/insights/events^
