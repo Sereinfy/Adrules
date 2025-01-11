@@ -1,9 +1,9 @@
 !
 ! Title: AdBlock Filter Lite
 ! Homepage: https://github.com/Sereinfy/Adrules
-! Version: 20250111091430
-! Last modified: 2025/01/11 09:14:30
-! Blocked Filters: 61901
+! Version: 20250111161910
+! Last modified: 2025/01/11 16:19:10
+! Blocked Filters: 61921
 !
 #%#var AG_abortInlineScript=function(g,b,c){var d=function(){if("currentScript"in document)return document.currentScript;var a=document.getElementsByTagName("script");return a[a.length-1]},e=Math.random().toString(36).substr(2,8),h=d();AG_defineProperty(b,{beforeGet:function(){var a=d();if(a instanceof HTMLScriptElement&&a!==h&&""===a.src&&g.test(a.textContent))throw c&&console.warn("AdGuard aborted execution of an inline script"),new ReferenceError(e);}});var f=window.onerror;window.onerror=function(a){if("string"===typeof a&&-1!==a.indexOf(e))return c&&console.warn("AdGuard has caught window.onerror: "+b),!0;if(f instanceof Function)return f.apply(this,arguments)}};
 #%#var AG_abortOnPropertyRead=function(a,b){var c=Math.random().toString(36).substr(2,8);AG_defineProperty(a,{beforeGet:function(){b&&console.warn("AdGuard aborted property read: "+a);throw new ReferenceError(c);}});var d=window.onerror;window.onerror=function(e){if("string"===typeof e&&-1!==e.indexOf(c))return b&&console.warn("AdGuard has caught window.onerror: "+a),!0;if(d instanceof Function)return d.apply(this,arguments)}};
@@ -27896,7 +27896,6 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 -cookiePolicy.
 -cookieconsent-
 -cookies-policy.
--detect-adblock.
 -dfp-prebid-
 -didomi.js
 -display-ads.
@@ -30201,7 +30200,6 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 /banner468x60_live173.
 /banner_468.$image
 /banner_ads/*$~xmlhttprequest,domain=~clickbd.com
-/bannerad3.js$script
 /bannerads/*$~xmlhttprequest,domain=~coldwellbankerhomes.com
 /bannerpop/uploads/*
 /banners*swf
@@ -32572,7 +32570,6 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 /nielsen.js
 /nilesoft.org\/assets\/js\/lib\/[a-f0-9]+$/$domain=nilesoft.org
 /njs.gif?
-/nlRUM.js
 /nlogger.js
 /nm/itracking?
 /nm_trck.gif?$domain=spiegel.de
@@ -35105,6 +35102,16 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 1111.baidu.com,jump.bdimg.com,tieba.baidu.com,tieba.com,xingqu.baidu.com##.topic_list_box
 112amersfoort.nl,112amsterdam.nl,112apeldoorn.nl,112arnhem.nl,112barneveld.nl,112bunschoten.nl,112doetinchem.nl,112ede.nl,112harderwijk.nl,112hilversum.nl,112inbeeld.nl,112nijkerk.nl,112ridderkerk.nl,112rotterdam.nl,112scherpenzeel.nl,112schiedam.nl,112vallei.nl,112veenendaal.nl,112wageningen.nl,112zeewolde.nl,112zwolle.nl###wrapper > div[class][style="display:none;"] + div[id][class*=" "]
 112brabant.nl,112nederland.nl,12tomatoes.com,20minutes.fr,20minutos.es,6abc.com,972mag.com,a2tv.com.tr,abc11.com,abc13.com,abc30.com,abc7.com,abc7chicago.com,abc7news.com,abc7ny.com,abola.pt,acrosstheline.press,adsoftheworld.com,affaritaliani.it,africa1.com,agrositio.com.ar,aica.org,al-ain.com,al-akhbar.com,al-shabaka.org,al-sharq.com,albaceteabierto.es,albawabhnews.com,algemeiner.com,algerietelecom.dz,alligator-sunglasses.com,allkpop.com,allons-y.social,almanaquesos.com,alpen-guide.de,alpin.de,altoadige.it,amicidicasa.it,androidiani.com,angeloparodi.it,angolotesti.it,apkmb.com,arbeitspause.org,armageddonexpo.com,aruba.it,assopoker.com,atv.com.tr,atv.hu,auto.it,autofoco.pt,avira.com,avivaitalia.it,az.com.na,aztesti.it,badtaste.it,banca5.com,bancaprivataleasing.it,beatsbydre.com,bestlifeonline.com,bet.com,bioisotherm.it,bleacherreport.com,bnr.nl,bobvila.com,borsadelcredito.it,boursier.com,brindisisera.it,budapester.hu,businessinsider.com,businessinsider.de,businesslive.co.za,businesstoday.in,c-span.org,calcionapoli1926.it,carmagazine.co.uk,caustica.co,cdt.ch,centerblog.net,chimeraos.org,christianpost.com,christiantoday.co.nz,christiantoday.com.au,cielotv.it,cipiacecucinare.it,cittaceleste.it,cityam.com,clarin.com,classicalite.com,classifieds.co.zw,clearancejobs.com,climatempo.com.br,clm21.es,cmt.com,cmu.edu,collectorsweekly.com,colombiapress.co,comicbook.com,comicbookmovie.com,conjur.com.br,consigli.it,cookingwithjanica.com,coopcasarsa.it,correiobraziliense.com.br,corriere.it,corrierecomunicazioni.it,courrierinternational.com,creditosportivo.it,cropmarketchronicles.cc,crossmap.com,crowdstrike.com,dagospia.com,dailymaverick.co.za,dailysignal.com,damndelicious.net,dastelefonbuch.de,deabyday.tv,debate.com.mx,deepsilver.com,deintelligenz.io,democracynow.org,dequo.it,derbayerischelowe.info,derbyderbyderby.it,dererker.it,derglaube.online,derleitstern.cc,derrattenfanger.io,dhakacourier.com.bd,diariodelweb.it,diarioti.com,dispatchlive.co.za,dn.pt,doctissimo.fr,dpreview.com,dr.com.tr,dunsguide.co.il,dvhn.nl,ebar.com,ecologiaverde.com,ecranlarge.com,eetimes.com,ef-magazin.de,elconsolto.com,electionwatch.io,elmundofinanciero.com,elplural.com,elvenar.com,entywbas.com,epicgames.com,err.ee,estadao.com.br,estrelando.com.br,estrellatv.com,etcanada.com,eurogamer.it,euronics.it,europages.cn,europages.co.hu,europages.dk,europages.ee,europages.es,europages.eu,europages.fi,europages.fr,europages.gr,europages.hk,europages.it,europages.lt,europages.lv,europages.nl,europages.pl,europages.se,europages.si,europapress.es,europe1.fr,eurospin.it,eurovisionworld.com,extra.ec,extratv.com,fantamagazine.com,fastcompany.com,fcinter1908.it,filmitalia.org,finanzaonline.com,fivebooks.com,fm-world.it,fmglobal.com,forbes.ru,formulatv.com,forzaroma.info,foxcharleston.com,franceeteu.today,gamergen.com,gay.it,gazzetta.it,gazzettadimantova.it,gazzettaregionale.it,gedidigital.it,gediwatch.it,geraligado.blog.br,gidhaur.com,giornaledibrescia.it,giornaletrentino.it,glistatigenerali.com,gmx.com,gmx.fr,goldenline.pl,golssip.it,grandhotel-et-des-palmes.com,greencarreports.com,grostracteurspassion.com,gse.it,guardian.ng,guildwars2.com,gulfstream.com,gunviolencearchive.org,haber7.com,hannibaltv.com.tn,hauynescherben.press,hawaii.com,hdmotori.it,healthychild.org,hellas1903.it,hellogiggles.com,heraldlive.co.za,heraldnet.com,hispanidad.com,html.it,hub.jhu.edu,humordido.net,hvg.hu,ibtimes.co.in,idiva.com,il-corrispondente.io,ildolomiti.it,ilgiornale.it,iliketomakestuff.com,ilmilanista.it,ilpost.it,ilposticipo.it,ilsussidiario.net,imadrassa.com,impresspages.org,indiatodayne.in,indiatvnews.com,indypendent.org,infomotori.com,informador.mx,infosat.de,inmoto.it,insideedition.com,insider.com,interior-news.com,interventionist.cc,inthesetimes.com,iol.pt,irannewsdaily.com,islamweb.net,isprime.com,istat.it,italiaoggi.it,itasportpress.it,ivid.it,jamescoyle.net,jeep.co.nz,jeu.video,jns.org,jornaldebrasilia.com.br,journaldugeek.com,juvenews.eu,kabeleins.de,kaputteampel.cc,kataweb.it,klassikradio.de,knack.be,korben.info,krautundrueben.de,kwai.com,lacivertdergi.com,ladepeche.fr,lancaster.ac.uk,lapressa.it,laprovinciadivarese.it,lasicilia.it,laterrasse.io,latvija.lv,lavozdeltajo.com,lebelligerant.io,leboncoin.fr,ledevoir.com,legacoop.coop,lematin.ma,lemondeinformatique.fr,leseclaireuses.com,lesfrontieres.media,lesifflet.cc,lethbridgeherald.com,liberoquotidiano.it,libertaddigital.com,libremercado.com,liesofwallstreet.io,lifegate.it,lifenews.com,linkiesta.it,lionair.co.id,lorientlejour.com,luinonotizie.it,madanichannel.tv,madeincucina.com,mader.bz.it,madridiario.es,magnoliatv.it,marketingtribune.nl,marvel.com,masterinvestor.co.uk,maxpreps.com,mdspa.it,mediagol.it,medicinehatnews.com,mediocredito.it,medisite.fr,meetingrimini.org,metropol.hu,miastagebuch.com,mikronis.hr,milanofinanza.it,misk.tn,mk.ru,mobileapk.info,mobilenews.jp,monacomatin.mc,mondaymag.com,mondoudinese.it,monovolume.cc,monthlyreview.org,moscowtimes.ru,moto.it,motonline.com.br,motorionline.com,moviechat.org,mtv.it,muckraker.com,muckrock.com,mumbrella.com.au,myevreview.com,mypride.press,nationalgeographic.it,naturalborngamers.it,nbcolympics.com,neowin.net,nintendolife.com,nogomania.com,noordernieuws.nl,notibolivia.bo,notichile.cl,noticiargentina.com.ar,noticiasbravas.com,notiecuador.com.ec,notimexico.com.mx,notipanama.com.pa,notiparaguay.com.py,notiperu.com.pe,notiuruguay.uy,notiziecalciomercato.eu,notrepays.today,noursat.tv,nplusonemag.com,ntdtv.com,numericalcio.it,nzgeo.com,nzx.com,odia.ig.com.br,olhardigital.com.br,olivetti.com,omdb.org,omnialyrics.it,oo-software.com,opendns.com,opinione.it,ornews.it,osthessen-news.de,ox.ac.uk,padovasport.tv,paginasamarillas.es,paginasiete.bo,pap.pl,pauta.cl,pentapostagma.gr,petitfute.com,petrolicious.com,peugeot.de,phanteks.com,phonearena.com,pianetamilan.it,pneusnews.it,pokernews.com,portaldotransito.com.br,portalinsights.com.br,primainfanzia.it,professionearchitetto.it,proiezionidiborsa.it,prosieben.de,protonvpn.com,publico.es,publish0x.com,purexbox.com,pushsquare.com,qualcomm.com,qualenergia.it,quice.it,radbox.me,radio.cz,radiocitymilano.it,radionacional.com.ar,radioorient.com,ran.de,ranactive.de,raya.ps,razon.com.mx,rd.nl,recipetineats.com,red-buzz.com,regione.piemonte.it,register724.com,renaultsport.com,republikein.com.na,responsibility.org,retailmenot.com,retrofm.ru,rickey.org,rmcsport.net,rollingstone.it,roncadin.it,ropeofsilicon.com,rossopomodoro.it,rottentomatoes.com,rtcc.org,rtlnieuws.nl,rts.rs,russia-insider.com,rustica.fr,samfw.com,sanook.com,sardiniapost.it,sat.tv,sat1.de,scalescale.com,schiit-europe.com,schuttevaer.nl,sci.news,sciencenorway.no,scorpionbay.com,scottishconservatives.com,scottishlabour.org.uk,searchmarketingexpo.com,seattleweekly.com,sectionstudios.com,seen.de,sex.com,sfist.com,shacknews.com,shanghaiist.com,shefinds.com,singaporeair.com,sixx.de,skynews.com.au,slurpee.com.au,smithsonianmag.com,soccerway.com,sofarsogood.fr,softexia.com,solidfiles.com,sorgenia.it,sparknotes.com,spgpromos.com,spicyconspiracy.io,spin.com,sport.es,sportnews.bz,sportsmole.co.uk,spratings.com,spunteblu.it,stackpath.com,stardock.com,startpage.com,streamkiste.tv,sucuri.net,sudouest.fr,supermacs.ie,suzuki.it,swedroid.se,sygic.com,t3.com,tacticalshit.com,tari.it,techonthenet.com,techpowerup.com,telegiz.com,testimania.com,the-voice-of-germany.de,thebeaverton.com,thedissolve.com,themoscowtimes.com,thepeninsulaqatar.com,therese-moelk.at,theringreport.com,thescottishsun.co.uk,thesun.co.uk,thesun.ie,thomann.de,thomson,ti.com,tichyseinblick.de,tickld.com,timeextension.com,timeslive.co.za,timesofisrael.com,tmonews.com,tmz.com,todomecanica.com,todomercadoweb.es,toofab.com,top.de,toronews.net,tourhebdo.com,truecrimedaily.com,trust.zone,truthout.org,tt.com,tuacasa.com.br,tubestart.com,tudocelular.com,tuttobolognaweb.it,tuttomercatoweb.com,tweakers.net,twr.org,typomaps.net,u.tv,uai.com.br,ucl.ac.uk,uk-mkivs.net,ukraine-nachrichten.de,ukrlm.info,ultimominuto.news,unica.it,unita.it,units.it,urbanomnibus.net,uschina.online,utorrent.com,veol.hu,vg247.com,vg247.it,victoriassecret.com,vijesti.me,violanews.com,viralnova.com,vitatrentina.it,viveregiovani.it,vkmag.com,voetbal24.be,voetbalnieuws.be,vortice.it,voxafrica.com,vz.ru,wallpaper.com,wanderfalke.net,wantedonline.co.za,washwasha.org,wdet.org,we.com.na,webs.com,wegotthiscovered.com,willyweather.com,winfuture.de,woot.com,workersliberty.org,yachtingjournal.com##.social
+114la.com###Gamepng
+114la.com###dlAD1
+114la.com###dlAD2
+114la.com###egg-packet
+114la.com##.corner
+114la.com##.headline
+114la.com##.s11bg
+114la.com##.search_ad
+114la.com##.sy_ad4
+114la.com#?#.sortItem:-abp-has(> dIV[class] > .FeedADClose)
 114la.com,78dm.net,chinairn.com,chinanews.com.cn,dav01.com,qncye.com,qzwb.com,silisili.in,silver.org.cn,solidot.org,ylmf.com##.adv
 114la.com,ylmf.com###GameAdv
 114la.com,ylmf.com###HDtopBar
@@ -37298,6 +37305,7 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 @@||geekbang.org/resource/image/ad/14/addb521e20de1a302206f4286eac3914.png
 @@||genshuixue.com/??/*/counter/action_
 @@||getitfree.cn/wp-content/plugins/adunblocker/public/js/banner_ads_*.js
+@@||gg.wudizuqiu.com/72nba.js
 @@||ghxi.com^$stealth=dpi
 @@||gias.jd.com/js/td.js
 @@||gifshow.com/rest/wd/common/log/collect/acfun
@@ -39375,6 +39383,8 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 @@||teabox.com^$jsinject,elemhide
 @@||teambition.com^$jsinject,elemhide,extension
 @@||tech*.techradar.ink/*/?se=*&listing=$stealth=referrer
+@@||technews.tw/www/delivery/$badfilter
+@@||technews.tw^$generichide,badfilter
 @@||telegram.hr^$content
 @@||tennispro.*/gdpr/cookiealert.css
 @@||tenpay.com/v2/res/pub/cps/main/bottom_ad.js
@@ -39488,7 +39498,6 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 @@||x.*.tk/*/caxi.m3u8$stealth
 @@||x.*.tk/*/strmrdr.m3u8$stealth
 @@||x.*.xyz/*/xox_*.jpeg$stealth
-@@||xbeibeix.com^$generichide
 @@||xhamster*.*/*/ads$xmlhttprequest,~third-party
 @@||xhscdn.com^$image,stealth,domain=xiaohongshu.com
 @@||xianzhenyuan.cn/data/attachment/common/guanggao/adjs.htm
@@ -54957,6 +54966,10 @@ techmaniak.pl,activemaniak.pl,gizmaniak.pl,agdmaniak.pl,rtvmaniak.pl,fotomaniak.
 techmaniak.pl,activemaniak.pl,gizmaniak.pl,agdmaniak.pl,rtvmaniak.pl,fotomaniak.pl,tabletmaniak.pl##.alead
 techmaniak.pl,activemaniak.pl,gizmaniak.pl,agdmaniak.pl,rtvmaniak.pl,fotomaniak.pl,tabletmaniak.pl##.rsidebar > div[style^="margin:0 auto"][style*="px auto; text-align:center;"]
 techmize.net,atravan.net#%#//scriptlet('prevent-xhr', 'adsbygoogle')
+technews.tw##.AD_wrapper
+technews.tw##.googlenews_Content
+technews.tw##.inside_AD
+technews.tw##.newsLetter_articleContent
 technologpython.com,novelcool.com###protocol_cookie_box
 technopoint.ru,dns-shop.ru##.main-footer__subscription
 techobest.com$$script[tag-content="adback_configuration"][min-length="100000"][max-length="360000"]
@@ -57080,8 +57093,6 @@ xanimu.com,familyporner.com,darknessporn.com,freepublicporn.com,pisshamster.com,
 xanimu.com,familyporner.com,darknessporn.com,freepublicporn.com,pisshamster.com,punishworld.com##div[id^="inside-video-boxes-mobile"]
 xanimu.com,familyporner.com,darknessporn.com,freepublicporn.com,pisshamster.com,punishworld.com#%#//scriptlet('remove-node-text', 'script', 'advert')
 xatakaciencia.com,xatakamovil.com,xatakawindows.com,genbeta.com##.js-img-adb
-xbeibeix.com#%#//scriptlet('prevent-setTimeout', '/\.height\(\) == 0|adsbygoogle/')
-xbeibeix.com#@#.google-ad
 xbiquwx.la##.box_con > div[style="margin:10px auto;width: 930px;height: 250px;"]
 xbjav.com,javdragon.com##.poplayer
 xbooru.com,xxxymovies.com###smb
@@ -57163,6 +57174,7 @@ xinhuanet.com##.xwApp
 xinmin.cn##span[style^="position:fixed;right"]
 xinmin.cn##span[style^="position:fixed;right"] + a
 xitek.com##a[href*="/adclick"]
+xitonghe.com##.sidebar-wx
 xitongtiandi.net##.sidebar > a[target="_blank"] > img
 xitongzhijia.net###top_gg
 xitongzhijia.net##.btn-dl_swift
@@ -57840,10 +57852,16 @@ zzzyk.com###Tinfo
 ||0722fc.com/index/tools/js.php
 ||073img.com/*/|
 ||0755rc.com^$third-party
+||10000xing.cn/images/we
 ||1024wanzhai.$popup,third-party
 ||107.167.16.*.gif
 ||107.167.22.*.gif
+||114la.com/static/js/egg.js
+||114la.com^$third-party,domain=~ylmf.com
+||1188.com^$third-party
 ||121.204.246.*.gif
+||123.sogou.com/discover/?
+||123cha.com/counter.js
 ||123pandamovie.*/125_125.js
 ||127.0.0.1^$script,domain=iqiyi.com
 ||127.0.0.1^$third-party,domain=53.com|ameriprise.com|beachbody.com|chick-fil-a.com|citi.com|ebay.at|ebay.be|ebay.ca|ebay.ch|ebay.cn|ebay.co.uk|ebay.com|ebay.com.au|ebay.com.hk|ebay.com.my|ebay.com.sg|ebay.de|ebay.es|ebay.fr|ebay.ie|ebay.it|ebay.nl|ebay.ph|ebay.pl|equifax.ca|equifax.com|globo.com|gumtree.com|kleinanzeigen.de|lendup.com|mbna.ca|rusneb.ru|sciencedirect.com|sky.com|spectrum.net|td.com|tiaa.org|vedacheck.com|wepay.com|whatleaks.com
@@ -57856,6 +57874,8 @@ zzzyk.com###Tinfo
 ||158.247.208.
 ||158.247.208.$popup
 ||163487*.qmgmw.com^
+||168.it168.com$script
+||168.it168.com^$script
 ||168gamer.*.php?mod=js
 ||168gamer.*/list-
 ||168gamer.*/olist-
@@ -58596,6 +58616,7 @@ zzzyk.com###Tinfo
 ||baidu.com^*/w.gif?
 ||baidu.com^*/wb.gif?
 ||baifendian.com^$third-party
+||baihuwang.com^$third-party
 ||baike.baidu.com/*/directad?$xhr
 ||baike.baidu.com/api/wikiad/$xhr
 ||baike.baidu.com/lemma/api/guesslike?$xhr
@@ -59833,7 +59854,6 @@ zzzyk.com###Tinfo
 ||images.sohu.com/bill/
 ||images.sohu.com/cs/
 ||images.sohu.com/ytv/*.jpg
-||images.whoer.com/image/*.gif
 ||imeee.cn/DA_HTML/*.js
 ||imeee.cn/DA_HTML/bottom_960x90.html
 ||img*.xyz/assets/img/banner-new/$domain=madoohd.com
@@ -60070,7 +60090,6 @@ zzzyk.com###Tinfo
 ||jyfw.cn/nav/cf_
 ||jz5u.com/public/js/t$script
 ||jz5u.com/public/new/
-||k2n0f.cn^$third-party
 ||k366.com/images/smxs^
 ||kaipuyun.cn/count/
 ||kalvin.cn/page/img/
@@ -61670,6 +61689,7 @@ zzzyk.com###Tinfo
 ||xitek.com/idzone
 ||xitong8.com/theme/default/images/725x90.gif
 ||xitong8.com/theme/default/images/index_13.jpg
+||xitonghe.com/SkinNew/js/init_g.
 ||xitongzhijia.net/theme/2020/js/10033_
 ||xizi.com/js/rotator.js
 ||xkd*.com/layer/layer.js
