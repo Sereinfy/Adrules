@@ -1,9 +1,9 @@
 !
 ! Title: AdBlock Filter Lite
 ! Homepage: https://github.com/Sereinfy/Adrules
-! Version: 20250122002003
-! Last modified: 2025/01/22 00:20:03
-! Blocked Filters: 62126
+! Version: 20250122091326
+! Last modified: 2025/01/22 09:13:26
+! Blocked Filters: 62107
 !
 ###AC_ad
 ###AD_160
@@ -8787,6 +8787,7 @@
 ##.ad-300-dummy
 ##.ad-300-flex
 ##.ad-300-x-250
+##.ad-300250
 ##.ad-300X250
 ##.ad-300X250-body
 ##.ad-300x
@@ -8831,6 +8832,7 @@
 ##.ad-970
 ##.ad-970-250
 ##.ad-970-90
+##.ad-970250
 ##.ad-970x250
 ##.ad-970x90
 ##.ad-Advert_Placeholder
@@ -14591,6 +14593,7 @@
 ##.c-sns
 ##.c-social-bar
 ##.c-social-box
+##.c-social-buttons--popover.c-social-buttons
 ##.c-social-container
 ##.c-social-menu
 ##.c-social-navigation
@@ -26241,8 +26244,10 @@
 ##[data-template-type="nativead"]
 ##[data-testid="adBanner-wrapper"]
 ##[data-testid="ad_testID"]
+##[data-testid="commercial-label-taboola"]
 ##[data-testid="prism-ad-wrapper"]
 ##[data-testid="prism-share"]
+##[data-testid^="taboola-"]
 ##[data-tracking-zone="share"]
 ##[data-trigger="share-links-manager"]
 ##[data-type="ad-vertical"]
@@ -26913,6 +26918,7 @@
 ##link[rel="stylesheet"][href*=".html-load.com/contents/"] + script + script + div[id^="img_"]
 ##link[rel="stylesheet"][href*=".html-load.com/contents/"][media="screen"] + script + div[class^="img_"]
 ##meta + title + script + div[id^="img_"]
+##meta + title + script + script + div[id^="img_"]
 ##meta[charset="utf-8"] + meta[name="viewport"] + div[class^="img_"]
 ##oxk
 ##ps-connatix-module
@@ -28082,7 +28088,6 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 .com/ad/$~image,third-party,domain=~mediaplex.com|~warpwire.com|~wsj.com,badfilter
 .com/ad_js/
 .com/ads/$domain=pornbraze.com|hdbraze.com
-.com/ads?
 .com/ads?$popup
 .com/adv/$domain=~adv.asahi.com|~advantabankcorp.com|~alltransistors.com|~archiproducts.com|~tritondigital.com
 .com/adv1/?q=
@@ -28409,7 +28414,6 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 .net/2?z=$script,third-party
 .net/ad2/$~xmlhttprequest
 .net/ads.js?api_key=*000&header=*&p=*&file=
-.net/ads?
 .net/adx.php?$popup
 .net/jquerys.js
 .net/js/ads/
@@ -29362,7 +29366,6 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 /_xa/ads?
 /_xa/ads?$popup
 /_xa/ads_
-/_xa/ads_batch?
 /_xa/ads_batch?ads=$xmlhttprequest,script
 /a-ads.$third-party
 /a-detector/*.js$domain=tivio.net|vsthouse.ru
@@ -29418,14 +29421,12 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 /ad-scripts--$script
 /ad-scroll.js$script
 /ad-server.$~script
-/ad-third-party?
-/ad.cgi?
+/ad.cgi?$~xmlhttprequest
 /ad.css?$stylesheet
-/ad.html?
+/ad.html?$~xmlhttprequest
 /ad.min.js$script
 /ad.php?tag=$popup
 /ad.php?zone$popup
-/ad/a.aspx?
 /ad/ad_common.js$script
 /ad/dfp/*$script
 /ad/display.php$popup
@@ -29435,7 +29436,6 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 /ad/images/*$image,domain=~studiocalling.it
 /ad/img/*$image,domain=~eki-net.com|~jiji.com
 /ad/imp?
-/ad/load_ad?
 /ad/postbid_handler1.$script
 /ad/window.php?$popup
 /ad300.jpg$image
@@ -29456,7 +29456,6 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 /ad_banner/*$image,domain=~ccf.com.cn
 /ad_bottom.jpg$image
 /ad_bottom.js$script
-/ad_break?
 /ad_campaign?
 /ad_counter.aspx$ping
 /ad_display.php?ad_pos=
@@ -29650,7 +29649,6 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 /ads728.$image
 /ads728x90.$image
 /ads?apid
-/ads?callback
 /ads?client=
 /ads?id=
 /ads?object_
@@ -29712,7 +29710,6 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 /adv-banner-$image
 /adv-scroll-sidebar.js$script
 /adv-scroll.$script
-/adv.css?
 /adv_out.js$third-party
 /adv_vert.js$script
 /advanced-ads-$script,stylesheet,domain=~transinfo.pl|~wordpress.org
@@ -29720,7 +29717,6 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 /advbanner.frontend.js$script
 /advert.$~script,~xmlhttprequest,domain=~advert.ae|~advert.club|~advert.com.tr|~advert.ee|~advert.ge|~advert.io|~advert.media|~advert.org.pl|~motortrader.com.my
 /advert/youxi.js
-/advert?
 /advertising/banners/*$image
 /adverts.$~script,~xmlhttprequest,domain=~0xacab.org|~adverts.ie|~adverts.org.ua|~github.com|~gitlab.com
 /adverts/*$~xmlhttprequest
@@ -29741,20 +29737,18 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 /aff_banners/*$image
 /aff_i?offer_id=
 /aff_land?referrer
-/affad?
 /affbanners/*$image
 /affiliate-tracker.js
 /affiliate/ad/*$image
 /affiliate/ads/*$image
 /affiliate/banner/*$image
 /affiliate/banners/*$image
-/affiliate/referral.asp?site=*&aff_id=
 /affiliate:link_visit?
 /affiliateads/*$image
 /affiliates/banner$image
 /affiliatetracking.js
 /afon7.$script,~third-party
-/afr.php?
+/afr.php?$~xmlhttprequest
 /aftrack.asp
 /afu.php?$popup
 /afx_prid/*$script
@@ -29782,7 +29776,7 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 /ajds/*
 /ajgg-1318512902.
 /ajjsjfsk/*
-/ajs.php?
+/ajs.php?$script
 /ajs?zoneid=
 /akam/*/pixel_
 /akam/10/*
@@ -29946,7 +29940,6 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 /api/ad.$script
 /api/ad/*
 /api/adplogger/*
-/api/ads?
 /api/apiFetchAdsData
 /api/async.php?t=user&m=pagehits&
 /api/autosda.php
@@ -30020,7 +30013,7 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 /appstore_135x40.png$domain=xn----etbbecbrbp5ahkja1ae7v.xn--p1ai|kingisepp-today.ru
 /apstag.js$script
 /aptrk.js
-/apu.php?
+/apu.php?$script
 /arcads.js$script
 /ard.png?
 /aria-web-telemetry-
@@ -30177,7 +30170,6 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 /bannerads/*$~xmlhttprequest,domain=~coldwellbankerhomes.com
 /bannerpop/uploads/*
 /banners*swf
-/banners.*/piclist?
 /banners.cgi?
 /banners/*$domain=2ip.io|2ip.ru
 /banners/*$domain=biertijd.com|biertijd.xxx|waskucity.com
@@ -30204,7 +30196,6 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 /bcn.gif?
 /bcsensor.js
 /bdg.gif?
-/bdv_rd2.dbm?enparms
 /beacon.cgi?
 /beacon.gif?
 /beacon.js
@@ -30355,7 +30346,6 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 /caixinlog.js
 /calcalist_gpt_ads.js$script
 /call.tracker.js
-/callAdserver?
 /callbacks/stats?
 /camgirlbay.net\/[a-z]{1,2}[1-9]{1,4}[a-z]{1,2}[1-9]{1,4}[\s\S]*.js/$domain=camgirlbay.net
 /camwhores.adult\/[a-z]{1,2}[1-9]{1,4}[a-z]{1,2}[1-9]{1,4}[\s\S]*.js/$domain=camwhores.adult
@@ -30450,7 +30440,6 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 /click.php?c=
 /click.php?key=*&zone_id=$document
 /click/impression?
-/click/zone?
 /click?adv=
 /click?adv=$popup
 /click?track=
@@ -30581,7 +30570,6 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 /combo?darla/*
 /common-js/exit/om2.min.js
 /common/ad.js$script
-/common/ads?
 /common/analytics.js
 /common/boxes/*$domain=babupc.com
 /common/cf/*$image,object,domain=~ztgame.com
@@ -31001,7 +30989,6 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 /dynaTraceMonitor?
 /dynamic-pop-comb.min.js
 /dynamic.ziftsolutions.com/*
-/dynamicad?
 /dynamicyield/*
 /dzwww/ad_dzw_inner.js
 /e.customeriomail.com/e/o/*$image
@@ -31165,10 +31152,9 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 /external-tracking.min.js
 /external/ad.$script
 /external/ads/*$image
-/external_ad?
 /ezais/analytics?
 /ezais/dynamic?$domain=portableapps.com|theaviationist.com|hardreset.info
-/ezcl.webp?
+/ezcl.webp?$script
 /ezf-min.$script
 /ezo/*$script,~third-party,domain=~yandex.by|~yandex.com|~yandex.kz|~yandex.ru|~yandex.ua
 /ezoic/*$script,~third-party
@@ -31487,7 +31473,6 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 /get/?go=1&data=$subdocument
 /get?go=1&data=$subdocument
 /getAditem
-/getAdsysCode?
 /getAliyunAdv.
 /getGG.php?key=
 /getMultiAdsStrategy
@@ -31578,7 +31563,6 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 /gpt.js$script
 /gpt_ads-public.js$script
 /graphics/share/*
-/greenoaks.gif?
 /grgfbigo.js
 /gridinbound.blob.core.
 /grumi-ip.js
@@ -31687,6 +31671,7 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 /hserver/channel=
 /hserver/site=
 /ht.js?site_
+/ht.js?site_$script
 /htdocs/js/admiral/init.js
 /html/709/*.js
 /html/taobao_focus_
@@ -32149,7 +32134,7 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 /levelmaxblock.js
 /lg-share.js
 /lhnhelpouttab-current.min.js
-/li.blogtrottr.com/imp?
+/li.blogtrottr.com/imp?$image
 /li.lms-analytics/insight.min.js
 /lib.js$third-party,domain=pinoymovies.es|pinoymovieseries.com
 /lib/analytics.js
@@ -32321,7 +32306,7 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 /m1938pc/static/js/dibu.js
 /macplus/ads/*
 /madAnalytics.js
-/mads.php?
+/mads.php$subdocument
 /magento-storefront-event-collector@
 /magento/page-visit?
 /magento2.js
@@ -32350,7 +32335,6 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 /matomo/*$domain=~github.com|~hub.docker.com|~matomo.org|~wordpress.org
 /matongwu/img/gg_
 /maven/am.js$script
-/mbads?
 /mcookie.aspx
 /mcount.cgi?
 /measure/pixel/*
@@ -32655,7 +32639,7 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 /page-view.gif?
 /page.bsigroup.com/*
 /page/?s=$third-party
-/page/bouncy.php?
+/page/bouncy.php?$document
 /page/bouncy.php?&bpae=*&redirectType=js&inIframe=$all
 /page/index.php?s=$third-party
 /page/load?
@@ -32724,7 +32708,7 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 /pd2.js$third-party
 /pdp.gif?
 /peach-collector.min.js
-/peel.php?
+/peel.php?$script
 /peel_ads.js$script
 /peelads/*$script
 /penton_gdpr.js
@@ -32817,11 +32801,11 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 /pixel.track
 /pixel/email/*$image
 /pixel/nvrwe?
-/pixel/puclc?
+/pixel/puclc?$third-party
 /pixel/pure$third-party
-/pixel/purs?
-/pixel/purst?
-/pixel/sbe?
+/pixel/purs?$third-party
+/pixel/purst?$third-party
+/pixel/sbe?$third-party
 /pixel/sbs?
 /pixel/view?
 /pixel/visit?
@@ -33066,7 +33050,6 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 /proxy.htm?id=
 /proxy.html?id=
 /proxy_top_banner_js.php
-/proxyadcall?
 /pt.gif?
 /pt?type=pv&
 /ptrack.js
@@ -33107,7 +33090,7 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 /push.js$domain=51xiazai.cn|tsn.ua|sputnik.by|news.noteru.com|sputnik-georgia.ru|aksiyon.com.tr|infox.sg
 /push.js?utm_source=*&domain=$script
 /push/js/rmf-push.js$domain=rmfmaxx.pl|rmf.fm
-/push/p.js?
+/push/p.js?$third-party
 /push/p.js?u=$third-party
 /pushJs/*$third-party,script
 /pushlog.min.js
@@ -33327,7 +33310,7 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 /rwtag.gif?
 /rwtag.js
 /s-pcjs.php
-/s.ashx?btag
+/s.ashx?btag$script
 /s.gif?
 /s/i.php?id=$script,third-party
 /s/js/fshow.js$third-party
@@ -33561,7 +33544,7 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 /show_ad.js$script
 /show_ad?
 /show_ads_
-/showban.asp?
+/showban.asp?$image
 /showbanner.js$script
 /showcounter.js
 /showcounter.php
@@ -33627,7 +33610,6 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 /skin/view/ft$domain=iimanhua.cc|iimh.net
 /skype-analytics.js
 /skyscraperad.$image
-/sl/assetlisting/?
 /sli.*/imp?$image
 /slide_in_ads_close.gif$image
 /slider_ad.js$script
@@ -33642,7 +33624,6 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 /smart-eu-cookies.min.js
 /smart-pixel.min.js
 /smartTag.bundle.js
-/smartlinks.epl?
 /smartpixel-1.js
 /smartpixel.$domain=~smartpixel.com|~smartpixel.tv
 /smartpop/*$popup
@@ -33740,7 +33721,6 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 /sponsorad.jpg$image
 /sponsorad.png$image,domain=~hmassoc.org
 /sponsored_link.gif$image
-/sponsoredlinks?
 /sponsors/ads/*$image
 /sport.cz\/[-_a-zA-Z0-9]{20,}\/[-_a-zA-Z0-9]{3,}\/[-_a-zA-Z0-9]{20,}./$image,domain=sport.cz
 /spots/*$xmlhttprequest,domain=xszav2.com
@@ -34573,7 +34553,7 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 /whisper?event=
 /whisperingauroras\.com\/[a-z0-9]{20,32}\.js/$domain=whisperingauroras.com
 /white_pixel.gif?
-/widget-advert?
+/widget-advert?$subdocument
 /widget/js/przv.js
 /widget/share?
 /widget/share_
@@ -35884,7 +35864,7 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 4kdownload.com#$?#body > div.remodal-wrapper:has(> div#ouibounce-modal > div#popup-download-root) { display: none!important; }
 4kdownload.com,folhavitoria.com.br,giffits-articles-publicitaires.ch,giffits-werbeartikel.at,giffits-werbeartikel.ch,giffits.*,easycosmetic.de##.overlay
 4kporn.xxx,alotporn.com,amateurporn.co,camstreams.tv,crazyporn.xxx,danude.com,fpo.xxx,hoes.tube,scatxxxporn.com,xasiat.com##.footer-margin
-4kporn.xxx,babesandstars.com,cam-video.xxx,crazyporn.xxx,cumlouder.com,gosexy.mobi,hoes.tube,hog.tv,javcl.com,javseen.tv,love4porn.com,marawaresearch.com,mobilepornmovies.com,mypornstarbook.net,pichunter.com##.ads
+4kporn.xxx,babesandstars.com,cam-video.xxx,crazyporn.xxx,cumlouder.com,gosexy.mobi,hoes.tube,hog.tv,javcl.com,javseen.tv,kartavarna.com,love4porn.com,marawaresearch.com,mobilepornmovies.com,mypornstarbook.net,pichunter.com##.ads
 4kporn.xxx,crazyporn.xxx##.myadswarning
 4kporn.xxx,crazyporn.xxx,hoes.tube,love4porn.com##.item:has(> [class*="ads"])
 4kporn.xxx,crazyporn.xxx,hoes.tube,love4porn.com##.sponsorbig
@@ -39872,7 +39852,6 @@ _adblock_killer.
 _adblocker_detected
 _adobe_analytics.js
 _ads.cms?
-_ads.php?
 _advertise-$domain=~linkedin.com
 _advertisment.$~xmlhttprequest
 _beacon?
@@ -45929,7 +45908,7 @@ fsylr.com##.plus_r
 ft.com,ftchinese.com##.bn-ph
 ftchinese.com,cn.ft.com##.mpu-container-instory,div[data-id|=banner],div[data-id|=storympu],div[data-id|=mpu],div.o-barrier
 ftm.nl#$?#.modal[open] { remove: true; }
-ftopx.com,gayboystube.com,hungangels.com##.advert
+ftopx.com,gayboystube.com,gayporntube.com,hungangels.com##.advert
 ftw.usatoday.com,kansascity.com,rotowire.com##.gdcg-oplist
 ftw.usatoday.com,touchdownwire.usatoday.com###ad--home-well-wrapper
 fuckcelebs.net,onlinestars.net##.fp-ui > a[href][target="_blank"]
@@ -50827,7 +50806,7 @@ motachashma.com,ordertracker.com##.partnerbanner
 motaen.com,adultgamestop.com##.baner
 motherless.com$$script[tag-content="_ml_ads_ns"][min-length="4000"][max-length="5000"]
 motherless.com,einprozent.de##.cookie-accept-wrapper
-mothership.sg,techtimes.com##.socials
+mothership.sg,overclock3d.net,techtimes.com##.socials
 moto-akut.de,boxspring-welt.de,ssb-ag.de,filmdienst.de,penguinrandomhouse.de,vegdog.de,werner-mertz.de,lust-auf-vegan.com,5g-anbieter.info,firstname.de,velomobilforum.de,tanke-guenstig.de,pfh.de,herrenberg.de,landkreis-nu.de,versicherungsjournal.de,ikkbb.de,auerswald.de,wunschliste.de,hundund.de#$#body[class].ccm-blocked { overflow: auto !important; }
 moto-akut.de,boxspring-welt.de,ssb-ag.de,filmdienst.de,penguinrandomhouse.de,vegdog.de,werner-mertz.de,lust-auf-vegan.com,5g-anbieter.info,firstname.de,velomobilforum.de,tanke-guenstig.de,pfh.de,herrenberg.de,landkreis-nu.de,versicherungsjournal.de,ikkbb.de,auerswald.de,wunschliste.de,hundund.de#$#html[class].ccm-blocked { overflow: auto !important; }
 moto-akut.de,boxspring-welt.de,ssb-ag.de,filmdienst.de,penguinrandomhouse.de,vegdog.de,werner-mertz.de,lust-auf-vegan.com,5g-anbieter.info,firstname.de,velomobilforum.de,tanke-guenstig.de,pfh.de,herrenberg.de,landkreis-nu.de,versicherungsjournal.de,ikkbb.de,auerswald.de,wunschliste.de,hundund.de#$?#.ccm-root { display: none !important; }
@@ -60893,6 +60872,7 @@ zzzyk.com###Tinfo
 ||pop800.com^$third-party
 ||popup*.lifterapps.com^$domain=linuxandubuntu.com
 ||pornhat.*/static/js/300x250.
+||pornhub.*/_xa/ads
 ||pornhub.*/view_video.php?viewkey=$replace=/vastXml/_vastXml/,important,~third-party
 ||pornid.*/azone/
 ||pornid.*/pid/dev.js
@@ -61584,6 +61564,7 @@ zzzyk.com###Tinfo
 ||tripadvisor.*/wm/record
 ||trstx.org^$badfilter
 ||truyensex*/anh/
+||tube8.*/_xa/ads
 ||tubeon.*/templates/base_master/js/jquery.shows.min.js
 ||tubeon.*/templates/base_master/js/jquery.shows2.min.js
 ||tui.gtimg.com//res/
@@ -62097,10 +62078,10 @@ zzzyk.com###Tinfo
 ~car.kdslife.com,enet.com.cn,fjsen.com,hupu.com,kdslife.com,~my.hupu.com,mysteel.com,news.cnyes.com,pchome.net,rznews.cn##div[class^="ad"]
 ~cbachina.sports.sohu.com,sohu.com##sohuadcode
 ~connect.deezer.com,deezer.com###modal_login
-~dogdrip.net,~infinityfree.com,~smsonline.cloud#$?#body > a:only-child > div[id^="img_"][class^="img_"] { height: 0px !important; width: 0px !important; filter: opacity(0) !important; }
-~dogdrip.net,~infinityfree.com,~smsonline.cloud#$?#body > div:first-child > script + div[id^="img_"][class^="img_"] { position: absolute !important; top: -100000px !important; }
-~dogdrip.net,~infinityfree.com,~smsonline.cloud#$?#body > div[id^="img_"][class^="img_"][style^="width"]:first-child { position: absolute !important; top: -100000px !important; }
-~dogdrip.net,~infinityfree.com,~smsonline.cloud#$?#div[style*="fixed"] span[id^="img_"][class^="img_"] > style:first-child + div[style*="flex"][style*="relative"] { width: 10000px !important; }
+~dogdrip.net,~infinityfree.com,~slashdot.org,~smsonline.cloud#$?#body > a:only-child > div[id^="img_"][class^="img_"] { height: 0px !important; width: 0px !important; filter: opacity(0) !important; }
+~dogdrip.net,~infinityfree.com,~slashdot.org,~smsonline.cloud#$?#body > div:first-child > script + div[id^="img_"][class^="img_"] { position: absolute !important; top: -100000px !important; }
+~dogdrip.net,~infinityfree.com,~slashdot.org,~smsonline.cloud#$?#body > div[id^="img_"][class^="img_"][style^="width"]:first-child { position: absolute !important; top: -100000px !important; }
+~dogdrip.net,~infinityfree.com,~slashdot.org,~smsonline.cloud#$?#div[style*="fixed"] span[id^="img_"][class^="img_"] > style:first-child + div[style*="flex"][style*="relative"] { width: 10000px !important; }
 ~fishmsg.net,~briian.com##.a_pt
 ~forum.golem.de,golem.de#$?#li[style="display: none !important;"] + li { border-top: none !important; }
 ~google.com,~mediafire.com##.ads
