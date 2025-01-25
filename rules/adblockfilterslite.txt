@@ -1,9 +1,9 @@
 !
 ! Title: AdBlock Filter Lite
 ! Homepage: https://github.com/Sereinfy/Adrules
-! Version: 20250125001937
-! Last modified: 2025/01/25 00:19:37
-! Blocked Filters: 61966
+! Version: 20250125090827
+! Last modified: 2025/01/25 09:08:27
+! Blocked Filters: 61985
 !
 ###AC_ad
 ###AD_160
@@ -44161,6 +44161,7 @@ doucuji.eu,dsl.wia.cz,studionews.fr,forit.ro,meetnlearn.de,vexio.ro,sevensins.ro
 doudoudm.site,ezdmw.com##.public_ad
 douglas.*##.criteo-product-carousel
 douglas.*##.product-grid-column:has(.product-tile__sponsored)
+douglas.*##.product-grid-column:has([data-testid="sponsored-button"])
 douglas.*##.swiper-slide:has(button[data-testid="sponsored-button"])
 douglas.*##div.product-grid-column:has(button[data-testid="sponsored-button"])
 douglas.at,douglas.be,douglas.ch,douglas.cz,douglas.de,douglas.es,douglas.hr,douglas.hu,douglas.it,douglas.lt,douglas.lv,douglas.nl,douglas.pl,douglas.pt,douglas.ro,douglas.si,douglas.sk,nocibe.fr##[class="cms-criteo"]
@@ -50606,10 +50607,10 @@ modfyp.com,prothomalo.com##body .adsBox
 modijiurl.com#$?#body > .site ~ div[id][class] { remove: true; }
 modivo.*#%#//scriptlet('set-cookie-reload', '__MODIVO__cookies_modal', '1')
 modivo.*#%#//scriptlet('set-local-storage-item', '__MODIVO__categories_storage', 'emptyObj')
+modivo.*#?#.banner:-abp-contains(/Sponsorizzato|Sponsorowane|Sponsorizat|Sponzorováno|Szponzorált|Спонсорирани|Sponsored|Gesponsert/)
+modivo.*#?#.product:-abp-contains(/Sponsorizzato|Sponsorowane|Sponsorizat|Sponzorováno|Szponzorált|Спонсорирани|Sponsored|Gesponsert/)
 modivo.at,modivo.bg,modivo.cz,modivo.de,modivo.ee,modivo.fr,modivo.gr,modivo.hr,modivo.hu,modivo.it,modivo.lt,modivo.lv,modivo.pl,modivo.ro,modivo.si,modivo.sk,modivo.ua##.display-container
 modivo.at,modivo.bg,modivo.cz,modivo.de,modivo.ee,modivo.fr,modivo.gr,modivo.hr,modivo.hu,modivo.it,modivo.lt,modivo.lv,modivo.pl,modivo.ro,modivo.si,modivo.sk,modivo.ua##.promoted-slider-wrapper
-modivo.it,modivo.pl,modivo.ro,modivo.cz,modivo.hu,modivo.bg,modivo.gr,modivo.de#?#.banner:-abp-contains(/Sponsorizzato|Sponsorowane|Sponsorizat|Sponzorováno|Szponzorált|Спонсорирани|Sponsored|Gesponsert/)
-modivo.it,modivo.pl,modivo.ro,modivo.cz,modivo.hu,modivo.bg,modivo.gr,modivo.de#?#.product:-abp-contains(/Sponsorizzato|Sponsorowane|Sponsorizat|Sponzorováno|Szponzorált|Спонсорирани|Sponsored|Gesponsert/)
 moe.gov.cn,qspfw.com#@#.ad_title
 moeasia.net,syurabahazard.com###middlerss
 moebel-boss.de,porta.de##.mod-cookie-warning
@@ -55577,8 +55578,12 @@ tripadvisor.*###lithium-root > div[style="bottom: 368px;"]
 tripadvisor.*###lithium-root > div[style="top: 110px;"]
 tripadvisor.*###singletonRoot
 tripadvisor.*##.ppr_priv_document_cookie_banner
+tripadvisor.*##.rSJod
 tripadvisor.*##.txxUo
 tripadvisor.*##body > div#lithium-root > div[role="button"]
+tripadvisor.*##div:has(> div > div[class="ui_column ovNFo is-3"])
+tripadvisor.*##div:has(> div[class="ui_columns is-multiline "])
+tripadvisor.*##div[class="ui_container dSjaD _S"]
 tripadvisor.*##div[class^="memx-facebook-onetap-Facebook"]
 tripadvisor.*##section[data-automation$="_AdPlaceholder"]:has(.txxUo)
 tripadvisor.*#$##c_onboarding-interstitial { display: none!important; }
@@ -55586,6 +55591,7 @@ tripadvisor.*#$#body[style*="overflow"][style*="position"] { overflow: visible!i
 tripadvisor.*#?##component_2 > div[class^="_"] > div > div[class^="iab_"][style="min-height:90px"]:upward(2)
 tripadvisor.*#?##lithium-root > div[style^="bottom:"]:has(> div[class] span > svg[viewBox="0 0 24 24"])
 tripadvisor.*#?##lithium-root > div[style^="bottom:"][class]:has(> div[class] > h3[class]:contains(Unlock the best))
+tripadvisor.*#?#.AaFRW:-abp-contains(Sponsored)
 tripadvisor.*#?#.ui_container > div[class] > div[class^="_"] > .iab_medRec:only-child:upward(1)
 tripadvisor.*#?#[data-automation="crossSellShelf"] div:has(> span:-abp-contains(Sponsored))
 tripadvisor.*#?#[data-automation="relatedStories"] div > div:has(a:-abp-contains(SPONSORED))
@@ -56401,10 +56407,14 @@ wallstreetcn.com##.open-in-app
 wallstreetcn.com#$#body { overflow: auto !important; }
 wallstreetcn.com#?#main > .modal:has(> .oia-drawer)
 wallstreetcn.com#@#.banner
+walmart.*##[data-automation="flipkartDisplayAds"]
 walmart.*##[data-testid="carousel-ad"]
+walmart.*##a[href*=".criteo.com/"]
+walmart.*##div[class="mb1 ph1 pa0-xl bb b--near-white w-25"]:has(div[data-ad-component-type="wpa-tile"])
+walmart.*##div[class="mv3 ml3 mv4-xl mh0-xl"][data-testid="sp-item"]
+walmart.*##div[data-automation^="HookLogicCarouses"]
+walmart.*##li.items-center:has(div[data-ad-component-type="wpa-tile"])
 walmart.*#?#div > div[io-id]:-abp-contains(Sponsored)
-walmart.ca,walmart.com##[data-testid="carousel-ad"]
-walmart.ca,walmart.com#?#div > div[io-id]:-abp-contains(Sponsored)
 walterfootball.com$$script[tag-content="if (window.TextDecoder) return (new window.TextDecoder(""utf-8"")).decode("][max-length="30000"]
 wanchan.jp,roomclip.jp,gamme.com.tw##.app_link
 wandhi.com##.table img
@@ -57325,7 +57335,7 @@ ydss.cn##.bm.bml.pbn > table > tbody > tr > td:nth-child(-n+2)
 ydss.cn##.indexAd
 yellowpages.com,yelp.com,yelp.com.br###privacy-policy-notice
 yellowstone-btc.com,bigbtc.win,shrink.*##div[style^="width:300px;height:250px"]
-yelp.at,yelp.be,yelp.ca,yelp.ch,yelp.cl,yelp.co.jp,yelp.co.nz,yelp.co.uk,yelp.com,yelp.com.ar,yelp.com.au,yelp.com.br,yelp.com.hk,yelp.com.mx,yelp.com.ph,yelp.com.sg,yelp.com.tr,yelp.cz,yelp.de,yelp.dk,yelp.es,yelp.fi,yelp.fr,yelp.ie,yelp.it,yelp.my,yelp.nl,yelp.no,yelp.pl,yelp.pt,yelp.se#?#main[class^="searchResultsContainer"] li h2:-abp-contains(Sponsored)
+yelp.*#?#main[class^="searchResultsContainer"] li h2:-abp-contains(Sponsored)
 yemancomic.com##div > center > strong > button[onclick^="window.location.href"]
 yenicag.az,fcjav.com,plan-home.com,netfapx.com##div[class^="ads-"]
 yenicaggazetesi.com.tr,20minutes.fr,picwish.com,halktv.com.tr,whosampled.com,lefigaro.fr,type.jp,yenihaberden.com,victorysportsnews.com###app-banner
@@ -59202,6 +59212,9 @@ zzzyk.com###Tinfo
 ||delivery-pc.wasu.cn/d/js/
 ||deloplen.com^$csp=script-src 'none'
 ||destyy.com^$removeheader=request:user-agent
+||dev.to^*/bb/post_body_bottom^
+||dev.to^*/bb/post_comments^
+||dev.to^*/bb/post_sidebar^
 ||dev.to^*/billboards/post_body_bottom^
 ||dev.to^*/billboards/post_comments^
 ||dev.to^*/billboards/post_sidebar^
@@ -61245,6 +61258,12 @@ zzzyk.com###Tinfo
 ||static.youku.com/*/index/js/iresearch.js
 ||static.youku.com/*/js/cps.js
 ||static.yxdown.com/cj/$script
+||static.zongheng.com/*/ad$script
+||static.zongheng.com/upload/*ds/column/$script,image
+||static.zongheng.com/upload/recommend/game/201$image
+||static.zongheng.com^*/adClickStat.js
+||static.zongheng.com^*/ad_click.js
+||static.zongheng.com^*/logger.min.js
 ||staticfile.qq.com/datong/$script
 ||staticfile.qq.com/qimei/$script
 ||stats*.credit-cooperatif.coop^

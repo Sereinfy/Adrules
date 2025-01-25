@@ -2462,6 +2462,7 @@ scootertechno.com#$?#div[consent-skip-blocker] { remove: true; }
 !
 ! NOTE: Regular rules
 !
+shop.mango.com##aside[class^="CookiesWrapper_"]
 androprice.com.ua##.f-cookies
 atozmath.com#%#//scriptlet('set-cookie', 'cookiesconsent', 'ok')
 sentione.com##.cookie-policy-bar
@@ -51772,6 +51773,7 @@ book.oricon.co.jp##a[href^="https://apay-up-banner.com?merchantId="] > img
 !
 ! SECTION: Self-promo - Regular rules
 !
+streamlabs.com###ultra_banner
 thecode.media##div[class^="lazyblock-banner"]
 msn.com#%#//scriptlet('hide-in-shadow-dom', 'views-promo-card')
 msn.com#%#//scriptlet('hide-in-shadow-dom', 'right-rail-provider-carousel[contenttitle^="Netflix raising prices"]')
@@ -54735,6 +54737,8 @@ newsweek.com##iframe[src="http://sns.europe.newsweek.com/newsletter?popup=1"]
 !##############################
 ! SECTION: Tweaks - JS
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/196802
+howdyho.net#%#//scriptlet('trusted-set-attr', '#progress-value', 'data-timer', '0')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/196388
 alex71.com#%#//scriptlet('remove-attr', 'style', '#download-link')
 alex71.com#%#//scriptlet('remove-attr', 'disabled', '#download-btn')
