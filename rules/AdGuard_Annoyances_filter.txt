@@ -2488,6 +2488,8 @@ scootertechno.com,mysize.ch,aeotec.com,geschichte-wissen.de,4kfilme.de,pk.edu.pl
 !
 ! NOTE: Regular rules
 !
+mobisystems.com##div[class*="bottom-"]:has(> div > div > div > span#consent-learn-more)
+pngtree.com##body > div > div:has(> button[data-huejs="usescookies-accept"])
 ||cp.gutefrage.net^
 shop.tastycoffee.ru##.tc-cookies
 notebook.de,koberger-hamburg.de#%#//scriptlet('trusted-click-element', '.ccm--decline-cookies')
@@ -5256,7 +5258,6 @@ plus500.com#$##cookiesModal { display: none !important; }
 plus500.com#$#.modal-backdrop { display: none !important; }
 plus500.com#%#//scriptlet('remove-attr', 'style', 'body[class]')
 menicka.cz##.cookies_panel_wrp
-||js.pngtree.com/a3/static/UseCookies.*.js
 craftserve.pl#$##rodo { display: none !important; }
 craftserve.pl#$#.modal-backdrop { display: none !important; }
 craftserve.pl#$#body.modal-open { overflow: auto !important; padding-right: 0 !important; }
@@ -23255,6 +23256,7 @@ armidaleexpress.com.au,bendigoadvertiser.com.au,canberratimes.com.au,centralwest
 ! Do not forget about '!#safari_cb_affinity' section for exclusions:
 ! LINK: AnnoyancesFilter/Popups/sections/antiadblock.txt#general
 !
+mobisystems.com#%#//scriptlet('prevent-fetch', 'pagead2.googlesyndication.com/pagead/js/adsbygoogle.js')
 yularihappysmile.com###adblock-modal
 moto100.de#%#//scriptlet('prevent-setTimeout', 'Adblocker')
 retail.ru##.news__c1
@@ -25974,7 +25976,7 @@ pornone.com#@#.overheaderbanner
 @@||observador.pt^$generichide
 @@||outschool.com^$generichide
 @@||pagead2.googlesyndication.com/pagead/js/*/show_ads_impl.js$domain=techsolutiontips.com
-@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=androidcentral.com|imore.com|windowscentral.com|vsthemes.org|crackwatcher.com|cheatnetwork.eu|raenonx.cc
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=mobisystems.com|androidcentral.com|imore.com|windowscentral.com|vsthemes.org|crackwatcher.com|cheatnetwork.eu|raenonx.cc
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=audiotag.info
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=diffnow.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=diynetwork.com,important
@@ -34851,6 +34853,8 @@ gaugau.futabanet.jp,newscientist.com,jiji.com,edp24.co.uk,technologyreview.com,n
 !
 ! SECTION: Subscriptions - Regular rules
 !
+deltiasgaming.com###block-7
+wheresyoured.at##main + section:has(> div.section-cta__content)
 lifehacker.jp##div[class^="article_pArticle_mailMagazine"]
 doisongphapluat.com.vn##a[href^="https://news.google.com/publications/"]
 mathebibel.de##div[id^="overlay-newsletter"]
@@ -42610,6 +42614,7 @@ turkishairlines.com,atmos-tokyo.com,radarbox.com,ciceksepeti.com,rabota.by,temp-
 !
 !
 !
+microsoft.com##.rail-cta-prefix-container
 mobalytics.gg##main > div > div:has(> div > img[alt="Mobalytics"])
 sportsinjuryclinic.net###media_image-10
 zexy.net###kikaku_tklp_banner_generalTop
@@ -54819,9 +54824,9 @@ chip.de#$#.Button--Download { display: block !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/183581 - copy/right text
 ||i38.ru/templates/teleinform/js/cprgt.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/183012
-newselab.com,glowandglamcorner.com,dadinthemaking.com,listofthis.com,beautifulfashionnailart.com,crewbase.net,batmanfactor.com#%#//scriptlet('remove-attr', 'disabled', 'button')
-newselab.com,glowandglamcorner.com,dadinthemaking.com,listofthis.com,beautifulfashionnailart.com,crewbase.net,batmanfactor.com#$#.text-center > div[id][style^="display:"] { display: block !important; }
-newselab.com,glowandglamcorner.com,dadinthemaking.com,listofthis.com,beautifulfashionnailart.com,crewbase.net,batmanfactor.com#$#form[id][style^="display:"] { display: block !important; }
+9sblog.com,newselab.com,glowandglamcorner.com,dadinthemaking.com,listofthis.com,beautifulfashionnailart.com,crewbase.net,batmanfactor.com#%#//scriptlet('remove-attr', 'disabled', 'button')
+9sblog.com,newselab.com,glowandglamcorner.com,dadinthemaking.com,listofthis.com,beautifulfashionnailart.com,crewbase.net,batmanfactor.com#$#.text-center > div[id][style^="display:"] { display: block !important; }
+9sblog.com,newselab.com,glowandglamcorner.com,dadinthemaking.com,listofthis.com,beautifulfashionnailart.com,crewbase.net,batmanfactor.com#$#form[id][style^="display:"] { display: block !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/179738 (left-over)
 forbes.com##.for-you__component:empty
 ! https://github.com/AdguardTeam/AdguardFilters/issues/177560
@@ -58459,7 +58464,7 @@ blog.livedoor.jp##div[id^="shitarss_title_"]
 !
 !   SECTION: Widgets - Marketing (specific)
 !
-||asus-brand-assistant.asus.com/brand-assistant.js
+asus.com#%#//scriptlet('hide-in-shadow-dom', '#brandAssistant-root')
 theporndude.vip,theporndude.com##.chat-widget
 pw.live##.sticky-call
 sanevv.com.ua###animate_btn_4
