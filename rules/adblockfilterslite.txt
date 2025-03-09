@@ -1,9 +1,9 @@
 !
 ! Title: AdBlock Filter Lite
 ! Homepage: https://github.com/Sereinfy/Adrules
-! Version: 20250309161745
-! Last modified: 2025/03/09 16:17:45
-! Blocked Filters: 62603
+! Version: 20250310001614
+! Last modified: 2025/03/10 00:16:14
+! Blocked Filters: 62602
 !
 ###AC_ad
 ###AD_160
@@ -29441,6 +29441,7 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 /_a_xb/*$xmlhttprequest,domain=m.xcum.com|hellporno.com,redirect-rule=nooptext
 /_adslot/*
 /_blazor/*$ping
+/_fd?subid1=$xmlhttprequest
 /_ga?send&
 /_ga?sponsor_pixel=
 /_gz/counter.php?
@@ -36461,8 +36462,6 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 ://www.*.com/js/css/$script,third-party,header=link:/adsco\.re\/>;rel=preconnect/
 ://www.*.com/js/css/$script,third-party,header=popads-node
 ://www.*.js|$script,third-party,domain=159i.com|r3sub.com|thisav.com
-://www.*.xyz/contents/*/-1/$script,subdocument,third-party,xmlhttprequest
-://www.*.xyz/contents/*?h=$script,third-party
 ://www.*.xyz/script/$script,third-party,domain=jmty.jp|dolldivine.com|knowt.com|bbs.animanch.com|thefreebieguy.com
 ://www.google.*/async/folsrch?*&async=_basejs:*,_basecomb:*&q=$xmlhttprequest
 ://www.vinted.*/relay/events
@@ -40370,7 +40369,7 @@ afrsmartinvestor.com.au,afternoondc.in,allmovie.com,allmusic.com,bolnews.com,brw
 afterdawn.com,download.fi,edukas.fi#@##ad-top-banner-placeholder
 afternic.com,godaddy.com###gtm_privacy
 afterschoolafrica.com,technofaq.org###ai_widget-8
-aftvnews.com,baptistnews.com,calmatters.org,cartoonbrew.com,jta.org,thefrisc.com,washingtoncitypaper.com,washingtoninformer.com##.sharedaddy
+aftvnews.com,baptistnews.com,calmatters.org,cartoonbrew.com,jta.org,thefrisc.com,usmagazine.com,washingtoncitypaper.com,washingtoninformer.com##.sharedaddy
 afyonhaber.com,tamindir.com,bigfishgames.de,adapostasi.com##div[id^="simplemodal-"]
 afzhan.com##.bannerAdv
 afzhan.com##.newsRightAdv
@@ -42747,8 +42746,8 @@ buttondown.email,the-village.ru,psychologies.ru###subscribe-form
 buysellvouchers.com,allonlinestore.in,100sp.ru##.cookie-window
 buzz.ie,irishpost.com,theweekendsun.co.nz##.add-block
 buzzfeed.com,buzzfeednews.com##.desktop-sticky-ad_desktopStickyAdWrapper__a_tyF
+buzzfeed.com,buzzfeednews.com,winfuture.de#%#//scriptlet('trusted-suppress-native-method', 'Element.prototype.setAttribute', ' |"error-report.com"')
 buzzfeed.com,darkreading.com,gamedeveloper.com,imgur.io,iotworldtoday.com,sevendaysvt.com,tasty.co,tucsonweekly.com##.Ad
-buzzfeednew-s.com,winfuture.de#%#//scriptlet('trusted-suppress-native-method', 'Element.prototype.setAttribute', ' |"error-report.com"')
 buzzfeednews.com,aol.com##div[class^="newsletter-"]
 buzztv.futbol,streamsport.pro,sportsonline.*,hdstreams.club###html1
 bycard.by,goodfon.ru,old-games.ru,satsis.info,swordmaster.org##.adb
@@ -57461,7 +57460,6 @@ wsls.com,gmg-wjxt-prod.cdn.arcpublishing.com,ksat.com##.topWrapper
 wsobv.com,foresight.jp##.footer-fixed
 wss://*.xyz:*?x=$third-party
 wss://*/api/wss/GetNotReadCount$third-party
-wss://www.*.xyz/ws^$third-party
 wstream.video,akvideo.stream###overlayx
 wstream.video,ouo.io##div[id*="ScriptRoot"]
 wtatennis.com,einstieg.com##.nl-footer
@@ -57618,6 +57616,7 @@ x.com,twitter.com#?#div[data-testid="inlinePrompt"]:has(> div > a[href="/i/premi
 x.com,twitter.com#?#div[style^="transform"] h2 > div[style^="-webkit-line-clamp"] > span:contains(/^(?:Promoted Post|Promowany Post|Post promovat|プロモポスト)$/):upward(3)
 x.com,twitter.com#?#div[style^="transform"]:has(div[data-testid="inlinePrompt"] > div > a[href="/i/premium_sign_up?referring_page=timeline_prompt"])
 x.com,twitter.com#?#section[aria-labelledby][role="region"] > div[aria-label] > div[style] > div[style^="transform: translate"] article[data-testid="tweet"]:has(> div[class] > div[class] > div[class] a[href^="/i/topics"][dir="auto"])
+x.com,twitter.com#?#section[aria-labelledby^="accessible-list"] div[style^="transform"]:has(div[data-testid="tweetText"] > a:contains(/jp\.cooki(?:e-food|cway)\.com/))
 x.com/*/videoads/
 x.facebook.com,beta.facebook.com,alpha.facebook.com,d.facebook.com##article[data-ft*="quick_promotion_id"]
 x1337x.cc,1337x.st,1337x.to,1337xx.to,x1337x.eu,x1337x.ws,1337x.unblock2.xyz##.page-content > .box-info:has(> .box-info-heading > div[onclick^="location.href="][style])
