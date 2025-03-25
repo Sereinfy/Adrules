@@ -1,9 +1,9 @@
 !
 ! Title: AdBlock Filter Lite
 ! Homepage: https://github.com/Sereinfy/Adrules
-! Version: 20250325002244
-! Last modified: 2025/03/25 00:22:44
-! Blocked Filters: 62835
+! Version: 20250325091926
+! Last modified: 2025/03/25 09:19:26
+! Blocked Filters: 62844
 !
 ###AC_ad
 ###AD_160
@@ -33116,6 +33116,7 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 /poppy^$script,domain=pornq.com|see.xxx
 /popu.js$script
 /popunder.$popup
+/popunder/in/click/*
 /popunder/in/click/*$popup
 /popunder1.js$script
 /popunder1000.js$script
@@ -40777,6 +40778,7 @@ amazon.*###sponsoredProducts2_feature_div
 amazon.*###sponsoredProducts_feature_div
 amazon.*###typ-recommendations-stripe-1
 amazon.*###typ-recommendations-stripe-2
+amazon.*##.AdsCard_container__K6vmo
 amazon.*##.amzn-safe-frame-container
 amazon.*##.dp-widget-card-deck:has([data-ad-placement-metadata])
 amazon.*##.maple-banner
@@ -42728,6 +42730,7 @@ brtn.cn,btime.com##.business-box
 brtn.cn,btime.com##.business-item
 brtn.cn,btime.com##.promo-item > a[href^="http"]:not([href*=".b"])
 brtn.cn,btime.com##.seed-item
+bs.cimanow.cc#@%#//scriptlet('abort-on-stack-trace', 'Image', '?v=')
 bsc.news,web3wire.news##.banner-one
 bsl.com.tr,alvinaonline.com###CookieNotificationArea
 bt.cn##.left_wrap:nth-child(3)
@@ -62103,6 +62106,12 @@ zzzyk.com###Tinfo
 ||static.youku.com/*/index/js/iresearch.js
 ||static.youku.com/*/js/cps.js
 ||static.yxdown.com/cj/$script
+||static.zongheng.com/*/ad$script
+||static.zongheng.com/upload/*ds/column/$script,image
+||static.zongheng.com/upload/recommend/game/201$image
+||static.zongheng.com^*/adClickStat.js
+||static.zongheng.com^*/ad_click.js
+||static.zongheng.com^*/logger.min.js
 ||staticfile.qq.com/datong/$script
 ||staticfile.qq.com/qimei/$script
 ||stats*.credit-cooperatif.coop^
