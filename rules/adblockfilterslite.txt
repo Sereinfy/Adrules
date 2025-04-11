@@ -1,9 +1,9 @@
 !
 ! Title: AdBlock Filter Lite
 ! Homepage: https://github.com/Sereinfy/Adrules
-! Version: 20250411002157
-! Last modified: 2025/04/11 00:21:57
-! Blocked Filters: 62995
+! Version: 20250411092025
+! Last modified: 2025/04/11 09:20:25
+! Blocked Filters: 63000
 !
 ###AC_ad
 ###AD_160
@@ -32849,6 +32849,7 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 /opinionlab.js
 /optiextension.dll?$script
 /optimizelyjs/*
+/orichipixel.min.js
 /os1019.oss-cn-quanzhou.
 /os2023001.oss-$script
 /os230718.oss-
@@ -38153,7 +38154,7 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=sondakika.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=sonyliv.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=soonersports.com
-@@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=southparkstudios.com
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=southpark.*|southparkstudios.*
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=spox.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=stack.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=startrek.com
@@ -38252,7 +38253,7 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 @@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=nick.com|nickjr.com|cc.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=play.virginmediatelevision.ie
 @@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=sonyliv.com
-@@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=southparkstudios.com
+@@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=southpark.*|southparkstudios.*
 @@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=timesnownews.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=vix.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=winknews.com
@@ -38276,7 +38277,7 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 @@||imasdk.googleapis.com/pal/sdkloader/pal.js$domain=pluto.tv
 @@||imasdk.googleapis.com/pal/sdkloader/pal.js$domain=pluto.tv|tunein.com
 @@||imasdk.googleapis.com/pal/sdkloader/pal.js$domain=sciencechannel.com
-@@||imasdk.googleapis.com/pal/sdkloader/pal.js$domain=southparkstudios.com
+@@||imasdk.googleapis.com/pal/sdkloader/pal.js$domain=southpark.*|southparkstudios.*
 @@||imasdk.googleapis.com/pal/sdkloader/pal.js$domain=tunein.com
 @@||imasdk.googleapis.com^$domain=cnet.com
 @@||imasdk.googleapis.com^$stealth,domain=news.tvb.com
@@ -46763,7 +46764,7 @@ ghxi.com#@#.social-item
 ghxi.com#@#.wpcom_ad_wrap
 ghxi.com,mcdulll.com,pixnet.net##div[id*="-ad-"]
 giantfood.com,giantfoodstores.com,martinsfoods.com##[aria-label^="Sponsored"]
-giantfood.com,giantfoodstores.com,martinsfoods.com##[data-product-id]:has(.flag_label--sponsored)
+giantfood.com,giantfoodstores.com,martinsfoods.com#?#[data-product-id]:-abp-contains(Sponsored)
 giantfoodstores.com,giantfood.com,martinsfoods.com#?#.pdl-generic-content_full:-abp-contains(Sponsored)
 gidahatti.com,kanalben.com,kibrispostasi.com,patronlardunyasi.com##a[href^="https://news.google.com/publications/"]
 gidahatti.com,mygazete.com###_cookieMessageDiv
@@ -55128,6 +55129,10 @@ soundandvision.com,stereophile.com#@##topbannerad
 soundcore.com,dreametech.com,eufy.com,shop.nufc.co.uk,anker.com,eufylife.com,shop.rangers.co.uk###shopify-section-fixed-message
 sourceforge.net,freepik.com##div[data-id^="div-gpt-ad-"]
 southernliving.com,thesprucecrafts.com,marthastewart.com#$#html { overflow-y: auto !important; }
+southpark.*,southparkstudios.*#%#(()=>{const e=new Map,t=function(){},o=t;o.prototype.dispose=t,o.prototype.setNetwork=t,o.prototype.resize=t,o.prototype.setServer=t,o.prototype.setLogLevel=t,o.prototype.newContext=function(){return this},o.prototype.setParameter=t,o.prototype.addEventListener=function(t,o){t&&(console.debug(`Type: ${t}, callback: ${o}`),e.set(t,o))},o.prototype.removeEventListener=t,o.prototype.setProfile=t,o.prototype.setCapability=t,o.prototype.setVideoAsset=t,o.prototype.setSiteSection=t,o.prototype.addKeyValue=t,o.prototype.addTemporalSlot=t,o.prototype.registerCustomPlayer=t,o.prototype.setVideoDisplaySize=t,o.prototype.setContentVideoElement=t,o.prototype.registerVideoDisplayBase=t,o.prototype.submitRequest=function(){const t={type:tv.freewheel.SDK.EVENT_SLOT_ENDED},o=e.get("EVENT_SLOT_ENDED");o&&setTimeout((()=>{try{o(t)}catch(e){console.error(e)}}),1)},window.tv={freewheel:{SDK:{Ad:t,AdManager:o,AdListener:t,_instanceQueue:{},setLogLevel:t,EVENT_SLOT_ENDED:"EVENT_SLOT_ENDED"}}}})();
+southpark.*,southparkstudios.*#%#//scriptlet('google-ima3')
+southpark.*,southparkstudios.*#%#//scriptlet('json-prune', 'imasdk')
+southpark.*,southparkstudios.*#%#//scriptlet('prevent-fetch', 'imasdk.googleapis.com')
 southparkstudios.com,southparkstudios.nu##section[data-display-name="Newsletter"]
 soyoung.com###pubWideBanner
 soyoung.com##.cash_back
