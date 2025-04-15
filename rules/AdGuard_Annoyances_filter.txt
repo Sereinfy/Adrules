@@ -4308,8 +4308,8 @@ bbb.org#%#//scriptlet('trusted-set-cookie', 'iabbb_cookies_preferences_set', 'tr
 manufactum.com##div[data-cookie-banner-area="true"]
 mediamarkt.nl##div:has(> [data-test="mms-search-consent-section"])
 worthaus-ac.de##[class^="pixelmate-"]
-restaurantclub.pl#$#html.disable--interaction.show--consent:not(#style_important) { overflow-y: auto !important; }
-restaurantclub.pl,zamowienia.tpizza.pl,houseflippergame.com,subiektywnieofinansach.pl,atlasbus.by,mrgugu.com,dietly.pl#$##cc-main { display: none !important; }
+soulkyn.com,restaurantclub.pl#$#html.disable--interaction.show--consent:not(#style_important) { overflow-y: auto !important; }
+soulkyn.com,restaurantclub.pl,zamowienia.tpizza.pl,houseflippergame.com,subiektywnieofinansach.pl,atlasbus.by,mrgugu.com,dietly.pl#$##cc-main { display: none !important; }
 zamowienia.tpizza.pl,houseflippergame.com,subiektywnieofinansach.pl,atlasbus.by,mrgugu.com,dietly.pl#$#html.disable--interaction.show--consent:not(#style_important) { overflow: auto !important; }
 laposte.net###privacy-overlay
 bleepingcomputer.com#%#//scriptlet('set-cookie', 'sc_cookie_consent', '0')
@@ -8207,6 +8207,8 @@ link1one.com,claimercorner.xyz,faucetzoid.online###gath3r-optin-dialog
 brf.be###cookieDashboard
 cool-mania.pl,forpro.pl,natterhub.com,grubytom.pl,kotas.com.br,kuchniapupila.pl,allnutrition.pl,elenovo.pl,facetaria.pl,cool-mania.de,inkbook.pl,rheumaliga.ch,medicshop.pl,cobbo.pl,pakomat.pl,rolnet.pl,petrostar.pl,atmoskop.cz,pulser.hr,jesus.de,airindia.com,lovekrakow.pl,mediccentre.pl,erzeszow.pl#$#html.force--consent.show--consent:not(#style_important) { overflow: auto !important; }
 cool-mania.pl,forpro.pl,natterhub.com,grubytom.pl,kotas.com.br,kuchniapupila.pl,allnutrition.pl,elenovo.pl,facetaria.pl,cool-mania.de,inkbook.pl,rheumaliga.ch,medicshop.pl,cobbo.pl,pakomat.pl,rolnet.pl,petrostar.pl,atmoskop.cz,pulser.hr,jesus.de,airindia.com,lovekrakow.pl,mediccentre.pl,giga-hamburg.de,gerth.de,erzeszow.pl#$##cc--main { display: none !important; }
+soulkyn.com#$#html.show--consent { overflow: auto !important; }
+soulkyn.com#$##cc-main { display: none !important; }
 hyperbook.pl,eazymut.pl###cookie-change-button
 nytimes.com#?#footer + div > span[data-gtm-trigger="cookie_banner_dismiss"]:upward(1)
 ||consent.prointernet.com/consent.js
@@ -50973,6 +50975,7 @@ www.kinopoisk.ru##div[class^="trailer-promo"]
 !
 ! SECTION: Self-promo - Regular rules
 !
+zeit.de##dialog[data-tp-layout="footer_bar_offer_variante_shared"]
 blitz.gg##div[class]:has(> .placeholder > [href^="/pro?utm_"])
 kyuzerogo.sakura.ne.jp##body > div.pe_1
 kyuzerogo.sakura.ne.jp##body > div.top_head:has(+ div.pe_1)
@@ -56023,6 +56026,8 @@ newsweek.com##iframe[src="http://sns.europe.newsweek.com/newsletter?popup=1"]
 !##############################
 ! SECTION: Tweaks - JS
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/202433
+recut.ru#%#//scriptlet('trusted-click-element', '#open_link', '', '500')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/202740
 shorttrick.in#%#//scriptlet('adjust-setInterval', 'wpsafe', '*', '0.001')
 sampledrive.org#%#//scriptlet('adjust-setInterval', 'downloadButton', '*', '0.001')
@@ -56884,7 +56889,7 @@ dogeatm.com,claimbits.io,i-bits.io,diamondfaucet.space,gobits.io,faucet.shortera
 ! https://github.com/AdguardTeam/AdguardFilters/issues/81186
 adslink.pw#%#//scriptlet('adjust-setInterval', '_0x', '*', '0.02')
 jpopsingles.eu#%#//scriptlet("adjust-setInterval", "downloadTimer", "", "0.02")
-jpopsingles.eu#%#(function(){if(location.href.includes("/to/aHR0c"))try{var a=location.href.split("/to/");a=atob(a[1]).split("url=");location=decodeURIComponent(a[1])}catch(b){}})();
+jpopsingles.eu#%#(function(){if(location.href.includes("/to/aHR0c"))try{var a=location.href.split("/to/");a=atob(a[1]);location=decodeURIComponent(a)}catch(b){}})();
 ! https://github.com/AdguardTeam/AdguardFilters/issues/80037
 psdly.com#%#//scriptlet("adjust-setInterval", "counter--", "", "0.02")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/79999
@@ -57368,6 +57373,7 @@ codedosa.com###wpcp-error-message
 !--- CSS ---
 ! NOTE: Context menu - CSS
 !
+recut.ru#$##skip_panel { display: block !important; }
 novelpia.com#$#font[id] { -webkit-touch-callout: default !important; -moz-user-select: text !important; -webkit-user-select: text !important; -ms-user-select: text !important; -o-user-select: text !important; user-select: text !important; -khtml-user-select: text !important; }
 videocardz.com#$##videocardz-article * { user-select: auto !important; }
 oricon.co.jp#$#.all-lyrics { -webkit-touch-callout: default !important; -webkit-user-select: auto !important;-moz-user-select: text !important; -ms-user-select: text !important; user-select: auto !important; -webkit-tap-highlight-color: black !important; }
