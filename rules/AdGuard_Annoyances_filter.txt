@@ -2503,6 +2503,7 @@ scootertechno.com,mysize.ch,aeotec.com,geschichte-wissen.de,4kfilme.de,pk.edu.pl
 !
 ! NOTE: Regular rules
 !
+fantasi.one#?##app > div.outline:has(> button:contains(Akzeptieren))
 casadotiro.com.br###container-popup:has(a[href="politica.privacidade.php"])
 stager.co##.s-cookie-consent
 easy-peasy.ai###__next > .fixed.m-4.max-w-md.rounded-lg.bg-gray-100
@@ -2949,7 +2950,7 @@ notion.com#%#//scriptlet('trusted-click-element', 'button[aria-label="Reject all
 animatebookstore.com##.ccst_area
 1000kitap.com###__next > div.w-full > div.flex-row ~ div.shadow.fixed.right-4
 befree.ru##.digi-cookie-popup
-max.com#$##app > div#layer-root-modal:has(> div[class^="StyledDialogWrapper-Fuse-"] button[aria-label="Accept All Cookies"]) { display: none !important; }
+max.com#$##app > div#layer-root-modal:has(> div[class^="StyledDialogWrapper-Fuse-"] button[aria-label^="Accept All"]) { display: none !important; }
 max.com#$#body { overflow: auto !important; }
 abs-cbn.com#%#//scriptlet('set-local-storage-item', 'uninavIsAgreeCookie', 'true')
 esure.com#%#//scriptlet('trusted-click-element', 'button[data-testid="accept-all-cookies"]')
@@ -26458,6 +26459,7 @@ sanalkurs.net###toast-container > .toast-error[aria-live="assertive"]
 !
 ! SECTION: Popups - Regular rules
 !
+marktechpost.com##div[class*="sgpb-popup-"]
 cnnturk.com##watch-live-button
 bikepacking.com#%#//scriptlet('abort-current-inline-script', '$', 'showOverlay')
 instacart.com#$#.ReactModalPortal > div.AuthModal__Overlay:not(:has(button[aria-label="Close modal"])) { display: none !important; }
@@ -35235,6 +35237,10 @@ gaugau.futabanet.jp,newscientist.com,jiji.com,edp24.co.uk,technologyreview.com,n
 !
 ! SECTION: Subscriptions - Regular rules
 !
+androidauthority.com##main div[class]:has(> form:only-child)
+olderbest.com##seguno-popup
+trailspace.com#$#.fancybox-newsletter { display: none !important; }
+trailspace.com#$#body.fancybox-active { overflow: auto !important; }
 showbox.media##.follow_us
 pamukovasosyalmedya.com##.tarih > a[title="Google News"]
 comicbook.com##.comicbook-cta-newsletter-wrap
@@ -46737,8 +46743,12 @@ m.tokopedia.com#$#div[data-testid="divOverlay"] { display: none!important; }
 ! Suppressing PWA "Add To Home screen" annoyance
 ! Limit it to mobile versions only
 ! causes some issues: https://github.com/AdguardTeam/AdguardForMac/issues/550
-~status.im,~lafenice.io,~kurer-sreda.ru,~chorki.com,~zattoo.com,~zaycev.net,~hitta.se,~mail.ru,~facebook.com,~instagram.com,~drive.google.com$$link[rel="manifest"]
+~search.brave.com,~status.im,~lafenice.io,~kurer-sreda.ru,~chorki.com,~zattoo.com,~zaycev.net,~hitta.se,~mail.ru,~facebook.com,~instagram.com,~drive.google.com$$link[rel="manifest"]
 !
+theinformation.com##a[data-testid="download-app"]
+quora.com#?#a[href="https://www.quora.com/"][target="_top"] + div[class] > button:has(> div > div > div:contains(App))
+fantasi.one#?##app > div.background:has(> div:only-child > .close + .content > p:contains(App))
+hepsiburada.com##details[class^="sf-smart-banner"]
 ifunny.co###App > div[class*=" "]:has(> div[class] a[href^="https://ifunny.onelink.me/"])
 okeydostavka.ru###mainHeaderMobileBanner
 tft.op.gg##a[href^="https://apps.apple.com/"][href*="/app/op-gg/id605722237"]
@@ -50997,6 +51007,8 @@ www.kinopoisk.ru##div[class^="trailer-promo"]
 !
 ! SECTION: Self-promo - Regular rules
 !
+rus.postimees.ee##.article__piano-block
+wired.jp##.body__inner-container > div[class^="GenericCalloutWrapper"]:has(> aside > p > a[href="https://wired.jp/membership/about/"])
 santaretail.by##.gif_banner
 zeit.de##dialog[data-tp-layout="footer_bar_offer_variante_shared"]
 blitz.gg##div[class]:has(> .placeholder > [href^="/pro?utm_"])
