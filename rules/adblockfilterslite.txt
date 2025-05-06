@@ -1,9 +1,9 @@
 !
 ! Title: AdBlock Filter Lite
 ! Homepage: https://github.com/Sereinfy/Adrules
-! Version: 20250506002326
-! Last modified: 2025/05/06 00:23:26
-! Blocked Filters: 63212
+! Version: 20250506092332
+! Last modified: 2025/05/06 09:23:32
+! Blocked Filters: 63216
 !
 ###AC_ad
 ###AD_160
@@ -28152,8 +28152,10 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 .bhphotovideo.com/mo/
 .bid/ads/
 .birdsend.net/o/$image
+.biz/?ce=$third-party
 .biz/?pu=$script,third-party
 .biz/?pus=$script,third-party
+.biz/?re=$third-party
 .biz/?te=$script
 .biz/?te=$third-party
 .biz/rss.htm$subdocument,~third-party
@@ -29798,6 +29800,7 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 /admiral.js
 /admiral_worker_caller.js
 /admitad.js$script
+/admtracker.lib.min.js
 /adnow.js$domain=tvboxnow.com
 /adobe-analytics-$domain=~business.adobe.com
 /adobe-analytics.js
@@ -41009,6 +41012,7 @@ amazon.*##.AdsCard_container__K6vmo
 amazon.*##.amzn-safe-frame-container
 amazon.*##.dp-widget-card-deck:has([data-ad-placement-metadata])
 amazon.*##.maple-banner
+amazon.*##.s-result-item:has([data-ad-feedback-label-id])
 amazon.*##.s-result-item:has([data-ad-feedback])
 amazon.*##.s-result-item:has(div.puis-sponsored-label-text)
 amazon.*##.s-result-list > .a-section:has(.sbv-ad-content-container)
