@@ -1,9 +1,9 @@
 !
 ! Title: AdBlock Filter Lite
 ! Homepage: https://github.com/Sereinfy/Adrules
-! Version: 20250516002316
-! Last modified: 2025/05/16 00:23:16
-! Blocked Filters: 63330
+! Version: 20250516092508
+! Last modified: 2025/05/16 09:25:08
+! Blocked Filters: 63334
 !
 ###AC_ad
 ###AD_160
@@ -32305,6 +32305,7 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 /js/profit.js$~third-party
 /js/ptn/*.js?_=$domain=depositfiles.com|dfiles.eu|dfiles.ru
 /js/push.js$domain=site.ua|gorod24.online|ytro.news|vz.ru|infostart.hu
+/js/pushjs/1.0.0/subscriber.js
 /js/pushsubscribe.js
 /js/quantcast-
 /js/re-ads-
@@ -35981,6 +35982,8 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 2smsupernetwork.com,snowbrains.com,theconservativetreehouse.com,times.co.zm,treesofblue.com###text-6
 2smsupernetwork.com,westseattleblog.com###text-3
 2urs.com#%#//scriptlet('abort-on-property-read', 'ads')
+2wheelslife.com,finance240.com##div[data-placement-id="revbid-square"]
+2wheelslife.com,finance240.com#%#//scriptlet('prevent-fetch', 'googleads.g.doubleclick.net')
 2x2.su,car.ru,esoligorsk.by##.dzen
 2x2tv.ru,alfa-tv.ua##.cook
 2yjw.com,fuliba2021.net,itdog.cn,zhujiceping.com##.orbui
@@ -37953,7 +37956,7 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 @@||googleads.g.doubleclick.net/pagead/interaction/$domain=quins.us
 @@||googleads.g.doubleclick.net/pagead/interaction/$domain=starkroboticsfrc.com|cryptednews.space|seoliv.com|waezg.xyz|blackwoodacademy.org|lifgam.online|crypto-radio.eu|tiktokcounter.net
 @@||googleads.g.doubleclick.net/pagead/interaction/|$xmlhttprequest,domain=ecosolardigest.com
-@@||googleads.g.doubleclick.net/pagead/interaction/|$xmlhttprequest,domain=finance240.com
+@@||googleads.g.doubleclick.net/pagead/interaction/|$xmlhttprequest,domain=finance240.com|2wheelslife.com
 @@||googleads.g.doubleclick.net/pagead/js/adsbygoogle.js$domain=sportshub.to
 @@||googleads.g.doubleclick.net/pagead/js/adsbygoogle.js$xmlhttprequest,domain=werfgt.fun
 @@||googleads.g.doubleclick.net^$domain=fplstatistics.com
@@ -40191,6 +40194,7 @@ Mplay/kk1.js
 [$path=/jobs]linkedin.com###ember33
 [$path=/jobs]linkedin.com##.discovery-templates-entity-item:has(> div[data-job-id="search"] > div > .job-card-list__footer-wrapper > .job-card-container__footer-item.align-items-center:first-child)
 [$path=/m]consent.youtube.com#%#//scriptlet('trusted-click-element', 'form[action="https://consent.youtube.com/save"][jsaction] button[jsname="b3VHJd"]')
+[$path=/maps]google.*#%#//scriptlet('set-local-storage-item', 'mapslitepromosdismissed', 'true')
 [$path=/maps]yandex.*##.business-card-title-view__actions .button._view_advertisement
 [$path=/maps]yandex.*##.business-card-title-view__advert
 [$path=/maps]yandex.*##.business-card-view__extend > form.maillist-form-view
@@ -45355,8 +45359,8 @@ ebay.*###g-yolo-overlay-holder > iframe#google-ebay
 ebay.*###gh-appBanner
 ebay.*##.gadget-banner.bottom-of-page
 ebay.*##.srp-river-answer[class*="CAROUSEL"]:not([class*="NAVIGATION"])
-ebay.*##.x-rx-slot
 ebay.*#$##gh-bulletin-det[style*="height:1px"] { display: block !important; }
+ebay.*#$#.x-rx-slot { position: absolute!important; left: -4000px!important;}
 ebay.*#@#.ad-placeholder:not(#filter_ads_by_classname):not(#detect_ad_empire):not(#detect):not(.adsbox)
 ebay.at,ebay.co.uk,ebay.com,ebay.de,ebay.es,ebay.fr,ebay.it,ebay.nl,ebay.pl##.s-answer-region-center-top > div[id^="placement"][style="min-height:144px;"]
 ebay.co.uk,ebay.com,ebay.com.au##.srp-1p__link
