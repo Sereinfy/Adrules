@@ -2507,6 +2507,9 @@ teslawissen.ch,scootertechno.com,mysize.ch,aeotec.com,geschichte-wissen.de,4kfil
 !
 ! NOTE: Regular rules
 !
+lkz.de#%#//scriptlet('trusted-click-element', '#nfyc-plus-layer:not(.hidden) button[onclick="UC_UI.acceptAllConsents();"]', '', '1000')
+cam4.com##footer + div[class]:has(> div > div > a[href="/legal/cookies"])
+noon.com##div[class^="CookieConsentNotice_wrapper"]
 pdf-xchange.com##.cookie-fixed-hint
 solesavy.com##.u21-privacy-banner
 tomtom.com#%#//scriptlet('trusted-set-cookie', 'tt_settings', '{%22%2C%22advertising%22:false%2C%22social%22:false%2C%22analytical%22:false}')
@@ -17175,11 +17178,14 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 !+ NOT_OPTIMIZED PLATFORM(windows, mac, android)
 ||geolocation.onetrust.com/cookieconsentpub/*/geo/location$xmlhttprequest,redirect-rule=noopjson
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/206765
+@@||usercentrics.eu^$domain=lkz.de
+! https://github.com/AdguardTeam/AdguardFilters/issues/206746
 ! https://github.com/AdguardTeam/AdguardFilters/issues/206759
 ! https://github.com/AdguardTeam/AdguardFilters/issues/206751
 ! https://github.com/AdguardTeam/AdguardFilters/issues/206748
 ! https://github.com/AdguardTeam/AdguardFilters/issues/206730
-@@||delivery.consentmanager.net/delivery/cmp.php$domain=nrz.de|braunschweiger-zeitung.de|waz.de|thueringer-allgemeine.de
+@@||delivery.consentmanager.net/delivery/cmp.php$domain=nrz.de|braunschweiger-zeitung.de|waz.de|thueringer-allgemeine.de|weser-kurier.de
 ! https://github.com/AdguardTeam/AdguardFilters/issues/206424
 newpharma.fr,newpharma.be,newpharma.de,newpharma.nl,newpharma.at#@#.cookie-policy:not(body):not(html)
 newpharma.fr,newpharma.be,newpharma.de,newpharma.nl,newpharma.at#@#.js-cookie-policy
@@ -43843,6 +43849,7 @@ alfastrah.ru,turkishairlines.com,atmos-tokyo.com,radarbox.com,ciceksepeti.com,ra
 !
 !
 !
+noon.com##div[class^="AppInstallBanner_container"]
 visualcapitalist.com##div[style^="margin-bottom:"]:has(> p > a[href="https://www.voronoiapp.com/"])
 rzd.ru##rzd-mobile-application-banner
 m.modlily.com###down-app-box
@@ -51830,6 +51837,7 @@ yandex.*##.meteum-promo
 [$path=/maps]yandex.*##.business-card-title-view__actions .button._view_advertisement
 !
 ! Yandex.Music
+music.yandex.*##div[class*="NavbarDesktopAnimatedPlusBar_root___"]
 music.yandex.*##section[aria-label="Баннер"]
 music.yandex.*#%#//scriptlet('trusted-click-element', 'div[role="dialog"][class*=" PaywallModal_root__"] button[class*=" PaywallModal_closeButton__"]')
 music.yandex.*##div[class^="player-bar_miniBrickContainer"] > div[data-name="MINI_BRICK"]
@@ -51887,6 +51895,7 @@ www.kinopoisk.ru##div[class^="trailer-promo"]
 !
 ! SECTION: Self-promo - Regular rules
 !
+lz.de###fb_werbeform
 visualcapitalist.com###block-8
 saechsische.de###piano-home-inline-saez
 dnn.de,landeszeitung.de#$#div[class^="PianoBanner"] { display: none !important }
