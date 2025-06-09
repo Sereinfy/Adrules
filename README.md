@@ -69,3 +69,7 @@ Forked From [217heidai/adblockfilters](https://github.com/217heidai/adblockfilte
 | 1024 hosts | host | [原始链接](https://raw.githubusercontent.com/Goooler/1024_hosts/master/hosts) | [加速链接1](https://gcore.jsdelivr.net/gh/Sereinfy/Adrules@main/rules/1024_hosts.txt) | [加速链接2](https://github.boki.moe/https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/1024_hosts.txt) | [加速链接3](https://ghfast.top/https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/1024_hosts.txt) | 2025/06/09 |
 | ad-wars hosts | host | [原始链接](https://raw.githubusercontent.com/jdlingyu/ad-wars/master/hosts) | [加速链接1](https://gcore.jsdelivr.net/gh/Sereinfy/Adrules@main/rules/ad-wars_hosts.txt) | [加速链接2](https://github.boki.moe/https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/ad-wars_hosts.txt) | [加速链接3](https://ghfast.top/https://raw.githubusercontent.com/Sereinfy/Adrules/main/rules/ad-wars_hosts.txt) | 2025/06/09 |
 
+
+## 以下是广告
+感兴趣的可以看下，DartNode 免费 VPS, [点击申请](https://dartnode.com?aff=PudgyBurrito637)
+[![Powered by DartNode](https://dartnode.com/branding/DN-Open-Source-sm.png)](https://dartnode.com "Powered by DartNode - Free VPS for Open Source")
