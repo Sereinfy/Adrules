@@ -3012,7 +3012,6 @@ eleman.net##.privacy_disclaime
 magic-x-store.com#%#//scriptlet('set-cookie', 'accept_cookies_policy', 'accepted')
 hisense.com#%#//scriptlet('trusted-click-element', 'app-gg-cookie-consent-management-banner button.btn-accept')
 perfumesclub.*#%#//scriptlet('trusted-set-cookie', 'PreferenciasCookies', 'PermiteAnaliticas=false&PermiteMarketing=false')
-svgcreator.com,luvvoice.com##.fixed.bottom-4
 epicdrama.eu#%#//scriptlet('set-cookie', 'cookies_popup', '0')
 store.insta360.com###CookieConsentBanner
 casamundo.*,home-to-go.ca,hometogo.*###htg-app > div.react-onclickoutside
@@ -4673,7 +4672,7 @@ helix-pflanzen.de###cconsent-modal.ccm--visible
 eurogamer.pt#%#//scriptlet('trusted-click-element', '.message-component > button[title="Manage Cookie Settings"]')
 eurogamer.pt#%#//scriptlet('trusted-click-element', '.message-component > button[title="Reject All"]')
 miles-mobility.com##div[data-testid="cookie-consent"]
-prmira.ru,docs.roadrunner.dev,newsnn.ru,dust.tt,tagilcity.ru##.fixed.bottom-4
+asiaon.top,svgcreator.com,luvvoice.com,prmira.ru,docs.roadrunner.dev,newsnn.ru,dust.tt,tagilcity.ru##.fixed.bottom-4
 sklep-internet.pl#%#//scriptlet('trusted-set-cookie', 'cookies_message_bar_hidden', 'true')
 oklink.com##.cookieTips
 burgerking.pl##div[data-testid="footer"] > div[class^="styles__Container-"]:has(> div[class^="styles__ButtonsContainer-"] > button[data-testid="close-cookies-button"])
@@ -17222,6 +17221,8 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 !+ NOT_OPTIMIZED PLATFORM(windows, mac, android)
 ||geolocation.onetrust.com/cookieconsentpub/*/geo/location$xmlhttprequest,redirect-rule=noopjson
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/208681#issuecomment-3032001663
+@@||cdn.cookielaw.org^$domain=people.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/208495
 @@||medicoversport.pl/pakiety/public-shared/element/cookies-info/cookie-bar.js$domain=medicoversport.pl
 ! https://github.com/AdguardTeam/AdguardFilters/issues/208314
@@ -26805,6 +26806,7 @@ sanalkurs.net###toast-container > .toast-error[aria-live="assertive"]
 !
 ! SECTION: Popups - Regular rules
 !
+kaitori-dx.com###footBnr
 urban-media.ru#%#//scriptlet('set-cookie', 'hide_popup', 'yes')
 haberaktuel.com###android-install-banner
 haberaktuel.com###windows-install-banner
@@ -42808,7 +42810,7 @@ neonnettle.com###mailList
 comfycozygaming.com,finsmes.com,skardu.pk,mikrometoxos.gr,filmdaily.co,connectwww.com,helpnetsecurity.com,journaldev.com###mailchimp-top-bar
 allkpop.com#?##mailing-list > article:has(> input#subscribe_email)
 vellisa.ru###mbt-sub-box
-hola.com,thatskygame.com,melhoresdestinos.com.br,archives.gov,glvrd.ru,todayifoundout.com,it-here.ru,grammar-tei.com,money.cnn.com###mc-embedded-subscribe-form
+historynewsnetwork.org,hola.com,thatskygame.com,melhoresdestinos.com.br,archives.gov,glvrd.ru,todayifoundout.com,it-here.ru,grammar-tei.com,money.cnn.com###mc-embedded-subscribe-form
 jasonsavard.com,rawstory.com,zik.ua###mc_embed_signup_scroll
 2ch.hk,2ch.pm###mobile-plashque
 speedtest.net###modal-edit-newsletter
@@ -47373,6 +47375,8 @@ m.tokopedia.com#$#div[data-testid="divOverlay"] { display: none!important; }
 ! causes some issues: https://github.com/AdguardTeam/AdguardForMac/issues/550
 ~vert.sh,~search.brave.com,~status.im,~lafenice.io,~kurer-sreda.ru,~chorki.com,~zattoo.com,~zaycev.net,~hitta.se,~mail.ru,~facebook.com,~instagram.com,~drive.google.com$$link[rel="manifest"]
 !
+dcard.tw##button[style="--button-padding-left:16px;--button-padding-right:16px"]
+dcard.tw#$?#article ~ div[style="--15gfups: 0;"]:has(> button[style="--button-padding-left:14px;--button-padding-right:14px"]) { remove: true; }
 youdo.com##div[class^="toolbar_downloadAppWrapper"]
 youdo.com###MobileDownloadApp
 tntsports.co.uk##div[data-testid="organism-smart-banner"]
@@ -48335,9 +48339,8 @@ forbes.com#$##forbes-dv { display: none !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/196958
 ctvnews.ca##.b-alert-bar-wrapper-custom
 ! Google Search - AI Overview
-google.*##div[data-lhcontainer][style="margin-bottom:30px"] > div[data-mcpr]
+google.*##div[data-lhcontainer="1"][id][data-hveid] > div[data-mcpr][data-mg-cp][data-mcp]
 ://www.google.*/async/folsrch?*&async=_basejs:*,_basecomb:*&q=$xmlhttprequest
-google.*##script + div[data-mcpr][class="YzCcne"]
 google.*##div[data-q][data-al]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/197075
 pravda.sk#%#//scriptlet('prevent-addEventListener', 'scroll', 'fixed && window.scroll')
@@ -51739,6 +51742,8 @@ www.kinopoisk.ru##div[class^="trailer-promo"]
 !
 ! SECTION: Self-promo - Regular rules
 !
+jitenon.jp##.side_shop_bnr
+jitenon.jp##.shop_bnr
 fintables.com#%#//scriptlet('prevent-setTimeout', 'Plan_Promotion_Modal')
 ||api.fintables.com/ads?
 domclick.ru##div[class^="tpln-RateReduction-"]
@@ -56904,6 +56909,8 @@ newsweek.com##iframe[src="http://sns.europe.newsweek.com/newsletter?popup=1"]
 !##############################
 ! SECTION: Tweaks - JS
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/208730
+asiaon.top#%#//scriptlet('href-sanitizer', 'a[href^="https://link.asiaon.top/full?api="][href*="&url=aHR0c"]', '?url', 'base64decode')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/208570
 uploadcloud.pro#%#//scriptlet("adjust-setTimeout", ".show('drop')", "*", "0.001")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/208461
