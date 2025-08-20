@@ -2525,12 +2525,19 @@ entrack.pl,kraemer-it.de,teslawissen.ch,scootertechno.com,mysize.ch,aeotec.com,g
 !
 ! NOTE: Regular rules
 !
+aap.co.jp###pro-cp-dialog-wrapper
+shop.shionogi-hc.co.jp#%#//scriptlet('set-cookie-reload', 'shionogi_tracking_answer', 'true')
+efortuna.pl#%#//scriptlet('set-cookie', 'marketing', 'false', '/', 'efortuna.pl')
+efortuna.pl#%#//scriptlet('set-cookie', 'performance', 'false', '/', 'efortuna.pl')
+efortuna.pl#%#//scriptlet('set-cookie', 'statistics', 'false', '/', 'efortuna.pl')
+efortuna.pl#%#//scriptlet('set-cookie', 'necessary', 'true', '/', 'efortuna.pl')
+efortuna.pl#%#//scriptlet('set-cookie', 'cookie_layer', '1', '/', 'efortuna.pl')
 baseus.com##.ez-consent
 shipmentlink.com#$##modal_cookie_alert { display: none !important; }
 shipmentlink.com#$#div[class*="-backdrop"] { display: none !important; }
 shipmentlink.com#$#body.modal-open { overflow: auto !important; padding-right: 0 !important; }
 shop.tricolor.ru##.is-dock-cookie-policy
-wellness.shionogi.co.jp,dani-allergy.jp##.js-cookie-panel
+shionogi-hc.co.jp,wellness.shionogi.co.jp,dani-allergy.jp##.js-cookie-panel
 deutscheoperberlin.de###consent-manager-bg
 check.lionic.com###js-cookie-box
 architecture-weekly.com#%#//scriptlet('trusted-set-cookie', 'hideCookieBanner', '$currentISODate$')
@@ -25754,6 +25761,8 @@ sanalkurs.net###toast-container > .toast-error[aria-live="assertive"]
 !
 ! SECTION: Popups - Regular rules
 !
+theprovince.com##.featured-video--fixed
+ksta.de##turbo-player-ui[controls-breakpoint="tiny"]
 auroraoss.com###ads-notice
 npr.org###global-stickybar-mount-piano-wrap
 searchfloor.org#%#//scriptlet('trusted-set-session-storage-item', 'promoSeen', '3755508181288')
@@ -33664,6 +33673,7 @@ macwelt.de,pcwelt.de#%#//scriptlet("set-constant", "firebase.messaging", "noopFu
 !
 ! SECTION: Push notifications - Regular rules
 !
+eluniversal.com.mx###webpushBanner-eluniversal
 dexerto.com#$?#div[class*="animate-slideInUp"]:has(> div[class] > span.text-display-4:contains(Stay Updated)) { display: none !important; }
 dexerto.com#%#//scriptlet('remove-class', 'fixed', '.fixed[class*="animate-"]')
 dexerto.com##div[class]:has(> button[aria-label="Get Notifications for Twitch News"])
@@ -34581,6 +34591,11 @@ gaugau.futabanet.jp,newscientist.com,jiji.com,edp24.co.uk,technologyreview.com,n
 !
 ! SECTION: Subscriptions - Regular rules
 !
+computerbild.de##.socialBar__newsletter
+computerbild.de##.NewsletterEmbed__iframe
+||resources-production.la.welt.de/la-paperboy-widget
+ksta.de##.newsletter-widget-background
+goal.com##div[data-testid="article-body"] > .fco-responsive-table:has(td > a[href^="https://www.whatsapp.com/channel/"])
 opumo.com#%#//scriptlet('set-cookie', 'o-newsletter-popup', 'hide')
 misato-gurashi.com###follow
 downdetector.su##.sitereport > div.social
@@ -38663,6 +38678,7 @@ aamuposti.fi##.diks-box--commercial
 bbbl.dev##.subscription-section
 bbbl.dev##.telegram-widget
 npr.org##.callout--newsletter
+theprovince.com##.callout
 kralmuzik.com.tr,techbang.com##.google-news-wrapper
 womo.ua##.telegram_buttun
 aberdeennews.com##form[class^="gnt_"][aria-label*="newsletter: "]
@@ -47523,6 +47539,8 @@ instagram.com##._aagw:empty
 ! End: Instagram.com
 !
 !
+! eluniversal.com.mx - autoplay video on main page
+||youtube.com/embed*&autoplay=1$domain=eluniversal.com.mx,important
 ! https://github.com/AdguardTeam/AdguardFilters/issues/210978
 msn.com###WeatherRightRail
 ! https://uzaymanga.com/
@@ -51012,6 +51030,8 @@ www.kinopoisk.ru##div[class^="trailer-promo"]
 !
 ! SECTION: Self-promo - Regular rules
 !
+||reforma.com/libre/offlines/cx_bloquesexternos/personalizado
+reforma.com##div[id*="_Personalizado"][id^="Bloque_EX_"]
 wantgoo.com#$##popupOverlayAd { display: none !important; }
 wantgoo.com#$#.modal-backdrop { display: none !important; }
 wantgoo.com#$#body.modal-open { overflow: auto !important; }
