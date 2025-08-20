@@ -2525,6 +2525,8 @@ entrack.pl,kraemer-it.de,teslawissen.ch,scootertechno.com,mysize.ch,aeotec.com,g
 !
 ! NOTE: Regular rules
 !
+svt.se#%#//scriptlet('trusted-set-cookie', 'cookie-consent-news-3', '{"optedIn":true,"functionality":false,"statistics":false}', '', '/', 'svt.se')
+sverigesradio.se#%#//scriptlet('trusted-set-local-storage-item', 'cookie-settings', '{"consentSaved":true,"settingsAllowed":true,"statisticsAllowed":false,"thirdPartyAllowed":true,"version":"1"}')
 aap.co.jp###pro-cp-dialog-wrapper
 shop.shionogi-hc.co.jp#%#//scriptlet('set-cookie-reload', 'shionogi_tracking_answer', 'true')
 efortuna.pl#%#//scriptlet('set-cookie', 'marketing', 'false', '/', 'efortuna.pl')
@@ -5023,7 +5025,6 @@ yle.fi#%#//scriptlet('trusted-set-cookie', 'userconsent', 'v2|')
 chatreplay.stream#%#//scriptlet('trusted-set-cookie-reload', 'cr_consent', '2|tracking=false+analytics=false+marketing=falses')
 lvbet.pl#$#bcf-modal-cookies-consent { display: none !important; }
 lvbet.pl#$#body { overflow: auto !important; }
-svt.se#%#//scriptlet('trusted-set-cookie', 'cookie-consent-1', '{"optedIn":true,"functionality":false,"statistics":false}')
 svtplay.se#%#//scriptlet('trusted-set-cookie', 'cookie-consent-1', '{"required_storage":true,"functionality_storage":false,"statistics_storage":false,"ad_storage":false}')
 jow.fr#%#//scriptlet('trusted-set-cookie', 'jow_cookie_consent', 'none')
 turk.net#%#//scriptlet('trusted-set-cookie', 'cookie-consent', 'dismissed')
@@ -17413,6 +17414,8 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 !+ NOT_OPTIMIZED PLATFORM(windows, mac, android)
 ||geolocation.onetrust.com/cookieconsentpub/*/geo/location$xmlhttprequest,redirect-rule=noopjson
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/211695
+@@||gardenwildlifedirect.co.uk/static/*/frontend/*/Amasty_GdprFrontendUi/$domain=gardenwildlifedirect.co.uk
 ! https://github.com/AdguardTeam/AdguardFilters/issues/211371
 ! https://github.com/AdguardTeam/AdguardFilters/issues/211370
 ! https://github.com/AdguardTeam/AdguardFilters/issues/211294
@@ -30291,9 +30294,9 @@ realestate.yahoo.co.jp###_shp_bnr.FixedBox__fixedInfoBox
 realestate.yahoo.co.jp##.StickyBanner__link--contract
 timeout.com##div[class^="_overlay"][data-component="popup-newsletter"]
 byjus.com##.ask-ques-mobile-bottom-button
-touristik-aktuell.de,zinspilot.de,fussball.com,ionos.it,giardiniblog.it#$#body { overflow: auto !important; }
-touristik-aktuell.de,zinspilot.de,fussball.com,ionos.it,giardiniblog.it#$##bio_ep { display: none !important; }
-touristik-aktuell.de,zinspilot.de,fussball.com,ionos.it,giardiniblog.it#$##bio_ep_bg { display: none !important; }
+thetruckersreport.com,touristik-aktuell.de,zinspilot.de,fussball.com,ionos.it,giardiniblog.it#$#body { overflow: auto !important; }
+thetruckersreport.com,touristik-aktuell.de,zinspilot.de,fussball.com,ionos.it,giardiniblog.it#$##bio_ep { display: none !important; }
+thetruckersreport.com,touristik-aktuell.de,zinspilot.de,fussball.com,ionos.it,giardiniblog.it#$##bio_ep_bg { display: none !important; }
 puntocellulare.it#$?##pushbox { remove: true; }
 puntocellulare.it#%#//scriptlet('set-cookie', 'ilike', '1')
 shotam.info,bahndampf.de,vpncompare.co.uk##.sgpb-popup-dialog-main-div-wrapper
@@ -46585,6 +46588,7 @@ m.tokopedia.com#$#div[data-testid="divOverlay"] { display: none!important; }
 ! causes some issues: https://github.com/AdguardTeam/AdguardForMac/issues/550
 ~lineup.withgoogle.com,~vert.sh,~search.brave.com,~status.im,~lafenice.io,~kurer-sreda.ru,~chorki.com,~zattoo.com,~zaycev.net,~hitta.se,~mail.ru,~facebook.com,~instagram.com,~drive.google.com$$link[rel="manifest"]
 !
+knews.com.tw##a[href="https://event.knews.com.tw/app"]
 m.sporx.com##.media-news:has(> div.flex-grow-1 > a[href="https://sporx.com/mobil"])
 snkrdunk.com##app-banner
 m.sporx.com###appLink
@@ -59710,13 +59714,14 @@ mhealth.ru##.incut_readmore
 ##.torimochi-widget
 rankingoo.net##div.widget_swell_ad_widget
 ! Uzou recommendation
-||speee-ad.akamaized.net^$important,domain=newsee-media.com|saitama-np.co.jp|htb.co.jp|oricon.co.jp|maidonanews.jp|news.tv-aichi.co.jp|lisani.jp|hochi.news|yomuno.jp
+webcartop.jp###widget_code_php_in_widget-23
+||speee-ad.akamaized.net^$important,domain=newsee-media.com|saitama-np.co.jp|htb.co.jp|oricon.co.jp|maidonanews.jp|news.tv-aichi.co.jp|lisani.jp|hochi.news|yomuno.jp|webcartop.jp
 hochi.news##div[style="min-height: 1000px;"]
 lisani.jp##.widget__uzou
 yomuno.jp#?#.aside_redesign.post > h3.aside_redesign_headline:contains(こちらもどうぞ)
 yomuno.jp###similar_articles
 newsee-media.com,saitama-np.co.jp##.uz-ar
-newsee-media.com,saitama-np.co.jp,htb.co.jp,oricon.co.jp,maidonanews.jp##.uz-ny
+webcartop.jp,newsee-media.com,saitama-np.co.jp,htb.co.jp,oricon.co.jp,maidonanews.jp##.uz-ny
 ! gacraft recommendations
 ||gacraft.jp^$third-party
 houyhnhnm.jp##.section-similer-post
