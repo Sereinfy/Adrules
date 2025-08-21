@@ -13,6 +13,7 @@
 ! Bad: ||adssubdomain.legitwebsite.com^ (should be in adservers_firstparty.txt)
 !
 !
+||vernaellac.com^
 ||dkaktsb.icu^
 ||tw-726620180914.*.run.app^
 ||au.adhacker.online^$third-party
@@ -2963,6 +2964,7 @@ $$script:contains(/document\.write[^|&%$#@!]{0,400}:8007"\+"\/cc\//)
 ! Periodically updated, so placed in this filter
 .com:8007/sc/*?n=$third-party,script
 ! Chinese online books
+! https://m.xddxsw.net/723/723946/7041611.html
 ! Examples:
 ! - https://241028z.1iuh5l.com:9001/sc/1028?n=llvukcwa
 ! - https://246xgtyyh.frify.xyz:9369/hm/6?x=u46hl2p1sb&r=0&t=2sb3yi92g9&v=2
@@ -3250,6 +3252,8 @@ adguard.info,adguard.com,adguard.app#$#.hello_from_adguard_advanced_protection_i
 !+ PLATFORM(ext_chromium_mv3)
 @@||uniqlo.com^$jsinject,content
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/211851
+||cupid.iqiyi.com/mixer?$domain=www.iqiyi.com,badfilter
 ! https://github.com/AdguardTeam/AdguardFilters/issues/210278
 #@#.uk-container.uk-container-expand
 ! https://github.com/AdguardTeam/AdguardFilters/issues/208953
@@ -5247,6 +5251,8 @@ newduba.cn###jq_youxi
 ||bjk08211ip.com^
 ||mwbncf22w.com^
 ||goi08211kh.com^
+||laowanglm.com^
+||tcragarnh.com^
 ||pa026n1waq.com^
 ||k1s3u1dtpc.com^
 ||jazppd.icu^
