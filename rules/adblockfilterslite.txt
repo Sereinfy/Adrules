@@ -1,9 +1,9 @@
 !
 ! Title: AdBlock Filter Lite
 ! Homepage: https://github.com/Sereinfy/Adrules
-! Version: 20250822002354
-! Last modified: 2025/08/22 00:23:54
-! Blocked Filters: 63104
+! Version: 20250822092627
+! Last modified: 2025/08/22 09:26:27
+! Blocked Filters: 63109
 !
 ###AC_ad
 ###AD_160
@@ -27334,6 +27334,7 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 *##.adtable
 *##div.a_mu,div.a_h,div.ad_pic,div.wp.a_f,div.wp.a_t,div.a_pb,div.a_pt,div.a_pr,div.a_cn,#ggPar,#preAdContent
 *$denyallow=efuxs.com,domain=efuxs.com,script,subdocument,xmlhttprequest
+*$denyallow=foodtechnos.in|fonts.googleapis.com|bootstrapcdn.com|blogger.googleusercontent.com|ajax.googleapis.co|fonts.gstatic.com,domain=foodtechnos.in
 *$denyallow=qiexs.cc|ququge.cc,domain=qiexs.cc|ququge.cc,xmlhttprequest,image,script
 *$denyallow=tszw.org,subdocument,script,xmlhttprequest,domain=tszw.org
 *$denyallow=xpxs.net|jiasucdn.com,domain=xpxs.net,xmlhttprequest,image,script
@@ -29609,6 +29610,7 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 /^https?:\/\/ftopx\.com\/[a-z\d]+\.js$/$domain=ftopx.com
 /^https?:\/\/hentaigo\.com\/[a-z\d]+\.js$/$domain=hentaigo.com
 /^https?:\/\/imageboom\.net\/[a-z\d]+\.js$/$domain=imageboom.net
+/^https?:\/\/kan\.znds\.com\/public\/home\/images\/[0-9]+-[0-9]+\.gif\?v=/$domain=kan.znds.com
 /^https?:\/\/picturelol\.com\/[a-z\d]+\.(js)$/$domain=picturelol.com
 /^https?:\/\/pikabu\.ru\/ajax\/[A-Za-z0-9]+\?[A-Za-z0-9]+=[0-9a-z-]+[0-9a-z]$/$xmlhttprequest,domain=pikabu.ru
 /^https?:\/\/pov\.spectrum\.net\/[a-zA-Z0-9]{14,}\.js/$script,domain=spectrum.net
@@ -42409,6 +42411,7 @@ bilibili.com##.desktop-download-tip
 bilibili.com##.download-client-trigger.download-entry
 bilibili.com##.eva-banner
 bilibili.com##.extension-tips
+bilibili.com##.feed-card:has(> div.bili-feed-card > div > div > div.bili-video-card__no-interest + a[target="_blank"]:not([href^="https://www.bilibili.com/"]))
 bilibili.com##.feed-card:has(a[href*="cm.bilibili.com"][data-target-url*="gaoneng.bilibili.com"])
 bilibili.com##.fixed-card
 bilibili.com##.floor-single-card:has(.floor-skeleton):not(:has(> div.bili-video-card__skeleton))
@@ -52334,6 +52337,7 @@ novelpia.com,dinvemitoloji.com,teachios.com,ilife97.com,a2zapk.com,fully-fundeds
 novinky.cz#@%#//scriptlet('ubo-acis.js', 'String.fromCharCode')
 novinky.cz,seznamzpravy.cz##div[data-e2e="mol-advert"]
 novinky.cz,seznamzpravy.cz#%#//scriptlet('remove-cookie', 'qusnyQusny')
+novinky.cz,volnamista.cz##szn-cwl
 novochag.ru,thevoicemag.ru##.app-popups
 novostroy.*##div[class^="Cookie_wrapper"]
 novyny.live,thequestion.ru##.cookie__wrapper
@@ -56575,6 +56579,7 @@ trailerhg.xyz,turboplayers.xyz,javggvideo.xyz,turtleviplay.xyz,findjav.com,stbtu
 trailerhg.xyz,turboplayers.xyz,javggvideo.xyz,turtleviplay.xyz,findjav.com,stbturbo.xyz,emturbovid.com#%#//scriptlet('set-constant', 'premium', 'undefined')
 trailerhg.xyz,turboplayers.xyz,javggvideo.xyz,turtleviplay.xyz,findjav.com,stbturbo.xyz,emturbovid.com#%#//scriptlet('trusted-replace-node-text', 'script', 'openNewTab', '/openNewTab[(]".*?"[)]/g', 'null')
 trainman.in,klook.com,newchic.com,m.zaful.com,c.mi.com,m.vseinstrumenti.ru##.app-download
+trakt.tv,unipegaso.it,escortempire.*,videspratiba.lv,soleretriever.com,healf.com,gameship.io,xzone.pl,givesendgo.com,workstreams.ai,trae.ai,jimms.fi,imusic.*,dobrydietetyk.pl,zeno.fm,ratujlaptopa.pl,chat.mistral.ai,subdomains.whoisxmlapi.com,derslig.com,bikeexchange.de,webtv.tv,cargiant.co.uk,r34.app,webtv.sk,rustdesk.com,praha.eu,bdm.pl,mobimatter.com,gl-inet.com,astrowarp.net,gamers-outlet.net,kinnisvara24.ee,costa-coffee.cz,sterbabike.cz,codesandbox.io,xzone.cz,dap.gov.hu,idomsoft.hu,uxpilot.ai,evaluar.com,home.s.id,skubacz.pl,restaumatic.com,any.run,rekinysukcesu.pl,nutrend.pl,app.any.run,financnihra.cz,kurczakiodeliasza.com,kontomaniak.pl,snowboard-online.pl,whitebit.com,nicelocal.com.de,ndsas.sk,trakt.tv,greptime.com,newsinslowfrench.com,happyscribe.com###cc-main
 traktorpool.pl,baupool.com.pl##.billboard
 trancehost.com,magicgameworld.com,karanpc.com#%#//scriptlet('prevent-xhr', 'static.doubleclick.net/instream/ad_status.js')
 trancepodcasts.com$$script[tag-content="if( $('.adsbygoogle')"][max-length="1700"]
@@ -57001,7 +57006,6 @@ uniladtech.com,sportbible.com,unilad.com,ladbible.com##div[class^="sticky-top-ad
 unimedodonto.com.br,segurosunimed.com.br##unimed-cookie-consent
 union-bulletin.com,timescall.com##.Mg2-connext.bottom
 union.58.com#@##advertise
-unipegaso.it,escortempire.*,videspratiba.lv,soleretriever.com,healf.com,gameship.io,xzone.pl,givesendgo.com,workstreams.ai,trae.ai,jimms.fi,imusic.*,dobrydietetyk.pl,zeno.fm,ratujlaptopa.pl,chat.mistral.ai,subdomains.whoisxmlapi.com,derslig.com,bikeexchange.de,webtv.tv,cargiant.co.uk,r34.app,webtv.sk,rustdesk.com,praha.eu,bdm.pl,mobimatter.com,gl-inet.com,astrowarp.net,gamers-outlet.net,kinnisvara24.ee,costa-coffee.cz,sterbabike.cz,codesandbox.io,xzone.cz,dap.gov.hu,idomsoft.hu,uxpilot.ai,evaluar.com,home.s.id,skubacz.pl,restaumatic.com,any.run,rekinysukcesu.pl,nutrend.pl,app.any.run,financnihra.cz,kurczakiodeliasza.com,kontomaniak.pl,snowboard-online.pl,whitebit.com,nicelocal.com.de,ndsas.sk,trakt.tv,greptime.com,newsinslowfrench.com,happyscribe.com###cc-main
 unisono.eu,venezia.pl,jungfrau.ch##.m-cookie-info
 unityassetpack.com$$script:contains(noteAlert)
 unitystr.com,azrotv.com,uptoplay.net##.adbn-wrap
@@ -60357,6 +60361,7 @@ zzzyk.com###Tinfo
 ||damai.cn/phpstat/
 ||dangbei.net/2022/dbhezi.
 ||dangbei.net/img/db/downdangbei.gif
+||dangbei.net/jing/dbai/$domain=kan.znds.com
 ||dangdang.com/adall.
 ||daniujiaoyu.com/js/zk
 ||daniuxuexiao.org.cn/js/zk
