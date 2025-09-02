@@ -2530,6 +2530,9 @@ entrack.pl,kraemer-it.de,teslawissen.ch,scootertechno.com,mysize.ch,aeotec.com,g
 !
 ! NOTE: Regular rules
 !
+indexbox.io##.cookie_block_header
+ikar.aero##.notification-panel-wrapper > div.notification-panel:has(> div > a[href="/legal/privacy-policy#cookie"])
+rac.co.uk###ensPrivacyBlock
 severstal-avia.ru##.cbar
 flyone.eu#%#//scriptlet('set-cookie', 'termsAgreed', 'true', '/', 'flyone.eu')
 ||nordstar.ru/bitrix/*/r52.acceptcookies/
@@ -3056,7 +3059,7 @@ hostzealot.*##div[x-data="gdprComponent"]
 publix.com##.tou-prompt-wrapper
 ptt.gov.tr##div[class^="styles_cookieBanner"]
 robolinkmarket.com##.w-full > div.fixed[class*="bottom-"]:has(a[href="https://robolinkmarket.com/pages/bilgi-guvenligi-politikasi"])
-sectorcine.com,9to5linux.com###wpconsent-root
+classicsongoftheday.com,sectorcine.com,9to5linux.com###wpconsent-root
 tigo.com.gt,tigo.com.hn,tigo.com.ni,tigo.com.bo,tigo.com.py,tigo.com.sv,tigo.cr,tigo.com.co,tigo.com.pa##app-cookieconsent
 m3datarecovery.com###user_popup
 otpbank.md#$#body { overflow: auto !important; }
@@ -15208,7 +15211,7 @@ promod.de##.content_cookies
 grandfront-osaka.jp,nobl.ru,allday.com.tr,happylook.ru,e-consystems.com,uaz.ru,nakubani.ru,eksmo.ru,papajohns.com.tr,dreamtv.com.tr,jobinfo.hu,kanald.com.tr,radyod.com,slowturk.com.tr##.cookie-accept
 plenum.de,foodspring.de,m.shop-apotheke.com##.cookie-advice
 fussball.de##.cookie-advise
-re-store.ru,get-cp.jp,israelpost.co.il,1rus.ru,uralweb.ru,sanyglobal.com,naray.one,mcdonalds.co.id,euronabycerny.com,mangahack.com,wiadomoscihandlowe.pl,bcs-express.ru,psc-inc.co.jp,apteka24.ua,u-mama.ru,gumtree.co.za,btclod.com,a12.com,ontiva.com,dr-telemed.ru,myfasol.ru,ponyexpress.ru,litres.ru,amediateka.ru,hansa.rs,schnaeppchenfuchs.com,xsport.ua##.cookie-agreement
+riatomsk.ru,re-store.ru,get-cp.jp,israelpost.co.il,1rus.ru,uralweb.ru,sanyglobal.com,naray.one,mcdonalds.co.id,euronabycerny.com,mangahack.com,wiadomoscihandlowe.pl,bcs-express.ru,psc-inc.co.jp,apteka24.ua,u-mama.ru,gumtree.co.za,btclod.com,a12.com,ontiva.com,dr-telemed.ru,myfasol.ru,ponyexpress.ru,litres.ru,amediateka.ru,hansa.rs,schnaeppchenfuchs.com,xsport.ua##.cookie-agreement
 bequiet.com,my5.tv,hearthhead.com,kabeleins.de,prosieben.de,prosiebenmaxx.de,ran.de,sat1.de,sixx.de,the-voice-of-germany.de##.cookie-banner
 crowdfox.com##.cookie-banner-info
 visitmons.be##.cookie-compliance-message
@@ -25860,6 +25863,7 @@ sanalkurs.net###toast-container > .toast-error[aria-live="assertive"]
 !
 ! SECTION: Popups - Regular rules
 !
+indexbox.io##div[id^="modal-start"]
 ||rtp.pt/common/js/validation_popup/validation-popup.js
 india.com#%#//scriptlet('trusted-click-element', '#portfolio #expandbtn')
 aspor.com.tr##.drop-news
@@ -46326,8 +46330,6 @@ appticker.de#%#(function(){var b=window.setTimeout;window.setTimeout=function(a,
 svyaznoy.ru#%#//scriptlet('remove-class', 'android-banner-on-page')
 ebay.*###gh-appBanner
 m.avito.ru##div[data-marker="main-container"] > div[data-scroll-blocker="true"]
-flash.pt,vodafone.ua#$#div.smartbanner { display: none !important; }
-flash.pt,vodafone.ua#$#.smartbanner-show { margin-top: 0 !important; }
 imgur.io,imgur.com#$#div[class^="SeeImgurOIA-"] { display: none !important; }
 imgur.io,imgur.com#$#body { overflow-y: auto !important; }
 c.mi.com#$#.xm-header.app-down .top { top: 0 !important; }
@@ -46786,6 +46788,9 @@ m.tokopedia.com#$#div[data-testid="divOverlay"] { display: none!important; }
 ! causes some issues: https://github.com/AdguardTeam/AdguardForMac/issues/550
 ~lineup.withgoogle.com,~vert.sh,~search.brave.com,~status.im,~lafenice.io,~kurer-sreda.ru,~chorki.com,~zattoo.com,~zaycev.net,~hitta.se,~mail.ru,~facebook.com,~instagram.com,~drive.google.com$$link[rel="manifest"]
 !
+x.com#$#div[role="group"] > div[style]:not([class]):has(> div[class] > div[class] > a[href^="https://apps.apple.com/app/apple-store/"]) { display: none !important; }
+x.com#$#div[role="group"] > div[data-testid="mask"] { display: none !important; }
+x.com#$#html[style] { overflow: auto !important; position: static !important; }
 olimp.bet#$##header { top: 0 !important; }
 olimp.bet#$##subheader { top: 3rem !important; }
 olimp.bet#$##app-download-banner { display: none !important; }
@@ -47188,8 +47193,8 @@ wear.jp###newwearAppBanner
 wear.jp##a[href="/sp/app/download.html"]
 wear.jp#$#.bg-white > div.sticky.z-header { top: 0 !important; }
 wear.jp##.xl\:mx-auto > div.pt-\[30px\]
-nola-novel.com,cecile.co.jp#$#.smartbanner { display: none !important; }
-nola-novel.com,cecile.co.jp#$#.smartbanner-show { margin-top: 0 !important; }
+kinepolis.nl,kinepolis.be,simplemobile.com,nola-novel.com,cecile.co.jp,flash.pt,vodafone.ua#$#.smartbanner { display: none !important; }
+kinepolis.nl,kinepolis.be,simplemobile.com,nola-novel.com,cecile.co.jp,flash.pt,vodafone.ua#$#.smartbanner-show { margin-top: 0 !important; }
 cartune.me##a[href="https://cartune.me/appinstall"]
 premium.sbs.co.kr,cartune.me##a[href="/appinstall"]
 news.ifeng.com##div[class^="index_bottom_box_"]
@@ -51261,6 +51266,7 @@ www.kinopoisk.ru##div[class^="trailer-promo"]
 !
 ! SECTION: Self-promo - Regular rules
 !
+hermitcraft.com###HermitCraftContainer > section > #ShopNotice
 sosyalbilgiler.biz##.notice--primary[data-notice-id="46"]
 uralairlines.ru##.promo-code-popup
 ||kasegeru.blog.jp/blogframe/contents/content_bestbuy$subdocument
@@ -54229,6 +54235,8 @@ nijimiss.moe,novelskey.tarbin.net,gp.tsukimi.club,misskey.neos.love,mk.yopo.work
 ! !SECTION: Self-promo - Regular rules
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/187875#issuecomment-3243213902
+twitch.tv##.channel-info-content div[class^="Layout-sc-"][style^="background-image: url(\"https://static-cdn.jtvnw.net/subs-image-assets/banner/subtember2025/banner-"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/209935#issuecomment-3156737102
 !#if (adguard_app_android || adguard_app_ios || adguard_ext_firefox || ext_ublock)
 pikabu.ru#$#.promo-banner { display: none !important; }
@@ -56581,6 +56589,8 @@ newsweek.com##iframe[src="http://sns.europe.newsweek.com/newsletter?popup=1"]
 !##############################
 ! SECTION: Tweaks - JS
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/212580
+goldengoalsfinance.com#%#//scriptlet('adjust-setInterval', '/timeLeft|counter/', '*', '0.001')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/212391
 sporx.com#%#//scriptlet('set-constant', 'Object.prototype.isStickyModeTemporarilyDisabled', 'true')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/212282
