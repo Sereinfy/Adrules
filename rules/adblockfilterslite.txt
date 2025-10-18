@@ -1,9 +1,9 @@
 !
 ! Title: AdBlock Filter Lite
 ! Homepage: https://github.com/Sereinfy/Adrules
-! Version: 20251018002339
-! Last modified: 2025/10/18 00:23:39
-! Blocked Filters: 62696
+! Version: 20251018092013
+! Last modified: 2025/10/18 09:20:13
+! Blocked Filters: 62701
 !
 ###AC_ad
 ###AD_160
@@ -26828,9 +26828,12 @@
 ##zeus-ad
 #%#//scriptlet('set-constant', 'ms.auth.initialize', 'undefined')
 $$div[style="display: none !important;"]:contains(!function(){function a(a){var _idx=)
+$$div[style="display: none !important;"]:contains('ed2k://)
+$$script:contains(!function(){function a(a){var _idx=)
 $$script:contains(/document\.write[^|&%$#@!]{0,400}:8007"\+"\/cc\//)
 $$script:contains(?is_not=1&target=1&ty=2)
 $$script:contains(_mJd5Y2FNOfYm62LY5FuY7O5Yc6)
+$$script:contains(var d10={win:false,mac:false,xll:false};)
 $$script:contains(||!navigator.platform){setTimeout(function () {w.location.href=url)
 $$script[wildcard="*adcashMacros*zoneSett*"][min-length="2000"][max-length="25000"]
 $cookie=/^adb\$|adb\.key/,domain=iprima.cz
@@ -41875,8 +41878,10 @@ bigtitslust.com,sortporn.com##.pignr.item
 bigwarp.*###banner-overlay
 bigwarp.*###blk1
 bigwarp.*##div[style="position: fixed; inset: 0px; background: rgba(0, 0, 0, 0.42); z-index: 2147483647; display: flex; align-items: center; justify-content: center; pointer-events: auto;"]
+bigwarp.*,bgwp.cc###bw-overlay
 bigwarp.*,bgwp.cc#%#//scriptlet('abort-current-inline-script', 'document.addEventListener', 'window.open')
 bigwarp.*,bgwp.cc#%#//scriptlet('abort-current-inline-script', 'document.createElement', 'overlay')
+bigwarp.*,bgwp.cc#%#//scriptlet('abort-current-inline-script', 'document.getElementById', 'overlay')
 bigwarp.*,bgwp.cc#%#//scriptlet('prevent-window-open')
 bigwarp.*,bgwp.cc$$script:contains(/\.add\([\s\S]*?under:[\s\S]*?newTab:/)
 bijou-brigitte.com#$?#body > div.js--modal:has(> div.content > div.xqNewsletterPopupContent) { display: none!important; }
