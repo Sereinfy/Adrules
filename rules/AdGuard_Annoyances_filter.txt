@@ -2544,6 +2544,9 @@ raz-zeitung.de,muensteraner-rechtsanwaelte.de,hardware-helden.de,naheland-apothe
 !
 ! NOTE: Regular rules
 !
+cbf.com.br#%#//scriptlet('trusted-set-cookie', 'cookies_accepted_categories', 'technically_required')
+belkacar.ru##.the-cookies
+asnbank.nl#%#//scriptlet('trusted-click-element', 'button#cookie-deny', '!cookie:CLC_GDPR')
 visitbursa.org#%#//scriptlet('set-cookie', 'cookiesPerm', 'false')
 ||cb.rollercoin.com/cookie_widget.min.js
 genesis-zone.com#%#//scriptlet('set-cookie-reload', 'cookies_initialized', '1')
@@ -17854,6 +17857,10 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 !+ NOT_OPTIMIZED PLATFORM(windows, mac, android)
 ||geolocation.onetrust.com/cookieconsentpub/*/geo/location$xmlhttprequest,redirect-rule=noopjson
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/216786
+asnbank.nl#@#.cookie-overlay:not(html):not(body)
+asnbank.nl#@##cookieconsent
+asnbank.nl#@##cookie-accept
 ! https://github.com/AdguardTeam/AdguardFilters/issues/216712
 genesis-zone.com#@##cookies-modal
 ! https://github.com/AdguardTeam/AdguardFilters/issues/216522
@@ -23364,6 +23371,9 @@ armidaleexpress.com.au,bendigoadvertiser.com.au,canberratimes.com.au,centralwest
 ! Do not forget about '!#safari_cb_affinity' section for exclusions:
 ! LINK: AnnoyancesFilter/Popups/sections/antiadblock.txt#general
 !
+exceldestek.com#%#//scriptlet('set-constant', 'googletag', 'emptyObj')
+exceldestek.com#%#//scriptlet('set-constant', 'googletag._loaded_', 'true')
+exceldestek.com#%#//scriptlet('prevent-setTimeout', '()=>{o()}', '3000')
 birsenaltuntas.com#$#.ad_block_detected { overflow: auto !important; }
 birsenaltuntas.com#$#.adblockalert { display: none !important; }
 rutube.ru#%#//scriptlet('set-constant', 'adBlockDetected', 'false')
@@ -47581,6 +47591,7 @@ m.tokopedia.com#$#div[data-testid="divOverlay"] { display: none!important; }
 ! causes some issues: https://github.com/AdguardTeam/AdguardForMac/issues/550
 ~lineup.withgoogle.com,~vert.sh,~search.brave.com,~status.im,~lafenice.io,~kurer-sreda.ru,~chorki.com,~zattoo.com,~zaycev.net,~hitta.se,~mail.ru,~facebook.com,~instagram.com,~drive.google.com$$link[rel="manifest"]
 !
+scoopzapp.com#%#//scriptlet('set-session-storage-item', 'showDownloadPrompt', '1')
 2gis.ru#$?#div[style^="height:"] > div > div:has(> div[id="confirm"]) > div > div:has(a[href^="https://2gis.onelink.me/"][type="button"] + button) { remove: true; }
 rexagames.com##i-pwa-install
 kurashi.yahoo.co.jp###_incidentsBousaiWeb2yjapp
