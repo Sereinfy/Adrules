@@ -1903,7 +1903,7 @@
 -privacy-cookie-
 .cookie-law.$script
 .cookie_law.
-.cookieconsent.$domain=~cookieconsent.io
+.cookieconsent.$domain=~cookieconsent.io|~register-of-charities.charitycommission.gov.uk
 .cookiecuttr.^$domain=~argeweb.nl
 .cookielaw.js
 .cookienotice.
@@ -2547,6 +2547,10 @@ raz-zeitung.de,muensteraner-rechtsanwaelte.de,hardware-helden.de,naheland-apothe
 !
 ! NOTE: Regular rules
 !
+trypair.com#%#//scriptlet('trusted-set-cookie', 'cpm-accepted-cookies-policy', '%7B%22necessary%22%3Atrue%2C%22preferences%22%3Afalse%2C%22statistics%22%3Afalse%7D')
+shopcider.com#%#//scriptlet('trusted-click-element', '.cmp-mask .disable-button')
+register-of-charities.charitycommission.gov.uk#%#//scriptlet('set-cookie-reload', 'cookie_consent', 'false')
+telcel.com##.telcel-banner-aviso-cookies
 staloysius.nsw.edu.au##.article-acknowledge-main
 /assets/js/*.sirdata.js$domain=futbolfantasy.com
 planoplan.com##div[class^="cookies__"]
@@ -3361,7 +3365,7 @@ juedische-allgemeine.de##.ub-cmp
 upwr.edu.pl#$#.modal-backdrop { display: none !important; }
 upwr.edu.pl#$#.modal-open { overflow: auto !important; }
 jusbrasil.com.br##div[class^="topbar-lgpd_root__"]
-sparkasse-hochfranken.de,sskduesseldorf.de,kreissparkasse-duesseldorf.de,sparkasse-dortmund.de,sparkasse-minden-luebbecke.de#%#//scriptlet('trusted-click-element', '.if6_eprivacy a[data-form=".eprivacy_optin_decline"]', '!cookie:ePrivacyStatus_de', '5000')
+sparkasse-mainfranken.de,berliner-sparkasse.de,sparkasse-hannover.de,sskm.de,sparkasse-nuernberg.de,mbs.de,ksk-koeln.de,sparkasse-hochfranken.de,sskduesseldorf.de,kreissparkasse-duesseldorf.de,sparkasse-dortmund.de,sparkasse-minden-luebbecke.de#%#//scriptlet('trusted-click-element', '.if6_eprivacy a[data-form=".eprivacy_optin_decline"]', '!cookie:ePrivacyStatus_de', '3500')
 rmf.fm#%#//scriptlet('didomi-loader')
 ups.com##.implicit-consent-message
 rule34.xxx#%#//scriptlet('set-cookie', 'gdpr', '1')
@@ -6013,7 +6017,7 @@ samolet.ru##div[data-selector="cookie"]
 sinerji.gen.tr###CookieConcent
 fi.google.com##fi-cookie-consent
 tunemymusic.com##div[class^="HeaderMenu_CookieAlert_"]
-gra.parkiet.com##.gpw-cookie-popup
+gra.parkiet.com###gpw-cookie-popup
 itnext.io#%#//scriptlet('set-local-storage-item', '201805-policy|accepted', '1')
 akket.com###anycomment-root .MuiSnackbarContent-root
 casetify.com#%#//scriptlet('trusted-set-cookie-reload', 'accept_cookies', 'essential,function')
@@ -35362,6 +35366,11 @@ gaugau.futabanet.jp,newscientist.com,jiji.com,edp24.co.uk,technologyreview.com,n
 !
 ! SECTION: Subscriptions - Regular rules
 !
+tour.bushikaku.net#%#//scriptlet('set-cookie', 'mailmagazine_guide_hidden', 'true')
+gq-magazine.co.uk##div[data-testid="ContentFooterBottom"] div[class^="ContentFooterNewsletterContentWrapper-"]
+gq-magazine.co.uk##.body__inner-container div[class^="NewsletterOneClickVerticalPullQuoteWrapper"]
+m.shopcider.com#%#//scriptlet('set-cookie', 'cider-site-email-sub-home-modal-shrink', '1')
+studyingreece.edu.gr##.elementor-hidden-tablet[data-element_type="column"]:has(a[href^="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3"])
 tr.investing.com##div[class^="article_"] > div:not([class]) > div[style]:has(> a[href^="https://tr.investing.com/pro/landing-page?"])
 afisha.ru##.slider > a[href="https://t.me/afisha/"]:has(> picture)
 wwd.com#$##piano-paywall { display: none !important; }
@@ -44019,6 +44028,13 @@ alfastrah.ru,turkishairlines.com,atmos-tokyo.com,radarbox.com,ciceksepeti.com,ra
 !
 !
 !
+bushikaku.net#%#//scriptlet('set-cookie', 'hide_fixed_bottom_app_banner', 'true')
+tour.bushikaku.net##.headerAppBanner
+m.yelp.com##div[class^="overlay-wrapper__"]:has(> a[aria-label="Download the Yelp app"] ~ div[data-testid="review-feed-pitch"])
+bootbarn.com##div[content-asset-id^="mobile-app-banner-"]
+grainger.com##.gcom__header-mobile
+shopcider.com#$#.web2app-banner-container { display: none !important; }
+shopcider.com#%#//scriptlet('remove-class', 'show-branch', '.header > .header-container')
 hh.ru##div[class^="footer-app-banner-"]
 www.dji.com#%#//scriptlet('trusted-click-element', '.universal-product-tip a.universal-product-tip-link[href^="https://cdp-vg.djiservice.org/"] ~ .close-icon')
 callie.com#$#.vi-app { display: none !important; }
