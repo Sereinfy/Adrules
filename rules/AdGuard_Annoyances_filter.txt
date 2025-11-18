@@ -1696,6 +1696,7 @@
 !
 ! SECTION: Cookies - General URL
 !
+||bigidcmp.cloud/banner.js
 ||consent.preference-center.com^
 /gd-cookie2.js
 /modules/cookiesplus/views/js/cookiesplus-front.js
@@ -2516,7 +2517,7 @@ cdn.privacy-mgmt.com#%#//scriptlet('trusted-click-element', '.sp_choice_type_ACC
 codesandbox.io,damota.me,pracazarogiem.pl,pracezarohem.cz,pracazarohom.sk,seduo.*#%#//scriptlet('remove-class', 'force--consent|show--consent', 'html')
 ||cdn.jsdelivr.net/npm/@lmc-eu/cookie-consent-manager$domain=teamio.com
 ! orestbida/cookieconsent
-/cookieconsent.$domain=qrcodemonkey.net|wedos.com|scssoft.com|umino.io|sklep.ledlumen.pl|megasobota.pl|emunia.pl
+/cookieconsent.$domain=qrcodemonkey.net|wedos.com|scssoft.com|umino.io|sklep.ledlumen.pl|megasobota.pl|emunia.pl|proxmox.com
 ! GitBook instances
 help.lurker.tv,help.zenky.io,docs.powershelluniversal.com,docs.snyk.io,docs.keeper.io,developers.deepl.com##[aria-label="Cookies"]
 !
@@ -2549,6 +2550,14 @@ raz-zeitung.de,muensteraner-rechtsanwaelte.de,hardware-helden.de,naheland-apothe
 !
 ! NOTE: Regular rules
 !
+kyivstar.ua#%#//scriptlet('trusted-set-cookie', 'cookies_agreement', 'granted')
+kyivstar.ua#%#//scriptlet('trusted-set-cookie', 'ad_personalization', 'denied')
+kyivstar.ua#%#//scriptlet('trusted-set-cookie', 'ad_storage', 'denied')
+kyivstar.ua#%#//scriptlet('trusted-set-cookie', 'ad_user_data', 'denied')
+kyivstar.ua#%#//scriptlet('trusted-set-cookie', 'analytics_storage', 'denied')
+kyivstar.ua#%#//scriptlet('trusted-set-cookie', 'functionality_storage', 'denied')
+kyivstar.ua#%#//scriptlet('trusted-set-cookie', 'security_storage', 'denied')
+office-inhouse-schulung.de#%#//scriptlet('trusted-click-element', 'dialog[data-lenis-prevent="true"] a[role="button"]:first-child', '!cookie:/real_cookie_banner-v/')
 asv.org.ru##app-notification-cookie
 prav.io###privacy-widget
 revolutionrace.pl#$#body.body--modal { position: static !important; }
@@ -17952,6 +17961,11 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 !+ NOT_OPTIMIZED PLATFORM(windows, mac, android)
 ||geolocation.onetrust.com/cookieconsentpub/*/geo/location$xmlhttprequest,redirect-rule=noopjson
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/217939
+@@||cdn.cookielaw.org/consent/*/otSDKStub.js$domain=soundcloud.com
+@@||cdn.cookielaw.org/consent/*.json$domain=soundcloud.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/217940
+topmediai.com#@#.cookie-content
 ! https://github.com/AdguardTeam/AdguardFilters/issues/217534
 ditur.pl#@##cookie-popup:not(body, html)
 ditur.pl#@##cookie-popup
@@ -26447,6 +26461,7 @@ atomicmail.io##body > div[class^="_backdrop_"]:has(> div[class^="_content_"] a[h
 atomicmail.io##body > div[class^="_backdrop_"]:has(> div[class^="_content_"] > img[src*=".atomicmail.io/Promo"])
 atomicmail.io##body > div[class^="_backdrop_"]:has(> div[class^="_content_"] > img[alt="Ai Features"])
 atomicmail.io##body > div[class^="_backdrop_"]:has(> div[class^="_content_"] > img[alt="Addresses"])
+inc.com##div[class^="min-h-"]:has(> div.flex > svg[aria-label="Video player icon"])
 watchprowrestlings.live###likeShareOverlay
 forum.amateurpin.xxx##div[class^="apx-modal"]
 ||cdn.jsdelivr.net/npm/canvas-confetti*/dist/confetti.browser.min.js$domain=forum.amateurpin.xxx
@@ -35437,6 +35452,7 @@ msn.com##.newProviderBannerContainer
 msn.com##.consumption-page-gridarea_eocb_leadgen
 kia.com#%#//scriptlet('trusted-set-session-storage-item', 'Show-exit-cookie', '{"shown":["home"]}')
 studyingreece.edu.gr##.elementor-column.elementor-col-33:has(form[action^="https://eomail6.com/form/"])
+hanopatch4u.com##.et-popup-wrapper
 mel.fm##.b-pb-article__body a[href="https://t.me/gramota_mel"]
 plaisio.gr##article[data-test="NewsletterRegistration"]
 newsweek.com##section[class^="InlineNewsletterSignup_"]
@@ -39854,9 +39870,9 @@ canon.com#$#.fog-of-war-overlay { display: none!important; }
 canon.com#$#html > body:not(#style_important) { overflow: auto!important; }
 newia.ru,udm-info.ru,oilcapital.ru,inkazan.ru##.matter-after > div:has(> div[class^="Subscribe_subscribe"])
 affpaying.com#?##sidebar .bg-blue-lightest:has(> div.flex > button.subscribe)
-bianity.net#$##modal_newsletter { display: none !important }
-bianity.net#$#.modal-backdrop { display: none !important }
-bianity.net#$#.modal-open { overflow: auto !important; }
+booksfer.net,bianity.net#$##modal_newsletter { display: none !important }
+booksfer.net,bianity.net#$#.modal-backdrop { display: none !important }
+booksfer.net,bianity.net#$#.modal-open { overflow: auto !important; }
 seekingalpha.com##a[data-test-id="mcm-strip-link"]
 bakadesuyo.com##.newsletter-blog
 bakadesuyo.com###content-subscribe
@@ -52441,8 +52457,11 @@ www.kinopoisk.ru##footer > div:has(> div > div[data-testid="kp-ui.amediateka-foo
 !
 ! SECTION: Self-promo - Regular rules
 !
+builtin.com###job-search-widget
 speedtest.gate02.ne.jp##.fukusou_bannar
 bewins.tv##a[href^="https://bewins.wiki"]
+inc.com##body > div[data-radix-popper-content-wrapper] > div[id^="radix-"]
+inc.com###promo-banner
 ||apteka.by/banners/*Supradin-web-search-*.jpg
 apteka.by###header-search-catalog > div.autocomplete__group > div.tw-px-\[8px\]
 ||hominis.media/shared/images/banner/side_ad_
