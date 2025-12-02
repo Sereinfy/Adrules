@@ -2450,7 +2450,7 @@ win-10-forum.de,pedelecforum.de#$#body[style*="overflow: hidden;"] .p-pageWrappe
 ! #%#//scriptlet('prevent-setTimeout', 'f.parentNode.removeChild(f)', '100')
 ntv.com.tr,foromtb.com#%#//scriptlet('prevent-setTimeout', 'f.parentNode.removeChild(f)', '100')
 ! fundingchoicesmessages.google.com
-||fundingchoicesmessages.google.com^$domain=mobirank.pl|hotdeals.com|coderoad.ru|hardwaresfera.com|namba.keizai.biz|antik-war.lv|ipabox.net|nzherald.co.nz|nmac.to|smart-flash.jp|obserwatorgospodarczy.pl|schmidtisblog.de|androidfilehost.com|what-it.pl|showtv.com.tr|picmix.com|aeiou.pt|expansion.com|pik.poznan.pl|piklodz.pl|pik.warszawa.pl|pik.krakow.pl|pik.katowice.pl|pikgdansk.pl|piktorun.pl|pik.wroclaw.pl|piklublin.pl|techsvet.cz|crystal-launcher.pl|wpteq.org|guideoftheworld.com|gadgetversus.com|rtings.com|techzim.co.zw|tabiris.com|worksheetkids.com|temporary-phone-number.com|diena.lt|tvguru.cz|h-donghua.xyz|prospektangebote.de|funkykit.com|bielskiedrogi.pl|boardingarea.com|tychy.info|odigostoupoliti.eu|murciatoday.com|bestmvno.com|in.gr
+||fundingchoicesmessages.google.com^$domain=mobirank.pl|hotdeals.com|coderoad.ru|hardwaresfera.com|namba.keizai.biz|antik-war.lv|ipabox.net|nzherald.co.nz|nmac.to|smart-flash.jp|obserwatorgospodarczy.pl|schmidtisblog.de|androidfilehost.com|what-it.pl|showtv.com.tr|picmix.com|aeiou.pt|expansion.com|pik.poznan.pl|piklodz.pl|pik.warszawa.pl|pik.krakow.pl|pik.katowice.pl|pikgdansk.pl|piktorun.pl|pik.wroclaw.pl|piklublin.pl|techsvet.cz|crystal-launcher.pl|wpteq.org|guideoftheworld.com|gadgetversus.com|rtings.com|techzim.co.zw|tabiris.com|worksheetkids.com|temporary-phone-number.com|diena.lt|tvguru.cz|h-donghua.xyz|prospektangebote.de|funkykit.com|bielskiedrogi.pl|boardingarea.com|tychy.info|odigostoupoliti.eu|murciatoday.com|bestmvno.com|in.gr|audiocircuit.dk
 ! For apps
 ||fundingchoicesmessages.google.com^$app=com.accordion.pro.camera|ru.photostrana.mobile|com.photo.android.camera
 ! https://github.com/AdguardTeam/AdguardFilters/issues/176118
@@ -2552,6 +2552,10 @@ raz-zeitung.de,muensteraner-rechtsanwaelte.de,hardware-helden.de,naheland-apothe
 !
 ! NOTE: Regular rules
 !
+columbia.ua#$##cookies-modal { display: none !important; }
+columbia.ua#$#.backdrop { display: none !important; }
+columbia.ua#$#body { overflow: auto !important; }
+vietnamairlines.com##.cmp-cookie-consent-backdrop
 kulturkaufhaus.de#%#//scriptlet('trusted-click-element', 'button[data-katalon="acceptRequired"]')
 toujoursmikes.order-online.ai#%#//scriptlet('trusted-click-element', 'footer > div > button[data-variant="outline"]', 'containsText:Preferences')
 toujoursmikes.order-online.ai#%#//scriptlet('trusted-click-element', 'footer > div > button[data-variant="primary"]', 'containsText:Save my preferences')
@@ -18074,6 +18078,8 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 !+ NOT_OPTIMIZED PLATFORM(windows, mac, android)
 ||geolocation.onetrust.com/cookieconsentpub/*/geo/location$xmlhttprequest,redirect-rule=noopjson
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/219226
+columbia.ua#@##cookies-modal
 ! https://github.com/AdguardTeam/AdguardFilters/issues/219053
 tcl.com#@#.cookie-bar:not(body)
 tcl.com#@#.cookie-box:not(body):not(html)
@@ -39887,6 +39893,7 @@ super.ru##img[alt="telegram"]
 postimees.ee##.piano-subscribe-newsletter-after-lead
 tea.ru##.feedback-wrapper
 tea.ru##.blog__subscribe
+newrepublic.com##iframe[src="https://blink.net/iframe.html"]
 ||blink.net/iframe.html
 npu.gov.ua##.digest-home
 sport24.ua##app-google-subscribe
@@ -47246,7 +47253,7 @@ weather.yahoo.co.jp###doubleImage
 weather.yahoo.co.jp##.footeLinkPromo
 weather.yahoo.co.jp##.appLink
 typhoon.yahoo.co.jp,weather.yahoo.co.jp##.mdStickyFooter
-sixty-percent.com,m.sporx.com,baitoru.com,hokuohkurashi.com,weather.yahoo.co.jp##a[href^="https://app.adjust.com/"]
+smartnews.com,sixty-percent.com,m.sporx.com,baitoru.com,hokuohkurashi.com,weather.yahoo.co.jp##a[href^="https://app.adjust.com/"]
 roadway.yahoo.co.jp##.banners > li > a[href^="https://app.adjust.com/"]
 roadway.yahoo.co.jp##.banners > li > a[href^="https://itunes.apple.com/app/"]
 roadway.yahoo.co.jp###rc_app
@@ -50685,8 +50692,6 @@ fandom.com#?##WikiaBar:has(> #WikiaBarWrapper > .wikia-bar-anon > .message[data-
 cartoonprn.com##a[href="https://cartoonprn.com/link/prngames/"] > img
 ! https://github.com/AdguardTeam/AdguardFilters/issues/88649
 netdoktor.de###newsletter-abonnieren
-! https://github.com/AdguardTeam/AdguardFilters/issues/87867
-xchina.co#?#.aside > div.center:has(> a[href="/tg.html"])
 ! https://github.com/AdguardTeam/AdguardFilters/issues/87972
 eadaily.com#?#.latest-block > div.side-announcement:has(> a[href="tg://resolve?domain=EurasiaDaily"])
 ! sponsor page at the end of video
@@ -52792,6 +52797,10 @@ www.kinopoisk.ru##footer > div:has(> div > div[data-testid="kp-ui.amediateka-foo
 !
 ! SECTION: Self-promo - Regular rules
 !
+rail.hobidas.com###side_bnr
+railf.jp###library_banner_300x250_sppccom
+boxmob.jp##body > div[style] > div[style] > a[href="/sp/lp/"]
+shonanjin.com##.l-body > .fixed-banner
 bankersadda.com##main > .row a[href*="adda247.com"]
 bankersadda.com##.row > div > .top-package
 bankersadda.com##.footer-static-detail-bar
@@ -53103,6 +53112,7 @@ japanmetaldaily.com##.m-ad-bnr-rec
 reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion##shreddit-async-loader[bundlename="feed_announcement"]
 pitchfork.com##.body__inner-container > div.disclaimer
 pitchfork.com##.body__inner-container > div.disclaimer + div[data-testid="ProductEmbedWrapper"]
+the-ans.jp##center > script + a[id^="c2_click_"]
 the-ans.jp##.single-links
 the-ans.jp##a[id^="c2_click_sportbra_"]
 the-ans.jp##a[id^="c2_click_textlink_"]
