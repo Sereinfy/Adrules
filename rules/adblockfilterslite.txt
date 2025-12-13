@@ -1,9 +1,9 @@
 !
 ! Title: AdBlock Filter Lite
 ! Homepage: https://github.com/Sereinfy/Adrules
-! Version: 20251213002630
-! Last modified: 2025/12/13 00:26:30
-! Blocked Filters: 63484
+! Version: 20251213092839
+! Last modified: 2025/12/13 09:28:39
+! Blocked Filters: 63483
 !
 ###AC_ad
 ###AD_160
@@ -1530,7 +1530,6 @@
 ###ads-left-top
 ###ads-lrec
 ###ads-main
-###ads-menu
 ###ads-middle
 ###ads-mpu
 ###ads-outer
@@ -7055,7 +7054,6 @@
 ###sponsored_links
 ###sponsored_native_ad
 ###sponsoredad
-###sponsoredads
 ###sponsoredlinks
 ###sponsorfeature
 ###sponsorlink
@@ -7656,8 +7654,6 @@
 ###videoShareToEmailBtn
 ###videoShareToEmbed
 ###video_adv
-###video_advert
-###video_advert_top
 ###video_embed_ads
 ###video_hor_bot_ads
 ###video_overlay_ad
@@ -28087,8 +28083,8 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 .com/pc/ad/
 .com/piaozi/*.js
 .com/players/*/-1/$script,third-party
+.com/players/*/-1/70/$script,third-party
 .com/players/*/-1/70/$xmlhttprequest
-.com/players/*/-1/70/*?hash=-$script,third-party
 .com/playlist?list=$jsonprune=\$..[adPlacements\, adSlots\, playerAds],domain=youtubekids.com|youtube-nocookie.com|youtube.com
 .com/pu/$script,domain=smutr.com
 .com/qq.js$third-party
@@ -37552,6 +37548,7 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 @@||ani-*.xyz/*.html$stealth=referrer,domain=aniwatch.me
 @@||animeuniverse.*^$generichide
 @@||anisearch.*^$generichide
+@@||anitube*.vip/playerricas.php$stealth=referrer
 @@||anitube.*^$generichide
 @@||anizmstream*.com/cdn/down/$stealth=referrer,domain=anizmplayer.com|anizm.net
 @@||annhe.net^$generichide
@@ -39905,6 +39902,8 @@ Mplay/kk1.js
 [$domain=/^vidhub\d+\.(cc\|top)$/]##.player-info div[class]:has(> div[class][style] > img[onclick^="window.open"]:first-child + span[style]:last-child)
 [$domain=/cosmic\d+\.co/]###floatcenter
 [$domain=/cosmic\d+\.co/]##.kln
+[$domain=/mixdrop\d+\.net/]#%#//scriptlet("abort-current-inline-script", "document.createElement", "dtnoppu")
+[$domain=/mixdrop\d+\.net/]#%#//scriptlet("prevent-addEventListener", "click", "dtnoppu")
 [$domain=/pornolomka\d+\.com/]#%#//scriptlet('abort-on-property-read', 'popns')
 [$domain=/tigoals\d+\.com/]##.banner
 [$domain=facebook.com,path=/adsmanager]#$#body > .AdBox.Ad.advert { display: block !important; }
@@ -40769,7 +40768,6 @@ almayadeen.net,augustanews.it,autozeitung.de,avolanews.it,bearingarms.com,catani
 alo.rs,blic.rs,republika.rs,tanjug.rs##.single-news-share
 alocdn.co,serialeonline.biz#%#//scriptlet("prevent-window-open")
 alohabrowser.app,alohabrowser.com##.cookies-open-modal
-alohabrowser.com,alohabrowser.app,iflyltd.ru,alihelper.net,dvdmax.pl,me-qr.com,universalmusic.pl,spirou.com,superlegalbrinquedos.com.br,pasch-net.de##.modal-cookies
 alonsoaliaga.github.io,everyeye.it,hausbau-forum.de,birgun.net,curseforge.com,sheepesports.com,automoto.it,calcmaps.com,moto.it,insidermonkey.com,udocz.com,gisarea.com#%#//scriptlet('prevent-fetch', 'pagead2.googlesyndication.com')
 alotav.com,javbraze.com,javdoe.fun,javdoe.sh,javhat.tv,javhd.*,javhdz.today,javseen.tv,javseenz.tv,javtape.site,xjav.online###previewBox
 alotporn.com,amateurest.com,onlinestars.net,bravoerotica.net,gettubetv.com,hoes.tube,jizzberry.com,love4porn.com,gaysearch.com,submityourflicks.com,chubbyporn.com##.fp-ui > div[style^="position: absolute;"][style*="background: transparent;"]
@@ -49495,7 +49493,6 @@ jokers.de,weltbild.de#$#html { position: static !important; }
 jokers.de,weltbild.de#%#document.cookie="dsgvo=basic; path=/;";
 jokers.de,weltbild.de#?#.reveal-overlay > #dsgvoLayer:upward(1)
 joom.ru,joom.com#%#//scriptlet('trusted-click-element', 'div[class^="modalOverlay_"] > div[class^="design_"] button[class^="close_"]')
-jopdf.com,wkd-sppw.eu,megateh.eu,shemale.pub,hsn-tsn.de,myglo.com.ua,bo3.gg,speeddate.it,woodworkforinventor.com,maanimo.ua,namikoi.com,cvv.org.br,puttycolors.com,wokal.studio,tdk.com,globalpetrolprices.com,szukam-inwestora.com,hgspot.hr,drv.hu,genesis-zone.com,carlossainz.es,lordicon.com,farmako.net,theglobaleconomy.com,fakings.com,seg-social.gob.es,icu.ua,playretrogames.net,forum.selur.net,electronicfirst.com,jcarlosroldan.com,hostico.ro,filman.cc,mycoding.id,pixers.*,mapp.com,haylem.ca,bazar.club,79element.pl,apart.pl,gaygo.tv,activobank.pt,bagatela.pl,visitkrk.com,iparts.pl,beltorgi.by,tion.ru,penny-arcade.com,zaluknij.cc,tranny.one,krakow.pl,ispsystem.ru,hdmecze.com,polskiprzemysl.com.pl,oley.com,rncb.ru,iplogger.org,ekino-tv.pl,muzo.fm,samcook.eu,tellows.it,banco.bradesco,yesvids.com,holaporno.xxx,ah-me.com,istanbulhomes.com,bursahomes.com,antalyahomes.com,spainhomes.com,bta.bg,rockserwis.fm,support.tonies.com,walbrzych24.com,mosir.sosnowiec.pl,pwsz-ns.edu.pl,cybusinessonline.co.uk,secure.ybonline.co.uk,secure.cbonline.co.uk,postnauka.ru,emiko.de,dachbaustoffe.de,kj.de,cyfrowe.pl,ezzocard.com,sunporno.com,banker.ua,any.run,advancedinstaller.com,aztecapornohd.xxx,teatroporno.com,elmundoporno.com,eporner.com,mitino-center.ru,polenghi.com.br,magnadijital.com.tr,touchvpn.net,postnauka.ru,sync.me,mulheresafoder.com,tellows.de,lot.com,essenjet.com,eurowag.com,inmotionhosting.com,private.com,cad-computer.de,ravenol.de,abload.de,secureage.com,gogalaxy.com,windworld.org,boettcher-fahrraeder.de,redshieldvpn.com,educalingo.com,theodora.com,windtre.it,filehorst.de###cookies
 joporn.*,meteoprog.*,walbrzych24.com,cumlouder.com,themuslimvibe.com,bigboobsalert.com##.promo
 joq-albania.com,joqalbania.com##.boost-list-container a[href^="https://aa.boostapi.net"]
 joq-albania.com,joqalbania.com##div[class^="adunit-"]
@@ -51131,8 +51128,6 @@ mcrypto.club,ptc4btc.com,eldibux.com##div[id^="promo"]
 mcxlive.org,okpeliz.com,bluedollar.net,nulljungle.com,cehennemstream.xyz,mangacrab.org,arigl.online,s0ft4pc.com,boyfuck.me,freereadnovel.online,idlixvip.asia,javboys.tv,asianboy.fans,techedubyte.com,yomucomics.com,tuksudia2.sbs,tuktukcinma.com#$#body > * { filter: none !important; }
 mcxlive.org,okpeliz.com,bluedollar.net,nulljungle.com,cehennemstream.xyz,mangacrab.org,arigl.online,s0ft4pc.com,boyfuck.me,freereadnovel.online,idlixvip.asia,javboys.tv,asianboy.fans,techedubyte.com,yomucomics.com,tuksudia2.sbs,tuktukcinma.com#$#body > div[class*=" active"][style] + div[class]:has(> .active > [class*="-content"]) { display: none !important; }
 mcxlive.org,okpeliz.com,bluedollar.net,nulljungle.com,cehennemstream.xyz,mangacrab.org,arigl.online,s0ft4pc.com,boyfuck.me,freereadnovel.online,idlixvip.asia,javboys.tv,asianboy.fans,techedubyte.com,yomucomics.com,tuksudia2.sbs,tuktukcinma.com#$#body > div[class*=" active"][style] { display: none !important; }
-md3b0j6hj.com,mixdrop21.net,mixdropjmk.pw,mdzsmutpcvykb.net,mdfx9dc8n.net,mdbekjwqa.pw,mixdroop.*,mixdrp.*,mixdrop.*#%#//scriptlet("abort-current-inline-script", "document.createElement", "dtnoppu")
-md3b0j6hj.com,mixdrop21.net,mixdropjmk.pw,mdzsmutpcvykb.net,mdfx9dc8n.net,mdbekjwqa.pw,mixdroop.*,mixdrp.*,mixdrop.*#%#//scriptlet("prevent-addEventListener", "click", "dtnoppu")
 md3b0j6hj.com,mixdrop21.net,mixdropjmk.pw,mdzsmutpcvykb.net,mdfx9dc8n.net,mixdrop.*#%#//scriptlet('adjust-setTimeout', 'Please wait', '*', '0.001')
 mdhstream.cc,fucking-tube.com##.happy-section
 mdhstream.cc,taradinhos.com,sexseeimage.com,hotxfans.com,dotadostube.com#?#.video-block-happy:upward(1)
@@ -51450,6 +51445,8 @@ mixdrop.*#%#//scriptlet("set-constant", "MDinjectP2", "undefined")
 mixdrop.*#%#//scriptlet("set-constant", "MDinjectP3", "undefined")
 mixdrop.*#%#//scriptlet('trusted-click-element', '.download-top .download-wrapper > a.download-btn:not([href])', '', '500')
 mixdrop21.net,mixdropjmk.pw,mdzsmutpcvykb.net,mdfx9dc8n.net,mixdroop.*##body > div[style^="position: absolute;"][style*="z-index"]
+mixdrop23.net,md3b0j6hj.com,mixdrop21.net,mixdropjmk.pw,mdzsmutpcvykb.net,mdfx9dc8n.net,mdbekjwqa.pw,mixdroop.*,mixdrp.*,mixdrop.*#%#//scriptlet("abort-current-inline-script", "document.createElement", "dtnoppu")
+mixdrop23.net,md3b0j6hj.com,mixdrop21.net,mixdropjmk.pw,mdzsmutpcvykb.net,mdfx9dc8n.net,mdbekjwqa.pw,mixdroop.*,mixdrp.*,mixdrop.*#%#//scriptlet("prevent-addEventListener", "click", "dtnoppu")
 mixdrp.*##body > div[style^="position: absolute;"][style*="width: 100%; height: 100%; z-index:"]
 mixdrp.*,mixdrop.*#%#//scriptlet("set-constant", "MDCore.adblock", "0")
 mj-king.net,mjk-r.net###bg-banner
@@ -51583,6 +51580,7 @@ moqups.com,x.gd##.notice
 more.com,viva.gr#$#.cc-overlay { display: none !important; }
 more.com,viva.gr#$#body.cc--open { overflow-y: auto !important; }
 morgenpost.de,nrz.de##.cookie-note
+mori.film,jopdf.com,wkd-sppw.eu,megateh.eu,shemale.pub,hsn-tsn.de,myglo.com.ua,bo3.gg,speeddate.it,woodworkforinventor.com,maanimo.ua,namikoi.com,cvv.org.br,puttycolors.com,wokal.studio,tdk.com,globalpetrolprices.com,szukam-inwestora.com,hgspot.hr,drv.hu,genesis-zone.com,carlossainz.es,lordicon.com,farmako.net,theglobaleconomy.com,fakings.com,seg-social.gob.es,icu.ua,playretrogames.net,forum.selur.net,electronicfirst.com,jcarlosroldan.com,hostico.ro,filman.cc,mycoding.id,pixers.*,mapp.com,haylem.ca,bazar.club,79element.pl,apart.pl,gaygo.tv,activobank.pt,bagatela.pl,visitkrk.com,iparts.pl,beltorgi.by,tion.ru,penny-arcade.com,zaluknij.cc,tranny.one,krakow.pl,ispsystem.ru,hdmecze.com,polskiprzemysl.com.pl,oley.com,rncb.ru,iplogger.org,ekino-tv.pl,muzo.fm,samcook.eu,tellows.it,banco.bradesco,yesvids.com,holaporno.xxx,ah-me.com,istanbulhomes.com,bursahomes.com,antalyahomes.com,spainhomes.com,bta.bg,rockserwis.fm,support.tonies.com,walbrzych24.com,mosir.sosnowiec.pl,pwsz-ns.edu.pl,cybusinessonline.co.uk,secure.ybonline.co.uk,secure.cbonline.co.uk,postnauka.ru,emiko.de,dachbaustoffe.de,kj.de,cyfrowe.pl,ezzocard.com,sunporno.com,banker.ua,any.run,advancedinstaller.com,aztecapornohd.xxx,teatroporno.com,elmundoporno.com,eporner.com,mitino-center.ru,polenghi.com.br,magnadijital.com.tr,touchvpn.net,postnauka.ru,sync.me,mulheresafoder.com,tellows.de,lot.com,essenjet.com,eurowag.com,inmotionhosting.com,private.com,cad-computer.de,ravenol.de,abload.de,secureage.com,gogalaxy.com,windworld.org,boettcher-fahrraeder.de,redshieldvpn.com,educalingo.com,theodora.com,windtre.it,filehorst.de###cookies
 morningbrew.com,acouplecooks.com,readbrightly.com,ostechnix.com##.inline-subscribe
 morningpost.com.cn###\33 60hot
 morningpost.com.cn##.gg-2
@@ -52600,6 +52598,7 @@ ok.xxx,pornhat.com##.before-player
 ok.xxx,pornhat.com,xxxonxxx.com##.player-bn
 okal.de,allkauf-ausbauhaus.de##.tx-aecookies-show
 okazjum.pl,tracker.network,destinytracker.com,halotracker.com,fortnitetracker.com,tracker.gg,bankturov.ru##.mobile-promo
+okhtamall.ru,alohabrowser.com,alohabrowser.app,iflyltd.ru,alihelper.net,dvdmax.pl,me-qr.com,universalmusic.pl,spirou.com,superlegalbrinquedos.com.br,pasch-net.de##.modal-cookies
 okkazeo.com,radarbox.com###ads
 oklink.com##.cookieTips
 okmarket.ru,ulker.com.tr,vogue.ru##.cookie-pane
