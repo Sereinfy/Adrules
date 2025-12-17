@@ -2555,6 +2555,7 @@ raz-zeitung.de,muensteraner-rechtsanwaelte.de,hardware-helden.de,naheland-apothe
 !
 ! NOTE: Regular rules
 !
+eliveshop.de#%#//scriptlet('trusted-click-element', 'body, #cc--main button.c-bn.c_link', '!cookie:cc_cookie')
 marubun.co.jp#%#//scriptlet('set-cookie', 'accept', 'true')
 tarakanov.net###privacybottom
 groupeapocom.com###website_cookies_bar
@@ -5449,7 +5450,7 @@ domovita.by#$#body { overflow: auto !important; padding-right: 0 !important; }
 telekom.de#%#//scriptlet('trusted-set-cookie', 'CONSENTMGR', 'c1%3A0%7Cc3%3A0%7Cc7%3A1%7Cts%3A1717487342176%7Cconsent%3Atrue', '', '/', 'telekom.de')
 cupt.gov.pl#$#html { overflow: auto !important; }
 cupt.gov.pl#$#div[id^="wiCookieBar"] { display: none !important; }
-eliveshop.de,milled.com,almacareer.com,data.gov.lv,allnutrition.pl,potreningu.pl,olympijskytym.cz,dolubatarya.com#%#//scriptlet('trusted-click-element', '#cc--main button.c-bn.c_link', '!cookie:cc_cookie')
+milled.com,almacareer.com,data.gov.lv,allnutrition.pl,potreningu.pl,olympijskytym.cz,dolubatarya.com#%#//scriptlet('trusted-click-element', '#cc--main button.c-bn.c_link', '!cookie:cc_cookie')
 germanos.gr,payzy.gr##div[id^="ck_cookies"]
 ||cookies.webixa.pl^$domain=ppnt.poznan.pl
 fuam.pl#%#//scriptlet('trusted-click-element', 'dialog a[role="button"][data-order="0"][id]')
@@ -26730,6 +26731,7 @@ inews.co.uk,pinterest.com#%#//scriptlet('set-constant', 'google.accounts.id.prom
 !
 ! SECTION: Popups - Regular rules
 !
+merkur.de##revenue-reel-anchor + revenue-reel
 mori.film##div[class^="cinema-banner"]
 hash-hugq.com###floating-line-bnr
 newsbomb.gr##.sl-page-container > div[id^="widget-"]
@@ -31136,7 +31138,8 @@ schuh-okay.de#$#.js--overlay { display: none!important; }
 schuh-okay.de#$#body,html { overflow: visible!important; }
 sportdeal24.de###NostoOverlay
 sportdeal24.de##.simpledialog-overlay
-impulse.de##.exit_intent
+impulse.de#$#.exit_intent { display: none !important; }
+impulse.de#$#.pum-open-scrollable { overflow: auto !important; }
 forum.gfxdomain.net##.uix_welcomeBlock_fixed
 ||static.nationmaster.com/assets/*/javascript/bannerOutbreak.js
 finanztip.de##.react-newsletter-overlay
@@ -35788,6 +35791,8 @@ gaugau.futabanet.jp,newscientist.com,jiji.com,edp24.co.uk,technologyreview.com,n
 !
 ! SECTION: Subscriptions - Regular rules
 !
+news.de##.cleverpush-email-form
+southerndiscourse.com#%#//scriptlet('trusted-set-local-storage-item', 'ck/forms/modal/8721d215c5/hideUntil', '2765924414124')
 androeed.ru##.for_telegram
 businessinsider.com##div[data-href-share^="https://www.google.com/preferences/"]
 businessinsider.com##div[data-component-name="follow-author-inline-signup"]
@@ -44620,6 +44625,7 @@ alfastrah.ru,turkishairlines.com,atmos-tokyo.com,radarbox.com,ciceksepeti.com,ra
 !
 !
 !
+litres.ru#%#//scriptlet('set-cookie', 'appsTopBannerClosed', '1')
 redfin.com###AppInstallBanner
 goodnovel.com##.qrcode
 snkrdunk.com##app-banner
@@ -61431,7 +61437,6 @@ xn--r8jwklh769h2mc880dk1o431a.com##.footer > .spadtitle2
 xn--r8jwklh769h2mc880dk1o431a.com##.headlinewra
 xn--r8jwklh769h2mc880dk1o431a.com##div[id^="div_fam_"] + .spadtitle2
 xn--r8jwklh769h2mc880dk1o431a.com##.etpickup
-hobonichielog.com##.textwidget2
 kimootoko.net##div[class^="blogroll_Smartphone"]
 mizugigurabia.com##.ad3
 newsmana.com##div[class^="rss-table"]
