@@ -266,6 +266,9 @@
 ! Bad: ||ad.doubleclick.net^ (should be in adservers.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/221161
+w.waipian.sbs##.popup-tips
+w.waipian.sbs##.shortcuts-mobile-overlay
 ! https://github.com/AdguardTeam/AdguardFilters/issues/218417
 fabconvert.com#@#.ad-banner-top
 ! https://github.com/AdguardTeam/AdguardFilters/issues/212973
@@ -1263,6 +1266,9 @@ $script,xmlhttprequest,third-party,domain=00ksw.com|01zww.com|0biquge.com|114zw.
 !
 ! NOTE: Specific rules
 !
+supertaste.tvbs.com.tw##div[id^="taboola-"]
+supertaste.tvbs.com.tw#?#.sidebar > span:contains(人氣點閱榜)
+supertaste.tvbs.com.tw#?#.article_detail > div.cotxt_title:has(> p:contains(/延伸閱讀|你可能會喜歡|大家都在看/))
 sou-yun.cn#$##adsPanel { display: none !important; }
 sou-yun.cn#$#body { overflow: auto !important; }
 zol.com.cn###downBoxGaosu
@@ -1345,7 +1351,9 @@ luogu.me##.propaganda
 66ss.org###sidebar-follow:has(> div.widget > script[src*="/js/acmsd/"])
 *$denyallow=biqege.com,domain=biqege.com,script,xmlhttprequest
 ||bz*.net/js/html*.js$~third-party,script
+||bz*.com/js/html*.js$~third-party,script
 ||bz*.net/js/cdn.js
+||bz*.com/js/cdn.js
 macromicro.me#%#//scriptlet('abort-current-inline-script', '$', '/deposit-bonus?platform=26&utm_source=')
 macromicro.me#%#//scriptlet('abort-current-inline-script', '$', 'mmPopup() {')
 ||mumu*.com/js/cdn.js$~third-party
@@ -5491,6 +5499,9 @@ newduba.cn###jq_youxi
 ||aa52jm08ly.com^
 ||ainb12261zh.com^
 ||nvielkaa.com^
+||ao2doihore.com^
+||ueaeahze.com^
+||f4h123m89w.com^
 ||1pt7wq8di.com^
 ||4d45i6p0g.com^
 ||5bess6df0.com^
