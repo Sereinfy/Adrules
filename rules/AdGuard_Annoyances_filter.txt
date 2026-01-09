@@ -2560,6 +2560,11 @@ lockbarber-supplies.de,raz-zeitung.de,muensteraner-rechtsanwaelte.de,hardware-he
 !
 ! NOTE: Regular rules
 !
+rawpixel.com##div[data-test-id="check-cookie-consent"]
+corp.takachiho-kk.co.jp###dnn_cookieEnPane
+pttavm.com#%#//scriptlet('set-local-storage-item', 'cookie_status', '1')
+letterasenzabusta.com#%#//scriptlet('trusted-set-cookie', 'lb_csc', '{"level": ["necessary_cookies"], "version": "2"}')
+advancedcustomfields.com###announcement-eucookielaw
 toc.mercedes-benz-trucks.com#%#//scriptlet('trusted-set-cookie', 'cookiePolicy', 'seen')
 toc.mercedes-benz-trucks.com##.cdk-overlay-container:has(.cookie-container)
 sexfeast.ru##.sf-cookie-warning
@@ -4768,7 +4773,6 @@ kvelektro.cz###__next > div[class^="css-"]:has(a[href="/stranka/pouzivani-cookie
 sconto.cz##.js-eu-co0k1es
 firstmedia.com#%#//scriptlet('set-local-storage-item', 'cookiesPolicyConsent', 'true')
 moebelix.cz#$#body { overflow: auto !important; padding-right: 0 !important; }
-moebelix.cz#$##modal { display: none !important; }
 5ka.ru##div[class^="src-patterns-Cookies-Cookies-module__container"]
 5ka.ru#%#//scriptlet('trusted-set-local-storage-item', 'COOKIE_POLICY_ACCEPTED_KEY', 'true')
 playactivate.com##.bg-space > aside.fixed.lg\:bottom-0:has(> .text-sky)
@@ -23918,6 +23922,7 @@ armidaleexpress.com.au,bendigoadvertiser.com.au,canberratimes.com.au,centralwest
 ! The rules for content blockers only:
 ! LINK: AnnoyancesFilter/Popups/sections/antiadblock.txt#content_blockers
 !
+windguru.cz###adblock_warning_message
 sports.ru#%#//scriptlet('trusted-set-local-storage-item', 's-presence-notification-first-time', '99999999999999')
 fotpforums.com#%#//scriptlet('remove-node-text', 'script', 'adblock-message')
 steamverde.net#%#//scriptlet('prevent-setTimeout', 'offsetHeight === 0')
@@ -35994,6 +35999,9 @@ gaugau.futabanet.jp,newscientist.com,jiji.com,edp24.co.uk,technologyreview.com,n
 !
 ! SECTION: Subscriptions - Regular rules
 !
+lifehacker.jp###modalNewsletterRegister
+lifehacker.jp###pArticleNewsletterRegister
+letterasenzabusta.com#%#//scriptlet('set-cookie', 'NEWSLETTER_POPUP_TO_SHOW', '1')
 cyberport.de##a[href="https://www.cyberport.de/angebote/newsletter.html"]
 joyfoodsunshine.com##.cls-inserted
 joyfoodsunshine.com##.block-save-email
@@ -36014,6 +36022,7 @@ hunter.fm#%#//scriptlet('set-cookie', 'noLoggedClosed', 'yes')
 usahello.org###hello-footer-newsletter
 maxidom.ru###adverts-slider
 maxidom.ru##.footer-banner
+maxidom.ru##.footer-banner-mobile
 pagellapolitica.it##.bg-blue:has(a[class^="hover:text-blue"])
 pagellapolitica.it##section.bg-black:has(> .container > .grid)
 powercompare.co.nz##floating-subscription-element
@@ -44956,6 +44965,9 @@ alfastrah.ru,turkishairlines.com,atmos-tokyo.com,radarbox.com,ciceksepeti.com,ra
 !
 !
 !
+lemon8-app.com#%#//scriptlet('set-local-storage-item', 'seo_page_first_open_cta_2026-1-9', '1')
+lemon8-app.com#?#:is(aside, footer) > div[class$="-reflow"]:is(:has(> p:contains(Open)), :has(> .qrcode > img[alt="Scan to get the app"]))
+pttavm.com#%#//scriptlet('set-session-storage-item', 'pttavm_mobile_app_bar_closed', '1')
 check.lenta.com##a[href^="https://lentaapp.go.link/"]
 delish.com##section[data-lazy-id] > div[class^="css-"]:has(> div[class^="css-"] > div[class^="css-"] >img[src^="/_assets/design-tokens/"])
 otello.ru#%#//scriptlet('trusted-set-local-storage-item', 'o5_audience_transerfer_to_app', '99999999999999')
@@ -53408,7 +53420,6 @@ market.yandex.*##article[data-madv]
 market.yandex.*##div[data-zone-data*="isIncut\":true"]
 market.yandex.*##article[data-auto="searchIncut"]
 market.yandex.*##div[data-apiary-widget-name="@monetize/HorizontalIncut"]
-market.yandex.*##div[data-apiary-widget-name="@marketfront/CreativeBanner"]
 [$path=/^\/$|\/\?/]market.yandex.*##div[data-zone-data*="bannerUrl"]:not([data-zone-name="deals-banner"])
 market.yandex.*##.mediaBanner
 market.yandex.*##.main > noindex:not([data-tid])
@@ -53453,6 +53464,7 @@ www.kinopoisk.ru##footer > div:has(> div > div[data-testid="kp-ui.amediateka-foo
 !
 ! SECTION: Self-promo - Regular rules
 !
+windguru.cz###forecasts-page-content > a[href="/help.php?sec=pro"]
 check.lenta.com###carousel_banners
 fissman.ru#$#body.popmechanic-disable-scroll { overflow: auto !important; }
 fissman.ru#$#.popmechanic-js-paranja { display: none !important; }
