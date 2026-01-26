@@ -2573,6 +2573,7 @@ lockbarber-supplies.de,raz-zeitung.de,muensteraner-rechtsanwaelte.de,hardware-he
 !
 ! NOTE: Regular rules
 !
+||consent.dimaster.ch^$script,domain=auto-illustrierte.ch
 united-domains.de#%#//scriptlet('trusted-click-element', 'dialog[role="alertdialog"] .cookie-layer-dialog .show-details, dialog[role="alertdialog"] .cookie-layer-dialog .confirm-selection')
 team-shadowi.com#%#//scriptlet('trusted-set-cookie', 'cookie-consent-timestamp', '$now$')
 team-shadowi.com#%#//scriptlet('trusted-set-cookie', 'cookie-consent', '{%22necessary%22:true%2C%22analytics%22:false%2C%22marketing%22:false%2C%22functional%22:false}')
@@ -18152,7 +18153,7 @@ bnnvara.nl#%#//scriptlet('trusted-click-element', 'ccm-notification >>> .ccm_btn
 kabeleinsdoku.at,kabeleinsdoku.de#%#//scriptlet('trusted-click-element', 'cmp-banner >>> cmp-dialog >>> cmp-button[variant="primary"] >>> button', '', '1000')
 geberit.de#%#//scriptlet('trusted-click-element', '#usercentrics-root >>> button[data-testid="uc-save-button"]')
 conrad.*,br.de,peri.lv,webasto-comfort.com,shop-apotheke.com,sennheiser.com,antenne.de,bechtle.com,hagebau.de#%#//scriptlet('trusted-click-element', '#usercentrics-root >>> button[data-testid="uc-accept-all-button"]')
-srf.ch,hornbach.de,aldi.fr,aldi.be,aldi-nord.de,aldi.lu,aldi.pt,aldi.nl,villeroy-boch.fr#%#//scriptlet('trusted-click-element', '#usercentrics-root >>> button[data-testid="uc-deny-all-button"]')
+bonify.de,srf.ch,hornbach.de,aldi.fr,aldi.be,aldi-nord.de,aldi.lu,aldi.pt,aldi.nl,villeroy-boch.fr#%#//scriptlet('trusted-click-element', '#usercentrics-root >>> button[data-testid="uc-deny-all-button"]')
 !
 ! TODO: Rework when support for clicking on an element containing a given text appears: https://github.com/AdguardTeam/Scriptlets/issues/409
 ! !#if (!adguard_app_windows && !adguard_app_mac && !adguard_app_android && !adguard_ext_firefox)
@@ -18357,9 +18358,13 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 !+ NOT_OPTIMIZED PLATFORM(windows, mac, android)
 ||geolocation.onetrust.com/cookieconsentpub/*/geo/location$xmlhttprequest,redirect-rule=noopjson
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/223492
+@@||api.usercentrics.eu/settings/*.json$domain=sso.bonify.de
+! https://github.com/uBlockOrigin/uAssets/issues/31617
+@@||web.cmp.usercentrics.eu/ui/loader.js$script,domain=casino.psk.hr
 ! https://github.com/uBlockOrigin/uAssets/issues/31613
-@@||cdn.cookielaw.org/consent/*.json$domain=lasestrellas.tv
-@@||cdn.cookielaw.org/scripttemplates/otSDKStub.js$domain=lasestrellas.tv
+@@||cdn.cookielaw.org/consent/*.json$domain=lasestrellas.tv|televisa.com
+@@||cdn.cookielaw.org/scripttemplates/otSDKStub.js$domain=lasestrellas.tv|televisa.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/223334
 traunstein.de#@##CookieConsent
 ! https://github.com/AdguardTeam/AdguardFilters/issues/222790
@@ -27041,6 +27046,7 @@ inews.co.uk,pinterest.com#%#//scriptlet('set-constant', 'google.accounts.id.prom
 !
 ! SECTION: Popups - Regular rules
 !
+7tv081.com#%#//scriptlet('trusted-click-element', '#mvspan_2_s_k_i_p_bottom')
 kroger.com#$#.kds-Modal-overlay { display: none !important; }
 kroger.com#$#html.overflow-hidden { overflow: auto !important; }
 nihaojewelry.com#%#//scriptlet('set-local-storage-item', 'homePopupID', '8')
@@ -27864,7 +27870,7 @@ vogue.com.tr##.popup-message
 qiita.com##div[data-testid^="popup-"][data-testid$="-signup"]
 bing.com##.b_bnp_bopc
 cubiq.ru#%#//scriptlet('remove-in-shadow-dom', 'notification-bar')
-stolichki.ru###fancybox-container-1
+gorzdrav.spb.ru,stolichki.ru###fancybox-container-1
 stokker.ee##div[class^="layout_scroller-"]
 nytimes.com#$##article-container-grid > div.article-content-container + div:empty { display: none !important; }
 nytimes.com#$#main > div#body-container > div#darken-overlay { display: none !important; }
@@ -28904,7 +28910,6 @@ ok.ru#%#//scriptlet('abort-on-property-read', 'globalAuthLoginPopupCounter')
 adlock.com#$#.adl__spec__disc__content { display: none !important; }
 adlock.com#$#body[style^="filter: blur"] { filter: unset !important; }
 slideshare.net#%#//scriptlet('prevent-addEventListener', 'mouseleave', 'scribd_ad')
-online-lawyer.jp,open-minds.it##.fixed-banner
 inspire.com#?#ins-dynamic-modal:has( > div > div > app-login-modal-container form.ng-pristine > .login__form__age)
 you.com##div[data-eventname="user_click_in_non_app"]
 wired.com##div[class^="PaywallBarWrapper"]
@@ -34058,6 +34063,9 @@ www.kinopoisk.ru#$#body[class*="styles_body"] { overflow: auto !important; }
 ! Tegna Inc.
 myfoxzone.com,wtol.com,5newsonline.com,fox61.com,wthr.com,wqad.com,fox43.com,10tv.com,localmemphis.com,newswest9.com,weareiowa.com,krem.com,kcentv.com,cbs19.tv,kiiitv.com,12newsnow.com,cbs8.com,kvue.com,wbir.com,wltx.com,wgrz.com,newscentermaine.com,whas11.com,ktvb.com,13wmaz.com,firstcoastnews.com,wnep.com,wtsp.com,wfaa.com,kgw.com,king5.com,wcnc.com,kens5.com,ksdk.com,khou.com,wusa9.com,abc10.com,wwltv.com,11alive.com,wfmynews2.com,thv11.com,9news.com,wkyc.com,wzzm13.com,kare11.com,13newsnow.com,12news.com#$?#div[data-module="grid"] > dialog[data-name="exitInterstitial"] { remove: true; }
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/223480
+!+ NOT_OPTIMIZED
+online-lawyer.jp,open-minds.it##.fixed-banner
 ! https://github.com/AdguardTeam/AdguardFilters/issues/213716
 !+ PLATFORM(windows, mac, android)
 tri247.com#?#body > div[style*="z-index:"]:has(> div[style*="cursor:"] > img[alt="Progressier logo"])
@@ -36172,6 +36180,7 @@ gaugau.futabanet.jp,newscientist.com,jiji.com,edp24.co.uk,technologyreview.com,n
 !
 ! SECTION: Subscriptions - Regular rules
 !
+europapress.es###btnSeguirGoogle
 thepancakeprincess.com##.home-signup
 dancearoundthekitchen.com##.pmd-save-article
 newslab.ru##.js-mediator-article > p:has(> b > a[href="https://t.me/newslablive"])
@@ -43295,7 +43304,7 @@ capital.bg###newsletter-box-holder
 thedrive.com##.newsletter-image
 reverso.net##.more-newsletter-subcribe
 scamadviser.com##.section div > div > div.newsletter__row
-connoisseurusveg.com,thenoshery.com,fromvalerieskitchen.com,framedcooks.com,runtothefinish.com,boardingarea.com,cleananddelicious.com,itsfoss.com,tut4dl.com##.enews-widget
+lemontreedwelling.com,connoisseurusveg.com,thenoshery.com,fromvalerieskitchen.com,framedcooks.com,runtothefinish.com,boardingarea.com,cleananddelicious.com,itsfoss.com,tut4dl.com##.enews-widget
 thedailybeast.com##.ProductCalloutNewsletterModule
 timesofindia.indiatimes.com#?#.nonAppView > div[class]:has(> div.contentwrapper > button)
 searchenginewatch.com##.ab--subscribe
@@ -45250,6 +45259,7 @@ alfastrah.ru,turkishairlines.com,atmos-tokyo.com,radarbox.com,ciceksepeti.com,ra
 !
 !
 !
+wzzy.cc###qrCodeWidget
 calendar.yandex.ru##div[role="main"] > div[class^="MainBanner__wrap--"]:has(> div > a[href^="https://360.yandex.ru/calendar/#calendar-block"])
 nihaojewelry.com##.container > div.flex:has(> div.flex img[src$="/wholesale_jewelry_app.png"])
 vrisko.gr##.sectionAppGray
@@ -49136,6 +49146,8 @@ m.tokopedia.com#$#div[data-testid="divOverlay"] { display: none!important; }
 ! causes some issues: https://github.com/AdguardTeam/AdguardForMac/issues/550
 ~odaibako.net,~lineup.withgoogle.com,~vert.sh,~search.brave.com,~status.im,~lafenice.io,~kurer-sreda.ru,~chorki.com,~zattoo.com,~zaycev.net,~hitta.se,~mail.ru,~facebook.com,~instagram.com,~drive.google.com$$link[rel="manifest"]
 !
+delish.com#$#nav[data-tracking-id="topNav"] > div[class^="css-"]:has(> div[class^="css-"] > div[class^="css-"] > div[class^="css-"] > img[alt="Delish App Banner Logo"]) { display: none !important; }
+delish.com#$#nav[data-tracking-id="topNav"] { height: auto !important; }
 m.joybuy.co.uk##div[class^="header_downloadBarWrapper__"]
 m.globalsources.com##.app-download
 ggsel.net##.progressier-install-banner
@@ -49158,7 +49170,6 @@ kayak.com,momondo.com###mobile-app-promo-banner
 okinawatimes.co.jp##.deeplink_txt_color
 fedex.com##trk-shared-simplified-mobile-app-banner
 willmusic.com.tw,shop.showba.com.tw,mart.family.com.tw#%#//scriptlet('set-session-storage-item', 'AdHide', 'true')
-delish.com##nav[data-tracking-id="topNav"] > div[class^="css-"]:has(> div[class^="css-"] > img[src^="/_assets/design-tokens/"])
 hotpepper.jp#$#.app-bottom-modal-container { display: none !important; }
 hotpepper.jp#$#body.fixed-body { overflow: auto !important }
 baito.line.me##div[class^="AppDownloadLinkBar"]
@@ -53830,6 +53841,7 @@ www.kinopoisk.ru##footer > div:has(> div > div[data-testid="kp-ui.amediateka-foo
 !
 ! SECTION: Self-promo - Regular rules
 !
+zakzak.co.jp##.storycard:has(> div.story-card-flex > h3 > a[href="/article/20260126-SEVKEGWF4FDX7MZFVI7TVPJKGM/"])
 hotokami.jp##.mx-1.md\:mx-2:has(> div.max-w-\[100vw\] > div.overflow-y-scroll > div[onclick^="gtag"])
 vrisko.gr###advertiseContainer
 yesstyle.com##div[class*="discountBarContainer"]
@@ -59049,8 +59061,8 @@ web-service.aiportrait.online#$#body { overflow: auto !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/213725
 tamilprint51.online#$##content > #message { display: block !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/213540
-asd.homes#$##clickme + a#btn[style*="display: none;"] { display: table !important; }
-asd.homes#$##clickme:has(+ a#btn[style*="display: none;"]) { display: none !important; }
+asd.pics,asd.homes#$##clickme + a#btn[style*="display: none;"] { display: table !important; }
+asd.pics,asd.homes#$##clickme:has(+ a#btn[style*="display: none;"]) { display: none !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/210222
 odiadance.com#$##btn6 { display: block !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/209271
@@ -59537,7 +59549,7 @@ crystal-launcher.pl#%#//scriptlet('adjust-setTimeout', 'timerCount', '*', '0.001
 ! https://github.com/AdguardTeam/AdguardFilters/issues/213725
 tamilprint51.online#%#//scriptlet('adjust-setTimeout', '/countdown|pleaseWaitDiv/', '*', '0.001')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/213540
-asd.homes#%#//scriptlet('trusted-replace-node-text', 'script', 'downloadbtn', '/seconds: \d+/g', 'seconds: 0')
+asd.pics,asd.homes#%#//scriptlet('trusted-replace-node-text', 'script', 'downloadbtn', '/seconds: \d+/g', 'seconds: 0')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/213170
 financewada.com,utkarshonlinetest.com,techbezzie.com#%#//scriptlet('adjust-setInterval', '/time--|timeto--/', '*', '0.001')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/212580
