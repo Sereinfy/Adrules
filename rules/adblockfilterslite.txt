@@ -1,9 +1,9 @@
 !
 ! Title: AdBlock Filter Lite
 ! Homepage: https://github.com/Sereinfy/Adrules
-! Version: 20260314163629
-! Last modified: 2026/03/14 16:36:29
-! Blocked Filters: 64526
+! Version: 20260315003237
+! Last modified: 2026/03/15 00:32:37
+! Blocked Filters: 64527
 !
 ###AC_ad
 ###AD_160
@@ -47188,7 +47188,7 @@ gamesindustry.biz,newscientist.com,usgamer.net##.leaderboard-container
 gamesindustry.biz,vg247.com,eurogamer.*,rockpapershotgun.com###sticky_leaderboard
 gameslol.net,yabiladi.com##.pub_header
 gamesmain.xyz,foodtechnos.in###adblock-modal
-gamesmain.xyz,foodtechnos.in#%#//scriptlet('adjust-setInterval', '[_0x', '*', '0.001')
+gamesmain.xyz,foodtechnos.in#%#//scriptlet('adjust-setInterval', '/countdownDisplay|\[_0x/', '*', '0.001')
 gamesmain.xyz,foodtechnos.in#%#//scriptlet('adjust-setTimeout', '/createLinkButton|buttonGroup|\("\d+"\)/', '*', '0.001')
 gamesmain.xyz,foodtechnos.in#%#//scriptlet('prevent-element-src-loading', 'script', 'pagead2.googlesyndication.com')
 gamesmain.xyz,foodtechnos.in#%#//scriptlet('prevent-xhr', 'pagead2.googlesyndication.com')
@@ -62018,6 +62018,7 @@ zzztube.com,videoporn.tube##.b-random-column
 ||gamersky.com/wap/js/gs/gsAllOpenAppBtn.
 ||games.qq.com/playgame/gamesad/js/swfobject.js
 ||games.qq.com/playgame/videoweb/
+||gamesmain.xyz^$replace=/(setTimeout\(function[\s\S]*?createLinkButton[\s\S]*?}\,) \d+\);/\$1 1\);/,document
 ||gamessumo.com^$app=backiee.exe
 ||gavbus*.com/assets/common/js/ad.js
 ||gavbus*.com/assets/common/js/admenu.js
