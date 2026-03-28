@@ -1,9 +1,9 @@
 !
 ! Title: AdBlock Filter Lite
 ! Homepage: https://github.com/Sereinfy/Adrules
-! Version: 20260328005544
-! Last modified: 2026/03/28 00:55:44
-! Blocked Filters: 64570
+! Version: 20260328100936
+! Last modified: 2026/03/28 10:09:36
+! Blocked Filters: 64577
 !
 ###AC_ad
 ###AD_160
@@ -32821,6 +32821,7 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 /needsharebutton.js
 /needsharebutton.min.css
 /neilson.js
+/nelio-ab-testing/assets/dist/js/visitor-type.js
 /neoworx_tracker.php
 /netmining.js
 /netresults.js
@@ -39432,6 +39433,7 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=fastssh.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=flixscans.*
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=fsbot.xyz
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=fuucdayo.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=general24news.in
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=genova24.it
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=getintoway.com
@@ -39523,6 +39525,7 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$~script,domain=namerobot.de
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?$domain=production-api.androidacy.com,stealth=referrer
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?adblocktest$domain=haafedk2.com
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub$domain=fuucdayo.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js^$domain=linkneverdie.net
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js^$domain=sportshub.to
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js^$domain=watchfaces.be
@@ -49593,6 +49596,8 @@ itboth.com,itkeyword.com##.ad_pop_left_txy
 itboth.com,itkeyword.com##a[href*=".aliyun."]
 itbricksoft.com,bolavip.com,gorky.media##.subs-block
 itchygame.com#$?#.a-th:not([itemscope]) { remove: true; }
+itdmusicy.com,janammusic.in.net##body > div[id][class*=" "]:has(div.adblock_subtitle)
+itdmusicy.com,xporn.to,irootapk.net,ourcoincash.xyz,idrom.top,claimtrx.com,claimsatoshi.xyz#%#//scriptlet('abort-on-property-write', 'AdblockRegixFinder')
 itesco.cz,emerging-europe.com,home.webinarjam.com,eddiehub.org##.gdpr_cookie_banner
 itheat.com##.hot_ad
 itheima.com##.nav1
@@ -52484,7 +52489,7 @@ mydrivers.com##div[style="text-align: center;margin-top: 10px;"]
 mydrivers.com##div[style^="position:fixed;left:50%;bottom:200px;"]
 mydrivers.com#?#.newslist > li:has(> span:contains(广 告))
 mydrivers.com#?#div[class^="news_info"] > ul.newslist > li:has(> span:contains(广告))
-mydrivers.com#?#li:-abp-has(>.titl+:-abp-contains(好物))
+mydrivers.com#?#li:-abp-has(>.titl+:-abp-contains(/好\s*物/))
 mydrivers.com#?#li:has(>.titl+:contains(好物))
 mydrivers.com,wmzhe.com##a[href*=".jd.com/"]
 mydriveverse.blogspot.com,mydverse02.blogspot.com,kdramaplays.blogspot.com,technetbooks.com##.js-cookieconsent
@@ -59645,7 +59650,6 @@ xnxx.*,xvideos.*##.banner-game
 xnxx.com,xvideos.com##.thumb-ad
 xozilla.com,analdin.com##body > .popup
 xperiablog.net,burningangel.com#@#.header-ad
-xporn.to,irootapk.net,ourcoincash.xyz,idrom.top,claimtrx.com,claimsatoshi.xyz#%#//scriptlet('abort-on-property-write', 'AdblockRegixFinder')
 xpornium.net,mdy48tn97.com##div[style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; z-index: 2147483646;"]
 xpornotubes.com,dildoxxxtube.com,oxotube.com###ubr
 xprime4u.*,movies4u.*##.onclick-input
@@ -61103,6 +61107,9 @@ zzztube.com,videoporn.tube##.b-random-column
 ||autokult.pl^$replace=/(aabv\d[\s\S]*?.=function\(\)\{)return .===.(\}\,)/\$1return\$2/,script
 ||autopiano.cn/data/jd_
 ||autoscout24.*/frontend-metrics/
+||aviasales.*-analytics.
+||aviasales.*/analytics_pv.
+||aviasales.*/sentry-replay.
 ||avjd014.com/*ad^
 ||awifi.cn^$third-party
 ||ax.*.ifeng.com^
