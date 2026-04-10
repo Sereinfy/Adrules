@@ -96,14 +96,10 @@ class BlackList(object):
         self.__ChinalistFile = os.getcwd() + "/rules/china.txt"
         self.__blacklistFile = os.getcwd() + "/rules/black.txt"
         self.__domainlistFile = os.getcwd() + "/rules/domain.txt"
-        self.__domainlistFile_CN = os.getcwd() + "/rules/direct-list.txt"
-        self.__domainlistUrl_CN = "https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/refs/heads/release/direct-list.txt"
-        self.__domainlistFile_CN_Apple = os.getcwd() + "/rules/apple-cn.txt"
-        self.__domainlistUrl_CN_Apple = "https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/refs/heads/release/apple-cn.txt"
-        self.__domainlistFile_CN_Google = os.getcwd() + "/rules/google-cn.txt"
-        self.__domainlistUrl_CN_Google = "https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/refs/heads/release/google-cn.txt"
-        self.__iplistFile_CN = os.getcwd() + "/rules/CN-ip-cidr.txt"
-        self.__iplistUrl_CN = "https://raw.githubusercontent.com/Hackl0us/GeoIP2-CN/refs/heads/release/CN-ip-cidr.txt"
+        self.__domainlistFile_CN = os.getcwd() + "/rules/direct.txt"
+        self.__domainlistUrl_CN = "https://raw.githubusercontent.com/217heidai/RoutingRules/main/rules/direct.txt"
+        self.__iplistFile_CN = os.getcwd() + "/rules/ipv4_china.txt"
+        self.__iplistUrl_CN = "https://raw.githubusercontent.com/217heidai/RoutingRules/main/rules/ipv4_china.txt"
         self.__maxTask = 500
 
     def __getDomainList(self):
@@ -125,13 +121,11 @@ class BlackList(object):
         fullSet,domainSet,regexpSet,keywordSet = set(),set(),set(),set()
         try:
             domain_cn = ChinaDomian(self.__domainlistFile_CN, self.__domainlistUrl_CN)
-            domain_apple = ChinaDomian(self.__domainlistFile_CN_Apple, self.__domainlistUrl_CN_Apple)
-            domain_google = ChinaDomian(self.__domainlistFile_CN_Google, self.__domainlistUrl_CN_Google)
 
-            fullSet = domain_cn.fullSet | domain_apple.fullSet | domain_google.fullSet
-            domainSet = domain_cn.domainSet | domain_apple.domainSet | domain_google.domainSet
-            regexpSet = domain_cn.regexpSet | domain_apple.regexpSet | domain_google.regexpSet
-            keywordSet = domain_cn.keywordSet | domain_apple.keywordSet | domain_google.keywordSet
+            fullSet = domain_cn.fullSet
+            domainSet = domain_cn.domainSet
+            regexpSet = domain_cn.regexpSet
+            keywordSet = domain_cn.keywordSet
         except Exception as e:
             logger.error("%s"%(e))
         finally:

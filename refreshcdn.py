@@ -9,13 +9,11 @@ class RefreshCDN(object):
     def __init__(self):
         self.pwd = os.getcwd() + '/rules'
         self.blockList = [
-            "apple-cn.txt",
             "black.txt",
             "china.txt",
-            "CN-ip-cidr.txt",
-            "direct-list.txt",
+            "direct.txt",
             "domain.txt",
-            "google-cn.txt",
+            "ipv4_china.txt",
             "myblock.txt",
             "white.txt"
         ]
