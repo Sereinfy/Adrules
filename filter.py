@@ -6,7 +6,7 @@ from typing import List,Dict,Set,Tuple
 from loguru import logger
 from tld import get_tld
 
-from app import APPBase, AdGuard, AdGuardHome, DNSMasq, Hosts, InviZible, Loon, Mihomo, QuantumultX, Shadowrocket, SingBox, SmartDNS, Surge
+from app import APPBase, AdGuard, AdGuardHome, DNSMasq, Hosts, InviZible, Loon, Mihomo, QuantumultX, Shadowrocket, ShadowrocketModule, SingBox, SmartDNS, Surge
 from readme import Rule
 from resolver import Resolver
 
@@ -237,6 +237,7 @@ class Filter(object):
             Mihomo      (blockList, unblockList, filterDict, filterList, filterList_var, ChinaSet, self.path + "/adblockmihomo.yaml",   sourceRule),
             QuantumultX (blockList, unblockList, filterDict, filterList, filterList_var, ChinaSet, self.path + "/adblockqx.conf",       sourceRule),
             Shadowrocket(blockList, unblockList, filterDict, filterList, filterList_var, ChinaSet, self.path + "/adblockclash.list",    sourceRule),
+            ShadowrocketModule(blockList, unblockList, filterDict, filterList, filterList_var, ChinaSet, self.path + "/adblockshadowrocket.sgmodule", sourceRule),
             SingBox     (blockList, unblockList, filterDict, filterList, filterList_var, ChinaSet, self.path + "/adblocksingbox.json",  sourceRule),
             SmartDNS    (blockList, unblockList, filterDict, filterList, filterList_var, ChinaSet, self.path + "/adblocksmartdns.conf", sourceRule),
             Surge       (blockList, unblockList, filterDict, filterList, filterList_var, ChinaSet, self.path + "/adblocksurge.list",     sourceRule),

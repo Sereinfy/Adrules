@@ -8,6 +8,7 @@ from .loon import Loon
 from .mihomo import Mihomo
 from .quantumultx import QuantumultX
 from .shadowrocket import Shadowrocket
+from .shadowrocket_module import ShadowrocketModule
 from .singbox import SingBox
 from .smartdns import SmartDNS
 from .surge import Surge
