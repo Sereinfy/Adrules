@@ -2585,6 +2585,10 @@ bayreuth-region.de,ra-hoernschemeyer.de,tuhlteim-pedia.de,entwickler.de,lockbarb
 !
 ! NOTE: Regular rules
 !
+touchmywife.com,mypervyfamily.com#%#//scriptlet('trusted-set-cookie', 'cookieConsent', 'eyJjIjp7IjEiOjEsIjExIjowLCIyMSI6MCwiMzEiOjB9LCJ2IjoiMTAifQ==')
+support.mypervyfamily.com#%#//scriptlet('trusted-set-cookie', 'acceptedCookies', '%7B%22essential%22%3Atrue%2C%22functional%22%3Afalse%2C%22')
+bus.hava.ist#%#//scriptlet('trusted-set-local-storage-item', 'havaist_cookie_prefs', '{"essential":true,"analytics":false,"marketing":false,"social":false}')
+bus.hava.ist#%#//scriptlet('set-local-storage-item', 'havaist_cookie_consent', 'true')
 bsa.org###block-cookiepolicy
 ipb.ru###cookie_jar
 kanopy.com##.non-gdpr-banner
@@ -16962,6 +16966,11 @@ forum.gamer.com.tr#?#.p-body-inner > .notices > .notice:has(> .notice-content > 
 bethesda.net#?#visor-alert > div > div > div:last-child:has(> a[href$="/cookie-policy"])
 maximum.com.tr#?#.sticky_cookie_warning:has(> a[href^="/TR/gizlilik-politikamiz/Sayfalar/gizlilik-politikamiz.aspx"])
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/229631
+! https://github.com/AdguardTeam/AdguardFilters/issues/229633
+!+ PLATFORM(ext_ublock)
+mypervyfamily.com,touchmywife.com###root > div[class^="sc-"]:has(> p[class] > a[href$="/legal/privacy"])
+!
 ! https://github.com/AdguardTeam/AdguardFilters/issues/228794
 !+ PLATFORM(ext_ublock)
 online.globus.ru##footer ~ div[class^="css-"] div[class^="css-"]:has(> div > div > div > div > p > a[href="/page/politika-ispolzovaniya-cookie-fajlov"])
@@ -24738,6 +24747,7 @@ fuucdayo.com#$#.fuuc-adblock-overlay-open { overflow: auto !important; }
 fuucdayo.com#@#ins.adsbygoogle[data-ad-slot]
 fuucdayo.com#@#ins.adsbygoogle[data-ad-client]
 !
+||gobankingrates.com/wp-content/themes/rockefeller-lite/assets/build/block-ad-block.js
 cyanlabs.net#%#//scriptlet('trusted-replace-argument', 'Document.prototype.getElementsByClassName', '0', 'body', 'adsbygoogle')
 cyanlabs.net##div[class*=" "][style*="border-radius:"][style*="background-color:"] > div[style*="border-radius:"]:has(> .links-rosnoptblock)
 tranimaci.com###announcement-area
@@ -26402,7 +26412,7 @@ mothergrid.de,overclock3d.net,boingboing.net#@#.ad_unit
 @@||kickasssubtitles.com/js/fuckadblock.js
 @@||fussballtransfers.com/lib/prebid*.js
 @@||fussballtransfers.com/build/js/adManager.*.js
-morgenpost.de#@#.AdSense
+gazzetta.it,morgenpost.de#@#.AdSense
 @@||morgenpost.de/static/*/admanager.js
 @@||wochenblitz.com/js/advertisment/
 @@||zertalious.xyz/admitad.js
@@ -37058,6 +37068,8 @@ gaugau.futabanet.jp,newscientist.com,jiji.com,edp24.co.uk,technologyreview.com,n
 !
 ! SECTION: Subscriptions - Regular rules
 !
+pcmag.com##article > p > div[role="dialog"][id^="lightbox-"]
+dailymail.com##div[data-newsletter]
 ecoaliza.com.br#$##elementor-popup-modal-15633 { display: none !important; }
 ecoaliza.com.br#$#.dialog-prevent-scroll { overflow: visible !important; }
 affpaying.com##.w-full > div.flex-col:has(> span.text-sm.block)
@@ -55412,6 +55424,7 @@ www.kinopoisk.ru##footer > div:has(> div > div[data-testid="kp-ui.amediateka-foo
 !
 ! SECTION: Self-promo - Regular rules
 !
+cv-library.co.uk##.featured-jobs
 ecoaliza.com.br##div.g:has(> div.g-dyn > span.ad-description)
 fogplay.mts.ru##div.card--version-8
 gay-blog.tomrockets.com##.gb-content-banner
