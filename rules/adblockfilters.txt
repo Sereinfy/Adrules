@@ -1,9 +1,9 @@
 !
 ! Title: AdBlock Filter
 ! Homepage: https://github.com/Sereinfy/Adrules
-! Version: 20260425165329
-! Last modified: 2026/04/25 16:53:29
-! Blocked Filters: 178159
+! Version: 20260426004152
+! Last modified: 2026/04/26 00:41:52
+! Blocked Filters: 178170
 !
 ###AC_ad
 ###AD_160
@@ -48666,6 +48666,7 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 @@||stackpathcdn.com/wp-content/plugins/*/adblock-detector/advertisement.js$domain=phoneswiki.com
 @@||stackpathcdn.com^$stealth=referrer,domain=tympanus.net
 @@||stacksnippets.net^$jsinject,elemhide,extension
+@@||stacksocial.com^$stealth=flash
 @@||stacksocial.com^$stealth=java
 @@||stacksocial.com^$stealth=referrer
 @@||stadionowioprawcy.net^$generichide
@@ -54382,6 +54383,9 @@ animego.ong##.b-dwnapp
 animeguro.com###bt-ads
 animehay.*##body > div[style^="position: fixed; bottom: 0px; z-index:"]
 animehay.*#%#//scriptlet('set-constant', 'adsCatFish', 'noopFunc')
+animehay01.site##div[style^="position: absolute; bottom: 100%; right: 0px;"][style*="cursor: pointer;"]
+animehay01.site##img[src^="/ad_banner/"]
+animehay01.site#%#//scriptlet('prevent-window-open')
 animeheaven.pro,animepahe.*#%#//scriptlet("abort-on-property-write", "__C")
 animehub.ac###main-content > center
 animehub.ac##.sb-subs
@@ -65445,6 +65449,7 @@ ci123.com###fixed-recom
 ci123.com##div[onclick^="window.location="]
 cian.ru###map-search-frontend div[data-name="BannerWrapper"]
 cian.ru##.cg-row > div.cg-col-8:has(> div > div[class$="-c-digest-form"] > div[class$="-c-digest-form-email-container"])
+cian.ru##div[class*="--sidebar"] > div.design-theme--light:has(> div[class*="--wrapper"] > div > div[class*="unsubscribed-wrapper"])
 cian.ru##div[data-name="CookiesNotification"]
 cian.ru##div[data-name="DealSaleBanner"]
 cian.ru##div[data-name="DownloadAppBanner"]
@@ -90070,6 +90075,7 @@ igeeksblog.com##div[id^="igeek-"]
 igeeksblog.com#%#//scriptlet("set-constant", "Object.prototype.startShow", "noopFunc")
 igeeksblog.com#%#//scriptlet('prevent-setTimeout', 'placebo.height')
 igetintopc.com##.blocks > li.block:has(a[id^="dl-banner-"])
+igetnow.com##app-cookie-banner-wrapper-component
 igfonts.io#?##main > div.content-box:has(> div.proper-ad-unit)
 igg-games.*##a[href^="http://s.igg-games.com/index.php?qc="]
 igg-games.co,igg-games.com##body > div[id][style^="position: fixed; z-index:"][style*="overflow: auto; background-color:"]
@@ -152089,6 +152095,7 @@ zzzyk.com###Tinfo
 ||adjungle.com^$third-party
 ||adklip.com^$third-party
 ||adkonekt.com^$third-party
+||adkora.com^$third-party
 ||adkova.com^$third-party
 ||adku.co^$third-party
 ||adku.com^$third-party
@@ -153156,6 +153163,7 @@ zzzyk.com###Tinfo
 ||animedia.online/banner/youtube
 ||animeflv.*/api/pop.php
 ||animefrenzy.net/static/jquery.js?v=
+||animehay01.site/ad_banner/
 ||animehub.ac/api/pop.php
 ||animeinweb.com/api/proxy/data/ads/
 ||animeland.tv/zenny/
@@ -173099,6 +173107,9 @@ zzzyk.com###Tinfo
 ||static.youku.com/*/index/js/iresearch.js
 ||static.youku.com/*/js/cps.js
 ||static.zdassets.com/web_widget/messenger/$domain=op.gg|p2pb2b.com|revouninstaller.com
+||static.zongheng.com^*/adClickStat.js
+||static.zongheng.com^*/ad_click.js
+||static.zongheng.com^*/logger.min.js
 ||static0.wi-fi.ru/static/000/ios/index.html
 ||static1.lacoste.com/static/*/js/dist-refit/framework/templates/adblockers.tpl.js
 ||static2.wongnai.com/static2/5dfbab70f291e3d1a5df.js
