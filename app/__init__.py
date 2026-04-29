@@ -6,6 +6,7 @@ from .hosts import Hosts
 from .invizible import InviZible
 from .loon import Loon
 from .mihomo import Mihomo
+from .mosdns import MosDNS
 from .quantumultx import QuantumultX
 from .shadowrocket import Shadowrocket
 from .shadowrocket_module import ShadowrocketModule

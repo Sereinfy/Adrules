@@ -127,6 +127,8 @@ class ReadMe(object):
             f.write("| 规则14' |" + self.__subscribeLink("adblockloonlite.list") + " Loon |\n")
             f.write("| 规则15 |" + self.__subscribeLink("adblocksurge.list") + " Surge |\n")
             f.write("| 规则15' |" + self.__subscribeLink("adblocksurgelite.list") + " Surge |\n")
+            f.write("| 规则16 |" + self.__subscribeLink("adblockmosdns.txt") + " MosDNS |\n")
+            f.write("| 规则16' |" + self.__subscribeLink("adblockmosdnslite.txt") + " MosDNS |\n")
             f.write("\n")
 
             f.write("## 上游规则源\n")
