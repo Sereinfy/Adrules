@@ -11127,6 +11127,19 @@ youporn.com$$script:contains(/window\.[\s\S]*?_zone_[\s\S]*?{"zone_id":/)
 !
 ! NOTE: Regular rules
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/230011
+avnsgames.com#%#//scriptlet('prevent-setTimeout', 'adblockDetected')
+avnsgames.com#%#//scriptlet('abort-on-property-read', 'fuckAdBlock')
+! https://github.com/AdguardTeam/AdguardFilters/issues/230448
+metabot.gg#%#//scriptlet('set-constant', 'nitroAds.abp', 'true')
+metabot.gg#%#//scriptlet('prevent-addEventListener', 'np.detect', 'detail.blocking')
+metabot.gg##body > div[style^="background:"][style*="position: fixed; display: flex; align-items: center; justify-content: center; inset: 0px; z-index:"]
+! https://github.com/AdguardTeam/AdguardFilters/issues/230417
+vidbox.dev#%#//scriptlet('prevent-fetch', 'method:HEAD')
+vidbox.dev#%#//scriptlet('prevent-setTimeout', 'getComputedStyle')
+vidbox.dev#%#//scriptlet('prevent-element-src-loading', 'script', 'bait')
+vidbox.dev#$#div[aria-labelledby="adblock-title"] { display: none !important; }
+vidbox.dev#$#html { overflow: auto !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/230473
 waredata.com###adblock-overlay
 waredata.com###adblock-backdrop
@@ -23772,6 +23785,12 @@ extra.cz##[data-advert-container]
 rychlost.cz##.t-ban
 olympijskytym.cz##div.bg-texture:has(> div[class^="ad-"])
 akcniceny.cz,autojournal.cz,idos.cz,impuls.cz,lidovky.cz,idnes.cz,expres.cz,antiyoutuber.cz##body .r-main
+! https://github.com/AdguardTeam/AdguardFilters/issues/230488
+ewrc.cz#%#//scriptlet('prevent-navigation', '/adblock-detected')
+ewrc.cz#%#//scriptlet('prevent-element-src-loading', 'script', 'pagead2.googlesyndication.com')
+ewrc.cz#%#(()=>{const e={apply:(e,t,c)=>{try{const e=c[1],t=c[2];"redirectToAdblockDetected"===e&&"function"==typeof t?.value&&(c[2].value=()=>{})}catch(e){}return Reflect.apply(e,t,c)}};window.Object.defineProperty=new Proxy(window.Object.defineProperty,e)})();
+!+ PLATFORM(ios, ext_android_cb, ext_safari)
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=ewrc.cz
 ! https://github.com/AdguardTeam/AdguardFilters/issues/224190
 horoskopy.cz#%#//scriptlet('abort-on-property-write', 'shaman')
 horoskopy.cz#%#//scriptlet('json-prune', '*', '*.*.zoneId')
@@ -29556,6 +29575,9 @@ bieganie.pl#?#.biega-nb-paris > DIV[style^="text-align:"]:contains(Reklama)
 gospodarkamorska.pl##.Home_categories_box > div.polecamy-slider > div[class*="poster-dnone-"]
 onet.pl##a[href^="https://milionymonet.onet.pl/"]
 pograne.eu###custom_html-8
+! https://github.com/AdguardTeam/AdguardFilters/issues/230405
+||forumrowerowe.org/vendor/scripts/app/js/adBlockDetectAction.js
+forumrowerowe.org#%#//scriptlet('set-constant', 'AdBlockDetectAction', 'undefined')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/228107
 !+ NOT_PLATFORM(ext_ublock)
 ||spolecznosci.net^$important,domain=donald.pl
@@ -37439,6 +37461,11 @@ ign.com#%#//scriptlet('trusted-create-element', 'head', 'script', '', '(()=>{win
 fullformsmarathi.in,usanowday.com,bhadohimusic.in.net,edukaroo.com#%#//scriptlet('trusted-set-local-storage-item', 'firstClickTimestamp', '2747158774108')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/204296
 savefiles.com#%#//scriptlet('prevent-window-open', 'get/?spot_id=')
+! https://github.com/AdguardTeam/AdguardFilters/issues/230011
+! shrink.pe
+avnsgames.com#$#.steps { display: none !important; }
+avnsgames.com#$#form#go_d2 { display: inline-block !important; }
+avnsgames.com#$#[id^="droplink-step-"] { display: none !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/204562
 ! droplink.co
 tech8s.net,carbikenation.com,game5s.com,linkss.rcccn.in#$#[id^="droplink-step-"] { display: none !important; }
@@ -42063,8 +42090,8 @@ torontosun.com,athlonsports.com,edmontonsun.com,driving.ca,vancouversun.com$$scr
 !+ PLATFORM(ios, ext_safari, ext_android_cb)
 @@||ads.adthrive.com/abd/abd.js$xmlhttprequest
 ! #%#//scriptlet('set-cookie', '__adblocker', 'false') + #%#//scriptlet('prevent-xhr', 'ads.adthrive.com')
-beatthebudget.com,preventionrd.com,foodiecrush.com,allwaysdelicious.com,momontimeout.com,kitchentreaty.com,tastesbetterfromscratch.com,mynaturalfamily.com,pickyeaterblog.com,thelemonbowl.com,ambitiouskitchen.com,simplyquinoa.com,whiteonricecouple.com,cookiesandcups.com,inspiralized.com,momswithcrockpots.com,againstallgrain.com,howsweeteats.com,cookincanuck.com,hummusapien.com,healthygreenkitchen.com,thriftyfrugalmom.com,fedandfit.com,chelseasmessyapron.com,yourhomebasedmom.com,pressurecookingtoday.com,littlespicejar.com,dinnerthendessert.com,dessertnowdinnerlater.com,detoxinista.com,torontosun.com,parade.com,athlonsports.com,edmontonsun.com,canoe.com,driving.ca,vancouversun.com,spendwithpennies.com,saltandbaker.com,sporked.com,concertarchives.org,laurenslatest.com,muybuenoblog.com,handletheheat.com,paleomg.com,acouplecooks.com,101cookbooks.com,healthy-delicious.com,simple-nourished-living.com,ourbestbites.com,rachelcooks.com,giverecipe.com,healthynibblesandbits.com,sweetandsavorymeals.com,livingwellmom.com,theblondcook.com,wearychef.com,damndelicious.net,pcguide.com,micechat.com,thecafesucrefarine.com,realmenrealstyle.com,mmo-champion.com,nursefern.com,mtgsalvation.com,elliott.org,ohsweetbasil.com,mocoshow.com,thefpsreview.com,jaroflemons.com,russianmachineneverbreaks.com,appunwrapper.com,theimpulsivebuy.com,cruisehive.com,thurrott.com,twinsdaily.com,zhangcatherine.com,ministryofcurry.com,thewoksoflife.com,idownloadblog.com,thescranline.com,rachlmansfield.com,vincenzosplate.com,natashaskitchen.com,glutenfreeonashoestring.com,preppykitchen.com,starwarsunlimited.gg,theconsciousplantkitchen.com,archerytalk.com,gundamcard.gg,marvel.church,mamainastitch.com,myquietkitchen.com,anoregoncottage.com,twopeasandtheirpod.com,onceuponachef.com,currytrail.in,stephiecooks.com,iambaker.net,diethood.com,hot-thai-kitchen.com,grownandflown.com,thistlewoodfarms.com,thekoreanvegan.com,maangchi.com,whatgreatgrandmaate.com,365daysofbakingandmore.com,asweetpeachef.com,afarmgirlsdabbles.com,connoisseurusveg.com,veganricha.com,chefsavvy.com,julieblanner.com,overclock.net,pantrymama.com,joyfoodsunshine.com,sundaysuppermovement.com,gimmesomeoven.com,lexiscleankitchen.com,crockpotladies.com,kitchendivas.com,garminrumors.com,crayonsandcravings.com,dinneratthezoo.com,40plusstyle.com,andrewzimmern.com,anitalianinmykitchen.com,bromabakery.com,hannahmageerd.com,justagirlandherblog.com,machinelearningmastery.com,momsdish.com,pinchofyum.com,urbanfarmandkitchen.com,loveandlemons.com,mybakingaddiction.com,recipetineats.com,zenless.gg,prydwen.gg,jeepforum.com,ifish.net,frugalvillage.com,e46fanatics.com,corral.net,wutheringwaves.gg,umamusume.gg,traveler.gg,stardb.gg,snowbreak.gg,pokemontcgzone.com,moco.gg,lostsword.gg,honkai.gg,expedition33.gg,dotgg.gg,diablo4.gg,destiny2zone.com,iphoneincanada.ca,solveyourtech.com,favfamilyrecipes.com,spicysouthernkitchen.com,yourcupofcake.com,emilybites.com,dailydishrecipes.com,tidymom.net,thekitchenmagpie.com,thebestcakerecipes.com,amybakesbread.com,butternutbakeryblog.com,ballexclusives.com,runtothefinish.com,canonrumors.com,liliputing.com,simply-delicious-food.com,pipandebby.com,greensnchocolate.com,onionringsandthings.com,aheadofthyme.com,whipperberry.com,closetcooking.com,nutmegnanny.com,chumplady.com,laurafuentes.com,medievalists.net,therecipecritic.com,thefitchen.com,foodfaithfitness.com,kirbiecravings.com,umamigirl.com,simplywhisked.com,godairyfree.org,forkknifeswoon.com,makingthymeforhealth.com,premeditatedleftovers.com,justonecookbook.com,runningtothekitchen.com,halfbakedharvest.com,wellplated.com,platingsandpairings.com,foxeslovelemons.com,crunchycreamysweet.com,backforseconds.com,cookingclassy.com,brighteyedbaker.com,hoosierhomemade.com,entertainingwithbeth.com,tidefans.com,butterbeready.com,nourishedbynic.com,juliasalbum.com,fromvalerieskitchen.com,iamhomesteader.com,kdnuggets.com,androidheadlines.com,insider-gaming.com,juliescafebakery.com,ohsheglows.com,averiecooks.com,nomnompaleo.com,healthyfitnessmeals.com,redcurrantbakery.com,the-girl-who-ate-everything.com,stylegirlfriend.com,acedarspoon.com,addapinch.com,amandascookin.com,aprettylifeinthesuburbs.com,bakedbree.com,bakedbyrachel.com,barbarabakes.com,feastingathome.com,feedmephoebe.com,framedcooks.com,healthylittlefoodies.com,hungrypaprikas.com,ibreatheimhungry.com,littlesunnykitchen.com,melskitchencafe.com,mexicanfoodjournal.com,mountainmamacooks.com,mycolombianrecipes.com,neighborfoodblog.com,seededatthetable.com,shugarysweets.com,tasteandtellblog.com,thebakermama.com,theendlessmeal.com,thefoodieaffair.com,themediterraneandish.com,thewanderlustkitchen.com,whatjewwannaeat.com,gearpatrol.com,studyfinds.org,unefemme.net,hummingbirdhigh.com#%#//scriptlet('set-cookie', '__adblocker', 'false')
-beatthebudget.com,preventionrd.com,foodiecrush.com,allwaysdelicious.com,momontimeout.com,kitchentreaty.com,tastesbetterfromscratch.com,mynaturalfamily.com,pickyeaterblog.com,thelemonbowl.com,ambitiouskitchen.com,simplyquinoa.com,whiteonricecouple.com,cookiesandcups.com,inspiralized.com,momswithcrockpots.com,againstallgrain.com,howsweeteats.com,cookincanuck.com,hummusapien.com,healthygreenkitchen.com,thriftyfrugalmom.com,fedandfit.com,chelseasmessyapron.com,yourhomebasedmom.com,pressurecookingtoday.com,littlespicejar.com,dinnerthendessert.com,dessertnowdinnerlater.com,detoxinista.com,torontosun.com,parade.com,athlonsports.com,edmontonsun.com,canoe.com,driving.ca,vancouversun.com,spendwithpennies.com,saltandbaker.com,sporked.com,concertarchives.org,laurenslatest.com,muybuenoblog.com,handletheheat.com,paleomg.com,acouplecooks.com,101cookbooks.com,healthy-delicious.com,simple-nourished-living.com,ourbestbites.com,rachelcooks.com,giverecipe.com,healthynibblesandbits.com,sweetandsavorymeals.com,livingwellmom.com,theblondcook.com,wearychef.com,damndelicious.net,pcguide.com,micechat.com,thecafesucrefarine.com,realmenrealstyle.com,mmo-champion.com,nursefern.com,mtgsalvation.com,elliott.org,ohsweetbasil.com,mocoshow.com,thefpsreview.com,jaroflemons.com,russianmachineneverbreaks.com,appunwrapper.com,theimpulsivebuy.com,cruisehive.com,thurrott.com,twinsdaily.com,zhangcatherine.com,ministryofcurry.com,thewoksoflife.com,idownloadblog.com,thescranline.com,rachlmansfield.com,vincenzosplate.com,natashaskitchen.com,glutenfreeonashoestring.com,preppykitchen.com,starwarsunlimited.gg,theconsciousplantkitchen.com,archerytalk.com,gundamcard.gg,marvel.church,mamainastitch.com,myquietkitchen.com,anoregoncottage.com,twopeasandtheirpod.com,onceuponachef.com,currytrail.in,stephiecooks.com,iambaker.net,diethood.com,hot-thai-kitchen.com,grownandflown.com,thistlewoodfarms.com,thekoreanvegan.com,maangchi.com,whatgreatgrandmaate.com,365daysofbakingandmore.com,asweetpeachef.com,afarmgirlsdabbles.com,connoisseurusveg.com,veganricha.com,chefsavvy.com,julieblanner.com,overclock.net,pantrymama.com,joyfoodsunshine.com,sundaysuppermovement.com,gimmesomeoven.com,lexiscleankitchen.com,crockpotladies.com,kitchendivas.com,garminrumors.com,crayonsandcravings.com,dinneratthezoo.com,40plusstyle.com,andrewzimmern.com,anitalianinmykitchen.com,bromabakery.com,hannahmageerd.com,justagirlandherblog.com,machinelearningmastery.com,momsdish.com,pinchofyum.com,urbanfarmandkitchen.com,loveandlemons.com,mybakingaddiction.com,recipetineats.com,zenless.gg,prydwen.gg,jeepforum.com,ifish.net,frugalvillage.com,e46fanatics.com,corral.net,wutheringwaves.gg,umamusume.gg,traveler.gg,stardb.gg,snowbreak.gg,pokemontcgzone.com,moco.gg,lostsword.gg,honkai.gg,expedition33.gg,dotgg.gg,diablo4.gg,destiny2zone.com,iphoneincanada.ca,solveyourtech.com,favfamilyrecipes.com,spicysouthernkitchen.com,yourcupofcake.com,emilybites.com,dailydishrecipes.com,tidymom.net,thekitchenmagpie.com,thebestcakerecipes.com,amybakesbread.com,butternutbakeryblog.com,ballexclusives.com,runtothefinish.com,canonrumors.com,liliputing.com,simply-delicious-food.com,pipandebby.com,greensnchocolate.com,onionringsandthings.com,aheadofthyme.com,whipperberry.com,closetcooking.com,nutmegnanny.com,chumplady.com,laurafuentes.com,medievalists.net,therecipecritic.com,thefitchen.com,foodfaithfitness.com,kirbiecravings.com,umamigirl.com,simplywhisked.com,godairyfree.org,forkknifeswoon.com,makingthymeforhealth.com,premeditatedleftovers.com,justonecookbook.com,runningtothekitchen.com,halfbakedharvest.com,wellplated.com,platingsandpairings.com,foxeslovelemons.com,crunchycreamysweet.com,backforseconds.com,cookingclassy.com,brighteyedbaker.com,hoosierhomemade.com,entertainingwithbeth.com,tidefans.com,butterbeready.com,nourishedbynic.com,juliasalbum.com,fromvalerieskitchen.com,iamhomesteader.com,kdnuggets.com,androidheadlines.com,insider-gaming.com,juliescafebakery.com,ohsheglows.com,averiecooks.com,nomnompaleo.com,healthyfitnessmeals.com,redcurrantbakery.com,the-girl-who-ate-everything.com,stylegirlfriend.com,acedarspoon.com,addapinch.com,amandascookin.com,aprettylifeinthesuburbs.com,bakedbree.com,bakedbyrachel.com,barbarabakes.com,feastingathome.com,feedmephoebe.com,framedcooks.com,healthylittlefoodies.com,hungrypaprikas.com,ibreatheimhungry.com,littlesunnykitchen.com,melskitchencafe.com,mexicanfoodjournal.com,mountainmamacooks.com,mycolombianrecipes.com,neighborfoodblog.com,seededatthetable.com,shugarysweets.com,tasteandtellblog.com,thebakermama.com,theendlessmeal.com,thefoodieaffair.com,themediterraneandish.com,thewanderlustkitchen.com,whatjewwannaeat.com,gearpatrol.com,studyfinds.org,unefemme.net,hummingbirdhigh.com#%#//scriptlet('prevent-xhr', 'ads.adthrive.com')
+epicgardening.com,davesgarden.com,savvygardening.com,lifeasastrawberry.com,cravingsofalunatic.com,olgasflavorfactory.com,tablefortwoblog.com,skinnytaste.com,louisianacookin.com,laurenfromscratch.com,easycheesyvegetarian.com,cleananddelicious.com,heynutritionlady.com,fooddoodles.com,southernplate.com,littlespoonfarm.com,sallysbakingaddiction.com,justataste.com,hearthookhome.com,beatthebudget.com,preventionrd.com,foodiecrush.com,allwaysdelicious.com,momontimeout.com,kitchentreaty.com,tastesbetterfromscratch.com,mynaturalfamily.com,pickyeaterblog.com,thelemonbowl.com,ambitiouskitchen.com,simplyquinoa.com,whiteonricecouple.com,cookiesandcups.com,inspiralized.com,momswithcrockpots.com,againstallgrain.com,howsweeteats.com,cookincanuck.com,hummusapien.com,healthygreenkitchen.com,thriftyfrugalmom.com,fedandfit.com,chelseasmessyapron.com,yourhomebasedmom.com,pressurecookingtoday.com,littlespicejar.com,dinnerthendessert.com,dessertnowdinnerlater.com,detoxinista.com,torontosun.com,parade.com,athlonsports.com,edmontonsun.com,canoe.com,driving.ca,vancouversun.com,spendwithpennies.com,saltandbaker.com,sporked.com,concertarchives.org,laurenslatest.com,muybuenoblog.com,handletheheat.com,paleomg.com,acouplecooks.com,101cookbooks.com,healthy-delicious.com,simple-nourished-living.com,ourbestbites.com,rachelcooks.com,giverecipe.com,healthynibblesandbits.com,sweetandsavorymeals.com,livingwellmom.com,theblondcook.com,wearychef.com,damndelicious.net,pcguide.com,micechat.com,thecafesucrefarine.com,realmenrealstyle.com,mmo-champion.com,nursefern.com,mtgsalvation.com,elliott.org,ohsweetbasil.com,mocoshow.com,thefpsreview.com,jaroflemons.com,russianmachineneverbreaks.com,appunwrapper.com,theimpulsivebuy.com,cruisehive.com,thurrott.com,twinsdaily.com,zhangcatherine.com,ministryofcurry.com,thewoksoflife.com,idownloadblog.com,thescranline.com,rachlmansfield.com,vincenzosplate.com,natashaskitchen.com,glutenfreeonashoestring.com,preppykitchen.com,starwarsunlimited.gg,theconsciousplantkitchen.com,archerytalk.com,gundamcard.gg,marvel.church,mamainastitch.com,myquietkitchen.com,anoregoncottage.com,twopeasandtheirpod.com,onceuponachef.com,currytrail.in,stephiecooks.com,iambaker.net,diethood.com,hot-thai-kitchen.com,grownandflown.com,thistlewoodfarms.com,thekoreanvegan.com,maangchi.com,whatgreatgrandmaate.com,365daysofbakingandmore.com,asweetpeachef.com,afarmgirlsdabbles.com,connoisseurusveg.com,veganricha.com,chefsavvy.com,julieblanner.com,overclock.net,pantrymama.com,joyfoodsunshine.com,sundaysuppermovement.com,gimmesomeoven.com,lexiscleankitchen.com,crockpotladies.com,kitchendivas.com,garminrumors.com,crayonsandcravings.com,dinneratthezoo.com,40plusstyle.com,andrewzimmern.com,anitalianinmykitchen.com,bromabakery.com,hannahmageerd.com,justagirlandherblog.com,machinelearningmastery.com,momsdish.com,pinchofyum.com,urbanfarmandkitchen.com,loveandlemons.com,mybakingaddiction.com,recipetineats.com,zenless.gg,prydwen.gg,jeepforum.com,ifish.net,frugalvillage.com,e46fanatics.com,corral.net,wutheringwaves.gg,umamusume.gg,traveler.gg,stardb.gg,snowbreak.gg,pokemontcgzone.com,moco.gg,lostsword.gg,honkai.gg,expedition33.gg,dotgg.gg,diablo4.gg,destiny2zone.com,iphoneincanada.ca,solveyourtech.com,favfamilyrecipes.com,spicysouthernkitchen.com,yourcupofcake.com,emilybites.com,dailydishrecipes.com,tidymom.net,thekitchenmagpie.com,thebestcakerecipes.com,amybakesbread.com,butternutbakeryblog.com,ballexclusives.com,runtothefinish.com,canonrumors.com,liliputing.com,simply-delicious-food.com,pipandebby.com,greensnchocolate.com,onionringsandthings.com,aheadofthyme.com,whipperberry.com,closetcooking.com,nutmegnanny.com,chumplady.com,laurafuentes.com,medievalists.net,therecipecritic.com,thefitchen.com,foodfaithfitness.com,kirbiecravings.com,umamigirl.com,simplywhisked.com,godairyfree.org,forkknifeswoon.com,makingthymeforhealth.com,premeditatedleftovers.com,justonecookbook.com,runningtothekitchen.com,halfbakedharvest.com,wellplated.com,platingsandpairings.com,foxeslovelemons.com,crunchycreamysweet.com,backforseconds.com,cookingclassy.com,brighteyedbaker.com,hoosierhomemade.com,entertainingwithbeth.com,tidefans.com,butterbeready.com,nourishedbynic.com,juliasalbum.com,fromvalerieskitchen.com,iamhomesteader.com,kdnuggets.com,androidheadlines.com,insider-gaming.com,juliescafebakery.com,ohsheglows.com,averiecooks.com,nomnompaleo.com,healthyfitnessmeals.com,redcurrantbakery.com,the-girl-who-ate-everything.com,stylegirlfriend.com,acedarspoon.com,addapinch.com,amandascookin.com,aprettylifeinthesuburbs.com,bakedbree.com,bakedbyrachel.com,barbarabakes.com,feastingathome.com,feedmephoebe.com,framedcooks.com,healthylittlefoodies.com,hungrypaprikas.com,ibreatheimhungry.com,littlesunnykitchen.com,melskitchencafe.com,mexicanfoodjournal.com,mountainmamacooks.com,mycolombianrecipes.com,neighborfoodblog.com,seededatthetable.com,shugarysweets.com,tasteandtellblog.com,thebakermama.com,theendlessmeal.com,thefoodieaffair.com,themediterraneandish.com,thewanderlustkitchen.com,whatjewwannaeat.com,gearpatrol.com,studyfinds.org,unefemme.net,hummingbirdhigh.com#%#//scriptlet('set-cookie', '__adblocker', 'false')
+epicgardening.com,davesgarden.com,savvygardening.com,lifeasastrawberry.com,cravingsofalunatic.com,olgasflavorfactory.com,tablefortwoblog.com,skinnytaste.com,louisianacookin.com,laurenfromscratch.com,easycheesyvegetarian.com,cleananddelicious.com,heynutritionlady.com,fooddoodles.com,southernplate.com,littlespoonfarm.com,sallysbakingaddiction.com,justataste.com,hearthookhome.com,beatthebudget.com,preventionrd.com,foodiecrush.com,allwaysdelicious.com,momontimeout.com,kitchentreaty.com,tastesbetterfromscratch.com,mynaturalfamily.com,pickyeaterblog.com,thelemonbowl.com,ambitiouskitchen.com,simplyquinoa.com,whiteonricecouple.com,cookiesandcups.com,inspiralized.com,momswithcrockpots.com,againstallgrain.com,howsweeteats.com,cookincanuck.com,hummusapien.com,healthygreenkitchen.com,thriftyfrugalmom.com,fedandfit.com,chelseasmessyapron.com,yourhomebasedmom.com,pressurecookingtoday.com,littlespicejar.com,dinnerthendessert.com,dessertnowdinnerlater.com,detoxinista.com,torontosun.com,parade.com,athlonsports.com,edmontonsun.com,canoe.com,driving.ca,vancouversun.com,spendwithpennies.com,saltandbaker.com,sporked.com,concertarchives.org,laurenslatest.com,muybuenoblog.com,handletheheat.com,paleomg.com,acouplecooks.com,101cookbooks.com,healthy-delicious.com,simple-nourished-living.com,ourbestbites.com,rachelcooks.com,giverecipe.com,healthynibblesandbits.com,sweetandsavorymeals.com,livingwellmom.com,theblondcook.com,wearychef.com,damndelicious.net,pcguide.com,micechat.com,thecafesucrefarine.com,realmenrealstyle.com,mmo-champion.com,nursefern.com,mtgsalvation.com,elliott.org,ohsweetbasil.com,mocoshow.com,thefpsreview.com,jaroflemons.com,russianmachineneverbreaks.com,appunwrapper.com,theimpulsivebuy.com,cruisehive.com,thurrott.com,twinsdaily.com,zhangcatherine.com,ministryofcurry.com,thewoksoflife.com,idownloadblog.com,thescranline.com,rachlmansfield.com,vincenzosplate.com,natashaskitchen.com,glutenfreeonashoestring.com,preppykitchen.com,starwarsunlimited.gg,theconsciousplantkitchen.com,archerytalk.com,gundamcard.gg,marvel.church,mamainastitch.com,myquietkitchen.com,anoregoncottage.com,twopeasandtheirpod.com,onceuponachef.com,currytrail.in,stephiecooks.com,iambaker.net,diethood.com,hot-thai-kitchen.com,grownandflown.com,thistlewoodfarms.com,thekoreanvegan.com,maangchi.com,whatgreatgrandmaate.com,365daysofbakingandmore.com,asweetpeachef.com,afarmgirlsdabbles.com,connoisseurusveg.com,veganricha.com,chefsavvy.com,julieblanner.com,overclock.net,pantrymama.com,joyfoodsunshine.com,sundaysuppermovement.com,gimmesomeoven.com,lexiscleankitchen.com,crockpotladies.com,kitchendivas.com,garminrumors.com,crayonsandcravings.com,dinneratthezoo.com,40plusstyle.com,andrewzimmern.com,anitalianinmykitchen.com,bromabakery.com,hannahmageerd.com,justagirlandherblog.com,machinelearningmastery.com,momsdish.com,pinchofyum.com,urbanfarmandkitchen.com,loveandlemons.com,mybakingaddiction.com,recipetineats.com,zenless.gg,prydwen.gg,jeepforum.com,ifish.net,frugalvillage.com,e46fanatics.com,corral.net,wutheringwaves.gg,umamusume.gg,traveler.gg,stardb.gg,snowbreak.gg,pokemontcgzone.com,moco.gg,lostsword.gg,honkai.gg,expedition33.gg,dotgg.gg,diablo4.gg,destiny2zone.com,iphoneincanada.ca,solveyourtech.com,favfamilyrecipes.com,spicysouthernkitchen.com,yourcupofcake.com,emilybites.com,dailydishrecipes.com,tidymom.net,thekitchenmagpie.com,thebestcakerecipes.com,amybakesbread.com,butternutbakeryblog.com,ballexclusives.com,runtothefinish.com,canonrumors.com,liliputing.com,simply-delicious-food.com,pipandebby.com,greensnchocolate.com,onionringsandthings.com,aheadofthyme.com,whipperberry.com,closetcooking.com,nutmegnanny.com,chumplady.com,laurafuentes.com,medievalists.net,therecipecritic.com,thefitchen.com,foodfaithfitness.com,kirbiecravings.com,umamigirl.com,simplywhisked.com,godairyfree.org,forkknifeswoon.com,makingthymeforhealth.com,premeditatedleftovers.com,justonecookbook.com,runningtothekitchen.com,halfbakedharvest.com,wellplated.com,platingsandpairings.com,foxeslovelemons.com,crunchycreamysweet.com,backforseconds.com,cookingclassy.com,brighteyedbaker.com,hoosierhomemade.com,entertainingwithbeth.com,tidefans.com,butterbeready.com,nourishedbynic.com,juliasalbum.com,fromvalerieskitchen.com,iamhomesteader.com,kdnuggets.com,androidheadlines.com,insider-gaming.com,juliescafebakery.com,ohsheglows.com,averiecooks.com,nomnompaleo.com,healthyfitnessmeals.com,redcurrantbakery.com,the-girl-who-ate-everything.com,stylegirlfriend.com,acedarspoon.com,addapinch.com,amandascookin.com,aprettylifeinthesuburbs.com,bakedbree.com,bakedbyrachel.com,barbarabakes.com,feastingathome.com,feedmephoebe.com,framedcooks.com,healthylittlefoodies.com,hungrypaprikas.com,ibreatheimhungry.com,littlesunnykitchen.com,melskitchencafe.com,mexicanfoodjournal.com,mountainmamacooks.com,mycolombianrecipes.com,neighborfoodblog.com,seededatthetable.com,shugarysweets.com,tasteandtellblog.com,thebakermama.com,theendlessmeal.com,thefoodieaffair.com,themediterraneandish.com,thewanderlustkitchen.com,whatjewwannaeat.com,gearpatrol.com,studyfinds.org,unefemme.net,hummingbirdhigh.com#%#//scriptlet('prevent-xhr', 'ads.adthrive.com')
 ! Ad-Shield Light - the website's NextJS script tries to initialize Ad-Shield script.
 weatherzone.com.au##div[class*=" "][height="270px"]
 weatherzone.com.au##div[class*=" "][height="74px"]
@@ -42116,8 +42143,8 @@ torontosun.com,buchstaben.com,livescience.com,elnacional.cat,parade.com,athlonsp
 buchstaben.com#%#//scriptlet('remove-node-text', 'script', ': () => eval')
 !#endif
 !#if (adguard_app_windows || adguard_app_mac || adguard_app_android || adguard_app_cli || adguard_ext_chromium || adguard_ext_chromium_mv3 || adguard_ext_firefox || adguard_ext_edge || adguard_ext_opera)
-ottawasun.com,ottawacitizen.com,calgarysun.com,nationalreview.com,gerbeaud.com,hollywoodlife.com,robbreport.com,goldderby.com,vibe.com,km77.com,milestomemories.com,torontosun.com,buchstaben.com,livescience.com,elnacional.cat,parade.com,tj.news,thestarphoenix.com,leaderpost.com,athlonsports.com,edmontonsun.com,calgaryherald.com,theprovince.com,canoe.com,driving.ca,vancouversun.com,canada.com,financialpost.com,geo.fr,oeffnungszeitenbuch.de,followfollow.com,skinmc.net,pcgamebenchmark.com,thingiverse.com,mrexcel.com,nemzetisport.hu,montrealgazette.com,girlschannel.net,aussieaudiomart.com,programme-tv.net,base64decode.org,urldecoder.org,edmontonjournal.com,itavisen.no,hk01.com,calculatorsoup.com,russianmachineneverbreaks.com,scribd.com,bg-mania.jp,egolf.jp,otonanswer.jp,vague.style,magmix.jp,langenscheidt.com,trafficnews.jp,parents.com,merinfo.se,crosswordsolver.com,natalie.mu,petbook.de,egitim.net.tr,9gag.com,manchesterworld.uk,watchdocumentaries.com,canuckaudiomart.com,windsorstar.com,inverse.com,pons.com,bz-berlin.de,myhomebook.de,fitbook.de,techbook.de,travelbook.de,twopeasandtheirpod.com,onceuponachef.com,dict.cc,fansided.com,nationalpost.com,chloeting.com,sinemalar.com,zeilen.nl,wielerrevue.nl,ukaudiomart.com,woxikon.de,wort-suchen.de,dexerto.com,happyinshape.com,thetruthaboutcars.com,foodandwine.com,tips-and-tricks.co,lejdd.fr,edinburghnews.scotsman.com,sussexexpress.co.uk,lerobert.com,myrecipes.com,treehugger.com,ldoceonline.com,lifewire.com,thoughtco.com,yorkshirepost.co.uk,marthastewart.com,eatingwell.com,thespruceeats.com,simplyrecipes.com,liquor.com,seriouseats.com,mamastar.jp,collinsdictionary.com,andrewzimmern.com,tipsandtricksjapan.com,homesicktexan.com,oxfordlearnersdictionaries.com,dictionary.cambridge.org,bab.la,redcurrantbakery.com,gonnawantseconds.com,thegunnysack.com,bestfriendsforfrosting.com,savvysavingcouple.net,thesoccermomblog.com,iambaker.net,bakeplaysmile.com,crayonsandcravings.com,realhousemoms.com,bunsinmyoven.com,dinnersdishesanddesserts.com,chelseasmessyapron.com,julieseatsandtreats.com,cafedelites.com,dinneratthezoo.com,jamjarkitchen.com,laurenslatest.com,tablefortwoblog.com,learnmetrics.com,liveandletsfly.com,kuruma-news.jp,infinityfree.com,autobild.de,toyokeizai.net,usaudiomart.com,slideshare.net,motorradfrage.net,sportlerfrage.net,finanzfrage.net,reisefrage.net,gesundheitsfrage.net,computerfrage.net,autofrage.net,gutefrage.net,newatlas.com,fossbytes.com,perezhilton.com,exceljet.net,sportico.com,wwd.com,neoseeker.com,indiewire.com,helpdeskgeek.com,akinator.com,dnevnik.hr,rollingstone.com,billboard.com,variety.com,hollywoodreporter.com,nouvelobs.com,deadline.com,computerbild.de,divinedaolibrary.com,omnicalculator.com,thelayoff.com,sourceforge.net,welt.de,boardingarea.com,doviz.com,oricon.co.jp#%#//scriptlet('trusted-replace-argument', 'HTMLScriptElement.prototype.setAttribute', '1', 'replace:/.+(error-report|new Promise|:window|&&window,|void 0\]|html-load\.com[\s\S]*_onerror).+//g')
-||html-load.com^$script,important,domain=oricon.co.jp|doviz.com|boardingarea.com|welt.de|sourceforge.net|omnicalculator.com|divinedaolibrary.com|computerbild.de|deadline.com|nouvelobs.com|hollywoodreporter.com|variety.com|billboard.com|rollingstone.com|dnevnik.hr|akinator.com|helpdeskgeek.com|indiewire.com|wwd.com|sportico.com|exceljet.net|perezhilton.com|fossbytes.com|newatlas.com|songfacts.com|slideshare.net|nextchessmove.com|usaudiomart.com|toyokeizai.net|autobild.de|infinityfree.com|kuruma-news.jp|liveandletsfly.com|learnmetrics.com|tablefortwoblog.com|laurenslatest.com|jamjarkitchen.com|dinneratthezoo.com|cafedelites.com|julieseatsandtreats.com|chelseasmessyapron.com|dinnersdishesanddesserts.com|bunsinmyoven.com|realhousemoms.com|crayonsandcravings.com|bakeplaysmile.com|iambaker.net|thesoccermomblog.com|savvysavingcouple.net|bestfriendsforfrosting.com|thegunnysack.com|gonnawantseconds.com|redcurrantbakery.com|bab.la|dictionary.cambridge.org|oxfordlearnersdictionaries.com|homesicktexan.com|tipsandtricksjapan.com|andrewzimmern.com|collinsdictionary.com|mamastar.jp|seriouseats.com|liquor.com|simplyrecipes.com|thespruceeats.com|eatingwell.com|marthastewart.com|thoughtco.com|lifewire.com|ldoceonline.com|treehugger.com|myrecipes.com|lerobert.com|sussexexpress.co.uk|edinburghnews.scotsman.com|lejdd.fr|tips-and-tricks.co|foodandwine.com|thetruthaboutcars.com|dexerto.com|happyinshape.com|wort-suchen.de|woxikon.de|ukaudiomart.com|wielerrevue.nl|zeilen.nl|chloeting.com|nationalpost.com|fansided.com|dict.cc|onceuponachef.com|twopeasandtheirpod.com|bz-berlin.de|myhomebook.de|fitbook.de|techbook.de|travelbook.de|pons.com|inverse.com|windsorstar.com|canuckaudiomart.com|watchdocumentaries.com|manchesterworld.uk|9gag.com|egitim.net.tr|petbook.de|natalie.mu|crosswordsolver.com|merinfo.se|trafficnews.jp|otonanswer.jp|egolf.jp|scribd.com|calculatorsoup.com|hk01.com|itavisen.no|magmix.jp|edmontonjournal.com|urldecoder.org|base64decode.org|programme-tv.net|aussieaudiomart.com|girlschannel.net|montrealgazette.com|nemzetisport.hu|mrexcel.com|vague.style|thingiverse.com|alfalfalfa.com|pcgamebenchmark.com|skinmc.net|followfollow.com|oeffnungszeitenbuch.de|geo.fr|financialpost.com|canada.com|vancouversun.com|driving.ca|canoe.com|theprovince.com|calgaryherald.com|edmontonsun.com|athlonsports.com|thestarphoenix.com|leaderpost.com|tj.news|parade.com|elnacional.cat|livescience.com|buchstaben.com|torontosun.com|milestomemories.com|km77.com|vibe.com|goldderby.com|robbreport.com|hollywoodlife.com|gerbeaud.com|nationalreview.com|calgarysun.com|ottawacitizen.com|ottawasun.com
+urbandictionary.com,willyweather.com.au,ottawasun.com,ottawacitizen.com,calgarysun.com,nationalreview.com,gerbeaud.com,hollywoodlife.com,robbreport.com,goldderby.com,vibe.com,km77.com,milestomemories.com,torontosun.com,buchstaben.com,livescience.com,elnacional.cat,parade.com,tj.news,thestarphoenix.com,leaderpost.com,athlonsports.com,edmontonsun.com,calgaryherald.com,theprovince.com,canoe.com,driving.ca,vancouversun.com,canada.com,financialpost.com,geo.fr,oeffnungszeitenbuch.de,followfollow.com,skinmc.net,pcgamebenchmark.com,thingiverse.com,mrexcel.com,nemzetisport.hu,montrealgazette.com,girlschannel.net,aussieaudiomart.com,programme-tv.net,base64decode.org,urldecoder.org,edmontonjournal.com,itavisen.no,hk01.com,calculatorsoup.com,russianmachineneverbreaks.com,scribd.com,bg-mania.jp,egolf.jp,otonanswer.jp,vague.style,magmix.jp,langenscheidt.com,trafficnews.jp,parents.com,merinfo.se,crosswordsolver.com,natalie.mu,petbook.de,egitim.net.tr,9gag.com,manchesterworld.uk,watchdocumentaries.com,canuckaudiomart.com,windsorstar.com,inverse.com,pons.com,bz-berlin.de,myhomebook.de,fitbook.de,techbook.de,travelbook.de,twopeasandtheirpod.com,onceuponachef.com,dict.cc,fansided.com,nationalpost.com,chloeting.com,sinemalar.com,zeilen.nl,wielerrevue.nl,ukaudiomart.com,woxikon.de,wort-suchen.de,dexerto.com,happyinshape.com,thetruthaboutcars.com,foodandwine.com,tips-and-tricks.co,lejdd.fr,edinburghnews.scotsman.com,sussexexpress.co.uk,lerobert.com,myrecipes.com,treehugger.com,ldoceonline.com,lifewire.com,thoughtco.com,yorkshirepost.co.uk,marthastewart.com,eatingwell.com,thespruceeats.com,simplyrecipes.com,liquor.com,seriouseats.com,mamastar.jp,collinsdictionary.com,andrewzimmern.com,tipsandtricksjapan.com,homesicktexan.com,oxfordlearnersdictionaries.com,dictionary.cambridge.org,bab.la,redcurrantbakery.com,gonnawantseconds.com,thegunnysack.com,bestfriendsforfrosting.com,savvysavingcouple.net,thesoccermomblog.com,iambaker.net,bakeplaysmile.com,crayonsandcravings.com,realhousemoms.com,bunsinmyoven.com,dinnersdishesanddesserts.com,chelseasmessyapron.com,julieseatsandtreats.com,cafedelites.com,dinneratthezoo.com,jamjarkitchen.com,laurenslatest.com,tablefortwoblog.com,learnmetrics.com,liveandletsfly.com,kuruma-news.jp,infinityfree.com,autobild.de,toyokeizai.net,usaudiomart.com,slideshare.net,motorradfrage.net,sportlerfrage.net,finanzfrage.net,reisefrage.net,gesundheitsfrage.net,computerfrage.net,autofrage.net,gutefrage.net,newatlas.com,fossbytes.com,perezhilton.com,exceljet.net,sportico.com,wwd.com,neoseeker.com,indiewire.com,helpdeskgeek.com,akinator.com,dnevnik.hr,rollingstone.com,billboard.com,variety.com,hollywoodreporter.com,nouvelobs.com,deadline.com,computerbild.de,divinedaolibrary.com,omnicalculator.com,thelayoff.com,sourceforge.net,welt.de,boardingarea.com,doviz.com,oricon.co.jp#%#//scriptlet('trusted-replace-argument', 'HTMLScriptElement.prototype.setAttribute', '1', 'replace:/.+(error-report|new Promise|:window|&&window,|void 0\]|html-load\.com[\s\S]*_onerror).+//g')
+||html-load.com^$script,important,domain=oricon.co.jp|doviz.com|boardingarea.com|welt.de|sourceforge.net|omnicalculator.com|divinedaolibrary.com|computerbild.de|deadline.com|nouvelobs.com|hollywoodreporter.com|variety.com|billboard.com|rollingstone.com|dnevnik.hr|akinator.com|helpdeskgeek.com|indiewire.com|wwd.com|sportico.com|exceljet.net|perezhilton.com|fossbytes.com|newatlas.com|songfacts.com|slideshare.net|nextchessmove.com|usaudiomart.com|toyokeizai.net|autobild.de|infinityfree.com|kuruma-news.jp|liveandletsfly.com|learnmetrics.com|tablefortwoblog.com|laurenslatest.com|jamjarkitchen.com|dinneratthezoo.com|cafedelites.com|julieseatsandtreats.com|chelseasmessyapron.com|dinnersdishesanddesserts.com|bunsinmyoven.com|realhousemoms.com|crayonsandcravings.com|bakeplaysmile.com|iambaker.net|thesoccermomblog.com|savvysavingcouple.net|bestfriendsforfrosting.com|thegunnysack.com|gonnawantseconds.com|redcurrantbakery.com|bab.la|dictionary.cambridge.org|oxfordlearnersdictionaries.com|homesicktexan.com|tipsandtricksjapan.com|andrewzimmern.com|collinsdictionary.com|mamastar.jp|seriouseats.com|liquor.com|simplyrecipes.com|thespruceeats.com|eatingwell.com|marthastewart.com|thoughtco.com|lifewire.com|ldoceonline.com|treehugger.com|myrecipes.com|lerobert.com|sussexexpress.co.uk|edinburghnews.scotsman.com|lejdd.fr|tips-and-tricks.co|foodandwine.com|thetruthaboutcars.com|dexerto.com|happyinshape.com|wort-suchen.de|woxikon.de|ukaudiomart.com|wielerrevue.nl|zeilen.nl|chloeting.com|nationalpost.com|fansided.com|dict.cc|onceuponachef.com|twopeasandtheirpod.com|bz-berlin.de|myhomebook.de|fitbook.de|techbook.de|travelbook.de|pons.com|inverse.com|windsorstar.com|canuckaudiomart.com|watchdocumentaries.com|manchesterworld.uk|9gag.com|egitim.net.tr|petbook.de|natalie.mu|crosswordsolver.com|merinfo.se|trafficnews.jp|otonanswer.jp|egolf.jp|scribd.com|calculatorsoup.com|hk01.com|itavisen.no|magmix.jp|edmontonjournal.com|urldecoder.org|base64decode.org|programme-tv.net|aussieaudiomart.com|girlschannel.net|montrealgazette.com|nemzetisport.hu|mrexcel.com|vague.style|thingiverse.com|alfalfalfa.com|pcgamebenchmark.com|skinmc.net|followfollow.com|oeffnungszeitenbuch.de|geo.fr|financialpost.com|canada.com|vancouversun.com|driving.ca|canoe.com|theprovince.com|calgaryherald.com|edmontonsun.com|athlonsports.com|thestarphoenix.com|leaderpost.com|tj.news|parade.com|elnacional.cat|livescience.com|buchstaben.com|torontosun.com|milestomemories.com|km77.com|vibe.com|goldderby.com|robbreport.com|hollywoodlife.com|gerbeaud.com|nationalreview.com|calgarysun.com|ottawacitizen.com|ottawasun.com|willyweather.com.au|urbandictionary.com
 ||dexerto.com^$referrerpolicy=origin
 ||dexerto.com/_next/static/chunks/*.js$script,replace=/dblock:\{enabled:\{dexerto:\{en:!0/dblock:{enabled:{dexerto:{en:!1/
 ||hk01.com^$document,replace=/"enableShieldScript":true/"enableShieldScript":false/
@@ -42126,8 +42153,8 @@ ottawasun.com,ottawacitizen.com,calgarysun.com,nationalreview.com,gerbeaud.com,h
 /lib.js|$important,domain=petbook.de
 !#endif
 !#if (adguard_app_windows || adguard_app_mac || adguard_app_android || adguard_app_cli)
-ottawasun.com,ottawacitizen.com,calgarysun.com,nationalreview.com,gerbeaud.com,hollywoodlife.com,robbreport.com,goldderby.com,vibe.com,km77.com,milestomemories.com,torontosun.com,buchstaben.com,livescience.com,elnacional.cat,parade.com,tj.news,thestarphoenix.com,leaderpost.com,athlonsports.com,edmontonsun.com,calgaryherald.com,theprovince.com,canoe.com,driving.ca,vancouversun.com,canada.com,financialpost.com,geo.fr,oeffnungszeitenbuch.de,followfollow.com,skinmc.net,pcgamebenchmark.com,alfalfalfa.com,thingiverse.com,mrexcel.com,nemzetisport.hu,montrealgazette.com,girlschannel.net,aussieaudiomart.com,programme-tv.net,base64decode.org,urldecoder.org,edmontonjournal.com,itavisen.no,calculatorsoup.com,egolf.jp,otonanswer.jp,trafficnews.jp,merinfo.se,crosswordsolver.com,natalie.mu,petbook.de,egitim.net.tr,9gag.com,manchesterworld.uk,watchdocumentaries.com,canuckaudiomart.com,windsorstar.com,pons.com,bz-berlin.de,myhomebook.de,fitbook.de,techbook.de,travelbook.de,twopeasandtheirpod.com,dict.cc,fansided.com,nationalpost.com,zeilen.nl,wielerrevue.nl,ukaudiomart.com,woxikon.de,wort-suchen.de,happyinshape.com,thetruthaboutcars.com,foodandwine.com,tips-and-tricks.co,lejdd.fr,edinburghnews.scotsman.com,sussexexpress.co.uk,lerobert.com,ldoceonline.com,yorkshirepost.co.uk,seriouseats.com,mamastar.jp,collinsdictionary.com,tipsandtricksjapan.com,homesicktexan.com,oxfordlearnersdictionaries.com,dictionary.cambridge.org,bab.la,liveandletsfly.com,kuruma-news.jp,infinityfree.com,autobild.de,toyokeizai.net,usaudiomart.com,songfacts.com,newatlas.com,fossbytes.com,perezhilton.com,exceljet.net,sportico.com,wwd.com,indiewire.com,helpdeskgeek.com,akinator.com,dnevnik.hr,rollingstone.com,billboard.com,variety.com,hollywoodreporter.com,nouvelobs.com,deadline.com,computerbild.de,divinedaolibrary.com,thelayoff.com,welt.de,scribd.com,boardingarea.com,doviz.com,oricon.co.jp$$script[src="html-load.com/"]
-ottawasun.com,ottawacitizen.com,calgarysun.com,nationalreview.com,gerbeaud.com,hollywoodlife.com,robbreport.com,goldderby.com,vibe.com,km77.com,milestomemories.com,torontosun.com,buchstaben.com,livescience.com,elnacional.cat,parade.com,tj.news,thestarphoenix.com,leaderpost.com,athlonsports.com,edmontonsun.com,calgaryherald.com,theprovince.com,canoe.com,driving.ca,vancouversun.com,canada.com,financialpost.com,geo.fr,oeffnungszeitenbuch.de,followfollow.com,skinmc.net,pcgamebenchmark.com,alfalfalfa.com,thingiverse.com,mrexcel.com,nemzetisport.hu,montrealgazette.com,girlschannel.net,aussieaudiomart.com,programme-tv.net,base64decode.org,urldecoder.org,edmontonjournal.com,itavisen.no,calculatorsoup.com,egolf.jp,otonanswer.jp,vague.style,magmix.jp,langenscheidt.com,trafficnews.jp,merinfo.se,crosswordsolver.com,natalie.mu,petbook.de,egitim.net.tr,9gag.com,manchesterworld.uk,watchdocumentaries.com,canuckaudiomart.com,windsorstar.com,pons.com,bz-berlin.de,myhomebook.de,fitbook.de,techbook.de,travelbook.de,twopeasandtheirpod.com,dict.cc,fansided.com,nationalpost.com,zeilen.nl,wielerrevue.nl,ukaudiomart.com,woxikon.de,wort-suchen.de,happyinshape.com,thetruthaboutcars.com,foodandwine.com,lejdd.fr,edinburghnews.scotsman.com,sussexexpress.co.uk,lerobert.com,ldoceonline.com,yorkshirepost.co.uk,seriouseats.com,mamastar.jp,collinsdictionary.com,tipsandtricksjapan.com,homesicktexan.com,oxfordlearnersdictionaries.com,dictionary.cambridge.org,bab.la,liveandletsfly.com,kuruma-news.jp,infinityfree.com,autobild.de,toyokeizai.net,usaudiomart.com,songfacts.com,motorradfrage.net,sportlerfrage.net,finanzfrage.net,reisefrage.net,gesundheitsfrage.net,computerfrage.net,autofrage.net,gutefrage.net,newatlas.com,fossbytes.com,perezhilton.com,exceljet.net,sportico.com,wwd.com,neoseeker.com,indiewire.com,helpdeskgeek.com,akinator.com,dnevnik.hr,rollingstone.com,billboard.com,variety.com,hollywoodreporter.com,nouvelobs.com,deadline.com,computerbild.de,divinedaolibrary.com,thelayoff.com,welt.de,scribd.com,boardingarea.com,doviz.com,oricon.co.jp$$script:contains(/async[\s]*\(\)[\s]*=>[\s]*\{[\s]*try[\s]*\{[\s]*(const|var)[\s]*e[\s]*=[\s]*e[\s]*=>|if[\s]*\(await eval\(|[a-z]\([a-z]\),setTimeout\(\(\(\)=>\{[a-z]\(!1\)|\(async\(\)=>[\s\S]*?\(\)=>eval\)?,.:|\(async \(\) =>[\s\S]*?\(\) => eval\)?,\n.*.:|:\(\)=>eval|;\(async\(\)=>\{\([\s\S]*?:void 0\|\|window,|;\(async\(\)=>\{\([\s\S]*?:\d&&window,|\(function\(\)\{function[\s\S]*]===undefined\)\{var[\s\S]*:-0x|\.adshield\./)
+urbandictionary.com,willyweather.com.au,ottawasun.com,ottawacitizen.com,calgarysun.com,nationalreview.com,gerbeaud.com,hollywoodlife.com,robbreport.com,goldderby.com,vibe.com,km77.com,milestomemories.com,torontosun.com,buchstaben.com,livescience.com,elnacional.cat,parade.com,tj.news,thestarphoenix.com,leaderpost.com,athlonsports.com,edmontonsun.com,calgaryherald.com,theprovince.com,canoe.com,driving.ca,vancouversun.com,canada.com,financialpost.com,geo.fr,oeffnungszeitenbuch.de,followfollow.com,skinmc.net,pcgamebenchmark.com,alfalfalfa.com,thingiverse.com,mrexcel.com,nemzetisport.hu,montrealgazette.com,girlschannel.net,aussieaudiomart.com,programme-tv.net,base64decode.org,urldecoder.org,edmontonjournal.com,itavisen.no,calculatorsoup.com,egolf.jp,otonanswer.jp,trafficnews.jp,merinfo.se,crosswordsolver.com,natalie.mu,petbook.de,egitim.net.tr,9gag.com,manchesterworld.uk,watchdocumentaries.com,canuckaudiomart.com,windsorstar.com,pons.com,bz-berlin.de,myhomebook.de,fitbook.de,techbook.de,travelbook.de,twopeasandtheirpod.com,dict.cc,fansided.com,nationalpost.com,zeilen.nl,wielerrevue.nl,ukaudiomart.com,woxikon.de,wort-suchen.de,happyinshape.com,thetruthaboutcars.com,foodandwine.com,tips-and-tricks.co,lejdd.fr,edinburghnews.scotsman.com,sussexexpress.co.uk,lerobert.com,ldoceonline.com,yorkshirepost.co.uk,seriouseats.com,mamastar.jp,collinsdictionary.com,tipsandtricksjapan.com,homesicktexan.com,oxfordlearnersdictionaries.com,dictionary.cambridge.org,bab.la,liveandletsfly.com,kuruma-news.jp,infinityfree.com,autobild.de,toyokeizai.net,usaudiomart.com,songfacts.com,newatlas.com,fossbytes.com,perezhilton.com,exceljet.net,sportico.com,wwd.com,indiewire.com,helpdeskgeek.com,akinator.com,dnevnik.hr,rollingstone.com,billboard.com,variety.com,hollywoodreporter.com,nouvelobs.com,deadline.com,computerbild.de,divinedaolibrary.com,thelayoff.com,welt.de,scribd.com,boardingarea.com,doviz.com,oricon.co.jp$$script[src="html-load.com/"]
+urbandictionary.com,willyweather.com.au,ottawasun.com,ottawacitizen.com,calgarysun.com,nationalreview.com,gerbeaud.com,hollywoodlife.com,robbreport.com,goldderby.com,vibe.com,km77.com,milestomemories.com,torontosun.com,buchstaben.com,livescience.com,elnacional.cat,parade.com,tj.news,thestarphoenix.com,leaderpost.com,athlonsports.com,edmontonsun.com,calgaryherald.com,theprovince.com,canoe.com,driving.ca,vancouversun.com,canada.com,financialpost.com,geo.fr,oeffnungszeitenbuch.de,followfollow.com,skinmc.net,pcgamebenchmark.com,alfalfalfa.com,thingiverse.com,mrexcel.com,nemzetisport.hu,montrealgazette.com,girlschannel.net,aussieaudiomart.com,programme-tv.net,base64decode.org,urldecoder.org,edmontonjournal.com,itavisen.no,calculatorsoup.com,egolf.jp,otonanswer.jp,vague.style,magmix.jp,langenscheidt.com,trafficnews.jp,merinfo.se,crosswordsolver.com,natalie.mu,petbook.de,egitim.net.tr,9gag.com,manchesterworld.uk,watchdocumentaries.com,canuckaudiomart.com,windsorstar.com,pons.com,bz-berlin.de,myhomebook.de,fitbook.de,techbook.de,travelbook.de,twopeasandtheirpod.com,dict.cc,fansided.com,nationalpost.com,zeilen.nl,wielerrevue.nl,ukaudiomart.com,woxikon.de,wort-suchen.de,happyinshape.com,thetruthaboutcars.com,foodandwine.com,lejdd.fr,edinburghnews.scotsman.com,sussexexpress.co.uk,lerobert.com,ldoceonline.com,yorkshirepost.co.uk,seriouseats.com,mamastar.jp,collinsdictionary.com,tipsandtricksjapan.com,homesicktexan.com,oxfordlearnersdictionaries.com,dictionary.cambridge.org,bab.la,liveandletsfly.com,kuruma-news.jp,infinityfree.com,autobild.de,toyokeizai.net,usaudiomart.com,songfacts.com,motorradfrage.net,sportlerfrage.net,finanzfrage.net,reisefrage.net,gesundheitsfrage.net,computerfrage.net,autofrage.net,gutefrage.net,newatlas.com,fossbytes.com,perezhilton.com,exceljet.net,sportico.com,wwd.com,neoseeker.com,indiewire.com,helpdeskgeek.com,akinator.com,dnevnik.hr,rollingstone.com,billboard.com,variety.com,hollywoodreporter.com,nouvelobs.com,deadline.com,computerbild.de,divinedaolibrary.com,thelayoff.com,welt.de,scribd.com,boardingarea.com,doviz.com,oricon.co.jp$$script:contains(/async[\s]*\(\)[\s]*=>[\s]*\{[\s]*try[\s]*\{[\s]*(const|var)[\s]*e[\s]*=[\s]*e[\s]*=>|if[\s]*\(await eval\(|[a-z]\([a-z]\),setTimeout\(\(\(\)=>\{[a-z]\(!1\)|\(async\(\)=>[\s\S]*?\(\)=>eval\)?,.:|\(async \(\) =>[\s\S]*?\(\) => eval\)?,\n.*.:|:\(\)=>eval|;\(async\(\)=>\{\([\s\S]*?:void 0\|\|window,|;\(async\(\)=>\{\([\s\S]*?:\d&&window,|\(function\(\)\{function[\s\S]*]===undefined\)\{var[\s\S]*:-0x|\.adshield\.|;\(async\(\)=>\{\([\s\S]*?\,.:'/)
 gerbeaud.com$$script:contains(:window,)
 mamastar.jp$$script:contains(: window,)
 km77.com$$script:contains(/&&window,|await new Promise/)
@@ -42267,7 +42294,7 @@ thesaurus.net#%#//scriptlet('prevent-setTimeout', 'loader.min.js')
 mlbpark.donga.com,tweaksforgeeks.com#%#//scriptlet('remove-node-text', 'script', 'KCgpPT57bGV0IGU')
 ! Stylesheet is loaded by html-load.com script, so we need to add it manually
 tenasia.hankyung.com#%#//scriptlet('trusted-create-element', 'head', 'link', 'rel="stylesheet" https://hkstatic.hankyung.com/css/rel/tenasia/w/common.css"')
-robbreport.com,torontosun.com,saikyo-jump.com,elnacional.cat,parade.com,thestarphoenix.com,leaderpost.com,athlonsports.com,edmontonsun.com,calgaryherald.com,theprovince.com,notebookcheck.*,driving.ca,vancouversun.com,financialpost.com,followfollow.com,seriouseats.com,alfalfalfa.com,pcguide.com,thingiverse.com,welt.de,edmontonjournal.com,itavisen.no,russianmachineneverbreaks.com,geo.fr,langenscheidt.com,urldecoder.org,base64decode.org,deadline.com,crosswordsolver.com,natalie.mu,daily.co.jp,egitim.net.tr,9gag.com,hb-nippon.com,ukaudiomart.com,windsorstar.com,akinator.com,pons.com,autobild.de,odyclub.com,dict.cc,respublika.lt,si.com,stocktwits.com,zeilen.nl,wielerrevue.nl,speisekarte.de,ldoceonline.com,sankei.com,oxfordlearnersdictionaries.com,dictionary.cambridge.org,nishinippon.co.jp,gamewith.jp,glutenfreeonashoestring.com,subaruforester.org,tsxclub.com,civinfo.com,2coolfishing.com,1911forum.com,stylegirlfriend.com,toyokeizai.net,madaboutfood.co,galonamission.com,iheartnaptime.net,momontimeout.com,31daily.com,easydessertrecipes.com,scribd.com,dessertsonadime.com,skinnytaste.com,thehomesteadinghippy.com,gigafile.nu,trilltrill.jp,intoindiegames.com,liveandletsfly.com,traicy.com,stuckonsweet.com,worldhistory.org,kuruma-news.jp,1lumen.com,bluearchive.gg,ttforum.co.uk,newatlas.com,game8.jp,motorradfrage.net,sportlerfrage.net,finanzfrage.net,reisefrage.net,gesundheitsfrage.net,computerfrage.net,autofrage.net,wholesomeyum.com,gutefrage.net,sportico.com,wwd.com,neoseeker.com,yahoo.com,doviz.com,baseballchannel.jp,programme-tv.net,tz.de,ygosu.com,etoday.co.kr,sportalkorea.com,slashdot.org,dogdrip.net,smsonline.cloud,infinityfree.com#%#(()=>{const e=/html-load\.com|loader\.min\.js|andwonderful\.com\/safe\.min\.js|shieldload\.|:\/\/loader\.|core\.js/,t={filter:Array.prototype.filter,includes:String.prototype.includes,regexTest:RegExp.prototype.test},o=()=>(new Error).stack,r=o=>t.regexTest.call(e,o),l={construct:(e,l,n)=>{const c=o();return r(c)&&l[0]&&t.includes.call(l[0],"adshield")&&(l[0]=["(function(){})();"]),Reflect.construct(e,l,n)}};window.Blob=new Proxy(window.Blob,l);const n={apply:(e,l,n)=>{const c=o();return r(c)&&n[0]&&t.includes.call(n[0],"new Error")&&(n[0]=()=>{}),Reflect.apply(e,l,n)}};window.setTimeout=new Proxy(window.setTimeout,n);const c={apply:(e,l,n)=>{const c=o();return r(c)&&n[0]&&l?.includes?.("setTimeout")&&(l=t.filter.call(l,(e=>!t.includes.call(e,"setTimeout")))),Reflect.apply(e,l,n)}};window.Array.prototype.filter=new Proxy(window.Array.prototype.filter,c)})();
+urbandictionary.com,robbreport.com,torontosun.com,saikyo-jump.com,elnacional.cat,parade.com,thestarphoenix.com,leaderpost.com,athlonsports.com,edmontonsun.com,calgaryherald.com,theprovince.com,notebookcheck.*,driving.ca,vancouversun.com,financialpost.com,followfollow.com,seriouseats.com,alfalfalfa.com,pcguide.com,thingiverse.com,welt.de,edmontonjournal.com,itavisen.no,russianmachineneverbreaks.com,geo.fr,langenscheidt.com,urldecoder.org,base64decode.org,deadline.com,crosswordsolver.com,natalie.mu,daily.co.jp,egitim.net.tr,9gag.com,hb-nippon.com,ukaudiomart.com,windsorstar.com,akinator.com,pons.com,autobild.de,odyclub.com,dict.cc,respublika.lt,si.com,stocktwits.com,zeilen.nl,wielerrevue.nl,speisekarte.de,ldoceonline.com,sankei.com,oxfordlearnersdictionaries.com,dictionary.cambridge.org,nishinippon.co.jp,gamewith.jp,glutenfreeonashoestring.com,subaruforester.org,tsxclub.com,civinfo.com,2coolfishing.com,1911forum.com,stylegirlfriend.com,toyokeizai.net,madaboutfood.co,galonamission.com,iheartnaptime.net,momontimeout.com,31daily.com,easydessertrecipes.com,scribd.com,dessertsonadime.com,skinnytaste.com,thehomesteadinghippy.com,gigafile.nu,trilltrill.jp,intoindiegames.com,liveandletsfly.com,traicy.com,stuckonsweet.com,worldhistory.org,kuruma-news.jp,1lumen.com,bluearchive.gg,ttforum.co.uk,newatlas.com,game8.jp,motorradfrage.net,sportlerfrage.net,finanzfrage.net,reisefrage.net,gesundheitsfrage.net,computerfrage.net,autofrage.net,wholesomeyum.com,gutefrage.net,sportico.com,wwd.com,neoseeker.com,yahoo.com,doviz.com,baseballchannel.jp,programme-tv.net,tz.de,ygosu.com,etoday.co.kr,sportalkorea.com,slashdot.org,dogdrip.net,smsonline.cloud,infinityfree.com#%#(()=>{const e=/html-load\.com|loader\.min\.js|andwonderful\.com\/safe\.min\.js|shieldload\.|:\/\/loader\.|core\.js/,t={filter:Array.prototype.filter,includes:String.prototype.includes,regexTest:RegExp.prototype.test},o=()=>(new Error).stack,l=o=>t.regexTest.call(e,o),r={construct:(e,r,n)=>{const c=o();return l(c)&&r[0]&&t.includes.call(r[0],"adshield")&&(r[0]=["(function(){})();"]),Reflect.construct(e,r,n)}};window.Blob=new Proxy(window.Blob,r);const n={apply:(e,r,n)=>{const c=o();return l(c)&&n[0]&&(t.includes.call(n[0],"new Error")||t.includes.call(n[0],".apply(this"))&&(n[0]=()=>{}),Reflect.apply(e,r,n)}};window.setTimeout=new Proxy(window.setTimeout,n);const c={apply:(e,r,n)=>{const c=o();return l(c)&&n[0]&&r?.includes?.("setTimeout")&&(r=t.filter.call(r,(e=>!t.includes.call(e,"setTimeout")))),Reflect.apply(e,r,n)}};window.Array.prototype.filter=new Proxy(window.Array.prototype.filter,c)})();
 ! Workaround also for iOS, where we cannot apply url blocking rule
 ! Related to https://github.com/AdguardTeam/FiltersCompiler/issues/226
 ! After implementation, we could add any rules for AdGuard for iOS only with Advanced Protection
@@ -42933,6 +42960,19 @@ $third-party,script,domain=klto9.com|f2movies.to|hacamchicac.com|yourporngod.com
 !
 ! NOTE: Specific rules
 !
+every.to###main-content > section.py-6 > .border:has(> div.text-center > a[href="mailto:sponsorships@every.to"])
+||amdvids.com/vmap/
+localnow.com#%#//scriptlet('json-prune', 'ads vmap ad_tag props.pageProps.config.localNow.advertising')
+||hmama.tv/wp-content/custom_assets/jwplayer/*/vast.js
+urbandictionary.com###ud-root > div[class*="print:hidden"]:has(> .justify-center > div[class*="leaderboard:"])
+defence-industry.eu##.die-ad-bar
+defence-industry.eu##.die-sidebar-ad
+defence-industry.eu##.die-single-content > p:has(> ins.adsbygoogle)
+vik1ngfile.site#%#//scriptlet('abort-current-inline-script', 'String.prototype.indexOf', '(function(')
+vik1ngfile.site#%#//scriptlet('prevent-addEventListener', 'DOMContentLoaded', 'document.createElement')
+vik1ngfile.site#%#//scriptlet('prevent-addEventListener', 'click', 'document.createElement')
+manoramamax.com##div[class^="GAds_"]
+vidbox.dev##section[aria-label="Sponsored content"]
 azcentral.com##aside[aria-label="advertisement"]
 azcentral.com##.gnt_tba
 positioniseverything.net#%#//scriptlet('abort-current-inline-script', 'atob', 'showModal')
@@ -43523,7 +43563,6 @@ fullvideosporn.com###underplayer_direct
 fullvideosporn.com###s-suggesters
 definebabe.com##pjsdiv[id^="DF_player_control_"]
 definebabe.com##.ihlkko_right-sidebar
-definebabe.com###overlay
 definebabe.com##.main-container > section.p-ig:has(> div.models-videos)
 definebabe.com##.photos > div.d-flex:has(> a[href^="/go/"])
 watchmygf.me##.cumcoming_thumbs
@@ -43740,7 +43779,6 @@ audiobookbay.*##.torrent_infos tr:has( > td a[href*="ddl"])
 yhprn.com##div[class]:has(> iframe[src^="//img.3dfulicai.com/"])
 ||img.3dfulicai.com^$domain=yhprn.com
 ||cloudfront.net^$script,domain=vik1ngfile.site
-abtranny.com##.banner__container
 dropstab.com##.tableCustom > tbody[role="rowgroup"]:has(a[rel="sponsored"])
 snowscan.xyz,basescan.org,arbiscan.io,bscscan.com##.noindex-section > .d-none > div[data-featured-group] > .default-content > .featured-container
 coinglass.com#%#//scriptlet('set-constant', 'Object.prototype.url_ad', 'false')
@@ -46159,8 +46197,6 @@ deeplol.gg###desktop-takeover
 deeplol.gg###content-container > div[class*=" "] > div > div[class*=" "] > div[class*=" "] > div[class*=" "]:has(> div:not([class]):only-child:empty)
 theoldreader.com###banner_container
 theoldreader.com##div[id$="-ad-container"]
-pornl.com##.underplayer > section
-pornl.com###tags-scroll > h3.tag__item:has(> a[target="_blank"][href])
 ||pornl.com/static/ivideo.html?video=
 raenonx.cc,raenonx.cc##div[class="flex flex-col place-content-center place-items-center text-center w-full h-\[100px\]"]
 redd.tube###closeable_widget
@@ -47136,7 +47172,6 @@ gstream.uk##div:has(> p > a[href][target="_blank"])
 gstream.uk##a[href][target="_blank"]
 leakedzone.com##.item:has(> .movie-item > a[href^="https://phpremium.com"])
 axios.com##.apexAd
-pandamovies.org###overlay
 ||freepopnews.skin/advert/
 $xmlhttprequest,third-party,domain=swiftload.io
 /[a-z]{12,}\.com\//$script,third-party,domain=swiftload.io
@@ -49302,7 +49337,6 @@ embed.dugout.com##div[data-testid="keep-watching"]
 erocafe.net#?#body > div#td-outer-wrap + div[id][class]
 ||a.magsrv.com/nativeads-v*.js
 ||a.pemsrv.com/popunder*.js
-upornia.*,hclips.com##.underplayer > section
 hclips.com##.video__wrapper > section[style]
 privatehomeclips.com,hclips.com##span[style="display:flex !important"] > div:first-child
 fahrplan.guru##div[class*="StyledAdContainer"]
@@ -51928,7 +51962,8 @@ darkreader.org##.recommendations-container
 /assets/banners/*$domain=vizcloud.*|mcloud.to|vizcloud2.*|vidstreamz.online|vedbex.com
 vizcloud.*,mcloud.to,vizcloud2.*,vidstreamz.online###player-wrapper > #player ~ div[style^="position: absolute;"]
 vizcloud.*,mcloud.to,vizcloud2.*,vidstreamz.online##.xad-wrapper
-hentaimama.io##.in-between-ad-one-wrapper
+hmama.tv,hentaimama.io##.in-between-ad-one-wrapper
+hmama.tv,hentaimama.io##.in-between-ad-two-wrapper
 mrsportsgeek.com##div[class="container"] > .row > .col > .jcarousel-chriswrapper
 pornwhite.com,sleazyneasy.com,fetishshrine.com,wankoz.com##div[data-banner]
 kdramahood.com##div[style=" height:230px"]
@@ -53820,7 +53855,6 @@ lawlex.org###media_image-21
 lawlex.org###media_image-22
 privatehomeclips.com##.content > div > div.footer-banners
 vjav.tube,privatehomeclips.com##.jwplayer > div.afs_ads + span[class]
-privatehomeclips.com##.underplayer > div[data-nosnippet]
 privatehomeclips.com##.video-page__related > div.listing ~ div[class$="videos"]
 ||i2.wp.com/lawlex.org/wp-content/uploads/*/*/NISM.jpg
 calculator-online.net##div[class="center"][style^="min-height: 90px"]
@@ -59661,7 +59695,7 @@ onegoodthingbyjillee.com##.textwidget > a[href^="http://amzn.to/"] > img
 dotesports.com##a[href^="http://bit.ly/"][target="_blank"] > [style^="background:"]
 dotesports.com##.row > ._5kaapu-o_O-_13fiz6u-o_O-_kgqxma-o_O-_k2fyes
 patched.to,foxnews.com##.partners
-englismovies.pro,tmail.io,4gay.fans,serialeonline.biz,bclikeqt.com,dailyporn.club,freefeds.com,teleriumtv.com,techgeek.digital,sharer.pw,za.gl,xozilla.com,analdin.com,fc.lc,mp4upload.com###overlay
+hmama.tv,definebabe.com,pandamovies.org,englismovies.pro,tmail.io,4gay.fans,serialeonline.biz,bclikeqt.com,dailyporn.club,freefeds.com,teleriumtv.com,techgeek.digital,sharer.pw,za.gl,xozilla.com,analdin.com,fc.lc,mp4upload.com###overlay
 softonic.com##.ad--displayed
 ||cam4.com/directoryFanClubs^
 versus.com##.PrimeBadge__root___1mHM7
@@ -62034,8 +62068,6 @@ kentonline.co.uk#?#.row > div[class^="col-"]:has(> div[class] > span[id^="p_mpu"
 kentonline.co.uk#?#.row > div[class^="col-"]:has(> div[class] > span[id^="p_dmpu"])
 mydramalist.com#?#div[class^="col"] > div[style^="min-height"]:has(> div.spnsr)
 mydramalist.com#?#.app-body > div[class]:has(> div.is-desktop-ads)
-txxxporn.tube#?#.video-content > div[class]:has(> div[class] > div[id] > noscript > iframe[src^="https://syndication.realsrv.com"])
-txxxporn.tube#?#.video-content > div[class] > div:has(> div.pplayer) + div[class]
 insta-stories-viewer.com#?#.context__caption > .context__title:contains(/^Advertising$/)
 noodlemagazine.com#$?#.video_player + style { remove: true; }
 noodlemagazine.com#$?#.video_player ~ div[style] { remove: true; }
@@ -62896,7 +62928,6 @@ manysex.com,manysex.tube##.tubefriends
 555.porn##.fel-tem
 fullvideosporn.com,pornhits.com##.jw-channel-btn.nopop
 hotmovs.*,fullvideosporn.com,xmilf.com,manysex.*,porntop.com##[class^="header__"] > div[class] > [class] > a[target="_blank"][href]
-abbdsm.com,abjav.com,abgay.tube,abxxx.com,abmilf.com,abtranny.com##.wrapper > section
 keporn.vip,keporn.com,peporn.com,teen21.com,uanal.com,blackporn.tube,gettranny.com,in-porn.com,sextu.com,mrgay.tube,blackporn.tube,inporn.com##div[class^="video"][class$="info"] > section
 onlyporn.tube,fullvideosporn.com,blackporn.tube,lesbigo.com,porn-latina.com,inporn.com,gettranny.com,xmilf.com,vxxx.com###fhvids
 keporn.com,peporn.com,teen21.com,ourgay.tube,pornuse.com,uanal.com,pornl.tube,xshemale.tube,keporn.vip,fuxxx.com,pornl.com##.video-ntv-wrapper
@@ -62905,13 +62936,13 @@ pornclassic.tube,upornia.*##.video__wrapper > section[style]
 vjav.tube,vjav.com,transtxxx.com,upornia.*,txxxporn.tube,txxx.*##.video-videos-slider
 transtxxx.com,shemalez.*,gaytxxx.com,thegay.com,thegay.tube,hdzog.com,vjav.*,hotmovs.*,privatehomeclips.com,txxxporn.tube,txxx.*##div[style="display:flex !important"] > div
 ! ##.tag__item:has(> a[target="_blank"][href])
-vjav.com,ourgay.tube,pornclassic.tube,porn-latina.com,lesbigo.com,privatehomeclips.com,manysex.*,xmilf.com,inporn.com,xshemale.tube,ourgay.com,ooxxx.com##.tag__item:has(> a[target="_blank"][href])
+tubepornclassic.com,pornl.com,pornl.tube,vjav.com,ourgay.tube,pornclassic.tube,porn-latina.com,lesbigo.com,privatehomeclips.com,manysex.*,xmilf.com,inporn.com,xshemale.tube,ourgay.com,ooxxx.com##.tag__item:has(> a[target="_blank"][href])
 ! ##section[style="padding: 20px;"]
 keporn.vip,fuxxx.com,keporn.com,peporn.com,teen21.com,ourgay.tube,pornuse.com,uanal.com,pornl.tube,xshemale.tube,ourgay.com,lesbigo.com,porn-latina.com,pornl.com,ooxxx.com,privatehomeclips.com##section[style="padding: 20px;"]
 ! ##div[class^="underplayer"] > section
 ourgay.tube,pornclassic.tube,pornl.tube,upornia.*,hclips.com,privatehomeclips.com,ooxxx.com,pornl.com,xshemale.tube,ourgay.com,lesbigo.com,porn-latina.com,tubepornclassic.com##div[class^="underplayer"] > section
-! ##div[class$="review"] > a[href*="?ref="]
-txxxporn.tube,vjav.tube,vjav.com,voyeurhit.tube,ourgay.tube,pornclassic.tube,pornl.tube,txxx.*,hotmovs.*,upornia.*,hclips.com,privatehomeclips.com,ooxxx.com,manysex.*,pornl.com,xshemale.tube,ourgay.com,shemalez.*,voyeurhit.com,tubepornclassic.com##div[class$="review"] > a[href*="?ref="]
+! ##div[class*="review"] > a[href*="?ref="]
+txxxporn.tube,vjav.tube,vjav.com,voyeurhit.tube,ourgay.tube,pornclassic.tube,pornl.tube,txxx.*,hotmovs.*,upornia.*,hclips.com,privatehomeclips.com,ooxxx.com,manysex.*,pornl.com,xshemale.tube,ourgay.com,shemalez.*,voyeurhit.com,tubepornclassic.com##div[class*="review"] > a[href*="?ref="]
 ! ##.nopop
 vjav.tube,pornl.tube,keporn.com,voyeurhit.tube,uanal.com,peporn.com,abbdsm.com,abgay.tube,abjav.com,abxxx.com,abmilf.com,ourgay.tube,pornuse.com,desi-porn.xyz,onlyporn.tube,in-porn.com,pornclassic.tube,transtxxx.com,gaytxxx.com,xshemale.tube,ourgay.com,fuxxx.com,txxxporn.tube,mrgay.com,xjav.tube,lesbigo.com,porn-latina.com,bdsmx.tube,blackporn.tube,inporn.com,porntop.com,vxxx.com,aniporn.com,txxx.*,vjav.com,voyeurhit.com,pornl.com,ooxxx.com,txxx.com,01tube.com,tubepornclassic.com,keporn.vip,transtxxx.com,abtranny.com,shemalez.*,upornia.*,privatehomeclips.com,gettranny.com,desi-porn.tube,thegay.com,xmilf.com,hotmovs.com,hclips.com,manysex.*,hdzog.com,hdzog.tube##.nopop
 ! ##div[class^="partners"]
@@ -62927,7 +62958,9 @@ txxxporn.tube,txxx.*$$script:contains(AdManager)
 ! #%#//scriptlet('remove-node-text', 'script', 'AdManager')
 txxxporn.tube,txxx.*#%#//scriptlet('remove-node-text', 'script', 'AdManager')
 ! Adultnext
-abbdsm.com,abgay.tube,abjav.com,abxxx.com,abmilf.com##.join-now
+abbdsm.com,abmilf.com,abtranny.com##.banner__container
+abbdsm.com,abgay.tube,abjav.com,abxxx.com,abmilf.com,abtranny.com##.join-now
+abbdsm.com,abjav.com,abgay.tube,abxxx.com,abmilf.com,abtranny.com##.wrapper > section
 abbdsm.com,abjav.com,abgay.tube,abxxx.com,abmilf.com,abtranny.com##.unlock-full-btn
 abbdsm.com,abjav.com,abgay.tube,abxxx.com,abmilf.com,abtranny.com##.livecam-btn
 abbdsm.com,abgay.tube,abjav.com,abxxx.com,abmilf.com,abtranny.com##.links > [href][target="_blank"]
@@ -65362,6 +65395,8 @@ $popup,third-party,domain=dood.ws,badfilter
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/230530
+@@||media-amazon.com/images/S/sash/$domain=help.imdb.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/229798
 @@||pubads.g.doubleclick.net/ondemand/hls/content/$domain=play.aetv.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/229568
@@ -94573,6 +94608,7 @@ browsershots.org#@#.advert_area
 ||4ucwg8mu4txq5jr5n19.rest^
 ||4urrobfjygm9mnwyt.cfd^
 ||4uzknty9cgzfitho8.rest^
+||4vfrjbghb85rv8q7wqwyumckgu478u3p1.cfd^
 ||4vn6y527c4mmvi1t53z9n.cfd^
 ||4w3tmyk8tzll5qvjwv2qmlwv52elkmpk.rest^
 ||4wnetwork.com^
@@ -97580,6 +97616,7 @@ browsershots.org#@#.advert_area
 ||atala-apw.com^
 ||atamarvtcznxj.website^
 ||atampharosom.com^
+||atauntglopnen.qpon^
 ||atavismbesoul.cyou^
 ||ataxywash.cyou^
 ||ataykgrzwrplt.site^
@@ -97912,6 +97949,7 @@ browsershots.org#@#.advert_area
 ||awnexus.com^
 ||awnypearch.com^
 ||awolbitt.cyou^
+||awozdcvzjgbnh.online^
 ||awpcrpu.com^
 ||awprt.com^
 ||awptjmp.com^
@@ -98098,6 +98136,7 @@ browsershots.org#@#.advert_area
 ||ba61261c39.com^
 ||ba6174e1cd.com^
 ||ba69a24a2a.com^
+||baalathsodstechnol.qpon^
 ||baalistcornel.qpon^
 ||baatarveduteous.cyou^
 ||baauefhlsruga.online^
@@ -98390,6 +98429,7 @@ browsershots.org#@#.advert_area
 ||bbpaakofsfydc.online^
 ||bbppwgyzxftcx.online^
 ||bbrdbr.com^
+||bbspnbahaepje.com^
 ||bbsrelpwjryqcnd.com^
 ||bbtvpnqyvdzmq.website^
 ||bbtzlrfuc.com^
@@ -98644,6 +98684,7 @@ browsershots.org#@#.advert_area
 ||bemolelanguidepirot.cyou^
 ||bemoltconopid.shop^
 ||bemottoincord.com^
+||bemptdhubuizyg.com^
 ||benamednidulus.cyou^
 ||benatrogon.qpon^
 ||benchsuited.com^
@@ -99168,6 +99209,7 @@ browsershots.org#@#.advert_area
 ||blbsyosefiwos.online^
 ||blcdog.com^
 ||blcknvr.com^
+||blclajmgsqq.com^
 ||bldkgmtnesbfp.site^
 ||bldklgxmbfemy.online^
 ||bldxtxnmhlhli.online^
@@ -99399,6 +99441,7 @@ browsershots.org#@#.advert_area
 ||bodilysubtractoversight.com^
 ||bodilywondering.com^
 ||bodleanarcho.com^
+||bodragglairsaesop.cyou^
 ||bodybossmotivate.com^
 ||bodystrickenmultitude.com^
 ||boehwxhleexzc.website^
@@ -99557,6 +99600,7 @@ browsershots.org#@#.advert_area
 ||bothererune.com^
 ||botherlaying.com^
 ||bothyyuncagrulla.cfd^
+||botkdllphxivv.space^
 ||botpynlmmizsr.click^
 ||botsemends.cyou^
 ||botsxlhhjdvnp.online^
@@ -99929,6 +99973,7 @@ browsershots.org#@#.advert_area
 ||brxqlwrzcpcvx.website^
 ||brygella.com^
 ||brynzadolley.cyou^
+||bryoncorpse.cfd^
 ||brzbrjycauqcf.site^
 ||brzjthsubtlwj.site^
 ||brzvtueeyyqdo.space^
@@ -100121,6 +100166,7 @@ browsershots.org#@#.advert_area
 ||bunnyassetsworn.com^
 ||bunterstty.com^
 ||bunth.net^
+||buntypuddee.qpon^
 ||buoyant-coast.com^
 ||buoyant-most.pro^
 ||buoyantbug.pro^
@@ -101059,6 +101105,7 @@ browsershots.org#@#.advert_area
 ||chaitpapered.cfd^
 ||chaiwnaoytjig.site^
 ||chakobusteamerglazer.cyou^
+||chalahsturkess.cyou^
 ||chaliceguzzlerlandlord.com^
 ||chalkedretrieval.com^
 ||chalkerfecundmannose.cfd^
@@ -103104,6 +103151,7 @@ browsershots.org#@#.advert_area
 ||czsttsmgndlni.website^
 ||czsusasfoyqln.website^
 ||cztmmijwxiafu.click^
+||czuatpotvqip.in^
 ||czuwprnlhxpdh.site^
 ||czxnozkdqlcrk.online^
 ||czynhitkvjkkw.space^
@@ -104501,6 +104549,7 @@ browsershots.org#@#.advert_area
 ||dollishreman.com^
 ||dollylarkjeweller.com^
 ||dollyspreadingbeer.com^
+||dolmanshamelt.cfd^
 ||dolmenscragganmiswern.cyou^
 ||dolphincdn.xyz^
 ||dolphinpeapod.qpon^
@@ -104647,6 +104696,7 @@ browsershots.org#@#.advert_area
 ||dozepokinganthem.com^
 ||dozubatan.com^
 ||dpagxmzhm.com^
+||dpanosjvcveona.com^
 ||dpehzyosanbhl.website^
 ||dpfccivdvttx.com^
 ||dpfhmglkprqrrqk.com^
@@ -104714,6 +104764,7 @@ browsershots.org#@#.advert_area
 ||draperyrevolvertiara.com^
 ||dratetillage.com^
 ||drato.xyz^
+||draughtibericcurved.cyou^
 ||dravidamkt.shop^
 ||drawbackprotectivecut.com^
 ||drawerexperienceletting.com^
@@ -105186,6 +105237,7 @@ browsershots.org#@#.advert_area
 ||e67repidwnfu7gcha.com^
 ||e695de9aef.com^
 ||e6c5f295b4.com^
+||e6yq2371py7o8pojcv.rest^
 ||e779dae19c.com^
 ||e78c7a74e7.com^
 ||e7903973a7.com^
@@ -106097,6 +106149,7 @@ browsershots.org#@#.advert_area
 ||enthusiasticinsanity.com^
 ||entia.site^
 ||entifyruiner.cyou^
+||entire-positive.com^
 ||entiremain.com^
 ||entjgcr.com^
 ||entlyhavebed.org^
@@ -107538,6 +107591,7 @@ browsershots.org#@#.advert_area
 ||filletfiguredconstrain.com^
 ||filllocate.com^
 ||fillpoliteness.com^
+||fillybode.cyou^
 ||filmderange.shop^
 ||filmingazulineflamens.cyou^
 ||filosetramman.shop^
@@ -107718,6 +107772,7 @@ browsershots.org#@#.advert_area
 ||flamboyanthopefully.com^
 ||flamboyantideal.pro^
 ||flamboyantoriginal.pro^
+||flamenshotdogsancylus.cyou^
 ||flameordinaryhonours.com^
 ||flamesgleamed.com^
 ||flamingloweredchuckled.com^
@@ -108390,6 +108445,7 @@ browsershots.org#@#.advert_area
 ||frozenpayerpregnant.com^
 ||frozenprofession.pro^
 ||frpefhquywmje.store^
+||frpr82wtyocrjk4lmh.rest^
 ||frrhcvblgskvz.site^
 ||frrkdiszpiclc.online^
 ||frs2c.com^
@@ -109395,6 +109451,7 @@ browsershots.org#@#.advert_area
 ||gleampointscrystal.com^
 ||gleanertzaam.shop^
 ||glecjwgrihxui.site^
+||gleedbusters.qpon^
 ||gleeful-metal.pro^
 ||gleefulnote.com^
 ||gleefulsolvingsaxophone.com^
@@ -111473,6 +111530,7 @@ browsershots.org#@#.advert_area
 ||hotbyidide.cc^
 ||hotggguvav.com^
 ||hotgvibe.com^
+||hotilbthj.com^
 ||hotkabachok.com^
 ||hotlinedisappointed.com^
 ||hotlinevarietymorrow.com^
@@ -112051,6 +112109,7 @@ browsershots.org#@#.advert_area
 ||ichscannoli.cfd^
 ||ichwteqdufxed.website^
 ||icilyassertiveindoors.com^
+||icingatochaeboe.cfd^
 ||icjhjoe.studio^
 ||icjoiw71xp99oh42k7.cfd^
 ||ickersanthine.com^
@@ -113334,6 +113393,7 @@ browsershots.org#@#.advert_area
 ||ivfjjyytna.com^
 ||ivgkdijwawpli.space^
 ||iviesreducer.cyou^
+||ivilhjopafobq.website^
 ||ivioukpnweuhr.space^
 ||iviovqxlpvptw.space^
 ||ivkgsdbvmtcnlhk.com^
@@ -114169,6 +114229,7 @@ browsershots.org#@#.advert_area
 ||jpwwqujvnoskd.site^
 ||jpwzbglshulfq.space^
 ||jpzswwzdicijf.online^
+||jpzyeqobploxo.website^
 ||jq8efbj3wcfhqblq3.rest^
 ||jqabemjlgisej.website^
 ||jqacpuetzhjta.space^
@@ -114620,6 +114681,7 @@ browsershots.org#@#.advert_area
 ||kaqootniqwkfp.space^
 ||karafutem.com^
 ||karaismagacant.com^
+||karelobolesgelate.cyou^
 ||karlukslavey.qpon^
 ||karnwduphelya.cyou^
 ||karoskarn.shop^
@@ -115095,6 +115157,7 @@ browsershots.org#@#.advert_area
 ||kmuedwvaezote.online^
 ||kmueihqkuy.com^
 ||kmurwyixudezb.space^
+||kmvkipdsbckq.com^
 ||kmvkkwwlluwgx.site^
 ||kmwpxrau.com^
 ||kmwzyajvivjuz.space^
@@ -115445,6 +115508,7 @@ browsershots.org#@#.advert_area
 ||kumhgjxiuubeb.website^
 ||kumpulblogger.com^
 ||kumykdefrayscomicry.cfd^
+||kunmiutsnirtle.cyou^
 ||kunvertads.com^
 ||kuolkoola.com^
 ||kuosqjyasoh.com^
@@ -116366,6 +116430,7 @@ browsershots.org#@#.advert_area
 ||lipemiaaliptae.com^
 ||lipemiaknotteroffic.cyou^
 ||liphicafo.com^
+||lipideludo.cyou^
 ||lipidichoutou.cfd^
 ||liplesssaligot.com^
 ||lipsanographer.monster^
@@ -117108,6 +117173,7 @@ browsershots.org#@#.advert_area
 ||lwlhmnqlzvjvu.site^
 ||lwmpocteuzldy.world^
 ||lwnbts.com^
+||lwnybjrrno.com^
 ||lwoanmvmyjme.in^
 ||lwonclbench.com^
 ||lwqwlxzzujoof.space^
@@ -117363,6 +117429,7 @@ browsershots.org#@#.advert_area
 ||makeupslulls.cfd^
 ||making.party^
 ||makingnude.com^
+||makingpsyches.shop^
 ||makutastengere.cfd^
 ||malaccaamebas.cyou^
 ||malaiserara.qpon^
@@ -118165,6 +118232,7 @@ browsershots.org#@#.advert_area
 ||minutedeplorable.com^
 ||minutesillock.cfd^
 ||minutessmiles.com^
+||miogjhwfpg.com^
 ||miomg53b4xlev45nw.rest^
 ||miorokkyhdjna.store^
 ||mioymlvrhmlsk.online^
@@ -118729,6 +118797,7 @@ browsershots.org#@#.advert_area
 ||mpanfzgvlgwvt.space^
 ||mpanythathaveresulte.com^
 ||mpanythathaveresultet.info^
+||mpcsbtbipqzfa.space^
 ||mpdkfhyvpvttt.site^
 ||mpebncqjoepwq.space^
 ||mpeowvqnbeoah.online^
@@ -118868,6 +118937,7 @@ browsershots.org#@#.advert_area
 ||mtfrljmoeyssz.website^
 ||mthcplolzrszh.online^
 ||mtjglumdezujo.website^
+||mtkhbxksjjom.com^
 ||mtklngjjpzpwq.space^
 ||mtmqdcgzgduhb.website^
 ||mtnklans.cyou^
@@ -119237,6 +119307,7 @@ browsershots.org#@#.advert_area
 ||n36bbvbrhwl6tem.rest^
 ||n4m5x60.com^
 ||n4sredirect.com^
+||n58qreikclnf24pwzebyg12oemxppgzv.rest^
 ||n61xupfken4ucmcu.rest^
 ||n6wxm.com^
 ||n8jyfo29jm1ecvwg83pmzecx.rest^
@@ -119881,6 +119952,7 @@ browsershots.org#@#.advert_area
 ||niwinn.com^
 ||niwocgaqsx.in^
 ||niwooghu.com^
+||niwqupaz.in^
 ||nixeaperchmeltage.cfd^
 ||nixingminiateunpetal.qpon^
 ||nixkfmaywtugk.site^
@@ -121836,6 +121908,7 @@ browsershots.org#@#.advert_area
 ||outnameprairie.qpon^
 ||outoctillerytor.com^
 ||outonebraxate.com^
+||outpacegeulah.cyou^
 ||outplotthamus.com^
 ||outponyglorious.com^
 ||outpopantre.qpon^
@@ -123443,6 +123516,7 @@ browsershots.org#@#.advert_area
 ||phovursopsed.net^
 ||phowiver.qpon^
 ||phpbjalhigtqe.site^
+||phpdbetsjiywb.space^
 ||phphtjingkosayette.cfd^
 ||phphtscriver.com^
 ||phprdouhkyukn.space^
@@ -123496,6 +123570,7 @@ browsershots.org#@#.advert_area
 ||physidbillowy.cyou^
 ||physidboorish.qpon^
 ||phytonsfurner.com^
+||pi243rnxjmqx6be3.cfd^
 ||piabalitersuncle.cfd^
 ||piachebrehonsong.cyou^
 ||piacirques.cfd^
@@ -123950,6 +124025,7 @@ browsershots.org#@#.advert_area
 ||pliantethanyowing.qpon^
 ||pliblc.com^
 ||pliedhyper.cfd^
+||pliefarbdwnyd.website^
 ||pliescaelusinsuree.cyou^
 ||pliing.com^
 ||plinkedlindens.cfd^
@@ -124495,6 +124571,7 @@ browsershots.org#@#.advert_area
 ||potencebeknit.help^
 ||potencyidrooping.com^
 ||potfulsburro.qpon^
+||pothookknoppy.qpon^
 ||pothuntmemorda.cyou^
 ||pothutepu.com^
 ||potionsfurther.com^
@@ -126620,6 +126697,7 @@ browsershots.org#@#.advert_area
 ||qmwonwowmytqf.store^
 ||qmxvcjravsxyu.online^
 ||qmyonfatxab.in^
+||qmyytcdhtvvcy.website^
 ||qmyzawzrqryjj.top^
 ||qmzikvkk.business^
 ||qn-5.com^
@@ -126724,6 +126802,7 @@ browsershots.org#@#.advert_area
 ||qpjblxxjdatol.site^
 ||qpjiwtxmjitde.site^
 ||qpjwp8i3zbepp8i.rest^
+||qpkagebwelxhxtm.com^
 ||qpknmanfrzxqw.space^
 ||qpllellpinfes.com^
 ||qplywkhnlfyfy.online^
@@ -126749,6 +126828,7 @@ browsershots.org#@#.advert_area
 ||qqeamubuikcai.site^
 ||qqfksaamrtzvl.site^
 ||qqgjvgudcntvw.online^
+||qqglxofnwxa.com^
 ||qqgspelswxiok.website^
 ||qqhjdsbubacon.online^
 ||qqhuwthhmxeuc.space^
@@ -127184,6 +127264,7 @@ browsershots.org#@#.advert_area
 ||qvzcjlybqjvgx.website^
 ||qvzxpcedohgjp.website^
 ||qw1yqjte8igbq8m2mk3.rest^
+||qw9xp8f49f2pfby.cfd^
 ||qwbjriqd.com^
 ||qwbrgeyutdnuj.website^
 ||qwcagaftfkepf.website^
@@ -129083,6 +129164,7 @@ browsershots.org#@#.advert_area
 ||rjw4obbw.com^
 ||rjxczvecqiipf.site^
 ||rjykjiitsaoyw.space^
+||rjyqgtlazaijq.site^
 ||rjzbvmbybvokw.top^
 ||rjzkulworyqil.space^
 ||rkby4boiqwkigetk5yxg8q41koiqokl.cfd^
@@ -129788,6 +129870,7 @@ browsershots.org#@#.advert_area
 ||rtceeemh.com^
 ||rtdgdfdfehzrv.space^
 ||rtdpfwzxfajfl.online^
+||rtessfxxrqjbd.space^
 ||rtfsmrrvcmsoswm.com^
 ||rtfwbwstodqyj.site^
 ||rtgio.co^
@@ -130663,6 +130746,7 @@ browsershots.org#@#.advert_area
 ||sawspignus.qpon^
 ||sayalunlaw.com^
 ||sayingbunked.qpon^
+||saykafiyqytue.website^
 ||saykezhabdbyk.online^
 ||saynayegoizer.qpon^
 ||saynayfinfoot.cfd^
@@ -131444,6 +131528,7 @@ browsershots.org#@#.advert_area
 ||sewensiddurs.qpon^
 ||sewerfieryendurance.com^
 ||sewingfreaky.com^
+||sewinsuets.qpon^
 ||sewinturcian.cfd^
 ||sex-and-flirt.com^
 ||sex-chat.me^
@@ -133277,6 +133362,7 @@ browsershots.org#@#.advert_area
 ||spkvmszihgzei.space^
 ||splakesbescorn.shop^
 ||splashfailed.com^
+||splayarawak.cyou^
 ||splaysyrian.help^
 ||spleennest.com^
 ||splendid-lake.pro^
@@ -134130,6 +134216,7 @@ browsershots.org#@#.advert_area
 ||stupid-police.com^
 ||stupidconveniences.com^
 ||stuposekg.qpon^
+||sturdy-town.com^
 ||sturdyarrival.com^
 ||sturdyassociate.pro^
 ||sturdycow.pro^
@@ -134286,6 +134373,7 @@ browsershots.org#@#.advert_area
 ||suffocatedeliberatelyslid.com^
 ||suffocatefried.com^
 ||suffocateinnhandling.com^
+||suffuseoilcamp.qpon^
 ||sugamoscry.com^
 ||suganslurps.shop^
 ||sugarruse.com^
@@ -136685,6 +136773,7 @@ browsershots.org#@#.advert_area
 ||toshimtairteex.net^
 ||tosksprmwpkzf.site^
 ||tossedkryptol.cyou^
+||tossfaceboother.cyou^
 ||tossilyclosets.cyou^
 ||tossingtankage.cyou^
 ||tossingvivid.com^
@@ -136704,6 +136793,7 @@ browsershots.org#@#.advert_area
 ||totogetica.com^
 ||totymanglave.com^
 ||touchdowndeveloping.com^
+||toucheskey.cyou^
 ||touchstronglymuseum.com^
 ||tough-professional.pro^
 ||toughbirth.pro^
@@ -136791,6 +136881,7 @@ browsershots.org#@#.advert_area
 ||tpovpwtqjeazz.website^
 ||tppwkciiypmeh.site^
 ||tppzhzfi3616lo4vri7z8pzc7kck461.rest^
+||tpqlkcltn.com^
 ||tpubwzwrhdcst.store^
 ||tpvmdlxpvcenz.vip^
 ||tpwkbwphabbau.online^
@@ -136805,6 +136896,7 @@ browsershots.org#@#.advert_area
 ||tqcppxvxhbzgi.site^
 ||tqctbjddb.xyz^
 ||tqdxwboexwawx.site^
+||tqecglnxyhqsnbp.com^
 ||tqevahjkdhapc.com^
 ||tqgayhnwphgxn.site^
 ||tqgdovbcivlfu.space^
@@ -137803,6 +137895,7 @@ browsershots.org#@#.advert_area
 ||tyserving.com^
 ||tysigpzjxjegb.space^
 ||tythingpurpledunfiery.cyou^
+||tytmjjiykugiw.space^
 ||tytulcernodules.qpon^
 ||tyuhwlerptkcl.website^
 ||tyuknsyenergy.com^
@@ -138463,6 +138556,7 @@ browsershots.org#@#.advert_area
 ||ultracdn.top^
 ||ultrasoundpurchase.com^
 ||uluhiiotas.com^
+||ulupimodfpksp.site^
 ||uluuggxnhrxord.com^
 ||ulvqhajbndnty.website^
 ||ulwexxyucrdsm.online^
@@ -139258,6 +139352,7 @@ browsershots.org#@#.advert_area
 ||uptjtciycieat.online^
 ||uptornmehutched.cyou^
 ||uptracefeis.com^
+||upttorecoojaaxone.cfd^
 ||upttoreremet.cfd^
 ||upttorevirify.cyou^
 ||uptubefargood.shop^
@@ -141438,6 +141533,7 @@ browsershots.org#@#.advert_area
 ||vvwrajbckvfng.website^
 ||vvwrwrzrsuqug.site^
 ||vvwskuuryf.com^
+||vvwyojkzqpvwb.space^
 ||vvxxqpvylixke.store^
 ||vvyffpulokdxe.website^
 ||vvyqibaywupjz.site^
@@ -141580,6 +141676,7 @@ browsershots.org#@#.advert_area
 ||vyxsgealwarnz.website^
 ||vyxyydqivugrv.online^
 ||vyxzeemxrwnqs.online^
+||vyzmtwpokygpm.space^
 ||vz.7vid.net^
 ||vz2qt7y4fgffbc85x39wkjwtig.cfd^
 ||vzakrwqsbbsro.site^
@@ -142539,6 +142636,7 @@ browsershots.org#@#.advert_area
 ||whirlwindobject.pro^
 ||whirlwindofnews.com^
 ||whirnbhiidvta.space^
+||whirrooduet.shop^
 ||whirteetchi.net^
 ||whishannuent.com^
 ||whishedrebuilt.com^
@@ -144623,6 +144721,7 @@ browsershots.org#@#.advert_area
 ||xqxgcdhfkccgg.site^
 ||xqxplqzqywvcj.website^
 ||xqz4uivkc4lkukb35z6g7fxrihki.rest^
+||xraira.shop^
 ||xrbcmxuzmyfzj.website^
 ||xrbtfev4hm5r7kk.cfd^
 ||xrburmrbscpnb.online^
@@ -145125,6 +145224,7 @@ browsershots.org#@#.advert_area
 ||yawperssovkhoz.help^
 ||yawuyibzriuzn.space^
 ||yawytfr.cfd^
+||yaxiobbe.com^
 ||yaxsvnoftgzuj.website^
 ||yaylgwxilnrio.website^
 ||yb23b.com^
@@ -146023,6 +146123,7 @@ browsershots.org#@#.advert_area
 ||ytqzrtpejocyh.space^
 ||ytsa.net^
 ||ytseotpnuzrdc.site^
+||ytsivzidynwtl.site^
 ||ytsjtdehsznbu.online^
 ||ytsmqchsmmozq.space^
 ||ytsuptbpkgdq.net^
@@ -146862,6 +146963,7 @@ browsershots.org#@#.advert_area
 ||zlnzioxqvzfxp.store^
 ||zlosabftzqikz.site^
 ||zlqgrxuoxqpbd.website^
+||zlqzkbycvhnye.website^
 ||zlrjshctqzxlk.site^
 ||zlrwxkrwslawu.online^
 ||zlsvhossbiuwq.space^
@@ -147304,6 +147406,7 @@ browsershots.org#@#.advert_area
 ||zw7kvifj268tmhfgp6.cfd^
 ||zwaar.net^
 ||zwcmwvklhkfhh.website^
+||zwcuougbmsdbl.online^
 ||zwfbkyofoaqlj.site^
 ||zwfkvkmkmdoji.website^
 ||zwgcldrjgtvkx.online^
@@ -147365,6 +147468,7 @@ browsershots.org#@#.advert_area
 ||zxuknfffkemse.space^
 ||zxvhxdpyordan.store^
 ||zxvxukirgmomz.site^
+||zxvzqrjtfijqq.website^
 ||zxwrgwncljanq.site^
 ||zxwzovvtppdbf.space^
 ||zxyb5cuiuwu2hhlo9jpwl8tee3ih6.rest^
@@ -156379,7 +156483,7 @@ $third-party,xmlhttprequest,domain=mega4upload.net
 ||maxroll.gg/js/sponsor.js
 ||mbauniverse.com/sites/default/files/shree.png
 ||media-amazon.com/images/S/apesafeframe/ape/sf/$script
-||media-amazon.com/images/S/sash/$domain=imdb.com
+||media-amazon.com/images/S/sash/$domain=www.imdb.com
 ||media.babylonbee.com/ads/
 ||media.max.com/*/dash.mpd^$domain=cnn.com
 ||media.max.com/*/main.mpd^$domain=cnn.com
@@ -164100,6 +164204,7 @@ eztv.tf,eztv.yt##a > img[alt="Anonymous Download"]
 designtaxi.com##a.a-click[target="_blank"]
 cript.to##a.btn[target="_blank"][href^="https://cript.to/"]
 infowars.com##a.css-1yw960t
+scloud.ws##a.download-button
 darkreader.org##a.logo-link[target="_blank"]
 hulkshare.com##a.nhsIndexPromoteBlock
 steam.design##a.profile_video[href^="https://duobot.com/"]
