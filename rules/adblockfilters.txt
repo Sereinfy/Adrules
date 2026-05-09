@@ -1,9 +1,9 @@
 !
 ! Title: AdBlock Filter
 ! Homepage: https://github.com/Sereinfy/Adrules
-! Version: 20260509171954
-! Last modified: 2026/05/09 17:19:54
-! Blocked Filters: 180644
+! Version: 20260510005541
+! Last modified: 2026/05/10 00:55:41
+! Blocked Filters: 180653
 !
 ###AC_ad
 ###AD_160
@@ -49134,6 +49134,7 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 @@||seraphimonolith.space/content/$stealth=referrer
 @@||serasaexperian.com.br/dist/scripts/fingerprint2.js$~third-party
 @@||series-streaminghd.com^$generichide
+@@||seriezloaded.com.ng^$generichide
 @@||serve.adclixx.net/promoload
 @@||serve.adtrackers.net/promoload
 @@||serve.bannertrack.net/promoload
@@ -57816,6 +57817,9 @@ autogaleria.pl##.cookie-dis
 autogaleria.pl#%#//scriptlet("set-constant", "isAdblockEnabled", "false")
 autogidas.lt##.header-ann
 autogidas.lt##.promo-subscription
+autoglas-spezialist.com,imazing.com#$#body.modal-open { overflow: auto !important; }
+autoglas-spezialist.com,imazing.com#$#div#cookie-consent-modal { display: none !important; }
+autoglas-spezialist.com,imazing.com#$#div.modal-backdrop { display: none !important; }
 autograph.io##.modal-bg
 autogrodno.by###gkPageContent > aside#gkSidebar
 autoguide.com,motorcycle.com##.sidebar-ad-unit
@@ -86855,6 +86859,7 @@ gqjapan.jp##header[data-testid^="StackedNavigationHeader"] > section#link-banner
 gqjapan.jp#@#.ad-stickyhero
 gqjapan.jp#@#.ad-stickyhero--standard
 gqjapan.jp#@#.ad-stickyhero-enable-mobile
+gqjapan.jp,pitchfork.com,glamour.mx,allure.com,vogue.com,gq.com,cntraveler.com,wired.com,spicebar.de,vanityfair.com,self.com,cnet.com,newyorker.com##.newsletter-subscribe-form
 gqmagazine.fr##figure[data-testid="IframeEmbed"]
 gqmagazine.fr#@##onetrust-consent-sdk
 gqmiddleeast.com,masala.com,digitalstudiome.com,harpersbazaararabia.com##.intent-nl-popup
@@ -92416,9 +92421,6 @@ imaios.com#$##userConsentModal { display: none !important; }
 imaios.com#$#.modal-backdrop { display: none !important; }
 imaios.com#$#body { overflow: auto !important; padding-right: 0 !important; }
 imas-cg.net##.titleRssBottom
-imazing.com#$#body.modal-open { overflow: auto !important; }
-imazing.com#$#div#cookie-consent-modal { display: none !important; }
-imazing.com#$#div.modal-backdrop { display: none !important; }
 imcdb.org###SiteLifeSupport
 imdb.com###placeholderImageLinearGradient
 imdb.com###top_rhs
@@ -96727,6 +96729,7 @@ justetf.com###brokerAd
 justetf.com##.borker-ad
 justetf.com##.etf-ad-row
 justetf.com##.m-sep-l:has(#partnerNewsBox)
+justetf.com##.publift-ad-container
 justetf.com##.wAd
 justetf.com##div[id^="shadow-teaser-"]:has(div[class="disclaimer mb-1"])
 justetf.com##tr[onclick^="gaW"]
@@ -111296,6 +111299,7 @@ neowin.net,globe.adsbexchange.com,box.live,aerowitter.com,aerolla.net,wenxuecity
 neowin.net,globe.adsbexchange.com,box.live,aerowitter.com,aerolla.net,wenxuecity.com,newrepublic.com,fragrantica.*,pc-builds.com,flightaware.com,boingboing.net,emojipedia.org,camelcamelcamel.com,adsoftheworld.com,flightconnections.com,smithsonianmag.com,thenation.com,lse.co.uk,knowt.com,gamerescape.com,myabandonware.com,androidheadlines.com,phoronix.com,virtualpiano.net,creaders.net,baeldung.com,titantv.com,thisisanfield.com,mouse-sensitivity.com,hostednovel.com,getemoji.com,concertarchives.org#@$#body > div.ad.banner-ad.ad-siderail.stickyads[data-freestar-ad][style]:not(#style_important) { display: block !important; }
 neowin.net,seattletimes.com,thecooldown.com##.article-share
 nep.detaly.co.il##.nep_reck
+nepalicalendar.rat32.com###adsnew
 nepallivetoday.com##.adsimage
 nepallivetoday.com,wjr.com##img[height="100"]
 nepalpress.com##.gam-ad-position-wrap
@@ -118599,7 +118603,6 @@ pitchfork.com##.page > div[data-testid="RowWrapper"] > .journey-unit__container 
 pitchfork.com##div[data-testid="ContentFooterBottom"] > div[data-testid="RowWrapper"]:has(> .ad)
 pitchfork.com##div[data-testid="paywall-bar-thin"]
 pitchfork.com#%#//scriptlet('trusted-click-element', '#fides-banner-container .fides-accept-all-button', '!cookie:fides_consent', '', 'reloadAfterClick:200')
-pitchfork.com,glamour.mx,allure.com,vogue.com,gq.com,cntraveler.com,wired.com,spicebar.de,vanityfair.com,self.com,cnet.com,newyorker.com##.newsletter-subscribe-form
 pitd.org.pl#%#//scriptlet('trusted-set-local-storage-item', 'userConsent', '{"analytics":false,"advertising":false,"functionality":true,"personalization":false}')
 piter-online.net,101internet.ru#%#//scriptlet('set-cookie', 'closeNotificationAboutCookie', 'true')
 pitergsm.ru##.callback-btn
@@ -123937,9 +123940,13 @@ realestate.co.nz##.topbar-ad-parent
 realestate.co.nz#$#html.async-hide { opacity: 1!important; }
 realestate.com.au###headerLeaderBoardSlot
 realestate.com.au##.gdpr-consent-element-wrapper
+realestate.com.au##.google-preferred-link
+realestate.com.au##.header-ad-container
 realestate.com.au##.header-leaderboard-portal
 realestate.com.au##.lead-gen__action-link
 realestate.com.au##.media-viewer__sidebar
+realestate.com.au##.styles__Medrec1Container-sc-tc1w4x-0
+realestate.com.au##.styles__Medrec2Container-sc-tc1w4x-1
 realestate.com.au##div[class^="FooterAd"]
 realestate.com.au##div[class^="PostLayout__AsideWrapper-"] > div[class^="styles__Medrec"]
 realestate.yahoo.co.jp###_modalContractView.ModalSpecialBanner--show
@@ -128010,6 +128017,7 @@ serieshd24.com,newseries24.com##div[class^="banner-mid-"]
 serieshd24.com,newseries24.com,dooseries2uhd.com,moviedee24.com,xn--72czp7a9bc4b9c4e6b.video,nung2hdd.com,movieshdfree.com,newseries-hd.com,movie22hd.com,moviehdfree.net##.ad-float
 serieslatinoamerica.tv$$script[wildcard="*track*atob*ShadowRoot*"][min-length="5000"][max-length="10000"]
 serieslatinoamerica.tv,trshow.info,ruplayers.com##pp
+seriezloaded.com.ng#%#//scriptlet('prevent-setTimeout', 'offsetHeight === 0')
 serif.com##div[aria-labelledby="cookie-heading"]
 seriouseats.com##.entry-body > .product-widget
 seriouseats.com#$#.campaign-dialog { display: none !important; }
@@ -150730,6 +150738,7 @@ yam.com##a[href^="https://donate.yam.com/dq/Donateinfo"]
 yama.minato-yamaguchi.co.jp##._phn._on
 yama.minato-yamaguchi.co.jp##div[style].connection_flex > .nl_box
 yamakei-online.com##.ad-pop-nw3-nw4
+yamap.com##.DownloadBanner
 yamap.com##.Posts__Download__Section
 yamap.com#$#.AppDownloadBanner { display: none !important; }
 yamap.com#$#.Main__GlobalHeader--showSmartAppBanner { padding-top: 0 !important; }
