@@ -1772,7 +1772,7 @@
 ||service-cmp.com^$third-party
 ||consent.nitrocnct.com^
 ||cdn.cookiesuit.com^$third-party
-/wp-content/plugins/consent-magic-pro/*
+/plugins/consent-magic-pro/*
 ||transcend-cdn.com^$third-party
 ||cmp.sibbo.net^
 /pandectes-core.js
@@ -2611,6 +2611,10 @@ sabancivakfi.org###ez-banner[role="banner"]
 !
 ! NOTE: Regular rules
 !
+jeuxmaths.fr#%#//scriptlet('trusted-click-element', '.fc-cta-do-not-consent')
+mosoblgaz.ru##.cookie-modal-wrapper
+mini.com.tr#%#//scriptlet('trusted-click-element', 'epaas-fallback-page-shell >>> div.buttonContainer > button.accept-button')
+||koc.com.tr/api/api/v1/Consent/CookieText/
 bezmialem.com.tr#%#//scriptlet('set-cookie', 'bezmialemCookieConsent_tr', 'rejected')
 bezmialem.edu.tr###bezmialemCerez
 izu.edu.tr##.ck-consent
@@ -3107,7 +3111,7 @@ id.sber.ru##div[class^="_mobileContent_"] > div[class^="css-"] > div[class^="css
 secure.riamoneytransfer.com#%#//scriptlet('trusted-set-cookie', 'track-consent-v2', '%7B%22analytics%22%3Afalse%2C%22marketing%22%3Afalse%7D')
 escavador.com##.c-popup-consentimento
 tnob.md###firstModal
-umc.com##.gdpr
+taa-ankara.org.tr,umc.com##.gdpr
 account.xiaomi.com##._-src-components-CookieBanner-wrapper
 ||consentise.com^$domain=aspose.app
 goodtherapy.org###gdprWarning
@@ -6703,7 +6707,8 @@ usg.edu###gdpr-cookie-notification
 screen.studio##body > div[class]:has(> div[style] a[href="/privacy"])
 select.by,banki24.by##.cookies_consent
 /stereotypedsugar\.com\/[a-z]?\/[a-z0-9]+\/[a-z]{4}[a-z0-9]{15,25}\.index\.js$/$script,match-case,domain=agweek.com
-primevideo.com##.DVWebNode-conditional-site-wide-wrapper > .fbl-banner:has(form[action*="/privacyprefs/sp/consent/"])
+primevideo.com##div[data-testid="critical-notification"]:has(> div[class] > form[action*="_cookienotf_"])
+primevideo.com##div[data-testid="critical-notification"]:has(> div[class] > div[class^="scrollableContent-"] > div[class^="criticalNotificationBody-"] > p > a[href$="/privacyprefs/primevideo/partners"])
 bullionvault.com##.navigation__cookies
 edu.eset.com##doc-layout-cookie-policy-banner
 ||cdn.shopify.com/shopifycloud/privacy-banner/storefront-banner.js
@@ -10475,7 +10480,6 @@ wrangler.jeep.com.br##.disclaimers-lgpd
 compass.jeep.com.br#?##root > div:not([class]) > div:contains(PRIVACIDADE)
 signupgenius.com##.sug-notice--privacy
 ||consent.economist.com^
-primevideo.com##.DVWebNode-cookie-banner-wrapper
 ncsoft.jp###ncCookieAlert
 jovemnerd.com.br##.container-banner-cookie
 mobilitynews.pl##.politic__cookie
@@ -12813,7 +12817,7 @@ f1online.sk###__next > div[class^="style_container__"]
 schwebheim.de#$#html > body.borlabs-position-fix { overflow-y: auto !important; }
 schwebheim.de#$#html > body.borlabs-position-fix .bodyscroll { overflow-y: auto !important; }
 /borlabs-cookie.min.js$domain=mobil-ganz-einfach.de|schwebheim.de|rabot.energy
-podurama.com,clo3d.com##.cookie-consent-popup
+rumeli.edu.tr,podurama.com,clo3d.com##.cookie-consent-popup
 kvno.de#$##js-cookie-settings-manager { display: none !important; }
 kvno.de#$#body { overflow: auto !important; }
 my.hidrive.com#$#.consent-overlay { display: none !important; }
@@ -13820,7 +13824,6 @@ kleankanteen.ru.com###client-cookies-notice
 go2bus.ru###useragreement
 weatherbug.com##div[class^="notificationFooter__Container-"]
 mtv.com.lb##.cookiesDisclaimer
-primevideo.com##.cookie-notification-msg
 oeffnungszeitenbuch.de###CCcont
 motorradonline.de,menshealth.de##.v-A_-cookie__monster
 hidromek.com.tr##.cookie-notification-es
@@ -16486,7 +16489,7 @@ ariva.de###bottomWarnings
 newpharma.be###box_cookie_acceptance
 mercedes-benz.com###cLayer.notice
 mercedes-benz.com###cPageOverlay
-ariteknokent.com.tr,regione.emilia-romagna.it,coupons.de,msn.com###cc-banner
+lenovopress.lenovo.com,ariteknokent.com.tr,regione.emilia-romagna.it,coupons.de,msn.com###cc-banner
 deutsche-handwerks-zeitung.de###cc-box
 fiber.nl###ccm-banner-wrap
 worlddata.info,laenderdaten.info,rund-ums-baby.de###cconsent
@@ -37335,6 +37338,8 @@ gaugau.futabanet.jp,newscientist.com,jiji.com,edp24.co.uk,technologyreview.com,n
 !
 ! SECTION: Subscriptions - Regular rules
 !
+substack.com##.container-jsOc9L
+birgun.net##.gsource:has(> div > a[href^="https://google.com/preferences/source"])
 univerlist.com##.m-width-370.modal:has(img[src="/static/site/images/bite/mail.png"])
 platinonline.com##.col-md-12 > .margin-bottom-md:has(a[href*=".google.com/"])
 denofgeek.com##.newsletter-cta__form
@@ -46965,6 +46970,8 @@ rxgo.com,alfastrah.ru,turkishairlines.com,atmos-tokyo.com,radarbox.com,ciceksepe
 !
 !
 !
+meduza.io##.GeneralMaterial-module-article > p[class^="SimpleBlock"]:has(> a[href^="https://onelink.to/"] + a[href="https://bit.ly/meduzamirror"])
+meduza.io##.GeneralMaterial-module-article > hr
 dpu.edu.tr#%#//scriptlet('trusted-click-element', '.mobile_app_info_x > a')
 sushico.com.tr###singular-banner
 hayatpay.com.tr##a[href^="https://hayatpay.go.link/"]
@@ -52319,6 +52326,9 @@ instagram.com##._aagw:empty
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/231685
+meduza.io##.GeneralMaterial-module-article > p[class^="SimpleBlock"]:has(> a[href^="https://onelink.to/"] + a[href="https://bit.ly/meduzamirror"])
+meduza.io##.GeneralMaterial-module-article > hr
 ! https://github.com/AdguardTeam/AdguardFilters/issues/231252
 webtekno.com##.related-tag-posts-widget
 webtekno.com##.others-news
@@ -65581,6 +65591,7 @@ daddyhd.com##.sidebar__inner
 ||static.zdassets.com/web_widget/messenger/$domain=op.gg|p2pb2b.com|revouninstaller.com
 litres.ru###call_support
 !
+ianos.gr##chat-widget
 vit.ac.in###whatsapp-chat-widget
 ||astra.wati.io/widget/astra.js$domain=vit.ac.in
 godaddy.com##.ai-chatbot-tab
