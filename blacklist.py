@@ -40,9 +40,9 @@ class ChinaDomian(object):
         try:
             res = get_tld(address, fix_protocol=True, as_object=True) # 确认是否为域名
             fld, subdomain = res.fld, res.subdomain
+            return fld, subdomain
         except Exception as e:
             logger.error("%s: not domain"%(address))
-        finally:
             return fld, subdomain
 
     def __resolve(self):
@@ -110,10 +110,10 @@ class BlackList(object):
                 with open(self.__domainlistFile, 'r') as f:
                     tmp = f.readlines()
                     domainList = list(map(lambda x: x.replace("\n", ""), tmp))
+            logger.info("adblock dns backup: %d"%(len(domainList)))
+            return domainList
         except Exception as e:
             logger.error("%s"%(e))
-        finally:
-            logger.info("adblock dns backup: %d"%(len(domainList)))
             return domainList
         
     def __getDomainSet_CN(self):
@@ -126,10 +126,11 @@ class BlackList(object):
             domainSet = domain_cn.domainSet
             regexpSet = domain_cn.regexpSet
             keywordSet = domain_cn.keywordSet
+            
+            logger.info("China domain list: full[%d], domain[%d], regexp[%d], keyword[%d]"%(len(fullSet),len(domainSet),len(regexpSet),len(keywordSet)))
+            return fullSet,domainSet,regexpSet,keywordSet
         except Exception as e:
             logger.error("%s"%(e))
-        finally:
-            logger.info("China domain list: full[%d], domain[%d], regexp[%d], keyword[%d]"%(len(fullSet),len(domainSet),len(regexpSet),len(keywordSet)))
             return fullSet,domainSet,regexpSet,keywordSet
         
     def __getIPDict_CN(self):
@@ -151,10 +152,11 @@ class BlackList(object):
                         row = line.replace("\n", "").split("/")
                         ip, offset = row[0], int(row[1])
                         IPDict[IPy.parseAddress(ip)[0]] = offset
+            
+            logger.info("China IP list: %d"%(len(IPDict)))
+            return IPDict
         except Exception as e:
             logger.error("%s"%(e))
-        finally:
-            logger.info("China IP list: %d"%(len(IPDict)))
             return IPDict
     
     async def __resolve(self, dnsresolver, domain):
@@ -172,9 +174,9 @@ class BlackList(object):
                 ip = '{}'.format(item)
                 if ip != "0.0.0.0":
                     ipList.append(ip)
+            return ipList
         except Exception as e:
             logger.error('"%s": %s' % (domain, e if e else "Resolver failed"))
-        finally:
             return ipList
 
     async def __pingx(self, dnsresolver, domain, semaphore):
@@ -243,28 +245,21 @@ class BlackList(object):
 
     def __testDomain(self, domainList, nameservers, port=53):
         logger.info("resolve domain...")
-        # 异步检测
-        dnsresolver = DNSResolver()
-        dnsresolver.nameservers = nameservers
-        dnsresolver.port = port
-        # 启动异步循环
-        loop = asyncio.get_event_loop()
-        semaphore = asyncio.Semaphore(self.__maxTask) # 限制并发量为500
-        # 添加异步任务
-        taskList = []
-        for domain in domainList:
-            task = asyncio.ensure_future(self.__pingx(dnsresolver, domain, semaphore))
-            taskList.append(task)
-        # 等待异步任务结束
-        loop.run_until_complete(asyncio.wait(taskList))
-        # 获取异步任务结果
-        domainDict = {}
-        for task in taskList:
-            domain, ipList = task.result()
-            domainDict[domain] = ipList
 
-        logger.info("resolve domain: %d"%(len(domainDict)))
-        return domainDict
+        async def _resolve_all():
+            dnsresolver = DNSResolver()
+            dnsresolver.nameservers = nameservers
+            dnsresolver.port = port
+            semaphore = asyncio.Semaphore(self.__maxTask)
+
+            tasks = [self.__pingx(dnsresolver, domain, semaphore) for domain in domainList]
+            results = await asyncio.gather(*tasks)
+
+            domainDict = {domain: ipList for domain, ipList in results}
+            logger.info("resolve domain: %d" % len(domainDict))
+            return domainDict
+
+        return asyncio.run(_resolve_all())
 
     def __isChinaDomain(self, domain, ipList, fullSet_CN, domainSet_CN, regexpSet_CN, keywordSet_CN, IPDict_CN):
         isChinaDomain = False
@@ -295,7 +290,7 @@ class BlackList(object):
                         break
                     # keyword:
                     for keyword in keywordSet_CN:
-                        if re.match(".*%s.*"%(keyword), domain):
+                        if re.match(r".*%s.*"%(keyword), domain):
                             isChinaDomain = True
                             break
                     if isChinaDomain:
@@ -313,9 +308,9 @@ class BlackList(object):
                         if isChinaDomain:
                             break
                 break
+            return domain,isChinaDomain
         except Exception as e: 
             logger.error('"%s": not domain'%(domain))
-        finally:
             return domain,isChinaDomain
 
     def generate(self):
