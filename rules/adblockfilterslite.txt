@@ -1,9 +1,9 @@
 !
 ! Title: AdBlock Filter Lite
 ! Homepage: https://github.com/Sereinfy/Adrules
-! Version: 20260606113018
-! Last modified: 2026/06/06 11:30:18
-! Blocked Filters: 64459
+! Version: 20260606180419
+! Last modified: 2026/06/06 18:04:19
+! Blocked Filters: 64464
 !
 ###AC_ad
 ###AD_160
@@ -36291,6 +36291,9 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 ://tracker.*/track/event
 ://tracking.*/beacon/
 ://tracking.*/event
+://tralut.*/collect/value?
+://tralut.*/js/script-dynamic.js
+://tralut.*/js/tracking.js
 ://trk.*.run^$document
 ://uads.$third-party,xmlhttprequest
 ://widgets.spklw.com/v1/data/?*&widget-id=$replace=/(?<=\[)(\{"image":\{"url":"[\s\S]*?"type":"ad"[\s\S]*?\,"service_version":"[\s\S]*?"\}(\,)?)+|(\,)?\{"image":\{"url":"[\s\S]*?"type":"ad"[\s\S]*?\,"service_version":"[\s\S]*?"\}//
@@ -46096,6 +46099,8 @@ fashionunited.*#?#.adunitContainer:upward(3)
 fast-torrent.ru#$?#html:has(> body) { padding-top: 0!important; }
 fastbikesmag.com,theintrepidguide.com###custom_html-21
 fastcoin.ga,swift4claim.com,appnee.com,msmxtended.org,reevown.com,cryptofun.space,justlightnovels.com,tranimeizle.*#%#//scriptlet("prevent-setInterval", "/.\.display=='hidden'[\s\S]*?.\.visibility=='none'/")
+fastcompany.com,inc.com###article_share_button
+fastcompany.com,inc.com###article_share_google_icon
 fastcompany.com,inc.com,nationalreview.com,chronicle.com##.bcpNotificationBarStickyBottom
 fastconv.com$$script[tag-content="afScript"][min-length="5000"][max-length="7000"]
 fastconv.com,easymp3converter.com##body > div[style^="position: fixed; display: block;"][style*="z-index:"]
@@ -49909,6 +49914,7 @@ jp.stanby.com,theriver.jp##div[class^="app-banner"]
 jpfans.com,jpseek.com##table[cellspacing="1"][cellpadding="6"]
 jpfbs.com,daicel.com##.js-gdpr-popup
 jpg2png.com,gtaweb.eu#$#body div.fc-message-root { display: none !important; }
+jpix.ad.jp,smahospital.jp,nipponsteel.com##.p-gdpr
 jpopsingles.eu,superpsx.com#%#//scriptlet('trusted-suppress-native-method', 'Array.prototype.includes', '"error"')
 jpopsingles.eu,superpsx.com#%#//scriptlet('trusted-suppress-native-method', 'fetch', '"pagead2.googlesyndication.com"')
 jpradio.jp,onlineradios.in,radio.com.lk,radio.net.bd,radio.net.pk,radio.org.nz,radio.org.ph,radioau.net,radionp.com,radioonline.co.id,radioonline.kr,radioonline.my,radios.tw,radiosingapore.org,radioth.net##.add-box-side
@@ -55985,7 +55991,6 @@ sm.cn##div[id*="_Shopping_Etao_"]
 sm.cn##div[id^="ad_ele_"]
 sm.cn##div[id^="dl-banner-"]
 sm.news,amedia.online,sdamgia.ru#%#//scriptlet("abort-on-property-read", "Object.prototype.RenderMarks")
-smahospital.jp,nipponsteel.com##.p-gdpr
 smaker.pl,pomponik.pl,interia.pl#$##sponsCont { display: none !important; }
 smaker.pl,pomponik.pl,interia.pl#$#body[class*="body__ad-spons--"] .common-header { top: 0 !important; }
 smaker.pl,pomponik.pl,interia.pl#$#body[class*="body__ad-spons--"] header { transform: none !important; }

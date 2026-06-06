@@ -1,9 +1,9 @@
 !
 ! Title: AdBlock Filter
 ! Homepage: https://github.com/Sereinfy/Adrules
-! Version: 20260606113018
-! Last modified: 2026/06/06 11:30:18
-! Blocked Filters: 179433
+! Version: 20260606180419
+! Last modified: 2026/06/06 18:04:19
+! Blocked Filters: 179439
 !
 ###AC_ad
 ###AD_160
@@ -38094,6 +38094,9 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 ://tracker.*/track/event
 ://tracking.*/beacon/
 ://tracking.*/event
+://tralut.*/collect/value?
+://tralut.*/js/script-dynamic.js
+://tralut.*/js/tracking.js
 ://trk.*.run^$document
 ://uads.$third-party,xmlhttprequest
 ://widgets.spklw.com/v1/data/?*&widget-id=$replace=/(?<=\[)(\{"image":\{"url":"[\s\S]*?"type":"ad"[\s\S]*?\,"service_version":"[\s\S]*?"\}(\,)?)+|(\,)?\{"image":\{"url":"[\s\S]*?"type":"ad"[\s\S]*?\,"service_version":"[\s\S]*?"\}//
@@ -42741,6 +42744,7 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 @@||dw.cbsimg.net/js/cbsi/ds.js$domain=last.fm
 @@||dw.com.com/js/dw.js$domain=cbsnews.com|tv.com
 @@||dwebwj8qthne8.cloudfront.net/?wbewd=971059$domain=miraculum.ml
+@@||dwt.soundcloud.com.first-party-js.datadome.co^$script,xmlhttprequest,domain=soundcloud.com
 @@||dydog.org/*/DPlayer.min.css
 @@||dydog.org/*/DPlayer.min.js
 @@||dynamic-images-picturehappy.*.amazonaws.com^$stealth=referrer,domain=picturehappy.lv
@@ -79034,8 +79038,6 @@ fastcoin.ga,swift4claim.com,appnee.com,msmxtended.org,reevown.com,cryptofun.spac
 fastcompany.co.za##div[class^="google-ad_"]
 fastcompany.co.za##div[class^="search_googlePreferred"]
 fastcompany.com###FCGlobalPlayerFrame
-fastcompany.com###article_share_button
-fastcompany.com###article_share_google_icon
 fastcompany.com##.adhesive-banner
 fastcompany.com##.article-container > div.flex:has(> div > div.newsletters__page__marketo__form__container)
 fastcompany.com##.article-container > div.py-8
@@ -79054,6 +79056,8 @@ fastcompany.com##.sticky:has(.ad-container)
 fastcompany.com##article ~ div.border-t.border-solid.border-primary-light
 fastcompany.com##div[class^="second-scroll-container min-h-[4000px]"]:empty
 fastcompany.com##section[data-testid="newsletter-subscription-form"]
+fastcompany.com,inc.com###article_share_button
+fastcompany.com,inc.com###article_share_google_icon
 fastcompany.com,inc.com,nationalreview.com,chronicle.com##.bcpNotificationBarStickyBottom
 fastcompanybrasil.com##.fcbr_social_share
 fastconv.com#%#//scriptlet("prevent-window-open", "adfpoint")
@@ -90155,6 +90159,7 @@ homecinesolutions.fr###consent-loader-component
 homecookingadventure.com##.cookbook-instagram
 homecredit.ru##div[class*="BlockCookies"]
 homedecoratione.com#@#.advertiser
+homedepot.ca##sponsored-banner
 homedepot.com##.browse-search__pod:has([id^="plp_pod_sponsored"])
 homedepot.com##.js-sponsored--banner
 homedepot.com##[id*="sponsored"]
@@ -92800,6 +92805,7 @@ inc.com##div[class^="min-h-"]:has(> div.flex > svg[aria-label="Video player icon
 inc.com#$#.announcement { display: none !important; }
 inc.com#$#.fancybox-lock { overflow: auto !important; }
 inc.com#$#.sticky-bar { top: 0px !important; }
+inc.com#?#.pr-\[25px\].py-\[27px\]:contains(Apply Now)
 inc.com#?#body > div.fancybox-overlay:has(> div.fancybox-wrap div.fancybox-inner div.bcRecommendations)
 inc.com#?#div[class^="ArticleGrid__feedContainer"] > div[class^="Article__articleContent__"]:has(> form.newsletter)
 inc.com#?#div[class^="Article__articleContent"] > div.title-bar:has(> span:contains(Sponsored Business Content))
@@ -96828,6 +96834,7 @@ jpfans.com,jpseek.com##table[cellspacing="1"][cellpadding="6"]
 jpfbs.com,daicel.com##.js-gdpr-popup
 jpg2png.com,gtaweb.eu#$#body div.fc-message-root { display: none !important; }
 jpg6.su##iframe[src^="//go.gsrv.dev/"]
+jpix.ad.jp,smahospital.jp,nipponsteel.com##.p-gdpr
 jpl.nasa.gov##div[itemprop="articleBody"] > div.BaseGrid + div.BaseGrid:has(> div.relative > div.BlockNewsletterSignup)
 jpl.nasa.gov##div[itemprop="articleBody"] > div.BaseGrid + div.BaseGrid:has(> div.relative > div.bg-gray-light > a[href="/newsletter-signup/"])
 jpopsingles.eu##[src="/ddl/dl-link.png"]
@@ -130850,7 +130857,6 @@ sm.news##div[id^="bar"]
 sm.news#?#div:not([class="col-home"]):has(> div[id^="bar"])
 sm.news,amedia.online,sdamgia.ru#%#//scriptlet("abort-on-property-read", "Object.prototype.RenderMarks")
 sma.de###tracker-banner
-smahospital.jp,nipponsteel.com##.p-gdpr
 smailpro.com##.ads-sidebar-right
 smailpro.com##.flex > div.text-center:has(> div > ins.adsbygoogle)
 smailpro.com##.min-h-ads
