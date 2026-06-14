@@ -42605,6 +42605,9 @@ content-loader.com,css-load.com,html-load.com,img-load.com#$?#html:not(:has(> he
 ##div[class][style="min-height:180px;"]:empty
 ##div[class][style="min-height:250px;margin:0 0 10px;"]
 ##div[class][style^="display: block; width:    100%;"][started]
+##div[class][style^="min-width: 300px; min-height: 250px; color:#fff"]
+##div[class][style^="min-width: 336px; min-height: 280px; color:#fff"]
+##div[class][style^="width:300px; height:250px; color:#fff"]
 ##div[data-google-av-itpl]
 ##div[id^="img_"] > div[id^="img_"][style="width: auto;"]
 ##div[id^="img_"] > div[style$="text-decoration:none;width:300px;"]
@@ -42669,13 +42672,12 @@ content-loader.com,css-load.com,html-load.com,img-load.com#$?#html:not(:has(> he
 ##div[id][style^="min-width: 300px; min-height: 250px"]
 ##div[id][style^="min-width: 728px; min-height: 90px"]
 ##div[id][style^="width:    1"][style$="height:    90px;"]
-##div[id][style^="width:    3"][style*="height:    1"]
-##div[id][style^="width:    375px; height:    3"]
-##div[id][style^="width:    375px; margin-left: 0px !important; height:    "]
+##div[id][style^="width:    3"][style*="height:    "]
 ##div[id][style^="width:   "][style$="overflow:hidden"]
 ##div[id][style^="width:   "][style$="overflow: hidden;"]
 ##div[id][style="border: 0pt; max-height: none !important; max-width: 375px !important; padding: 0px !important; width: 375px !important;"]
 ##div[id][style="max-height: 180px; text-align: center; margin: 0px auto; display: block;"]
+##div[id][style="min-width: 320px; min-height: 50px;"]
 ##div[id][style="width:    auto;"]
 ##div[id][style="width: 375px; height: 667px; background-color: transparent;"]
 ##div[id][style="width: 728px; height: 90px;"]
@@ -42689,6 +42691,7 @@ content-loader.com,css-load.com,html-load.com,img-load.com#$?#html:not(:has(> he
 ##div[style*="left: 0px; z-index: 1000000000"] > div > div[id^="img_"]
 ##div[style="display:inline"][class^="img_"] > div[style="display:flex;"]
 ##div[style^="bottom:0;right:0;width:300px;height:250px;background:initial!important;"]
+##div[style^="left:0px;top:0px;width:   100%;height:   100%"] + div[class][style="display:inline"]
 ##div[style^="overflow: hidden; width:    100%; height:    1"]
 ##div[style^="position:absolute;left:0px;"] + div[class^="img_"]
 ##div[style^="position:absolute;"] > div[id^="img_"]
@@ -63337,7 +63340,7 @@ khaddavi.net#%#//scriptlet('set-constant', 'ads', 'emptyObj')
 ! A&E Television Networks, LLC
 ! TODO: replace JS rule by #%#//scriptlet('google-ima3-dai') when it will be available and split rule for "A&E Television Networks" and rest
 vix.com,play.fyi.tv,play.history.com,play.aetv.com#%#//scriptlet('prevent-element-src-loading', 'script', 'imasdk.googleapis.com/js/sdkloader/ima3_dai.js')
-vix.com,sbs.com.au,10.com.au,news4jax.com,sbtnews.sbt.com.br,paramountplus.com,play.fyi.tv,play.history.com,play.aetv.com#%#function GoogleIma3Dai(){const t=t=>"object"==typeof t&&null!==t,e=e=>{if(!t(e))return{};const s={},i=Object.keys(e);for(let t=0;t<i.length;t+=1){const o=i[t];s[o]=String(e[o])}return s},s=t=>"string"==typeof t&&t.length>0?t:null,i=t=>{t.listeners=new Map},o=t=>{if("string"==typeof t)return[t];if(!Array.isArray(t))return[];const e=[];for(let s=0;s<t.length;s+=1){const i=t[s];"string"==typeof i&&e.push(i)}return e},n=(s,i)=>{s.adTagParameters={},s.apiKey=null,s.authToken=null,s.format="hls",s.networkCode=null,s.omidAccessModeRules=null,s.streamActivityMonitorId=null,s.ui={custom:null},t(i)&&Object.assign(s,i),s.adTagParameters=e(s.adTagParameters),s.ui=(e=>{if(!t(e))return{custom:null};const s=Object.assign({custom:null},e);return s.custom=t(s.custom)?s.custom:null,s})(s.ui),"string"==typeof s.format&&0!==s.format.length||(s.format="hls")},r=(t,e)=>{n(t,e),t.customAssetKey="string"==typeof t.customAssetKey?t.customAssetKey:""},a=function(){i(this)};a.prototype.addEventListener=function(t,e){if("function"!=typeof e)return;const s=o(t);for(let t=0;t<s.length;t+=1){const i=s[t];this.listeners.has(i)||this.listeners.set(i,new Set);const o=this.listeners.get(i);o&&o.add(e)}},a.prototype.removeEventListener=function(t,e){if("function"!=typeof e)return;const s=o(t);for(let t=0;t<s.length;t+=1){const i=this.listeners.get(s[t]);i&&i.delete(e)}},a.prototype.dispatchEvent=function(t){const e=this.listeners.get(t.type);if(e)for(const s of Array.from(e))try{s(t)}catch(t){logMessage(source,t)}};const c=function(t){n(this,t)};c.StreamFormat={DASH:"dash",HLS:"hls"};const u=function(t){n(this,t),this.assetKey="string"==typeof this.assetKey?this.assetKey:""};Object.setPrototypeOf(u.prototype,c.prototype);const h=function(t){r(this,t)};Object.setPrototypeOf(h.prototype,c.prototype);const l=function(e){r(this,e),this.liveStreamEventId="string"==typeof this.liveStreamEventId?this.liveStreamEventId:"",this.oAuthToken="string"==typeof this.oAuthToken?this.oAuthToken:null,this.projectNumber="string"==typeof this.projectNumber?this.projectNumber:null,this.region="string"==typeof this.region?this.region:null,this.videoStitcherSessionOptions=t(this.videoStitcherSessionOptions)?this.videoStitcherSessionOptions:null};Object.setPrototypeOf(l.prototype,h.prototype);const p=function(e){n(this,e),this.adTagUrl="string"==typeof this.adTagUrl?this.adTagUrl:"",this.contentSourceUrl="string"==typeof this.contentSourceUrl?this.contentSourceUrl:"",this.oAuthToken="string"==typeof this.oAuthToken?this.oAuthToken:null,this.projectNumber="string"==typeof this.projectNumber?this.projectNumber:null,this.region="string"==typeof this.region?this.region:null,this.videoStitcherSessionOptions=t(this.videoStitcherSessionOptions)?this.videoStitcherSessionOptions:null,this.vodConfigId="string"==typeof this.vodConfigId?this.vodConfigId:""};Object.setPrototypeOf(p.prototype,c.prototype);const d=function(t){n(this,t),this.contentSourceId="string"==typeof this.contentSourceId?this.contentSourceId:"",this.videoId="string"==typeof this.videoId?this.videoId:""};Object.setPrototypeOf(d.prototype,c.prototype);const f=function(e){this.adPeriodData=null,this.adProgressData=null,this.cuepoints=[],this.errorMessage=null,this.manifestFormat="HLS",this.streamId=null,this.subtitles=[],this.url="",t(e)&&Object.assign(this,e)},m=function(t,e,s){this.type=t,this.streamData=e||new f,this.ad=s||null};m.Type={AD_BREAK_ENDED:"adBreakEnded",AD_BREAK_STARTED:"adBreakStarted",AD_PERIOD_ENDED:"adPeriodEnded",AD_PERIOD_STARTED:"adPeriodStarted",AD_PROGRESS:"adProgress",CLICK:"click",COMPLETE:"complete",CUEPOINTS_CHANGED:"cuepointsChanged",ERROR:"error",FIRST_QUARTILE:"firstquartile",HIDE_AD_UI:"hideAdUi",LOADED:"loaded",MIDPOINT:"midpoint",PAUSED:"paused",RESUMED:"resumed",SHOW_AD_UI:"showAdUi",SKIPPABLE_STATE_CHANGED:"skippableStateChanged",SKIPPED:"skip",STARTED:"started",STREAM_INITIALIZED:"streamInitialized",THIRD_QUARTILE:"thirdquartile",VIDEO_CLICKED:"videoClicked"},m.prototype.getAd=function(){return this.ad},m.prototype.getStreamData=function(){return this.streamData};const g=function(){this.locale="en"};g.prototype.getLocale=function(){return this.locale},g.prototype.setLocale=function(t){"string"==typeof t&&t.length>0&&(this.locale=t)};const y={EXTERNAL:"external",NOT_SUPPORTED:"notSupported"},S=function(e){this.altText="",this.height=0,this.url="",this.width=0,t(e)&&Object.assign(this,e),this.altText=s(this.altText)||"",this.height="number"==typeof this.height?this.height:0,this.url=s(this.url)||"",this.width="number"==typeof this.width?this.width:0},T=function(e){if(this.clickable=!1,this.required=!1,t(e)&&Object.assign(this,e),this.clickable=Boolean(this.clickable),this.required=Boolean(this.required),Array.isArray(this.imageVariants)){const t=[];for(let e=0;e<this.imageVariants.length;e+=1)t.push(new S(this.imageVariants[e]));this.imageVariants=t}};T.UiImage=S;const E=function(e){this.aboutThisAdSupport=!1,this.clickThroughNavigation=y.NOT_SUPPORTED,this.skippableSupport=!1,t(e)&&Object.assign(this,e),this.aboutThisAdSupport=Boolean(this.aboutThisAdSupport),this.clickThroughNavigation=this.clickThroughNavigation===y.EXTERNAL?y.EXTERNAL:y.NOT_SUPPORTED,this.skippableSupport=Boolean(this.skippableSupport)};E.ClickThroughNavigation=y;const I=new WeakMap,A=function(e){I.set(this,t(e)?e:{})};A.prototype.onClick=function(t,e){const s=I.get(this);s&&"function"==typeof s.onClick&&s.onClick(t,e)},A.prototype.setVisibleElements=function(t){const e=I.get(this);e&&"function"==typeof e.setVisibleElements&&e.setVisibleElements(t)},A.prototype.getConfig=function(){const t=I.get(this);if(!t||"function"!=typeof t.getConfig)return new Map;const e=t.getConfig();return e instanceof Map?e:new Map},A.UiData=T,A.UiKey={ABOUT_THIS_AD_FALLBACK_IMAGE:"aboutThisAdFallbackImage",ABOUT_THIS_AD_ICON:"aboutThisAdIcon",AD_TITLE:"adTitle",ATTRIBUTION:"attribution",AUTHOR_ICON:"authorIcon",AUTHOR_TITLE:"authorTitle",CALL_TO_ACTION:"callToAction",PRE_SKIP:"preSkip",SKIP_BUTTON:"skipButton",VIDEO_OVERLAY:"videoOverlay"},A.UiOptions=E;const v=new WeakMap,O=function(){v.set(this,{})};O.prototype.getFeatureFlags=function(){return(t=>{const e=v.get(t);if(e)return e;const s={};return v.set(t,s),s})(this)},O.prototype.setFeatureFlags=function(t){v.set(this,Object.assign({},t))};const D=t=>{const e=t;return"string"==typeof e.assetKey&&e.assetKey.length>0},b=t=>{const e=t;return"string"==typeof e.networkCode&&e.networkCode.length>0&&"string"==typeof e.customAssetKey&&e.customAssetKey.length>0},k=t=>{const e=t;return"string"==typeof e.contentSourceId&&e.contentSourceId.length>0&&"string"==typeof e.videoId&&e.videoId.length>0},R=t=>{const e=t,s=t,i=t,o=t;return"string"==typeof i.vodConfigId&&i.vodConfigId.length>0?`mock-video-stitcher-vod-${i.vodConfigId}`:"string"==typeof i.contentSourceUrl&&i.contentSourceUrl.length>0?"mock-video-stitcher-vod":"string"==typeof s.liveStreamEventId&&s.liveStreamEventId.length>0?`mock-video-stitcher-live-${s.liveStreamEventId}`:"string"==typeof e.assetKey&&e.assetKey.length>0?`mock-live-${e.assetKey}`:"string"==typeof o.videoId&&o.videoId.length>0?`mock-vod-${o.videoId}`:"mock-stream"},_=t=>"string"==typeof t.format&&"dash"===t.format.toLowerCase()?"DASH":"HLS",w=(e,s,i,o)=>{const n=new f({cuepoints:s.slice(),errorMessage:i,manifestFormat:_(e),streamId:R(e),url:""});return t(o)&&Object.assign(n,o),n},U=(t,e)=>{const s=Object.keys(e.adTagParameters);for(let i=0;i<s.length;i+=1){const o=s[i];t.searchParams.set(o,e.adTagParameters[o])}e.apiKey&&t.searchParams.set("api-key",e.apiKey),e.authToken&&t.searchParams.set("auth-token",e.authToken),e.streamActivityMonitorId&&t.searchParams.set("dai-sam-id",e.streamActivityMonitorId)},P=(t,e)=>{const s=new URL(`${e}/ssai/event/${t.assetKey}/streams`);return U(s,t),s.toString()},C=(t,e)=>{const s=new URL(`${e}/ssai/pods/api/v1/network/${t.networkCode}/custom_asset/${t.customAssetKey}/stream`),i="dash"===t.format.toLowerCase()?"dash":"hls";return U(s,t),s.searchParams.set("manifest-type",i),s.toString()},L=(t,e)=>{const s="dash"===t.format.toLowerCase()?"dash":"hls",i=new URL(`${e}/ondemand/${s}/content/${t.contentSourceId}/vid/${t.videoId}/streams`);return U(i,t),i.toString()},M="https://dai.google.com",K="https://pubads.g.doubleclick.net",N=(t,e,i)=>{const o=s(i.pod_manifest_url)||s(i.podManifestUrl)||"",n=s(i.stream_id)||s(i.streamId),r=s(i.stream_manifest)||s(i.streamUrl)||o||"",a=(t=>s(t.errorMessage)||s(t.error_message))(i),c=r.length>0||null!==n&&n.length>0,u=a||(c?null:"Stream initialization response missing stream URL"),h=s(i.manifest_format)||s(i.manifestFormat)||_(t),l=n||R(t),p=Array.isArray(i.subtitles)?i.subtitles:[];return w(t,e,u,{manifestFormat:h,podManifestUrl:o,pod_manifest_url:o,streamId:l,subtitles:p,url:r})},j=t=>{(t=>{t.adUiElement&&(t.adUiElement.style.display="none")})(t),(t=>{t.videoElement&&!t.videoElement.controls&&(t.videoElement.controls=!0)})(t)},q=function(t,e,s){i(this),this.videoElement=t||null,this.adUiElement=e||null,this.uiSettings=s||new g,this.clickElement=e||null,this.streamData=new f,this.streamMonitor={},this.streamRequest=null,this.cuepoints=[],this.lastMetadata=null,this.lastTimedMetadata=null};Object.setPrototypeOf(q.prototype,a.prototype),q.prototype.contentTimeForStreamTime=function(t){return"number"==typeof t?t:0},q.prototype.destroy=function(){this.reset()},q.prototype.focus=function(){const t=this.clickElement;if(t&&"function"==typeof t.focus)try{t.focus()}catch(t){logMessage(source,t)}},q.prototype.getAdSkippableState=function(){return!0},q.prototype.getStreamData=function(){return this.streamData},q.prototype.loadStreamMetadata=function(){j(this),this.dispatchEvent(new m(m.Type.LOADED,this.streamData))},q.prototype.onTimedMetadata=function(t){this.lastTimedMetadata=t},q.prototype.previousCuePointForStreamTime=function(t){let e=null;for(let s=0;s<this.cuepoints.length;s+=1){const i=this.cuepoints[s];"number"==typeof i.start&&(i.start<=t&&(e=i))}return e},q.prototype.processMetadata=function(t,e,s){this.lastMetadata={data:e,timestamp:s,type:t}},q.prototype.replaceAdTagParameters=function(t){this.streamRequest||(this.streamRequest=new c),this.streamRequest.adTagParameters=e(t)},q.prototype.requestStream=function(e){const s=(e=>{if(e instanceof c)return e;if(t(e)){if("string"==typeof e.liveStreamEventId)return new l(e);if("string"==typeof e.contentSourceUrl||"string"==typeof e.vodConfigId||"string"==typeof e.adTagUrl)return new p(e);if("string"==typeof e.customAssetKey)return new h(e);if("string"==typeof e.assetKey)return new u(e);if("string"==typeof e.contentSourceId||"string"==typeof e.videoId)return new d(e)}return new c})(e);this.streamRequest=s;const i=(t,e)=>{var s;this.streamData=e,(t=>t===m.Type.LOADED||t===m.Type.STREAM_INITIALIZED)(t)&&j(this),s=()=>{this.dispatchEvent(new m(m.Type.STREAM_INITIALIZED,e)),this.dispatchEvent(new m(t,e))},"function"!=typeof requestAnimationFrame?setTimeout(s,0):requestAnimationFrame(s)};if(!(t=>D(t)||b(t)||(t=>{const e=t;return"string"==typeof e.liveStreamEventId&&e.liveStreamEventId.length>0})(t)||(t=>{const e=t,s="string"==typeof e.contentSourceUrl&&e.contentSourceUrl.length>0,i="string"==typeof e.vodConfigId&&e.vodConfigId.length>0;return s||i})(t)||k(t))(s))return void i(m.Type.ERROR,w(s,this.cuepoints,"Missing stream request identifiers"));const o=(t=>b(t)?[C(t,M),C(t,K)]:D(t)?[P(t,M),P(t,K)]:k(t)?[L(t,M),L(t,K)]:[])(s);if(o.length>0){const e=s,n=async s=>{try{const n=await fetch(o[s],{method:"POST",credentials:"include"}),r=await(async e=>{const s=e;if(s&&!1===s.ok)throw new Error(`Stream initialization failed with status ${String(s.status||0)}`);if(s&&"function"==typeof s.json){const e=await s.json();return t(e)?e:{}}return t(e)?e:{}})(n);if(this.streamRequest!==e)return;const a=N(e,this.cuepoints,r),c=a.errorMessage?m.Type.ERROR:m.Type.LOADED;i(c,a)}catch(r){if(this.streamRequest!==e)return;if(s+1<o.length)return void await n(s+1);i(m.Type.ERROR,w(e,this.cuepoints,(e=>t(e)&&"string"==typeof e.message&&e.message.length>0?e.message:"Stream initialization failed")(r)))}};n(0)}else i(m.Type.LOADED,w(s,this.cuepoints,null))},q.prototype.reset=function(){this.cuepoints=[],this.lastMetadata=null,this.lastTimedMetadata=null,this.streamData=new f,this.streamRequest=null},q.prototype.setClickElement=function(t){this.adUiElement||(this.clickElement=t)},q.prototype.streamTimeForContentTime=function(t){return"number"==typeof t?t:0};const B={customUi:{UiOptions:function(e){this.aboutThisAdSupport=!1,this.skippableSupport=!1,t(e)&&Object.assign(this,e),this.aboutThisAdSupport=Boolean(this.aboutThisAdSupport),this.skippableSupport=Boolean(this.skippableSupport)}},DaiSdkSettings:new O,LiveStreamRequest:u,PodStreamRequest:h,StreamData:f,StreamEvent:m,StreamManager:q,StreamRequest:c,ui:A,UiSettings:g,VideoStitcherLiveStreamRequest:l,VideoStitcherVodStreamRequest:p,VODStreamRequest:d},F=window,H=t(F.google)?F.google:{};t(F.google)||(F.google=H);const V=t(H.ima)?H.ima:{};H.ima=V;const $=t(V.dai)?V.dai:{};V.dai=$;const G=t($.api)?$.api:{};$.api=G,Object.assign(G,B)}GoogleIma3Dai();
+vix.com,sbs.com.au,10.com.au,news4jax.com,sbt.com.br,paramountplus.com,play.fyi.tv,play.history.com,play.aetv.com#%#function GoogleIma3Dai(){const t=t=>"object"==typeof t&&null!==t,e=e=>{if(!t(e))return{};const s={},i=Object.keys(e);for(let t=0;t<i.length;t+=1){const o=i[t];s[o]=String(e[o])}return s},s=t=>"string"==typeof t&&t.length>0?t:null,i=t=>{t.listeners=new Map},o=t=>{if("string"==typeof t)return[t];if(!Array.isArray(t))return[];const e=[];for(let s=0;s<t.length;s+=1){const i=t[s];"string"==typeof i&&e.push(i)}return e},n=(s,i)=>{s.adTagParameters={},s.apiKey=null,s.authToken=null,s.format="hls",s.networkCode=null,s.omidAccessModeRules=null,s.streamActivityMonitorId=null,s.ui={custom:null},t(i)&&Object.assign(s,i),s.adTagParameters=e(s.adTagParameters),s.ui=(e=>{if(!t(e))return{custom:null};const s=Object.assign({custom:null},e);return s.custom=t(s.custom)?s.custom:null,s})(s.ui),"string"==typeof s.format&&0!==s.format.length||(s.format="hls")},r=(t,e)=>{n(t,e),t.customAssetKey="string"==typeof t.customAssetKey?t.customAssetKey:""},a=function(){i(this)};a.prototype.addEventListener=function(t,e){if("function"!=typeof e)return;const s=o(t);for(let t=0;t<s.length;t+=1){const i=s[t];this.listeners.has(i)||this.listeners.set(i,new Set);const o=this.listeners.get(i);o&&o.add(e)}},a.prototype.removeEventListener=function(t,e){if("function"!=typeof e)return;const s=o(t);for(let t=0;t<s.length;t+=1){const i=this.listeners.get(s[t]);i&&i.delete(e)}},a.prototype.dispatchEvent=function(t){const e=this.listeners.get(t.type);if(e)for(const s of Array.from(e))try{s(t)}catch(t){logMessage(source,t)}};const c=function(t){n(this,t)};c.StreamFormat={DASH:"dash",HLS:"hls"};const u=function(t){n(this,t),this.assetKey="string"==typeof this.assetKey?this.assetKey:""};Object.setPrototypeOf(u.prototype,c.prototype);const h=function(t){r(this,t)};Object.setPrototypeOf(h.prototype,c.prototype);const l=function(e){r(this,e),this.liveStreamEventId="string"==typeof this.liveStreamEventId?this.liveStreamEventId:"",this.oAuthToken="string"==typeof this.oAuthToken?this.oAuthToken:null,this.projectNumber="string"==typeof this.projectNumber?this.projectNumber:null,this.region="string"==typeof this.region?this.region:null,this.videoStitcherSessionOptions=t(this.videoStitcherSessionOptions)?this.videoStitcherSessionOptions:null};Object.setPrototypeOf(l.prototype,h.prototype);const p=function(e){n(this,e),this.adTagUrl="string"==typeof this.adTagUrl?this.adTagUrl:"",this.contentSourceUrl="string"==typeof this.contentSourceUrl?this.contentSourceUrl:"",this.oAuthToken="string"==typeof this.oAuthToken?this.oAuthToken:null,this.projectNumber="string"==typeof this.projectNumber?this.projectNumber:null,this.region="string"==typeof this.region?this.region:null,this.videoStitcherSessionOptions=t(this.videoStitcherSessionOptions)?this.videoStitcherSessionOptions:null,this.vodConfigId="string"==typeof this.vodConfigId?this.vodConfigId:""};Object.setPrototypeOf(p.prototype,c.prototype);const d=function(t){n(this,t),this.contentSourceId="string"==typeof this.contentSourceId?this.contentSourceId:"",this.videoId="string"==typeof this.videoId?this.videoId:""};Object.setPrototypeOf(d.prototype,c.prototype);const f=function(e){this.adPeriodData=null,this.adProgressData=null,this.cuepoints=[],this.errorMessage=null,this.manifestFormat="HLS",this.streamId=null,this.subtitles=[],this.url="",t(e)&&Object.assign(this,e)},m=function(t,e,s){this.type=t,this.streamData=e||new f,this.ad=s||null};m.Type={AD_BREAK_ENDED:"adBreakEnded",AD_BREAK_STARTED:"adBreakStarted",AD_PERIOD_ENDED:"adPeriodEnded",AD_PERIOD_STARTED:"adPeriodStarted",AD_PROGRESS:"adProgress",CLICK:"click",COMPLETE:"complete",CUEPOINTS_CHANGED:"cuepointsChanged",ERROR:"error",FIRST_QUARTILE:"firstquartile",HIDE_AD_UI:"hideAdUi",LOADED:"loaded",MIDPOINT:"midpoint",PAUSED:"paused",RESUMED:"resumed",SHOW_AD_UI:"showAdUi",SKIPPABLE_STATE_CHANGED:"skippableStateChanged",SKIPPED:"skip",STARTED:"started",STREAM_INITIALIZED:"streamInitialized",THIRD_QUARTILE:"thirdquartile",VIDEO_CLICKED:"videoClicked"},m.prototype.getAd=function(){return this.ad},m.prototype.getStreamData=function(){return this.streamData};const g=function(){this.locale="en"};g.prototype.getLocale=function(){return this.locale},g.prototype.setLocale=function(t){"string"==typeof t&&t.length>0&&(this.locale=t)};const y={EXTERNAL:"external",NOT_SUPPORTED:"notSupported"},S=function(e){this.altText="",this.height=0,this.url="",this.width=0,t(e)&&Object.assign(this,e),this.altText=s(this.altText)||"",this.height="number"==typeof this.height?this.height:0,this.url=s(this.url)||"",this.width="number"==typeof this.width?this.width:0},T=function(e){if(this.clickable=!1,this.required=!1,t(e)&&Object.assign(this,e),this.clickable=Boolean(this.clickable),this.required=Boolean(this.required),Array.isArray(this.imageVariants)){const t=[];for(let e=0;e<this.imageVariants.length;e+=1)t.push(new S(this.imageVariants[e]));this.imageVariants=t}};T.UiImage=S;const E=function(e){this.aboutThisAdSupport=!1,this.clickThroughNavigation=y.NOT_SUPPORTED,this.skippableSupport=!1,t(e)&&Object.assign(this,e),this.aboutThisAdSupport=Boolean(this.aboutThisAdSupport),this.clickThroughNavigation=this.clickThroughNavigation===y.EXTERNAL?y.EXTERNAL:y.NOT_SUPPORTED,this.skippableSupport=Boolean(this.skippableSupport)};E.ClickThroughNavigation=y;const I=new WeakMap,A=function(e){I.set(this,t(e)?e:{})};A.prototype.onClick=function(t,e){const s=I.get(this);s&&"function"==typeof s.onClick&&s.onClick(t,e)},A.prototype.setVisibleElements=function(t){const e=I.get(this);e&&"function"==typeof e.setVisibleElements&&e.setVisibleElements(t)},A.prototype.getConfig=function(){const t=I.get(this);if(!t||"function"!=typeof t.getConfig)return new Map;const e=t.getConfig();return e instanceof Map?e:new Map},A.UiData=T,A.UiKey={ABOUT_THIS_AD_FALLBACK_IMAGE:"aboutThisAdFallbackImage",ABOUT_THIS_AD_ICON:"aboutThisAdIcon",AD_TITLE:"adTitle",ATTRIBUTION:"attribution",AUTHOR_ICON:"authorIcon",AUTHOR_TITLE:"authorTitle",CALL_TO_ACTION:"callToAction",PRE_SKIP:"preSkip",SKIP_BUTTON:"skipButton",VIDEO_OVERLAY:"videoOverlay"},A.UiOptions=E;const v=new WeakMap,O=function(){v.set(this,{})};O.prototype.getFeatureFlags=function(){return(t=>{const e=v.get(t);if(e)return e;const s={};return v.set(t,s),s})(this)},O.prototype.setFeatureFlags=function(t){v.set(this,Object.assign({},t))};const D=t=>{const e=t;return"string"==typeof e.assetKey&&e.assetKey.length>0},b=t=>{const e=t;return"string"==typeof e.networkCode&&e.networkCode.length>0&&"string"==typeof e.customAssetKey&&e.customAssetKey.length>0},k=t=>{const e=t;return"string"==typeof e.contentSourceId&&e.contentSourceId.length>0&&"string"==typeof e.videoId&&e.videoId.length>0},R=t=>{const e=t,s=t,i=t,o=t;return"string"==typeof i.vodConfigId&&i.vodConfigId.length>0?`mock-video-stitcher-vod-${i.vodConfigId}`:"string"==typeof i.contentSourceUrl&&i.contentSourceUrl.length>0?"mock-video-stitcher-vod":"string"==typeof s.liveStreamEventId&&s.liveStreamEventId.length>0?`mock-video-stitcher-live-${s.liveStreamEventId}`:"string"==typeof e.assetKey&&e.assetKey.length>0?`mock-live-${e.assetKey}`:"string"==typeof o.videoId&&o.videoId.length>0?`mock-vod-${o.videoId}`:"mock-stream"},_=t=>"string"==typeof t.format&&"dash"===t.format.toLowerCase()?"DASH":"HLS",w=(e,s,i,o)=>{const n=new f({cuepoints:s.slice(),errorMessage:i,manifestFormat:_(e),streamId:R(e),url:""});return t(o)&&Object.assign(n,o),n},U=(t,e)=>{const s=Object.keys(e.adTagParameters);for(let i=0;i<s.length;i+=1){const o=s[i];t.searchParams.set(o,e.adTagParameters[o])}e.apiKey&&t.searchParams.set("api-key",e.apiKey),e.authToken&&t.searchParams.set("auth-token",e.authToken),e.streamActivityMonitorId&&t.searchParams.set("dai-sam-id",e.streamActivityMonitorId)},P=(t,e)=>{const s=new URL(`${e}/ssai/event/${t.assetKey}/streams`);return U(s,t),s.toString()},C=(t,e)=>{const s=new URL(`${e}/ssai/pods/api/v1/network/${t.networkCode}/custom_asset/${t.customAssetKey}/stream`),i="dash"===t.format.toLowerCase()?"dash":"hls";return U(s,t),s.searchParams.set("manifest-type",i),s.toString()},L=(t,e)=>{const s="dash"===t.format.toLowerCase()?"dash":"hls",i=new URL(`${e}/ondemand/${s}/content/${t.contentSourceId}/vid/${t.videoId}/streams`);return U(i,t),i.toString()},M="https://dai.google.com",K="https://pubads.g.doubleclick.net",N=(t,e,i)=>{const o=s(i.pod_manifest_url)||s(i.podManifestUrl)||"",n=s(i.stream_id)||s(i.streamId),r=s(i.stream_manifest)||s(i.streamUrl)||o||"",a=(t=>s(t.errorMessage)||s(t.error_message))(i),c=r.length>0||null!==n&&n.length>0,u=a||(c?null:"Stream initialization response missing stream URL"),h=s(i.manifest_format)||s(i.manifestFormat)||_(t),l=n||R(t),p=Array.isArray(i.subtitles)?i.subtitles:[];return w(t,e,u,{manifestFormat:h,podManifestUrl:o,pod_manifest_url:o,streamId:l,subtitles:p,url:r})},j=t=>{(t=>{t.adUiElement&&(t.adUiElement.style.display="none")})(t),(t=>{t.videoElement&&!t.videoElement.controls&&(t.videoElement.controls=!0)})(t)},q=function(t,e,s){i(this),this.videoElement=t||null,this.adUiElement=e||null,this.uiSettings=s||new g,this.clickElement=e||null,this.streamData=new f,this.streamMonitor={},this.streamRequest=null,this.cuepoints=[],this.lastMetadata=null,this.lastTimedMetadata=null};Object.setPrototypeOf(q.prototype,a.prototype),q.prototype.contentTimeForStreamTime=function(t){return"number"==typeof t?t:0},q.prototype.destroy=function(){this.reset()},q.prototype.focus=function(){const t=this.clickElement;if(t&&"function"==typeof t.focus)try{t.focus()}catch(t){logMessage(source,t)}},q.prototype.getAdSkippableState=function(){return!0},q.prototype.getStreamData=function(){return this.streamData},q.prototype.loadStreamMetadata=function(){j(this),this.dispatchEvent(new m(m.Type.LOADED,this.streamData))},q.prototype.onTimedMetadata=function(t){this.lastTimedMetadata=t},q.prototype.previousCuePointForStreamTime=function(t){let e=null;for(let s=0;s<this.cuepoints.length;s+=1){const i=this.cuepoints[s];"number"==typeof i.start&&(i.start<=t&&(e=i))}return e},q.prototype.processMetadata=function(t,e,s){this.lastMetadata={data:e,timestamp:s,type:t}},q.prototype.replaceAdTagParameters=function(t){this.streamRequest||(this.streamRequest=new c),this.streamRequest.adTagParameters=e(t)},q.prototype.requestStream=function(e){const s=(e=>{if(e instanceof c)return e;if(t(e)){if("string"==typeof e.liveStreamEventId)return new l(e);if("string"==typeof e.contentSourceUrl||"string"==typeof e.vodConfigId||"string"==typeof e.adTagUrl)return new p(e);if("string"==typeof e.customAssetKey)return new h(e);if("string"==typeof e.assetKey)return new u(e);if("string"==typeof e.contentSourceId||"string"==typeof e.videoId)return new d(e)}return new c})(e);this.streamRequest=s;const i=(t,e)=>{var s;this.streamData=e,(t=>t===m.Type.LOADED||t===m.Type.STREAM_INITIALIZED)(t)&&j(this),s=()=>{this.dispatchEvent(new m(m.Type.STREAM_INITIALIZED,e)),this.dispatchEvent(new m(t,e))},"function"!=typeof requestAnimationFrame?setTimeout(s,0):requestAnimationFrame(s)};if(!(t=>D(t)||b(t)||(t=>{const e=t;return"string"==typeof e.liveStreamEventId&&e.liveStreamEventId.length>0})(t)||(t=>{const e=t,s="string"==typeof e.contentSourceUrl&&e.contentSourceUrl.length>0,i="string"==typeof e.vodConfigId&&e.vodConfigId.length>0;return s||i})(t)||k(t))(s))return void i(m.Type.ERROR,w(s,this.cuepoints,"Missing stream request identifiers"));const o=(t=>b(t)?[C(t,M),C(t,K)]:D(t)?[P(t,M),P(t,K)]:k(t)?[L(t,M),L(t,K)]:[])(s);if(o.length>0){const e=s,n=async s=>{try{const n=await fetch(o[s],{method:"POST",credentials:"include"}),r=await(async e=>{const s=e;if(s&&!1===s.ok)throw new Error(`Stream initialization failed with status ${String(s.status||0)}`);if(s&&"function"==typeof s.json){const e=await s.json();return t(e)?e:{}}return t(e)?e:{}})(n);if(this.streamRequest!==e)return;const a=N(e,this.cuepoints,r),c=a.errorMessage?m.Type.ERROR:m.Type.LOADED;i(c,a)}catch(r){if(this.streamRequest!==e)return;if(s+1<o.length)return void await n(s+1);i(m.Type.ERROR,w(e,this.cuepoints,(e=>t(e)&&"string"==typeof e.message&&e.message.length>0?e.message:"Stream initialization failed")(r)))}};n(0)}else i(m.Type.LOADED,w(s,this.cuepoints,null))},q.prototype.reset=function(){this.cuepoints=[],this.lastMetadata=null,this.lastTimedMetadata=null,this.streamData=new f,this.streamRequest=null},q.prototype.setClickElement=function(t){this.adUiElement||(this.clickElement=t)},q.prototype.streamTimeForContentTime=function(t){return"number"==typeof t?t:0};const B={customUi:{UiOptions:function(e){this.aboutThisAdSupport=!1,this.skippableSupport=!1,t(e)&&Object.assign(this,e),this.aboutThisAdSupport=Boolean(this.aboutThisAdSupport),this.skippableSupport=Boolean(this.skippableSupport)}},DaiSdkSettings:new O,LiveStreamRequest:u,PodStreamRequest:h,StreamData:f,StreamEvent:m,StreamManager:q,StreamRequest:c,ui:A,UiSettings:g,VideoStitcherLiveStreamRequest:l,VideoStitcherVodStreamRequest:p,VODStreamRequest:d},F=window,H=t(F.google)?F.google:{};t(F.google)||(F.google=H);const V=t(H.ima)?H.ima:{};H.ima=V;const $=t(V.dai)?V.dai:{};V.dai=$;const G=t($.api)?$.api:{};$.api=G,Object.assign(G,B)}GoogleIma3Dai();
 !
 ! AWS MediaTailor SSAI
 watch.shout-tv.com#%#//scriptlet('json-prune', 'streams.*.adUnits.*')
@@ -94329,7 +94332,6 @@ ads.nipr.ac.jp#@##ads-header
 miuithemers.com#@##ads-left
 finvtech.com,herstage.com,sportynew.com,travel13.com#@##ads-wrapper
 mafagames.com,telkomsel.com#@##adsContainer
-video.tv-tokyo.co.jp,zeirishi-web.com#@##adspace
 globalsecurity.org#@##adtop
 ewybory.eu#@##adv-text
 basinnow.com,e-jpccs.jp,oxfordlearnersdictionaries.com#@##advertise
@@ -95059,6 +95061,7 @@ browsershots.org#@#.advert_area
 ||2b91f59493.com^
 ||2ba0f6361c.com^
 ||2bilxr9lu9pr1w3ctofg4xrgje9r.cfd^
+||2bm37r6cgeq5r32y3j.cfd^
 ||2bps53igop02.com^
 ||2bwq4gig2n5o9hov74im5.rest^
 ||2c2iyxgwp64t4t9b8mhkm.cfd^
@@ -95934,6 +95937,7 @@ browsershots.org#@#.advert_area
 ||8tzh2hi3v38heojitp.cfd^
 ||8ubizi41e1ryjuno.rest^
 ||8v21wql4bf1u51.cfd^
+||8v221hcoqvnx3xj9v26khopt.rest^
 ||8v7btukyz1ix621e9u3u163h.cfd^
 ||8vgyooonopk1oxmz9jvym.cfd^
 ||8vkg7hik3orp62zu.rest^
@@ -96889,6 +96893,7 @@ browsershots.org#@#.advert_area
 ||adsquash.info^
 ||adsquasher.com^
 ||adsquasher.pro^
+||adsratcarp.com^
 ||adsrv.net^
 ||adsrv.wtf^
 ||adstean.com^
@@ -97050,6 +97055,7 @@ browsershots.org#@#.advert_area
 ||aesmdokoo.com^
 ||aespmnbpqhpvu.space^
 ||aesqzfuosgvay.com^
+||aesrfmkkyhlei.online^
 ||aesyahweh.com^
 ||aetvellt.net^
 ||aeuafagezgxjp.online^
@@ -97783,6 +97789,7 @@ browsershots.org#@#.advert_area
 ||amkuayezfbcyp.online^
 ||amlumineona.com^
 ||amlzndgkbicak.store^
+||ammanparulis.qpon^
 ||ammeevilo.com^
 ||ammhmvurnghxn.space^
 ||ammjpimhyon.in^
@@ -98237,6 +98244,7 @@ browsershots.org#@#.advert_area
 ||araneidboruca.com^
 ||arangoclawk.com^
 ||araoyljo.com^
+||ararobafozy.cyou^
 ||arbaalette.cfd^
 ||arbovkqarkm.in^
 ||arbutterfreer.com^
@@ -98253,6 +98261,7 @@ browsershots.org#@#.advert_area
 ||archipelagosaidpre.com^
 ||architectmalicemossy.com^
 ||architecturediscussdifferently.com^
+||archivefrom502.com^
 ||archivescane.com^
 ||archwaypikapleura.cfd^
 ||arcmocbztwfsu.space^
@@ -99047,6 +99056,7 @@ browsershots.org#@#.advert_area
 ||b69b92742d.com^
 ||b6c9c4cf28.com^
 ||b6keq781g7kwl87lupq9.rest^
+||b6w3qq1bo9qo8t5ng2334.cfd^
 ||b70a8e5392.com^
 ||b7360c81c8.com^
 ||b7510.com^
@@ -99145,6 +99155,7 @@ browsershots.org#@#.advert_area
 ||balanicdelversnomarch.cyou^
 ||balasesersatz.com^
 ||balattebutanol.qpon^
+||baldieyengees.cfd^
 ||baleareheaf.qpon^
 ||balersechoers.qpon^
 ||baletingo.com^
@@ -99218,6 +99229,7 @@ browsershots.org#@#.advert_area
 ||barboychimera.com^
 ||barboycreme.com^
 ||barbuannular.cyou^
+||barbuttriplet.cfd^
 ||bardatm.ru^
 ||bardinghuggery.com^
 ||bardishgonifs.cfd^
@@ -99413,6 +99425,7 @@ browsershots.org#@#.advert_area
 ||bdnbziqcmbhnv.space^
 ||bdofwqcksqwtc.space^
 ||bdomygjx.com^
+||bdpfuvidujomw.online^
 ||bdpgjmobltabc.space^
 ||bdrvfuqkgp.com^
 ||bdrxcokcksbbr.store^
@@ -100292,6 +100305,7 @@ browsershots.org#@#.advert_area
 ||bodilysubtractoversight.com^
 ||bodilywondering.com^
 ||bodleanarcho.com^
+||bodockvirent.cfd^
 ||bodragglairsaesop.cyou^
 ||bodtdwiswmmsc.space^
 ||bodybossmotivate.com^
@@ -100597,6 +100611,7 @@ browsershots.org#@#.advert_area
 ||braverybreezebinding.com^
 ||braverycavalryoats.com^
 ||bravotrk.com^
+||brawexstill.shop^
 ||brawledsqueege.cfd^
 ||brawlysenjamb.com^
 ||braxyupsides.shop^
@@ -100652,6 +100667,7 @@ browsershots.org#@#.advert_area
 ||briefwoman.pro^
 ||briersabrupt.qpon^
 ||brigadedelegatesandbox.com^
+||brightcloudridge.com^
 ||brightcoremind.com^
 ||brighteroption.com^
 ||brightestmarriagegrape.com^
@@ -101340,6 +101356,7 @@ browsershots.org#@#.advert_area
 ||caketteanopiaalltud.cyou^
 ||cakinglastjob.qpon^
 ||caklhavidybcgh.com^
+||cakmzschaasdf.space^
 ||cakzbbrjeagxl.online^
 ||calabarminimus.cfd^
 ||calamityfortuneaudio.com^
@@ -101380,6 +101397,7 @@ browsershots.org#@#.advert_area
 ||calumnypaharia.qpon^
 ||calvali.com^
 ||calxespluvine.com^
+||calyxesmailie.cyou^
 ||camaligsnuckkreng.cyou^
 ||camaypsid.qpon^
 ||camelusnightly.qpon^
@@ -101939,6 +101957,7 @@ browsershots.org#@#.advert_area
 ||chaconayautias.qpon^
 ||chaerel.com^
 ||chafesbranialdisa.cyou^
+||chafewettest.qpon^
 ||chagnougroalry.net^
 ||chaibsoacmo.com^
 ||chainads.io^
@@ -101993,6 +102012,7 @@ browsershots.org#@#.advert_area
 ||chasedretzian.cfd^
 ||chaseherbalpasty.com^
 ||chasemodeler.com^
+||chastebrussel.com^
 ||chateaurecalled.com^
 ||chateaurestrictedbriefly.com^
 ||chatotapiocoupled.cyou^
@@ -102057,6 +102077,7 @@ browsershots.org#@#.advert_area
 ||chestgoingpunch.com^
 ||chethgentman.live^
 ||chevalneavil.cyou^
+||chevronmislain.cyou^
 ||chezoams.com^
 ||chfpgcbe.com^
 ||chftwkoiswquf.site^
@@ -102170,6 +102191,7 @@ browsershots.org#@#.advert_area
 ||churchyardlikinglockdown.com^
 ||churnerausubos.shop^
 ||churnsrajasoddsman.qpon^
+||churriplisping.cyou^
 ||chuttieimpious.com^
 ||chwedwbnthnzc.website^
 ||chwgbfkfyfkof.site^
@@ -102700,6 +102722,7 @@ browsershots.org#@#.advert_area
 ||cognatesyringe.com^
 ||cognizancesteepleelevate.com^
 ||cogocs.com^
+||cogonclocher.cfd^
 ||cograilpiaffe.qpon^
 ||cogxnkfudgi.com^
 ||cogzsatyhofvp.online^
@@ -103200,6 +103223,7 @@ browsershots.org#@#.advert_area
 ||courthousecadenceconsiderable.com^
 ||courthousezoological.com^
 ||courtroomestablishedtrauma.com^
+||courtsakra.cfd^
 ||cousinselizareproach.com^
 ||couthlydobber.qpon^
 ||couxiastoved.cfd^
@@ -103473,6 +103497,7 @@ browsershots.org#@#.advert_area
 ||crossoafstollery.qpon^
 ||crosspreferrite.com^
 ||crostyogee.cfd^
+||crotchwanle.cfd^
 ||crouchedmonarch.com^
 ||crowbariranianmanati.cyou^
 ||crowbarrinds.com^
@@ -103643,6 +103668,7 @@ browsershots.org#@#.advert_area
 ||cueistrapport.cyou^
 ||cuevastrck.com^
 ||cueweliqubbvh.space^
+||cuffagible.shop^
 ||cuflfoodbalq.in^
 ||cuinfocottisedikage.cyou^
 ||cuishverty.shop^
@@ -104130,6 +104156,7 @@ browsershots.org#@#.advert_area
 ||datemate.online^
 ||datepleasure.com^
 ||datersfinder.com^
+||daterushnow.com^
 ||dates-fever-zone.com^
 ||dateskeitai.com^
 ||datesnsluts.com^
@@ -104488,6 +104515,7 @@ browsershots.org#@#.advert_area
 ||demihagpareja.qpon^
 ||demimancackles.cyou^
 ||demimanexseclingers.cfd^
+||demiseberriesstranger.com^
 ||demiseskill.com^
 ||democraticexit.com^
 ||democratmachinesucceed.com^
@@ -105663,6 +105691,7 @@ browsershots.org#@#.advert_area
 ||dsdbbqmgpdfnl.space^
 ||dsdbdt.com^
 ||dsderq.com^
+||dsdgtf.com^
 ||dsdkgb.com^
 ||dsdlbu.com^
 ||dsdnhj.com^
@@ -105773,6 +105802,7 @@ browsershots.org#@#.advert_area
 ||dswqea.com^
 ||dswrqh.com^
 ||dsxgwwrkecsxd.online^
+||dsxoij.com^
 ||dsxpzd.com^
 ||dsxtea.com^
 ||dsyaae.com^
@@ -106038,6 +106068,7 @@ browsershots.org#@#.advert_area
 ||dynamicapl.com^
 ||dynamicfibroid.cyou^
 ||dynamics2048.net^
+||dynamics2efficient.com^
 ||dynamics421.com^
 ||dynamics69.com^
 ||dynamics880.net^
@@ -106591,6 +106622,7 @@ browsershots.org#@#.advert_area
 ||eiueayjvitdew.website^
 ||eiugequvqnhjw.online^
 ||eiul28e6jn8vu5r4u4btzy52vmtnj5z8.cfd^
+||eiurcesrxusez.website^
 ||eiwouldlikukemyf.com^
 ||eiwwvprgpeidlsa.com^
 ||eixgdeonnumrp.site^
@@ -107034,6 +107066,7 @@ browsershots.org#@#.advert_area
 ||enteraessoign.cfd^
 ||enteringlacquergiant.com^
 ||enterprises488.net^
+||enterprisestorepository.com^
 ||enterpriseswith102.net^
 ||enterpriseswithmetric.net^
 ||entertainenslave.com^
@@ -107604,6 +107637,7 @@ browsershots.org#@#.advert_area
 ||exameneuscaro.shop^
 ||examplehibernatescientific.com^
 ||exasperatebubblyorthodox.com^
+||exbmlmrewmnd.com^
 ||excafwcwlpevm.site^
 ||excavatedefeatedshudder.com^
 ||excavatenearbywand.com^
@@ -108178,6 +108212,7 @@ browsershots.org#@#.advert_area
 ||fdpmvwlxjszfv.space^
 ||fdpqgljmw.com^
 ||fdqzywhgrvgmo.store^
+||fdswbmxtmgqc.com^
 ||fdxouczcmbwti.store^
 ||fdzppmrptuxpm.site^
 ||fe7qygqi2p2h.com^
@@ -108628,6 +108663,7 @@ browsershots.org#@#.advert_area
 ||fk5lv2qyqoclnk.rest^
 ||fkbaqpqaptiid.site^
 ||fkbbaseodqexz.site^
+||fkblbasqbmxvx.space^
 ||fkbwtoopwg.com^
 ||fkczwsqlpdokj.online^
 ||fkdovrdesrbph.com^
@@ -108680,6 +108716,7 @@ browsershots.org#@#.advert_area
 ||flanfogger.shop^
 ||flanglituus.shop^
 ||flangrowler.shop^
+||flanshygeiancharlet.qpon^
 ||flappetwisket.cyou^
 ||flaprotatewedge.com^
 ||flapsoonerpester.com^
@@ -108958,6 +108995,7 @@ browsershots.org#@#.advert_area
 ||folderappealinformant.com^
 ||foldgun.xyz^
 ||foldingcutleryhelium.com^
+||folilyfaitour.cfd^
 ||foliomimer.qpon^
 ||foliotlatabuddage.qpon^
 ||folkscaravel.qpon^
@@ -109318,6 +109356,7 @@ browsershots.org#@#.advert_area
 ||frjbyduygjwbk.site^
 ||frjnnudnmborf.store^
 ||frjrwixwogqjt.site^
+||frkehycifykyq.site^
 ||frlchpbijbrui.com^
 ||frlywyflnpxrb.online^
 ||frmedredht.com^
@@ -109454,6 +109493,7 @@ browsershots.org#@#.advert_area
 ||ftzblwbirevog.website^
 ||fu-nu-ra.com^
 ||fuaueolb.com^
+||fubsycharqui.cfd^
 ||fucagrdtyo.in^
 ||fuck-ads.vercel.app^
 ||fuck-dating.com^
@@ -109819,6 +109859,7 @@ browsershots.org#@#.advert_area
 ||ganismpro.com^
 ||gankana.com^
 ||gannett.gcion.com^
+||gansellappersskyfte.qpon^
 ||ganserspeans.shop^
 ||gantonarmets.qpon^
 ||gantonjipper.qpon^
@@ -109889,6 +109930,7 @@ browsershots.org#@#.advert_area
 ||gawlvtftnx.com^
 ||gawmuighur.cfd^
 ||gaxkyokrghyts.online^
+||gaxyssprvcejy.site^
 ||gayadpros.com^
 ||gayetypgnttrpoctroy.cfd^
 ||gayhistone.cfd^
@@ -110274,6 +110316,7 @@ browsershots.org#@#.advert_area
 ||ginningconant.com^
 ||ginningsteri.com^
 ||giocyrvdmxgqz.website^
+||giowsljxfbzfu.online^
 ||gipsiesthyrsi.com^
 ||gipsydeceivedepoch.com^
 ||gipsyharryparasite.com^
@@ -110422,6 +110465,7 @@ browsershots.org#@#.advert_area
 ||gleefultable.pro^
 ||gleenplants.com^
 ||gleetyflemishlepanto.qpon^
+||gleipevjyhdrm.space^
 ||glempirteechacm.com^
 ||glenypsyha.com^
 ||glersakr.com^
@@ -110429,6 +110473,7 @@ browsershots.org#@#.advert_area
 ||glfmpqmfgkeuo.website^
 ||glgyxkvmbamoy.website^
 ||glhprfjtbrp.com^
+||glidersovens.cfd^
 ||gligoubsed.com^
 ||glikepulpar.cfd^
 ||glimmercheeringshield.com^
@@ -111979,6 +112024,7 @@ browsershots.org#@#.advert_area
 ||hhocpbwbjlywm.website^
 ||hhounvkxcdj.com^
 ||hhowyijfffxry.online^
+||hhozuwskkzyej.online^
 ||hhqpardpagdgq.website^
 ||hhthgsgnlrwii.website^
 ||hhtteocvkxvph.online^
@@ -112049,6 +112095,7 @@ browsershots.org#@#.advert_area
 ||highwayearningsexpand.com^
 ||higpcebtahfsg.online^
 ||hiicjrmuzltju.online^
+||hiinscgrshtbh.space^
 ||hiiona.com^
 ||hijbogiaodgil.space^
 ||hikdojlbwqqpq.online^
@@ -112153,6 +112200,7 @@ browsershots.org#@#.advert_area
 ||hkguziejl.com^
 ||hkhybjktdvdwt.space^
 ||hkihkoxqjcmmu.online^
+||hkivggtfhotoryh.com^
 ||hkjfukkhwfepo.club^
 ||hkjjdovnjipgd.space^
 ||hkjwazawuwxiy.online^
@@ -112533,6 +112581,7 @@ browsershots.org#@#.advert_area
 ||hqagmyjrm.com^
 ||hqazaazwdnxle.site^
 ||hqbaanqvcscwl.space^
+||hqbdibst.com^
 ||hqbqp46cl99yeh8.rest^
 ||hqdhdyehelnks.online^
 ||hqerddmneojvl.online^
@@ -112570,6 +112619,7 @@ browsershots.org#@#.advert_area
 ||hrawfoyklhfmg.website^
 ||hrbaal0z.xyz^
 ||hrcswcfxhqdff.website^
+||hrdekhozxnoyf.online^
 ||hrfokuusjun.com^
 ||hrfvjmmvlevt.com^
 ||hrheke2bjuc818n7tkvbpczui9b.cfd^
@@ -113749,6 +113799,7 @@ browsershots.org#@#.advert_area
 ||ingratitudealienatedues.com^
 ||ingratitudeworeinstead.com^
 ||ingressfromprocessors.com^
+||ingrowberylsrosales.qpon^
 ||ingrowsquallyajeine.qpon^
 ||ingsandmakingsil.com^
 ||inhabitantparticipation.com^
@@ -114026,6 +114077,7 @@ browsershots.org#@#.advert_area
 ||invoiceboldmansfield.com^
 ||invol.co^
 ||involvementelite.com^
+||involvingparentalducks.com^
 ||inwardabruptly.com^
 ||inwardupsettingcudgel.com^
 ||inweedapili.cyou^
@@ -114304,6 +114356,7 @@ browsershots.org#@#.advert_area
 ||itren.site^
 ||itrigra.ru^
 ||itrustzone.site^
+||itsaqxtw.com^
 ||itseagleswig.com^
 ||itsguiltymistaken.com^
 ||itskiddien.club^
@@ -114832,6 +114885,7 @@ browsershots.org#@#.advert_area
 ||jg43iqqd.xyz^
 ||jgaxcxbbdbsuy.space^
 ||jgbnltrrpotbl.online^
+||jgcakixnbnyng.website^
 ||jge46hwmx9eymzp.cfd^
 ||jge8xq1yhwefzq1fo4.cfd^
 ||jghmklgkk.com^
@@ -115102,6 +115156,7 @@ browsershots.org#@#.advert_area
 ||jointerestpred.cyou^
 ||jojackal.com^
 ||jokedecays.com^
+||jokefibers.cyou^
 ||jokercheerfullylet.com^
 ||jokfrivqogtwq.site^
 ||jokingaspirant.com^
@@ -116415,6 +116470,7 @@ browsershots.org#@#.advert_area
 ||kqrbbdjzcsxmp.space^
 ||kqsebncdjeuuj.site^
 ||kqtbwyrudcgeoe.com^
+||kqtqgoyjmbtev.site^
 ||kquojopnmvokgf.com^
 ||kqwvgzulratqt.space^
 ||kqwvqvapfvajp.online^
@@ -117527,6 +117583,7 @@ browsershots.org#@#.advert_area
 ||lituitebientt.cyou^
 ||litvp.com^
 ||livableprelacy.com^
+||livablespat.cyou^
 ||livablyinlets.cfd^
 ||live-desire.pro^
 ||livedjeopardizeemotion.com^
@@ -118640,6 +118697,7 @@ browsershots.org#@#.advert_area
 ||marrowobolet.com^
 ||marshalcurve.com^
 ||marshcooperative.com^
+||marsheswhampee.qpon^
 ||marsianables.shop^
 ||marsoonnotaeal.qpon^
 ||martencrippled.com^
@@ -119210,6 +119268,7 @@ browsershots.org#@#.advert_area
 ||mikka.app^
 ||mikkvmklsfzwv.store^
 ||mikqukcumhivv.online^
+||mikvehsphloxes.cfd^
 ||milchigpassout.cyou^
 ||mildcauliflower.com^
 ||mildconsciousness.com^
@@ -119478,6 +119537,7 @@ browsershots.org#@#.advert_area
 ||mm-syringe.com^
 ||mmadsgadget.com^
 ||mmapxesoqwtck.com^
+||mmbwpzthsmbul.online^
 ||mmchkbriryqrl.space^
 ||mmctsvc.com^
 ||mmeagerlystaff.com^
@@ -119810,6 +119870,7 @@ browsershots.org#@#.advert_area
 ||mountainousstop.pro^
 ||mountainsubmerge.com^
 ||mountedblueberrytall.com^
+||mounterwhyfor.cfd^
 ||mouoyjxlvytf.com^
 ||mournenterprise.com^
 ||mournersamoa.com^
@@ -119901,6 +119962,7 @@ browsershots.org#@#.advert_area
 ||mqblrvvnppqxw.online^
 ||mqbwqsvxfwzos.site^
 ||mqcbifspfrpn.com^
+||mqckr5y837xoxho8jlmtk1jmbp.rest^
 ||mqdownload.com^
 ||mqedledjjjdad.website^
 ||mqhmmeitvweiv.website^
@@ -120070,6 +120132,7 @@ browsershots.org#@#.advert_area
 ||mujwqivmsqpzf.site^
 ||mukindwouldm.org^
 ||mukrirumpy.cyou^
+||mulchimbiber.com^
 ||mulesto.com^
 ||muleterritorywitchcraft.com^
 ||mullockbaresma.cfd^
@@ -120089,6 +120152,7 @@ browsershots.org#@#.advert_area
 ||mummifiedpatienceunknowing.com^
 ||mummifypaps.shop^
 ||mumpercodo.com^
+||mumsysatsumarazzly.cfd^
 ||muncherrepipe.qpon^
 ||mundane-soft.pro^
 ||mundanesilly.com^
@@ -120388,6 +120452,7 @@ browsershots.org#@#.advert_area
 ||nababroadbirch.com^
 ||nabbr.com^
 ||nabjewthoknxr.space^
+||nableroberto.com^
 ||nabluscrack.cfd^
 ||nabuasbobiype.site^
 ||nachodusking.com^
@@ -120611,6 +120676,7 @@ browsershots.org#@#.advert_area
 ||ndtheyeiedm.info^
 ||ndtkxygpdzcdq.website^
 ||ndtlhvhfeokmc.website^
+||ndtpvswwkhsi.com^
 ||ndtvbcxhvmtde.site^
 ||ndwobwuygw.com^
 ||ndwsqexojpuka.online^
@@ -120682,6 +120748,7 @@ browsershots.org#@#.advert_area
 ||nemeaowmeffis.online^
 ||nemppa.com^
 ||nenobfwtzuiuj.space^
+||nenqzhqllxefb.website^
 ||nentsyshruggl.com^
 ||neoftheownouncillo.info^
 ||neousaunce.com^
@@ -120946,6 +121013,7 @@ browsershots.org#@#.advert_area
 ||nimble-tear.pro^
 ||nimble-wine.com^
 ||nimblecontest.com^
+||nimbleugarono.cyou^
 ||nimboseminiver.qpon^
 ||nimhuemark.com^
 ||nimrute.com^
@@ -122242,6 +122310,7 @@ browsershots.org#@#.advert_area
 ||ohffaofydfonc.website^
 ||ohffs.com^
 ||ohfuuzzotyffr.online^
+||ohganpxujow.in^
 ||ohgbefqegvejj.store^
 ||ohgriforkvan.com^
 ||ohgwkaedrbujt.website^
@@ -122578,6 +122647,7 @@ browsershots.org#@#.advert_area
 ||onmxrrvzhikqu.website^
 ||onpetropica.com^
 ||onpluslean.com^
+||onpnarloiuspl.online^
 ||onpotbactnk.in^
 ||onqapnliefiys.space^
 ||onrbmrwalqttw.website^
@@ -123609,6 +123679,7 @@ browsershots.org#@#.advert_area
 ||partners-show.com^
 ||partridgepuny.com^
 ||partridgevowel.com^
+||partsoptimisticrebound.com^
 ||partsroll.xyz^
 ||partsroll1.xyz^
 ||partyinglongitudekept.com^
@@ -123712,6 +123783,7 @@ browsershots.org#@#.advert_area
 ||payrollmerchant.com^
 ||paysagecommise.qpon^
 ||payslipspurse.com^
+||paytheicjmncr.online^
 ||paywqgxwdgborp.com^
 ||pbaaxrhaxhofh.online^
 ||pbcde.com^
@@ -125209,6 +125281,7 @@ browsershots.org#@#.advert_area
 ||private-individual.pro^
 ||private-play.pro^
 ||privetsreerect.cyou^
+||privilegedturmoilanew.com^
 ||privilegemoreovermarijuana.com^
 ||prize-brother.pro^
 ||prizeadultery.com^
@@ -125957,6 +126030,7 @@ browsershots.org#@#.advert_area
 ||q8ntfhfngm.com^
 ||q99i1qi6.de^
 ||q9z3wzm3r31jp1.cfd^
+||qabvhjrdyktha.space^
 ||qacrkaopng.com^
 ||qacwnujgnoxmh.site^
 ||qadfstqrst.com^
@@ -126044,6 +126118,7 @@ browsershots.org#@#.advert_area
 ||qcuwpicccoscr.online^
 ||qcvbnqbisfama.online^
 ||qcvgwqvgwtpxf.website^
+||qcvxpyrlsyevn.online^
 ||qcxpoulxosxnf.site^
 ||qcyfngmkrhcmg.website^
 ||qdbqdirohipeb.space^
@@ -126184,6 +126259,7 @@ browsershots.org#@#.advert_area
 ||qidnanah.in^
 ||qidqmephogw.in^
 ||qieiepqyflfpk.space^
+||qifgthtnod.com^
 ||qigkciqa.in^
 ||qigkvucouqnjs.space^
 ||qihegkxiytaah.online^
@@ -126665,6 +126741,7 @@ browsershots.org#@#.advert_area
 ||quyiucbigjgng.site^
 ||quyxwohgpxsue.online^
 ||quzaemqtjgdro.website^
+||quzdwlwqnxrta.website^
 ||qvafkzqojrhbl.online^
 ||qvakujjzyrxqi.online^
 ||qvbnjnsodshaj.site^
@@ -127003,6 +127080,7 @@ browsershots.org#@#.advert_area
 ||rauvoaty.net^
 ||ravedrizzle.com^
 ||raveigryeggfj.website^
+||ravenerfeower.qpon^
 ||ravenouspetition.com^
 ||ravm.tv^
 ||raw-co.com^
@@ -127787,6 +127865,7 @@ browsershots.org#@#.advert_area
 ||rgxqdzkajysfj.website^
 ||rgybahkdsqnsz.website^
 ||rgyusuytcir.com^
+||rgzzeowdjgxcg.online^
 ||rh57iux7o2jm93ooxc2plbkf8r7g2oc.cfd^
 ||rhaeticcartful.com^
 ||rhagiteteeing.cyou^
@@ -127863,6 +127942,7 @@ browsershots.org#@#.advert_area
 ||richstallar.cyou^
 ||richwebmedia.com^
 ||rickedpalgatquintus.cfd^
+||rickeyshazan.cyou^
 ||ricracsmimpeidemibob.cyou^
 ||riddancemanufacturerextraction.com^
 ||riddancepants.com^
@@ -128383,6 +128463,7 @@ browsershots.org#@#.advert_area
 ||rrjfcmhdarcmg.space^
 ||rrkbmhendbdv.com^
 ||rrkvgegrywbkf.site^
+||rrlnmohzscihu.space^
 ||rrlpfsdammzii.site^
 ||rrlupwne.com^
 ||rrobbybmkwjww.top^
@@ -128519,6 +128600,7 @@ browsershots.org#@#.advert_area
 ||rubbinggeic.cyou^
 ||rubbingsticksforthwith.com^
 ||rubestdealfinder.com^
+||rubfjitvnyfty.space^
 ||rubiconproject.com^
 ||rubificfreeing.shop^
 ||rubkfezraamr.in^
@@ -128553,6 +128635,7 @@ browsershots.org#@#.advert_area
 ||rugcookingintersection.com^
 ||ruggedbushlet.cfd^
 ||rugiomyh2vmr.com^
+||rugosalambdakuan.cyou^
 ||rugpowerfully.com^
 ||ruhfpcfkysoxw.site^
 ||ruhicofhzlyp.com^
@@ -130428,6 +130511,7 @@ browsershots.org#@#.advert_area
 ||snajebrxiyiih.website^
 ||snakerlauturejects.cfd^
 ||snammar-jumntal.com^
+||snappedevisee.cfd^
 ||snappedsafetysuccessfully.com^
 ||snappy-guess.pro^
 ||snappyallowwithdrew.com^
@@ -130575,6 +130659,7 @@ browsershots.org#@#.advert_area
 ||soignebravoed.cyou^
 ||soilenthusiasmshindig.com^
 ||sojabern.cfd^
+||solar40.com^
 ||solaranalytics.org^
 ||solarcyclonesky.com^
 ||solarlankest.shop^
@@ -130919,6 +131004,7 @@ browsershots.org#@#.advert_area
 ||spokinglyceum.cfd^
 ||spongecell.com^
 ||spongerendercement.com^
+||spongerneedlingoes.qpon^
 ||spongesofateacher.com^
 ||sponsorinserttimeout.com^
 ||sponsorpay.com^
@@ -132475,6 +132561,7 @@ browsershots.org#@#.advert_area
 ||tektosnuthook.shop^
 ||tel-tel-fie.com^
 ||telechargementdirect.net^
+||telecomout502.net^
 ||teledusdoeg.com^
 ||telegramdisposedjaws.com^
 ||telegraphfamouscucumbers.com^
@@ -132606,6 +132693,7 @@ browsershots.org#@#.advert_area
 ||tfnyipzwixwib.site^
 ||tfomxpkyvdzyi.space^
 ||tfosrv.com^
+||tfqaofjptonea.online^
 ||tfqrifustrybg.store^
 ||tfrkbyualptil.online^
 ||tfwjtrkuueobz.online^
@@ -132782,6 +132870,7 @@ browsershots.org#@#.advert_area
 ||thrifty-storage.com^
 ||throatentrepreneur.com^
 ||throbbingcometprobability.com^
+||throbbingdisplaystub.com^
 ||throbcrunchsurely.com^
 ||throddyoxfly.qpon^
 ||throngbuildingunborn.com^
@@ -132962,6 +133051,7 @@ browsershots.org#@#.advert_area
 ||titanads2.com^
 ||titanads3.com^
 ||titanads4.com^
+||titiansfisted.cyou^
 ||titoddle.cyou^
 ||titratewinner.cfd^
 ||tiueg4zxlo6uze.rest^
@@ -133063,7 +133153,9 @@ browsershots.org#@#.advert_area
 ||tlqjonbqwuwmp.online^
 ||tlrfikhhctnigq.com^
 ||tlrkcj17.de^
+||tltftozhercmx.website^
 ||tlucfqhtavxyx.space^
+||tluhigpbrybww.space^
 ||tluihoeadocjs.store^
 ||tlysearchingforanop.com^
 ||tlzwfptcxztnx.space^
@@ -133341,6 +133433,7 @@ browsershots.org#@#.advert_area
 ||tpivryav.in^
 ||tpiwuerxwtuyz.online^
 ||tpjdszootpiir.online^
+||tpjnsbmpkeigi.online^
 ||tpmedia-reactads.com^
 ||tpmr.com^
 ||tpn134.com^
@@ -134106,6 +134199,7 @@ browsershots.org#@#.advert_area
 ||typistsredeny.com^
 ||typisttuckerspurt.com^
 ||typmussy.com^
+||typobonaghtorphize.cyou^
 ||typwcoroner.cfd^
 ||tyrannipokier.cfd^
 ||tyrotation.com^
@@ -134433,6 +134527,7 @@ browsershots.org#@#.advert_area
 ||uicooheecarnel.cfd^
 ||uidpklgzchjnf.website^
 ||uidsync.net^
+||uieakzmpzhdtk.space^
 ||uifncgofildko.space^
 ||uighnhsbatmdf.store^
 ||uihrpfnmkzgkx.website^
@@ -134639,6 +134734,7 @@ browsershots.org#@#.advert_area
 ||unawareirreparable.com^
 ||unawarelimited.com^
 ||unawnedscap.shop^
+||unbagboshbok.shop^
 ||unbarsduckers.cfd^
 ||unbedozedhusker.qpon^
 ||unbelievablyabsolutely.com^
@@ -134896,6 +134992,7 @@ browsershots.org#@#.advert_area
 ||unrivedfankleoctonal.cyou^
 ||unroundcakettequickly.cfd^
 ||unrovengibbert.cyou^
+||unrrovefoetus.cfd^
 ||unrulesatlijk.com^
 ||unruly-cost.pro^
 ||unruly-customer.com^
@@ -135416,6 +135513,7 @@ browsershots.org#@#.advert_area
 ||uxiyazsdyyfkd.site^
 ||uxjbffdmqinye.site^
 ||uxkpztjxinsne.site^
+||uxlccmhwbtldq.space^
 ||uxljsbfuyqizt.store^
 ||uxncqfiilwfkw.site^
 ||uxnkyrfxgxz.com^
@@ -136733,6 +136831,7 @@ browsershots.org#@#.advert_area
 ||vyignfjyiuznx.online^
 ||vyilmellyqbfs.online^
 ||vyiqsohuuoziu.store^
+||vyis.net^
 ||vyium.com^
 ||vykqenhyehsnfjh.com^
 ||vympzhnxgoweg.store^
@@ -136863,6 +136962,7 @@ browsershots.org#@#.advert_area
 ||waiwaimetage.com^
 ||wajwzorujfi.in^
 ||wakealibis.com^
+||wakemansnooper.qpon^
 ||wakenbossing.cfd^
 ||wakkencobbles.shop^
 ||wakkengranetglim.qpon^
@@ -137000,6 +137100,7 @@ browsershots.org#@#.advert_area
 ||watery-dream.pro^
 ||watery-possession.pro^
 ||watery-result.com^
+||waterychocolate.pro^
 ||wateryimmigratecompetition.com^
 ||waterymenace.com^
 ||watknbtkwkspy.website^
@@ -137085,6 +137186,7 @@ browsershots.org#@#.advert_area
 ||wbt9e9egqw6yq86ju2.cfd^
 ||wbunwbnmzkmos.site^
 ||wbwrrfduvsv.com^
+||wbwuiryfbtboi.space^
 ||wbww9ouxolw7ji3i.rest^
 ||wbxlunexj.com^
 ||wbxrjivadctya.space^
@@ -137485,6 +137587,7 @@ browsershots.org#@#.advert_area
 ||whippedbetraygranddaughter.com^
 ||whippedredsnowman.com^
 ||whiprayoutkill.com^
+||whireclogomod.com^
 ||whirlclick.com^
 ||whirlwind-expression.com^
 ||whirlwind-leather.pro^
@@ -137496,6 +137599,7 @@ browsershots.org#@#.advert_area
 ||whishannuent.com^
 ||whisheddeskmanmeson.cyou^
 ||whishedrebuilt.com^
+||whiskerspeppersane.com^
 ||whisknitrite.cyou^
 ||whispered-dress.com^
 ||whispered-point.pro^
@@ -137887,6 +137991,7 @@ browsershots.org#@#.advert_area
 ||wmxskyhbeel.com^
 ||wmxzrccwgpenl.website^
 ||wmyyfgstypiur.space^
+||wmzhygbziauhh.space^
 ||wn4wztsx.xyz^
 ||wn6x136h.xyz^
 ||wnazizdyzhlew.website^
@@ -138014,6 +138119,7 @@ browsershots.org#@#.advert_area
 ||woofoobukugly.net^
 ||woogoust.com^
 ||wooguwhede.net^
+||wooinggashest.qpon^
 ||wooldedapitong.qpon^
 ||woolsawfuster.cfd^
 ||wootmedia.net^
@@ -138110,6 +138216,7 @@ browsershots.org#@#.advert_area
 ||wpbioervnvxdv.online^
 ||wpbtyebtypph.com^
 ||wpcklpeseoivx.online^
+||wpdbdkhobbwhf.space^
 ||wpdieifpq.net^
 ||wpeuphgn.com^
 ||wpewsnqnlxvhx.com^
@@ -138285,6 +138392,7 @@ browsershots.org#@#.advert_area
 ||wt20trk.com^
 ||wt2x6p7j.xyz^
 ||wtaojnja.in^
+||wtaorvnpa.com^
 ||wtatrrum.net^
 ||wtddiupxavnul.com^
 ||wtdshzjdlppil.online^
@@ -139102,6 +139210,7 @@ browsershots.org#@#.advert_area
 ||xsapykbbsdm.net^
 ||xsbjtmzcpqlst.space^
 ||xsbqratf.com^
+||xsbsfifapiemx.site^
 ||xsdsemgyxukwx.space^
 ||xsdyxmtxwwamuv.com^
 ||xsfcgwydeqhuz.online^
@@ -141032,6 +141141,7 @@ browsershots.org#@#.advert_area
 ||zvmxpklpnnenv.site^
 ||zvrokbqvqvvbw.top^
 ||zvrrzpfobezka.space^
+||zvryfgjfzwbnd.online^
 ||zvthanutunpww.site^
 ||zvvajeommbajz.top^
 ||zvvkjoyc.com^
@@ -155441,6 +155551,7 @@ thoughtco.com##.mntl-outbrain
 procyclingstats.com##.mob-ad
 businessplus.ie##.mobile-mpu-widget
 datetimego.com##.mobile-only
+refooty.com##.mobile-sticky-ad
 forbes.com##.mobile-sticky-ed-placeholder
 wordreference.com##.mobileAd_holderContainer
 pcmacstore.com##.mobileHide
@@ -157167,6 +157278,7 @@ shockwave.com##.ympb_target_banner
 saltwire.com##.youtube_article_ad
 readneverland.com##.z-0
 buzzly.art##.z-10.w-max
+character.ai##.z-40.max-w-\[970px\]
 howstuffworks.com##.z-999
 culturemap.com,rightwingnews.com##.z-ad
 fortune.com##.z-body-popover
@@ -158845,6 +158957,7 @@ psychcentral.com##aside:has([data-empty])
 kohls.com##astro-island[component-export="KmnMarqueeBannerWrapper"]:has(img[alt="Sponsored Banner"])
 creepypasta.com##center:has(+ #ad-container-1)
 hashrate.no##center:has(.sevioads)
+character.ai#?#.space-y-4 > .w-full:contains(Advertisement)
 cjleo.com#?#.alt-widget-title:contains(advertisement)
 majorgeeks.com##div > [style]:has([style]:has([href*="&utm"]))
 manomano.co.uk,manomano.de,manomano.es,manomano.fr,manomano.it##div > div:has([data-testid="banner-spr-label"])
