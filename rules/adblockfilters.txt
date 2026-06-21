@@ -1,9 +1,9 @@
 !
 ! Title: AdBlock Filter
 ! Homepage: https://github.com/Sereinfy/Adrules
-! Version: 20260621191555
-! Last modified: 2026/06/21 19:15:55
-! Blocked Filters: 181425
+! Version: 20260622012757
+! Last modified: 2026/06/22 01:27:57
+! Blocked Filters: 181437
 !
 ###AC_ad
 ###AD_160
@@ -33523,7 +33523,7 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 /scrollShareMenu.html
 /scrollgg_index.js
 /sda/*$domain=chineseinla.com
-/sdc.js
+/sdc.js|
 /sdc1.js
 /sdc2.js
 /sdcTrackingCode.js
@@ -42916,6 +42916,7 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 @@||dual1080p.blogspot.com^$generichide
 @@||duckduckgo.com/?q=$generichide
 @@||duckduckgo.com/?q=$generichide,badfilter
+@@||duckduckgo.com/local.js$~third-party
 @@||duckduckgo.com/y.js?*url
 @@||duelmeta.com^$generichide
 @@||duemmer.de/typo3conf/ext/xskeleton/Resources/Public/Js/50_jquery.divascookies-0.6.min.js
@@ -62182,6 +62183,7 @@ blockchain-council.org###tpbr_topbar
 blockchain-council.org##.blcn-popup-wrap
 blockchain-council.org#$##newsletterpopup { display: none !important; }
 blockchain-council.org#$#body { overflow: auto !important; padding-right: 0 !important; }
+blockchain.com##a[href^="https://snapmarkets.com/?utm_"]
 blockchain.com##body div[class^="TrackingProvider__Banner"]
 blockchain.com##main > div[class^="sc-"]:has(> a[href^="https://blockchainwallet.page.link/"])
 blockchain.com##main > div[style^="display:"] > div[class^="sc-"] > div[class^="sc-"]:has(> div[class^="sc-"] > div[class^="sc-"][font-size] > a[href^="https://bcdc.onelink.me/"])
@@ -67575,6 +67577,7 @@ cloudfam.io#%#//scriptlet('abort-on-stack-trace', 'document.createElement', 'ope
 cloudfam.io#%#//scriptlet('adjust-setInterval', 'remain--', '*', '0.001')
 cloudfam.io#%#//scriptlet('prevent-element-src-loading', 'script', '/adsbygoogle|doubleclick/')
 cloudfam.io#%#//scriptlet('prevent-fetch', '/pagead|adserve|adsbygoogle/')
+cloudfam.io#%#//scriptlet('prevent-fetch', 'method:HEAD')
 cloudfam.io#%#//scriptlet('prevent-window-open')
 cloudfam.io#?#.text-center:contains(Advertisement)
 cloudflare.com##.bottom-0.bg-blue0
@@ -86654,6 +86657,7 @@ gloswielkopolski.pl##.componentsPromotionsPromoted__list
 gloswielkopolski.pl##.linkiSponsorowane
 gloucestershirelive.co.uk#%#//scriptlet("set-constant", "chameleonVideo.adDisabledRequested", "true")
 glowbug.bandcamp.com#%#//scriptlet('trusted-set-cookie', 'cookie_preferences', '%7B%22allow%22%3A%5B%5D%7D')
+glowing.com##.adsWrapper-0-0-136
 gls-group.eu###cookiePopupMinimized
 gluehbirnebillig.de,heckenpflanzendirekt.de#$#body[class] { overflow-y: auto !important; }
 gluehbirnebillig.de,heckenpflanzendirekt.de#$#div[x-data="cookieConsentModal"] { display: none !important; }
@@ -145349,6 +145353,7 @@ uploadrar.com##.my-4 > form[method="POST"] > center
 uploadrar.com##a[href*="?"][target="_blank"]
 uploadrar.com##a[role="button"][href^="http://"]
 uploadrar.com##center > a.btn:not([href*="uploadrar.com"])
+uploadrar.com##center > a[href][target="_blank"]
 uploadrar.com#%#//scriptlet("adjust-setTimeout", "tick", "1000")
 uploadrar.com#?#div[class^="banner"]:not(:has(> div#commonId))
 uploadrar.com#?#div[class^="download"][class*="page"] div[class^="banner"]:has(> .as_ads_guard:only-child)
@@ -147184,8 +147189,6 @@ visittallinn.ee#$#div[id^="cookieAcceptModal"] { display: none !important; }
 visitukraine.today##.page-text_main-wrapp-help
 visme.co##.vismecookie
 visnyk.lutsk.ua##div.dgd_stb_box
-visset.pl,server4you.com,mindio-psychoterapia.pl,abctravel.de,bypassgpt.ai,id.sumsub.com,maanesten.us,aihumanizer.ai,humbot.ai#$##cc-main { display: none !important; }
-visset.pl,server4you.com,mindio-psychoterapia.pl,abctravel.de,bypassgpt.ai,id.sumsub.com,maanesten.us,aihumanizer.ai,humbot.ai#$?#.disable--interaction { overflow: auto !important; }
 vistanet.it#$#body > div.full_100 > div.full_box { margin-top: 0px !important; }
 vistanet.it#$#body > div.full_100 { margin-top: 0px !important; }
 vistanet.it#$#body { padding-top: 0px !important; }
@@ -154735,6 +154738,9 @@ zsw-bw.de,daa-kassel.de,daskrankenhaus.de#$##cookienotice_box { display: none !i
 zsw-bw.de,daa-kassel.de,daskrankenhaus.de#$#body { overflow: visible !important; }
 zt5.com##.gg_bt
 zte.com.cn,htm.sf-express.com##.cookieCon
+zteshop.pl##form[action="https://zteshop.pl/subscription"]
+zteshop.pl,visset.pl,server4you.com,mindio-psychoterapia.pl,abctravel.de,bypassgpt.ai,id.sumsub.com,maanesten.us,aihumanizer.ai,humbot.ai#$##cc-main { display: none !important; }
+zteshop.pl,visset.pl,server4you.com,mindio-psychoterapia.pl,abctravel.de,bypassgpt.ai,id.sumsub.com,maanesten.us,aihumanizer.ai,humbot.ai#$?#.disable--interaction { overflow: auto !important; }
 ztracker.cc##img[width="900"][height="90"]
 zuanke8.com##.zuanpw
 zuckerjagdwurst.com#$##gatsby-focus-wrapper > div[class^="index-module--backdrop"] { display: none!important; }
@@ -157631,6 +157637,7 @@ zzzyk.com###Tinfo
 ||api.taboola.com^$app=Mahjong.exe|Solitaire.exe|Microsoft.Msn.News.exe
 ||api.tacotax.fr/v2/amplitude_trackers
 ||api.takealot.com^$ping
+||api.tally.so/forms/*/events
 ||api.tblcontent.com*/log/
 ||api.thefantazy.com/web-vitals
 ||api.tin.network/banners/
@@ -159335,6 +159342,7 @@ zzzyk.com###Tinfo
 ||bol.com/click/
 ||bol.com/tracking/
 ||boldem.cz^$third-party
+||boldin.com/rails/arrival
 ||boldsky.com/common/build/js/site-notification-desk.min.js
 ||bolecdn.com/button/txt.js
 ||bolt.com/v1/log?
@@ -165164,6 +165172,7 @@ zzzyk.com###Tinfo
 ||glospowiatusredzkiego.pl/pl/_ajax/getBanners.php
 ||glospowiatusredzkiego.pl/pl/js/qp.js
 ||glove.fit^$third-party
+||glowing.com/unilog
 ||glsfreeads.com^$popup
 ||gluxouvauure.com^$popup
 ||glzy8.com/img/ceo/js.js
@@ -165321,6 +165330,7 @@ zzzyk.com###Tinfo
 ||google.com/pagead/1p-user-list/
 ||google.com/pagead/conversion_async.js
 ||google.com/pagead/drt/
+||google.com/pagead/form-data/
 ||google.com/pagead/landing?
 ||google.com^*/fastbutton?$third-party
 ||googleadapis.l.google.com^$third-party
@@ -170119,6 +170129,7 @@ zzzyk.com###Tinfo
 ||mfasa.chase.com/auth/js/jpmc_bb_check.js
 ||mfav88.com/yinzi/
 ||mfcdn.net/store/mfbanners/
+||mfilterit.net^$third-party
 ||mfr.cdn.dopc.cz^$subdocument,domain=idnes.cz
 ||mfs.mysteelcdn.com/group1/M00/16/70/rBL632fjcHKAUKSeAAE6mtwnW2Y118.jpg
 ||mfs.mysteelcdn.com/group1/M00/1B/12/rBL632frP-KAHreoAAGnyljyVAg027.jpg
@@ -177195,6 +177206,7 @@ zzzyk.com###Tinfo
 ||talkingpointsmemo.com/whoami
 ||talkingretail.com/wp-content/plugins/MBM-GDPR/assets/dist/js/MBM_GDPR.min.js
 ||tally-weijl.com/dist/vsf-Cookie*.js
+||tally.so/api/forms/*/events
 ||tally.so/popup/$third-party,domain=~pythagora.ai
 ||talpa-analytics.com^$third-party
 ||tamedia.com.tw^$third-party
