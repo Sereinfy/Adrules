@@ -1,9 +1,9 @@
 !
 ! Title: AdBlock Filter
 ! Homepage: https://github.com/Sereinfy/Adrules
-! Version: 20260714015428
-! Last modified: 2026/07/14 01:54:28
-! Blocked Filters: 180841
+! Version: 20260714102832
+! Last modified: 2026/07/14 10:28:32
+! Blocked Filters: 180845
 !
 ###AC_ad
 ###AD_160
@@ -67355,7 +67355,7 @@ cloud.tencent.com##.mod-commercial
 cloud.watch.impress.co.jp##.social > a[href^="https://bm-reg.impress.co.jp/mag/"]
 cloud4box.com###c4b-cookies-informer
 cloudbate.com#%#//scriptlet('remove-attr', 'onclick', '.play-now')
-cloudfam.io##.cf-body > .cf-ad-box
+cloudfam.io##.cf-ad-box
 cloudfam.io##.cf-warning-section
 cloudfam.io#%#(()=>{const e={apply:(e,t,n)=>{const o=Reflect.apply(e,t,n);try{o instanceof HTMLIFrameElement&&""===o.src&&o.contentWindow&&(o.contentWindow.fetch=window.fetch,o.contentWindow.getComputedStyle=window.getComputedStyle)}catch(e){}return o}};Node.prototype.appendChild=new Proxy(Node.prototype.appendChild,e)})();
 cloudfam.io#%#//scriptlet('abort-current-inline-script', 'EventTarget.prototype.addEventListener', '/delete window|window\.open/')
@@ -67366,6 +67366,7 @@ cloudfam.io#%#//scriptlet('prevent-fetch', '/pagead|adserve|adsbygoogle/')
 cloudfam.io#%#//scriptlet('prevent-fetch', 'method:HEAD')
 cloudfam.io#%#//scriptlet('prevent-window-open')
 cloudfam.io#%#//scriptlet('trusted-replace-argument', 'Blob', '0', 'emptyArr', '/\(.+\.data\.url/')
+cloudfam.io#%#//scriptlet('trusted-replace-node-text', 'script', 'blocked', '/if\s*\(!blocked\)/g', 'if(!0)')
 cloudfam.io#?#.text-center:contains(Advertisement)
 cloudflare.com##.bottom-0.bg-blue0
 cloudflare.com##.mb7 > div.bg-blue4:has(> section > form input#Email)
@@ -98165,6 +98166,7 @@ kapook.com##.likepage
 karaca.com.de##body .cookiealert
 karaca.com.tr##.cerezbilgi
 karachicorner.com##.divimg
+karamalz.de#%#//scriptlet('trusted-click-element', '#consent button[name="confirm"]')
 karanpc.com##.entry-content div[onclick][data-matrix]
 karanpc.com##.entry-content div[style] > a[target="_blank"] > img
 karanpc.com##.zestmodal
@@ -114510,8 +114512,8 @@ nodejs.cn#%#//scriptlet('set-constant', 'adRender', 'noopFunc')
 nodejs.cn#%#//scriptlet('set-constant', 'adsbygoogle', 'emptyObj')
 nodejs.cn#%#//scriptlet('set-constant', 'adsbygoogle.loaded', 'true')
 nodejs.libhunt.com##.saashub-ad
-nodeloc.com###wghtml
 nodeloc.com##.AfruxWidgets-sideNavAlt
+nodeloc.com##.sidebar-ads-wrapper
 nodeseek.com###nsk-right-panel-container > div.category-list + div:not([class])
 nodeseek.com##.promotation-item
 nodesource.com##.product-bottom-cta
@@ -124763,6 +124765,7 @@ radio.de,radio.net,radio.at###always-visible-banner-desktop-banner
 radio.de,radio.net,radio.at##section[data-testid="home-app-dl-section"]
 radio.fr##a[data-testid^="broadcast-appstore-"]
 radio.net###section-ad
+radio.net###sticky-reklame-header
 radio.net##.lg\:h-\[270px\]
 radio.net##.section-block > h2[data-mobile-title="App"]
 radio.net##.section-block > h2[data-mobile-title="App"] + div.accordion-toggle
@@ -134631,8 +134634,8 @@ startupcafe.ro###block-views-block-events-block-2
 startupcafe.ro##.main-partners
 startupfortune.com##.sf-hero-share
 startupfortune.com##.sf-hero-share-btn
-startuphub.ai#?#.duration-700.bg-card:contains(Partner)
-startuphub.ai#?#.group.block:contains(Partner)
+startuphub.ai##[title="Follow us on Google News"]
+startuphub.ai##a[href*="/go/"]
 startuponline.hu###hncookiegdpr
 startups.co.uk##.headline-sponsor
 startuptalky.com###st-announcement
@@ -161153,6 +161156,7 @@ zzzyk.com###Tinfo
 ||cloudbet.com/ad/
 ||cloudconvert.com/build/assets/plausible-CoqwX5KR.js
 ||clouddn.com/960x60.gif
+||cloudfam.io^$replace=/if\s*\(!blocked\)/if(!0)/,document
 ||cloudfilt.com/analyz.js
 ||cloudflare-analiytics.pages.dev/analytics.js
 ||cloudflare-quic.com/cdn-cgi/trace
