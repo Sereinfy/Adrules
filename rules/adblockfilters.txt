@@ -1,8 +1,8 @@
 !
 ! Title: AdBlock Filter
 ! Homepage: https://github.com/Sereinfy/Adrules
-! Version: 20260719005806
-! Last modified: 2026/07/19 00:58:06
+! Version: 20260719104107
+! Last modified: 2026/07/19 10:41:07
 ! Blocked Filters: 185145
 !
 ###AC_ad
@@ -59324,6 +59324,8 @@ axios.com##.lg\:min-h-\[200px\]
 axios.com##.min-h-\[200px\]
 axios.com##.relative.col-span-full > div[style*="background-color:"][style*="height:"][style*="width:"]:empty:has(+ .shortFormNativeAd)
 axios.com##.shortFormNativeAd
+axios.com##[data-vars-event-name="preferred_source_view"]
+axios.com##[data-vars-event-name="share_view"]
 axios.com##div[class^="Modal_ctaContainer"]
 axios.com##div[class^="SubscribeStreamCap__"]
 axios.com##div[data-cy="tab-content-top-stories"] ul[class^="space-"] > li.border-accent-blue-tint:has(> .shortFormNativeAd)
@@ -146447,13 +146449,11 @@ twitch.tv##.blue-bar.c-text.full-width
 twitch.tv##.channel-info-content div[class^="Layout-sc-"][style^="background-image: url(\"https://static-cdn.jtvnw.net/subs-image-assets/banner/subtember2025/banner-"]
 twitch.tv##.follow-prompt
 twitch.tv##.noty_bar
-twitch.tv##.online-video-ad-container
 twitch.tv##.side-info-container
 twitch.tv##.social-media-link
 twitch.tv##.stream-display-ad__wrapper
 twitch.tv##.twilight-root .toast-manager__container
 twitch.tv##.video-player__overlay .player-overlay-background:has(> div[class^="Layout-"] > div[class^="Layout-"] > div[class^="Layout-"] > a:is([href*="/how-to-allow-ads-browser"], [href="https://www.twitch.tv/turbo"]))
-twitch.tv##[data-a-target="outstream-ax-overlay"]
 twitch.tv##[data-test-selector="sda-wrapper"]
 twitch.tv##a[href*="store.asus.com/rog-promo/"]
 twitch.tv##a[href="https://vk.com/bust3rshop"]
@@ -177768,6 +177768,7 @@ zzzyk.com###Tinfo
 ||rightstats.com^$third-party
 ||riju.com/pr/$domain=jpfans.com|jpseek.com
 ||rintor.space/t2632cd43215.js
+||ripples.sh^$third-party
 ||risextube.com/t/
 ||rising.cn/js/haoAdData.js
 ||rising.cn/rxbox/
@@ -183959,7 +183960,6 @@ zzzyk.com###Tinfo
 ||x.com/1.1/graphql/user_flow.json
 ||x.com/1.1/jot
 ||x.com/9/measurement/
-||x.com/i/api/1.1/flow/viewer.json
 ||x.com/i/api/1.1/graphql/app_context.json
 ||x.com/i/api/1.1/graphql/error_log.json
 ||x.com/i/api/1.1/graphql/user_flow.json
