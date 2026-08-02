@@ -1,9 +1,9 @@
 !
 ! Title: AdBlock Filter
 ! Homepage: https://github.com/Sereinfy/Adrules
-! Version: 20260802175627
-! Last modified: 2026/08/02 17:56:27
-! Blocked Filters: 181959
+! Version: 20260803005758
+! Last modified: 2026/08/03 00:57:58
+! Blocked Filters: 181965
 !
 ###AC_ad
 ###AD_160
@@ -66285,6 +66285,7 @@ chatgpt.com#%#//scriptlet('set-cookie', 'oai_consent_marketing', 'false')
 chatgpt.com#%#//scriptlet('set-cookie-reload', 'oai_consent_personalization', 'false')
 chatgpt.com#%#//scriptlet('trusted-json-set', 'WeakMap.prototype.set', '$[?(@.ads_response_id)].*', '$remove$', '', 'arg:1')
 chatgpt.com#%#//scriptlet('trusted-replace-outbound-text', 'TextDecoder.prototype.decode', '/^{"type":\s*"ads",\s*"content":\s*{"ads_request_id":.*?"ads_response_id":.*}$/', '{}')
+chatgpt.com#?#.opacity-100.transition-opacity.ease-out:contains(Sponsored options)
 chatgptfree.ai#?#.elementor-widget-container > style + p:contains(/^ADS$/)
 chathamhouse.org##.newsletter-form.paragraph
 chathamhouse.org##main > .section--slice-media:has(.media-cta_banner)
@@ -69543,6 +69544,7 @@ corriere.it###youreporter
 corriere.it##.bck-box-newsletter
 corriere.it##.bck-promo-news
 corriere.it##.boxADVmanuale
+corriere.it##.sponsor-strip
 corriere.it##.tp-modal.manine-modal
 corriere.it##a[href^="https://it.chili.tv"]
 corriere.it##a[sticky-mode="on"]
@@ -99950,6 +99952,7 @@ kocpc.com.tw##ads
 kocpc.com.tw#$##header > nav.floated-navbar { top: 0!important; }
 kocpc.com.tw#?#div[id^="pum-"]:has(> div[id^="popmake-"] > div.pum-content > div[class^="popup"] > p[style] > a[onclick^="window.open('https://news.google.com/publications/"])
 koctas.com.tr##.cookie-dark-filter
+kod.ru##.site-banner
 kod.ru##a[class^="SmallTgBanner_"]
 kod.ru##a[class^="TgBanner_"]
 kod.ru##a[href="https://bit.ly/d_code"]
@@ -124885,7 +124888,6 @@ qmaths.in#?#.sidebar > div.widget:has(> div.widget-content > form input[name="em
 qmee.com##div[class^="prerender-"] > div[class^="Overlay-root-"].mobile-app-hidden
 qmh.sex#%#//scriptlet('prevent-window-open')
 qmh.sex#%#//scriptlet('set-constant', 'Object.prototype.directLinkAdsPlayVip2', '')
-qms.ru###pwa-prompt
 qna.habr.com###register-banner
 qnbfinansbank.enpara.com##.enpara-web-cookie
 qncye.com##.bbaner
@@ -134336,6 +134338,7 @@ speedtest.pl##a[href*="//ad.doubleclick.net/"]
 speedtest.pl##a[href^="https://track.adform.net/"]
 speedtest.pl##center > a[href^="https://www.play.pl/oferta/"][target="_blank"] > img
 speedtest.pl#$#.adsbygoogle { position: absolute!important; left: -3000px!important; }
+speedtest.ru,qms.ru###pwa-prompt
 speedtest.vn###advArea
 speedtest.vn###sponsorRow
 speedtest.vn##.jconfirm
@@ -135758,6 +135761,9 @@ stocktwits.com#?#.is-visible:contains(Remove ads)
 stocktwits.com#?#.leading-\[16px\]:contains(Advertisement)
 stockwatch.pl##div[class*="-"] > span[data-adsourl]:first-child + img:last-child
 stockwatch.pl##div[class*="-"]:has(> span[data-adsourl]:first-child + img:last-child)
+stockx.com##[data-component="brand-tile"]:has([data-testid="sponsored-tag"])
+stockx.com##[data-component="product-tile"]:has([data-testid="sponsored-tag"])
+stockx.com##[data-testid="banner-collage"] .chakra-aspect-ratio:has(a[title*="Promo"])
 stoen.pl#%#//scriptlet('trusted-set-cookie', 'cookinncookiev2', 'date:20240124|accepted:true|')
 stoen.pl#%#//scriptlet('trusted-set-cookie', 'dws01-level', '4')
 stoffe-hemmers.de##.app__misc-cookie__consent
@@ -153047,11 +153053,11 @@ xhamster.com#$#div[style*="adVideo"] { position: absolute!important; left: -3000
 xhamster.com#?#body > #svadilfari-content-root ~ div[class^="popup-"]:has(div[class^="contentInner-"] p:contains(app))
 xhamster.com,xhamster.one,xhamster2.com##[class^="xplayer-banner"]
 xhamster.com,xhamster2.com##.wio-xbanner
+xhamster.com,xhamster46.desi##.xplayer > div.xh-helper-hidden + div[class*="-hover-menu"]
 xhamster.fm,erotic-beauties.com,hardsex.cc,sex-movies.biz,sikwap.xyz,tube18.sexy#%#//scriptlet('abort-current-inline-script', 'pop_init')
 xhamster11.com#%#//scriptlet('abort-on-property-write', 'wio-vpopunder')
 xhamster2.com##.wio-xspa
 xhamster46.desi##.thumb-list__item:has(> div[class*="skeleton-"])
-xhamster46.desi##.xplayer > div.xh-helper-hidden + div[class*="-hover-menu"]
 xhamster46.desi##div[data-role="cookies-modal"]
 xhamster46.desi,tr.myxh.today,r.usbxh.life,xhamster44.desi,aawweb.beauty,colourxh.site,xhamster43.desi,fullxh.com,interxh.site,xhspot.com,xhwide5.com,xhchannel.com,xhtotal.com,xhtree.com,xhwide2.com,xhlease.world,xhamsterporno.mx,valuexh.life,xhdate.world,xhbranch5.com,galleryxh.site,xhbig.com,xhaccess.com,xhofficial.com,seexh.com,xhamster42.desi,xhvid.com,xhamster20.desi,xhamster19.desi,xhwebsite2.com,xhamster18.desi,xhadult3.com,xhadult2.com,xhmoon5.com,xhwide1.com,xhamster3.com,xhplanet2.com,megaxh.com,xhamster16.*,xhamster.com,xhamster2.com,xhamster7.com,xhamster8.com,xhamster9.com,xhamster10.com,xhamster12.com,xhamster13.*,xhamster14.com,xhamster15.com,xhamster17.*,xhamster18.*,xhamster19.com,xhamster1.desi,xhamster2.desi,xhamster3.*,xhamster4.desi,xhamster22.com,xhamster27.com,openxh.com,xhamster5.desi,xhopen.com,openxh1.com,xhamster40.com,xhamster.one,xhamster.desi,stripchat.com#$#.thumb-list > .video-thumb { margin-right: 0px !important; }
 xhamster46.desi,tr.myxh.today,tr.usbxh.life,xhamster44.desi,aawweb.beauty,colourxh.site,xhamster43.desi,fullxh.com,interxh.site,xhopen.com,xhspot.com,xhwide5.com,xhchannel.com,xhtotal.com,xhtree.com,xhwide2.com,xhlease.world,xhamsterporno.mx,valuexh.life,xhdate.world,xhbranch5.com,galleryxh.site,xhbig.com,xhaccess.com,xhofficial.com,seexh.com,xhamster42.desi,xhvid.com,xhamster20.desi,xhamster19.desi,xhamster19.desi,xhwebsite2.com,xhamster18.desi,xhadult3.com,xhadult2.com,xhmoon5.com,xhwide1.com,xhplanet2.com,megaxh.com,xhamster16.*,xhamster13.*,xhamster18.*,xhamster19.*,xhamster11.*,xhamster5.*,xhamster10.*,xhamster4.*,xhamster3.*,xhamster2.*,xhamster.*#$#.parental-bg { display: none !important; }
