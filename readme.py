@@ -129,6 +129,8 @@ class ReadMe(object):
             f.write("| 规则15' |" + self.__subscribeLink("adblocksurgelite.list") + " Surge |\n")
             f.write("| 规则16 |" + self.__subscribeLink("adblockmosdns.txt") + " MosDNS |\n")
             f.write("| 规则16' |" + self.__subscribeLink("adblockmosdnslite.txt") + " MosDNS |\n")
+            f.write("| 规则17 |" + self.__subscribeLink("adblockv2ray.dat") + " V2ray、Xray(category-ads-all) |\n")
+            f.write("| 规则17' |" + self.__subscribeLink("adblockv2raylite.dat") + " V2ray、Xray(category-ads-all) |\n")
             f.write("\n")
 
             f.write("## 上游规则源\n")
@@ -150,8 +152,9 @@ class ReadMe(object):
             for rule in self.ruleList:
                 f.write("| %s | %s |%s %s |\n" % (rule.name, rule.type, self.__subscribeLink(rule.filename, rule.url),rule.latest))
             f.write("\n")
-            
+
             '''
+            
             f.write("\n")
             f.write("## 以下是广告\n")
             f.write('感兴趣的可以看下，DartNode 免费 VPS, [点击申请](https://dartnode.com?aff=PudgyBurrito637)\n')
