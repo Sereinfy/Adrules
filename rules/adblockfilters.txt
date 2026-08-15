@@ -1,9 +1,9 @@
 !
 ! Title: AdBlock Filter
 ! Homepage: https://github.com/Sereinfy/Adrules
-! Version: 20260815162802
-! Last modified: 2026/08/15 16:28:02
-! Blocked Filters: 186131
+! Version: 20260816002318
+! Last modified: 2026/08/16 00:23:18
+! Blocked Filters: 186138
 !
 ###AC_ad
 ###AD_160
@@ -67268,6 +67268,8 @@ chatgpt.com##div[data-testid] div[class^="max-"] > div[data-ad-card-root]
 chatgpt.com##div[data-testid] div[class^="max-"] > div[data-testid="image-card-v2"]:has(button[aria-label="Sponsored options"])
 chatgpt.com##div[data-testid] div[class^="relative max-"]:has(> div[data-testid="image-card-v2"] + .pointer-events-none button[aria-label="Sponsored options"])
 chatgpt.com##section:has(> [aria-label="Sponsored"])
+chatgpt.com#%#(()=>{const e={apply:(e,r,s)=>{const t=Reflect.apply(e,r,s);try{return s[0]&&"string"==typeof s[0]&&s[0].includes("renderedAdsHtml")&&t.messages&&(t.hideAllAds=!0),t}catch(e){}return Reflect.apply(e,r,s)}};window.JSON.parse=new Proxy(window.JSON.parse,e)})();
+chatgpt.com#%#(()=>{const e={apply:(e,t,d)=>{try{const e=d[1];e?.ads&&e?.renderedAdsHtml&&(e.hidden=!0,delete e.ads,delete e.renderedAdsHtml)}catch(e){}return Reflect.apply(e,t,d)}};window.Map.prototype.set=new Proxy(window.Map.prototype.set,e)})();
 chatgpt.com#%#//scriptlet('json-prune', 'messages.*.ads messages.*.renderedAdsHtml')
 chatgpt.com#%#//scriptlet('set-cookie', 'oai-allow-ne', 'false')
 chatgpt.com#%#//scriptlet('set-cookie', 'oai_consent_analytics', 'false')
@@ -74105,6 +74107,7 @@ diamond.jp##.zai-subcolumn-banners-plus
 diamond.jp##.zai-subcolumn-fbanners
 diamondblog.jp##div[class^="special_link_in"]
 diamondlobby.com##.form-embed
+diamondv.jp##main[id] > div.MuiBox-root:has(> ul > li > button.react-share__ShareButton)
 dianping.com##.J_midas-3
 dianping.com##.J_mkt-group-1
 dianping.com##.J_mkt-group-2
@@ -103253,6 +103256,7 @@ led2work.com##.waconcookiemanagement-cookiebar
 ledauphine.com##.GSOC_newsletterRegistration
 ledemondujeu.com##.avertissement
 ledemondujeu.com##.sidebar > div.bloc-container:has(form.form-newsletter)
+ledge.ai##.flex-col > img[src*="EXPO_AUTUMN_bnr"]
 ledkia.com###modalPromotionschedule
 ledkia.com##.modal-backdrop
 ledlumen.pl,blsspain-russia.com###popup
@@ -161188,6 +161192,7 @@ zzzyk.com###Tinfo
 ||api.gplinks.com/track/js/power-cdn.js$replace=/function _0x[a-z0-9]{3}536\(\)\{[\s\S]*?\}/function _0x242536(){};/
 ||api.grumft.com^$third-party
 ||api.headliner.link/api/v1/b/receive
+||api.heikeji.me/api/logs/check
 ||api.helloextend.com/mintsight
 ||api.hotscope.tv/snaps/top
 ||api.ig.com/statistics/
@@ -164408,6 +164413,7 @@ zzzyk.com###Tinfo
 ||chatdealer.jp^$domain=zeirisi.co.jp
 ||chatfuel.com/cf-analytics/
 ||chatgpt.com/backend-api/bazaar/conversation/*/ads|$xmlhttprequest
+||chatgpt.com/backend-api/sentinel/ping
 ||chatinator.com^$third-party
 ||chatintr.com^$third-party
 ||chatra.io^$third-party
@@ -181003,6 +181009,7 @@ zzzyk.com###Tinfo
 ||static.qiota.com/assets/getQiota.js$domain=cosmopolitan.fr|beautyshow-by-kikomilano-cosmo.fr|magicmaman.com
 ||static.qiyi.com/js/pingback/
 ||static.quiq-cdn.com/webchat/$third-party
+||static.rebelboost.com/tracking/
 ||static.republicworld.com/assets/js/ads.min.js
 ||static.republika.co.id/js/tracker.js
 ||static.rolex.com/clocks/$third-party
