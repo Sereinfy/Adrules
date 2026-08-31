@@ -1,9 +1,9 @@
 !
 ! Title: AdBlock Filter
 ! Homepage: https://github.com/Sereinfy/Adrules
-! Version: 20260831235315
-! Last modified: 2026/08/31 23:53:15
-! Blocked Filters: 183491
+! Version: 20260901051942
+! Last modified: 2026/09/01 05:19:42
+! Blocked Filters: 183499
 !
 ###AC_ad
 ###AD_160
@@ -89047,6 +89047,7 @@ guard.io##.cookie-banner-component
 guard.io#%#//scriptlet('set-cookie', 'cookie_consent_seen', '1')
 guardatv.it,sedirekte.com###cookiewarningcontainer
 guardian.ng###guardian-follow-links
+guazimanhua.com##.reader-app-card
 guba.eastmoney.com##.redian
 gubernia.media##.box_article_content > h3:has(> strong > a[href="https://t.me/guberniaband"])
 gucheng.com##.fixed_img
@@ -98626,6 +98627,8 @@ jove.com##.css-ad08s1
 jove.com#%#//scriptlet('set-local-storage-item', 'displayCookiesBanner', 'false')
 jovemnerd.com.br##.container-banner-cookie
 jovemnerd.com.br##footer + div[class=""][style*="background-color"][style*="position: fixed"]
+jovempan.com.br###jp-esportes-cta
+jovempan.com.br###jp-follow-cta
 jovempan.com.br##.cta-model
 jovempan.com.br##.custom-container-lgpd
 jovenesweb.com#%#//scriptlet('remove-class', 'no-select', 'div')
@@ -99477,8 +99480,8 @@ katitube.com##.advertisement
 katitube.com##.linkvideo
 katitube.com##li > a[href][target="_blank"]
 katitube.com#%#//scriptlet('remove-node-text', 'script', 'ltvClicksCurrent')
-katitube.com#?#.header:has(> h2:contains(/Kati AI Porn|Kinky Webcam/i))
-katitube.com#?#.header:has(> h2:contains(/Kati AI Porn|Kinky Webcam/i)) + div#similar
+katitube.com#?#.video > div.header:has(> h2:contains(/Kati AI Porn|Kinky Webcam/g))
+katitube.com#?#.video > div.header:has(> h2:contains(/Kati AI Porn|Kinky Webcam/g)) + div#similar
 katitube.com$$script:contains(ltvClicksCurrent)
 katmoviehd.*#%#//scriptlet("abort-current-inline-script", "document.createElement", "/\/main\.js[\s\S]*?document\?document:null/")
 katoflix.pl###consent-message-container
@@ -101561,6 +101564,7 @@ kyoceradocumentsolutions.*#%#//scriptlet('remove-attr', 'inert')
 kyoceradocumentsolutions.us#%#//scriptlet('set-cookie', 'essentialsCookies', 'true')
 kyodo-d.jp,yahoo.co.jp###prm_sapp
 kyodo.co.jp##.post_detail__sns
+kyodo.co.jp#?#.ranking_archive > div.ranking_archive__content:has(> div.ranking_archive__content--content > a.flex > span.pr:contains(広告))
 kyodonews.net##.article-sns
 kyohaku.go.jp###js-consentCookie
 kyonavi.kyoto.travel#%#//scriptlet('set-cookie', 'ktaAgreed', 'false')
@@ -107488,6 +107492,7 @@ massfans.cc,massrips.cc###banner
 massfans.cc,massrips.cc###banner2
 massfans.cc,massrips.cc###banner4
 massimodutti.com##app-top-notification
+masslive.com##.sharebarBeta-googlePreferredSource-container
 massschuhmacherei.de,visitprocida.com##.privacywire-wrapper
 mast.az##.xendev-top-banners
 master-plus.com.ua##.popup_alert
@@ -145906,6 +145911,7 @@ turnoffthelights.com##.chw-widget-area
 turnoffthelights.com##.slideads
 turtlecute.org##.collab_wrap
 turtlecute.org##.sponsor_banner_wrap
+turtlecute.org##a[href^="https://shockvpn.com/?"]
 turystyka.wp.pl##article div[class][data-reactid] > div[class]:has(> span > div[class] > a.w_contentLink)
 turystyka.wp.pl##article div[class][data-reactid] > div[class]:has(> span:first-child:empty + span:last-child:empty)
 turystyka.wp.pl,finanse.wp.pl,film.wp.pl,kobieta.wp.pl,komorkomania.pl,tech.wp.pl,gadzetomania.pl,polygamia.pl,dobreprogramy.pl##div[class*=" "]:has(> img[src*="://v.wpimg.pl/"] + div[class] > style:first-child + div:last-child)
@@ -155172,8 +155178,8 @@ ya.ru,yandex.*##div[class^="DistrSmartbanner"]
 ya.ru,yandex.*##div[id^="Video-"] div[class*="VideoListPageDirect"]
 ya.ru,yandex.*##div[id^="search-"] > div[class*="Organic"]:has(> div.Root div[class*="-Ad"] > span)
 ya.ru,yandex.*##div[id^="search-list-"][id*="-R-I-"]
-ya.ru,yandex.*##ul[id] > li:has(> div.Organic > div.Organic-ContentWrapper ~ div[class*=" Organic"] > span[class$="-Text"])
 ya.ru,yandex.*##ul[id] > li:has(> div.Organic > div.Organic-Subtitle > div.Organic-Path ~ div[class*=" Organic"] > span[class$="-Text"])
+ya.ru,yandex.*##ul[id] > li:has(> div.Organic > div[class*=" Organic"] > span:not([role]))
 ya.ru,yandex.*##ul[id] > li:has(> div.Root_inited > div[class*="Organic"] > div[class$="-Header"] > h2 + div > span)
 ya.ru,yandex.*##ul[id] > li[class*="Organic"]:has(> div.Root a[href*="_crpd"] > div.Organic-OfferThumbWrap)
 ya.ru,yandex.*#$#Distribution_landscape_hidden { display: none !important; }
@@ -167965,6 +167971,8 @@ zzzyk.com###Tinfo
 ||guanoo.net^$third-party
 ||guarantee-cdn.com^$third-party
 ||guardyoureyes.com/templates/mentalpress/js/subscription.js
+||guazimanhua.com/assets/ad/
+||guazimanhua.com/assets/reader/mobile*-ad.js
 ||gubagoo.com/modules/tracking/
 ||gubagoo.io/c/$image
 ||gubagootracking.com^$third-party

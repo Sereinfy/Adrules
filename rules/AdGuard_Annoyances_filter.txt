@@ -25130,7 +25130,7 @@ yandex.*##main[class="body__wrapper"] form ~ div > div[style^="--height-ratio:"]
 yandex.ru##.main__block-banner iframe[src]
 ! Search results
 ya.ru,yandex.*#?#ul[id] > li:has(> div.Organic > div.Organic-Subtitle > div > span:contains(Промо))
-ya.ru,yandex.*##ul[id] > li:has(> div.Organic > div.Organic-ContentWrapper ~ div[class*=" Organic"] > span[class$="-Text"])
+ya.ru,yandex.*##ul[id] > li:has(> div.Organic > div[class*=" Organic"] > span:not([role]))
 ya.ru,yandex.*##ul[id] > li:has(> div.Organic > div.Organic-Subtitle > div.Organic-Path ~ div[class*=" Organic"] > span[class$="-Text"])
 ya.ru,yandex.*##ul[id] > li[class*="Organic"]:has(> div.Root a[href*="_crpd"] > div.Organic-OfferThumbWrap)
 ya.ru,yandex.*##ul[id] > li:has(> div.Root_inited > div[class*="Organic"] > div[class$="-Header"] > h2 + div > span)
@@ -38483,6 +38483,9 @@ yna.co.kr,pchocasi.com.tr,spidersweb.pl,empireonline.com,jiji.com,fictionhorizon
 !
 ! SECTION: Subscriptions - Regular rules
 !
+jovempan.com.br###jp-follow-cta
+jovempan.com.br###jp-esportes-cta
+masslive.com##.sharebarBeta-googlePreferredSource-container
 athensvoice.gr##.newsletterSnippet
 urfadegisim.com.tr###tmvPromo
 yemek.com##.google-preferred-source-banner
@@ -48887,6 +48890,7 @@ rxgo.com,alfastrah.ru,turkishairlines.com,atmos-tokyo.com,radarbox.com,ciceksepe
 !
 !
 !
+guazimanhua.com##.reader-app-card
 detmir.ru##div[data-testid="mobileAppPromo"]
 transferfeed.com###transferfeed-app-card
 transferfeed.com###android-app-banner
@@ -58260,6 +58264,7 @@ www.kinopoisk.ru##footer > div:has(> div > div[data-testid="kp-ui.amediateka-foo
 !
 ! SECTION: Self-promo - Regular rules
 !
+kyodo.co.jp#?#.ranking_archive > div.ranking_archive__content:has(> div.ranking_archive__content--content > a.flex > span.pr:contains(広告))
 jota.info##a[data-testid="banner-top"]
 transferfeed.com###market-explorer-promo
 transferfeed.com###fan-scout-promo
