@@ -1,9 +1,9 @@
 !
 ! Title: AdBlock Filter
 ! Homepage: https://github.com/Sereinfy/Adrules
-! Version: 20260902031402
-! Last modified: 2026/09/02 03:14:02
-! Blocked Filters: 186825
+! Version: 20260902110818
+! Last modified: 2026/09/02 11:08:18
+! Blocked Filters: 186834
 !
 ###AC_ad
 ###AD_160
@@ -52292,7 +52292,6 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 @@||writing.chegg.com/graphql$stealth=3p-auth,domain=citationmachine.net
 @@||wroffle.com/wp-content/plugins/ad-inserter^
 @@||wroffle.com^$generichide
-@@||ws.nperf.com^$domain=proof.ovh.net
 @@||wscdn.xmwol.com^$stealth=referrer,image,stylesheet
 @@||wsj.net/iweb/static_html_files/cxense-candy.js$script,domain=marketwatch.com
 @@||wsr.pearsonvue.com^$extension
@@ -88484,6 +88483,7 @@ globo.com###videos-tab-wrapper > ul > div.horizon-impression-wrapper
 globo.com##.banner-bottom-fixed-cpnt
 globo.com##.mobiliarioFooter
 globo.com##.mobiliarioNaoBarreira
+globo.com##.newsletter-g1
 globo.com##.newsletterMCWrapper
 globo.com##.titulo-pirulito
 globport.com###kbCookiePolicy
@@ -102726,6 +102726,9 @@ kyivstar.ua#%#//scriptlet('trusted-set-cookie', 'analytics_storage', 'denied')
 kyivstar.ua#%#//scriptlet('trusted-set-cookie', 'cookies_agreement', 'granted')
 kyivstar.ua#%#//scriptlet('trusted-set-cookie', 'functionality_storage', 'denied')
 kyivstar.ua#%#//scriptlet('trusted-set-cookie', 'security_storage', 'denied')
+kyobobook.co.kr##body > .min-w-\[1440px\] .top_banner_inner
+kyobobook.co.kr#$#body > .w-full > .z-header { top: 0 !important; background-color: white; }
+kyobobook.co.kr#$#body > h1.visuallyhidden + .z-banner { display: none !important; }
 kyobun.co.jp#$?#.tp-backdrop { display: none !important; }
 kyobun.co.jp#$?#body { overflow: auto !important; }
 kyobun.co.jp#$?#body { touch-action: unset !important; }
@@ -121893,6 +121896,8 @@ peachify.top#%#//scriptlet('prevent-addEventListener', 'click', '_blank')
 peachjohn.co.jp##.block-footer-guide--service a[href="/app"]
 peachprintable.com,printablecreative.com###popID
 peachprintable.com,printablecreative.com#%#//scriptlet('prevent-setTimeout', 'chkADB')
+peachring.com#%#//scriptlet('prevent-navigation', '/popunder')
+peachring.com#%#//scriptlet('remove-class', 'hv-pending', 'html')
 peachurbate.com##.video-right-banner
 peachurnet.com##.video-right-banner
 peachurnet.com,scotsman.com,warcraftlogs.com###bottom-banner
@@ -166546,6 +166551,7 @@ zzzyk.com###Tinfo
 ||cube.nlpcaptcha.in/index.php/cubes/getCubeBox/$domain=irctc.co.in
 ||cuberoot.co^$third-party
 ||cubikachatuiuat.azurefd.net/cubikbot
+||cubot.eigene.io^$third-party
 ||cuckoldland.com/CuckoldLand728-X-90-2.gif
 ||cue.search.naver.com/api/*/log/
 ||cuelinks.com^$third-party
@@ -177348,6 +177354,7 @@ zzzyk.com###Tinfo
 ||pdmntn.com/popups^
 ||pdmntn.com^$third-party
 ||pdst.fm^$script,third-party
+||peachring.com/new-page/js/human-verify.js$script
 ||peachurnet.com/templates/banner-*x*-*.png
 ||peachurnet.com/templates/stake.com-banner-size-*-min.jpg
 ||peakcounter.dk^$third-party
@@ -181759,6 +181766,9 @@ zzzyk.com###Tinfo
 ||static.youku.com/*/index/js/iresearch.js
 ||static.youku.com/*/js/cps.js
 ||static.zdassets.com/web_widget/messenger/$domain=op.gg|p2pb2b.com|revouninstaller.com
+||static.zongheng.com^*/adClickStat.js
+||static.zongheng.com^*/ad_click.js
+||static.zongheng.com^*/logger.min.js
 ||static0.wi-fi.ru/static/000/ios/index.html
 ||static1.lacoste.com/static/*/js/dist-refit/framework/templates/adblockers.tpl.js
 ||static2.wongnai.com/static2/5dfbab70f291e3d1a5df.js
@@ -185533,7 +185543,6 @@ zzzyk.com###Tinfo
 ||wrtn.ai/proxy/client/metrics
 ||ws.amazon.*/widgets/$third-party
 ||ws.kora-api.top/api/ads
-||ws.nperf.com^$third-party
 ||ws.sharethis.com^$script
 ||wshufa.com^$third-party
 ||wsimg.com/parking-lander/
