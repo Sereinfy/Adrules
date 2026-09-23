@@ -1,9 +1,9 @@
 !
 ! Title: AdBlock Filter
 ! Homepage: https://github.com/Sereinfy/Adrules
-! Version: 20260923033520
-! Last modified: 2026/09/23 03:35:20
-! Blocked Filters: 184475
+! Version: 20260923113335
+! Last modified: 2026/09/23 11:33:35
+! Blocked Filters: 184479
 !
 ###AC_ad
 ###AD_160
@@ -26438,6 +26438,7 @@
 ##a[href^="https://tatrck.com/"]
 ##a[href^="https://tc.tradetracker.net/"] > img
 ##a[href^="https://telegram.me/share/url?"]
+##a[href^="https://threads.net/intent/post?text="]
 ##a[href^="https://torguard.net/aff.php"] > img
 ##a[href^="https://tour.mrskin.com/"]
 ##a[href^="https://track.1234sd123.com/"]
@@ -31473,6 +31474,7 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 /gm-button-social.min.js
 /gmu-download.oss-
 /gmu-download.oss-$image,redirect-rule=1x1-transparent.gif,domain=voflix.vip
+/go.email.fly.io/e/o/*$image
 /go.news.fly.io/e/o/*$image
 /go/*?ident=*&id_site=$~third-party
 /goAnalytics.js
@@ -137591,6 +137593,7 @@ store.dji.com#%#//scriptlet('set-local-storage-item', 'popupHasShowed', 'true')
 store.dji.com#%#//scriptlet('trusted-set-local-storage-item', 'top-banner-mobile-custom-banner-app-29437', '$now$')
 store.epicgames.com#?#div[class^="css-"] > div[class^="css-"]:has(> div[class^="css-"] > h2 > span:contains(Follow Us))
 store.gaijin.net##.yp-cb.js-cb-policy
+store.google.com##.yYrYCd
 store.google.com##bento-dialog[position="bottom"]
 store.google.com##dialog[data-dialog-name="crm_crm_popup_center"]
 store.gx.me#%#//scriptlet('trusted-set-cookie', 'cookie-consent', '{%22marketing%22:false%2C%22necessary%22:true%2C%22version%22:2}')
@@ -140327,6 +140330,7 @@ techradar.com#@#[href^="https://www.hostg.xyz/aff_c"]
 techradar.com,pcgamer.com,tomsguide.com##div[id^="slice-container-newsletter"]
 techradar.com,tomshardware.com###article-body > p[id]:not([class]):has(> a[href^="https://news.google.com/publications/"])
 techradar.com,tomshardware.com,tomsguide.com##.onesignal-customlink-container
+techradar.com,tomshardware.com,windowscentral.com##.flexisites-social
 techrankup.com##.adall
 techraptor.net###nn_lb3
 techraptor.net###nn_lb4
@@ -144636,7 +144640,6 @@ tomshardware.com###rightcol_top + .space-b30
 tomshardware.com###rightcol_top_anchor
 tomshardware.com##.ad-unit + div.jwplayer__widthsetter > div.future__jwplayer
 tomshardware.com##.ec-popup-modal
-tomshardware.com##.flexisites-social
 tomshardware.com##.image-widthsetter[style="max-width:676px;"]
 tomshardware.com##.listingResult:has(> div.sponsored-post)
 tomshardware.com##.prism-modal
@@ -151277,6 +151280,7 @@ w3schools.com###lowerfeatureshowcaselink
 w3schools.com###right > div#internalCourses
 w3schools.com###sncmp-banner
 w3schools.com###upperfeatureshowcaselink
+w3schools.com##.ws-share
 w3schools.com##a[class^="showcase"]
 w3schools.com##div[id*="contentadcontainer"]
 w3schools.com#$##tryitLeaderboard + div#breadcrumb ~ div#container { top: 84px!important; }
@@ -167434,7 +167438,6 @@ zzzyk.com###Tinfo
 ||fishki.net/code?
 ||fishki.net/counter/
 ||fitanalytics.com/metrics/
-||fitanalytics.com^$third-party
 ||fitcurves.org/wp-content/themes/fitcurves/otzywy/assets/remodal/js/remodal.min.js
 ||fitnesslove.net/wp0901/wp-content/uploads/2023/12/kyuin
 ||fittingcentermondaysunday.com^$popup
@@ -179258,6 +179261,7 @@ zzzyk.com###Tinfo
 ||spider-mich.com^$third-party
 ||spielemax.de/pub/static/*/Anowave_Ec/js/ec.js
 ||spike.itv.com/itv/tserver/size=*/viewid=
+||spin.bergfreunde.*/wt?$image
 ||spindl.link/events
 ||spinny.com/blog/wp-content/uploads/*/*WithCTA$image
 ||spiral.world/events/
