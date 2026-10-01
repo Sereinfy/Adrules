@@ -1,8 +1,8 @@
 !
 ! Title: AdBlock Filter Lite
 ! Homepage: https://github.com/Sereinfy/Adrules
-! Version: 20261001043518
-! Last modified: 2026/10/01 04:35:18
+! Version: 20261001122618
+! Last modified: 2026/10/01 12:26:18
 ! Blocked Filters: 65816
 !
 ###AC_ad
@@ -28751,7 +28751,6 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 /^https:\/\/engine\.[a-z]+\.com\/\?[0-9]+$/$xmlhttprequest,third-party
 /^https:\/\/engine\.[a-z]+\.live\/\?[0-9]+$/$xmlhttprequest,third-party
 /^https:\/\/ik\.imagekit\.io\/[a-z0-9]+\/[a-zA-Z0-9_]+\.(jpg|png)\?updatedAt=/$match-case,image,domain=converter.app
-/^https:\/\/intercelestial\.com\/[0-9a-z]+\/[0-9a-z.]+$/$domain=intercelestial.com
 /^https:\/\/loader\.[-0-9a-z]+\.[a-z][a-z][a-z]?\/loader\.min\.js$/$script,~third-party,match-case
 /^https:\/\/loader\.[-0-9a-z]+\.[a-z][a-z][a-z]?\/script\/www\.[-0-9a-z]+\.js$/$script,~third-party,match-case
 /^https:\/\/m\.2shuqu\.net\/static\/[a-z0-9]+\/[a-z0-9]+\.js/$script,domain=m.2shuqu.net
@@ -29320,6 +29319,7 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 /alljs/allwzwfoot.js
 /alljs/allwzwhead.js
 /alog.min.js
+/alog/dp.min.js
 /altiframe.php$domain=imgadult.com|imgdrive.net|imgtaxi.com
 /altiframe2.php$domain=imgadult.com|imgdrive.net|imgtaxi.com
 /amCookieApproval.
@@ -35240,9 +35240,9 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 163.com##a[href^="http://popme.163.com/"]
 163.com##span[class^="gg"]
 163.com#@#.s-btns
-163.com,55188.com,csai.cn,miercn.com##div[class^="gg"]
 163.com,bilibili.com,longzhu.com##a[href*=".admaster."]
 163.com,changsha.cn,jrj.com.cn,neotv.com.cn,sina.cn,sina.com.cn##.topad
+163.com,csai.cn,miercn.com##div[class^="gg"]
 163.com,jishujd.com##.index_top_ad
 163.com,zybang.com##.top-banner
 163.com,~love.163.com##a[href^="http://love.163.com/"]
@@ -35897,7 +35897,7 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 5068.com,ifeng.com##.gg01
 50statesoflie.media,addictivetips.com,ambito.com,anews.com.tr,antenneac.de,antenneduesseldorf.de,antennemuenster.de,antenneniederrhein.de,antenneunna.de,archivebate.com,az.nl,bazar.it,bildderfrau.de,brocabrac.fr,candidat.news,carscoops.com,cracked.com,dacast.com,donna-magazin.de,ecodibergamo.it,einbecker-morgenpost.de,fastweb.it,forward.com,hellwegradio.de,hirtv.hu,hot.co.uk,hot.com,hpdetijd.nl,instant-gaming.com,intellinews.com,ipwatchdog.com,iranpress.com,isrotel.com,jagranjosh.com,kyivpost.com,laprovinciadicomo.it,laprovinciaunicatv.it,letterboxd.com,liferadio.at,lippewelle.de,mechanisatiemarkt.nl,mob.org,news894.de,newsbit.nl,ots.at,ouest-france.fr,pleno.news,polskikompas.com,primagames.com,prinspetfoods.nl,radio901.de,radioberg.de,radiobochum.de,radiobonn.de,radioduisburg.de,radioemscherlippe.de,radioenneperuhr.de,radioerft.de,radioessen.de,radioeuskirchen.de,radiohagen.de,radioherne.de,radiokiepenkerl.de,radiokoeln.de,radiokw.de,radioleverkusen.de,radiolina.it,radiomk.de,radiomuelheim.de,radioneandertal.de,radiooberhausen.de,radiorsg.de,radiorst.de,radiorur.de,radiosauerland.de,radiosiegen.de,radiovest.de,radiowmw.de,radiowuppertal.de,recyclingproductnews.com,rt.com,salon.com,scamadviser.com,screenweek.it,secoloditalia.it,sportwebsicilia.it,thejc.com,thetruthaboutcars.com,truthgate.us,tuttotech.net,u24.gov.ua,webcafe.bg,welleniederrhein.de,wng.org##.socials
 51.com###game_advlayer
-51.com,55188.com##.couplet
+51.com##.couplet
 51015kids.eu,streetstyle24.pl###cookieBan
 5119.cn##.xzbtn_new + .xzbtn_new
 5119.cn##div[class="downDz"]
@@ -35983,12 +35983,9 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 52vfx.com#@##head_ad
 52wmb.com###popContent
 52wubi.com##.top960
-55188.com###center-pic
-55188.com###top-pic
-55188.com##.ggdistich
-55188.com##.wz_text
-55188.com##a[href*="/gg-link."]
-55188.com##a[href^="http"]:not([href*=".55188."]) > img[src*="/portal/"]
+55188.com###bbslist
+55188.com###recommended-by-admin
+55188.com##.page-aside
 5555op.com,router.houzi-blog.top##.img
 5588.tv##.ProDaTu
 5588.tv##.ringhttu
@@ -36555,6 +36552,7 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 @@$subdocument,third-party,stealth=referrer,domain=sport.starsites.fun
 @@$subdocument,xmlhttprequest,stealth=referrer|flash,domain=pichive.online
 @@$websocket,domain=xvideos.com
+@@&_=1$domain=intercelestial.com
 @@&ad_type=$domain=ultimate-guitar.com
 @@&autoPlay=$subdocument,stealth=referrer,domain=aniwaves.ru|hianimes.ru|guts.to
 @@&http_referer=$domain=chaopx.com
@@ -52185,6 +52183,8 @@ malpensanews.it,romadailynews.it##.social-column
 mamahawa.com,10short.pro#%#//scriptlet('trusted-replace-node-text', 'script', '/function openLink\(\)[\s\S]*?window\.location\.href/', '/(function openLink\(\)[\s\S]*?)window\.location\.href.*;/', '$1')
 mamamia.com.au,4kdownload.com,folhavitoria.com.br,giffits-articles-publicitaires.ch,giffits-werbeartikel.at,giffits-werbeartikel.ch,giffits.*,easycosmetic.de##.overlay
 mamastar.jp$$script:contains(: window,)
+mamastar.jp,uppercutmma.com,oxfordlearnersdictionaries.com,weatherzone.com,cyclingnews.com,9gag.com,automobile-catalog.com,hb-nippon.com,worldjournal.com,nikkansports.com,robbreport.com,rollingstone.com,gloria.hr,deadline.com,vibe.com,goldderby.com,artnews.com,gearjunkie.com,urldecoder.org,base64decode.org,index.hr,willyweather.com.au,fandom.com,euronews.com#%#//scriptlet('remove-attr', 'onerror', 'script[id][onerror]')
+mamastar.jp,uppercutmma.com,pockettactics.com,automobile-catalog.com,robbreport.com,rollingstone.com,deadline.com,vibe.com,goldderby.com,artnews.com,gearjunkie.com,urldecoder.org,base64decode.org,merkmal-biz.jp,bike-news.jp,index.hr,willyweather.com.au,fandom.com,higherorlowergame.com,euronews.com,girlschannel.net,calculatorsoup.com,scribd.com,egolf.jp,otonanswer.jp,vague.style,magmix.jp,trafficnews.jp,langenscheidt.com,merinfo.se,9gag.com,petbook.de,boardingarea.com,ukaudiomart.com,canuckaudiomart.com,newatlas.com$$script[data-cfasync="false"][nowprocket]
 mamazone.pl,vitashop.pl,budujmase.pl,wylecz.to#?#body > div[id][class] > div > div > div > a#postpone-targeting-disclaimer-button:upward(4)
 mamazone.pl,wylecz.to#$#body { overflow: visible !important; }
 mamibuy.com.tw,avcao.cc##.layui-layer
@@ -59403,8 +59403,6 @@ upornia.com,upornia.tube##.video-page__related + h5
 upornia.com,upornia.tube##.wcccswvsyvk
 upornia.com,upornia.tube##.wssvkvkyyee
 uppercutmma.com,makeitmeme.com,tibiopedia.pl,gazeta.pl,edziecko.pl,sport.pl,moto.pl,plotek.pl#%#//scriptlet('trusted-replace-argument', 'Function', '1', 'replace:/^([A-Za-z_$][\w$]*\(\);)(?=[\s\S]*report\.error-report\.com)(?=[\s\S]*html-load\.com)[\s\S]*$/$1/')
-uppercutmma.com,oxfordlearnersdictionaries.com,weatherzone.com,cyclingnews.com,9gag.com,automobile-catalog.com,hb-nippon.com,worldjournal.com,nikkansports.com,robbreport.com,rollingstone.com,gloria.hr,deadline.com,vibe.com,goldderby.com,artnews.com,gearjunkie.com,urldecoder.org,base64decode.org,index.hr,willyweather.com.au,fandom.com,euronews.com#%#//scriptlet('remove-attr', 'onerror', 'script[id][onerror]')
-uppercutmma.com,pockettactics.com,automobile-catalog.com,robbreport.com,rollingstone.com,deadline.com,vibe.com,goldderby.com,artnews.com,gearjunkie.com,urldecoder.org,base64decode.org,merkmal-biz.jp,bike-news.jp,index.hr,willyweather.com.au,fandom.com,higherorlowergame.com,euronews.com,girlschannel.net,calculatorsoup.com,scribd.com,egolf.jp,otonanswer.jp,vague.style,magmix.jp,trafficnews.jp,langenscheidt.com,merinfo.se,9gag.com,petbook.de,boardingarea.com,ukaudiomart.com,canuckaudiomart.com,newatlas.com$$script[data-cfasync="false"][nowprocket]
 upplinks.net,upfion.com,upfiles.app,upfiles-urls.com,falpus.com,fooak.com#@#.ad-inner
 upplinks.net,upfion.com,upfiles.app,upfiles-urls.com,falpus.com,fooak.com#@#.ads-container
 upstage.ai,app.gigsky.com,mozemo.hr,cashify.eu,plurall.net,runna.com,vseti.app,identity.digital,import.io,frameright.io,ooux.com,sifugame.com,veed.io##div[fs-cc="banner"]
@@ -63203,6 +63201,7 @@ zzztube.com,videoporn.tube##.b-random-column
 ||fanzhuang.net.cn^$third-party
 ||fapnado.*.php|
 ||fapnado.*/bump/
+||faro-collector-*.grafana-ops.net^
 ||faro-collector-prod-*.grafana.net^
 ||fastadmin.net/uploads/store/aliyun
 ||fastadmin.net/uploads/store/tencent
@@ -65108,6 +65107,7 @@ zzztube.com,videoporn.tube##.b-random-column
 ||static.iqiyi.com/js/common/mars_v.js^$script
 ||static.okokserver.com^$media,domain=huaren.live
 ||static.qiyi.com/js/pingback/
+||static.ws.126.net/utf8/3g/util/antanalysis.min.js$domain=163.com
 ||static.youku.com/*/index/js/iresearch.js
 ||static.youku.com/*/js/cps.js
 ||staticfile.qq.com/datong/$script
