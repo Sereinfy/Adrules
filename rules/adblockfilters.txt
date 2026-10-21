@@ -1,9 +1,9 @@
 !
 ! Title: AdBlock Filter
 ! Homepage: https://github.com/Sereinfy/Adrules
-! Version: 20261021035046
-! Last modified: 2026/10/21 03:50:46
-! Blocked Filters: 184760
+! Version: 20261021113111
+! Last modified: 2026/10/21 11:31:11
+! Blocked Filters: 184769
 !
 ###AC_ad
 ###AD_160
@@ -30275,7 +30275,7 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 /cookie-consent-manager.js
 /cookie-consent-tool/*
 /cookie-consent.
-/cookie-consent/*$domain=~geenstijl.nl|~argeweb.nl|~europa.eu|~linkedin.com|~shelly-forum.com
+/cookie-consent/*$domain=~geenstijl.nl|~argeweb.nl|~europa.eu|~linkedin.com|~shelly-forum.com|~quotidianomolise.com
 /cookie-consent?
 /cookie-control.
 /cookie-disclaimer.
@@ -54055,6 +54055,9 @@ allyoucanwatch.net###discordPop
 allyouplay.com##.cookie-card_container
 allzero.jp#%#//scriptlet('set-local-storage-item', '/.__consent', 'emptyArr')
 almabetter.com#%#//scriptlet('set-session-storage-item', 'popup_viewed', 'true')
+almalaurea.it#%#//scriptlet('trusted-set-cookie', 'alma-cookie-agreed', '-1')
+almalaurea.it#%#//scriptlet('trusted-set-cookie', 'alma-cookie-agreed-categories', '["necessari"]')
+almalaurea.it#@#.eu-cookie-compliance-banner:not(body):not(html)
 almamarket.pl###claw
 almanac.com##.block-listraksubscribe-block
 almanac.com##.block:has(> .block__content:only-child > .text-content:only-child > .ad-wrapper:only-child)
@@ -72686,6 +72689,7 @@ deliveroo.*##div[class^="HomeFeedScrollTracker-"]:has(div[data-testid="sponsored
 deliveroo.*##div[class^="HomeFeedScrollTracker-"]:has(p[data-testid="sponsored-rating-distance"] > span[data-testid="label-prefix"])
 deliveroo.*##div[class^="MobileBanner"]
 deliveroo.*##li:not(:has(li)):has([data-testid="promotional-sponsor-label"])
+deliveroo.*##li[class^="HomeFeedGrid"]:has([data-testid="sponsored-tag"])
 deliveroo.*##li[class^="Slide-"]:has(div[data-testid="sponsored-tag"] > p[data-testid="label"])
 deliveroo.*##li[class^="Slide-"]:has(div[data-testid="sponsored-tag"] > p[data-testid="sponsored-tag-label"])
 deliveroo.*#?#a[role="button"]:has(p:contains(Sponsored))
@@ -115687,6 +115691,8 @@ newsday.com#$#body.modal-open .modal-scrollable ~ .connext-modal-backdrop { disp
 newsday.com#$#body.modal-open { overflow: visible!important; }
 newsday.com#$#html.modal-open { overflow: visible!important; }
 newsday.com#%#//scriptlet('remove-class', 'nd-lock', 'html')
+newsdig.tbs.co.jp##.m-banner-item__link[target="_blank"]:has(img[src^="https://newsdig.ismcdn.jp/mwimgs/e/b/"])
+newsdig.tbs.co.jp##[id^="appbanner_"][target]
 newsdigest.jp##.app-banner__inner
 newsdigest.jp##.post-inarticle-banner
 newsdigitales.com###modulo_banners_bajo_noticia
@@ -127068,6 +127074,8 @@ quotidiano.net#%#//scriptlet('set-local-storage-item', 'pwa_show', 'true')
 quotidiano.net#?#body > #__next > div[class^="sc-"]:has(> div[id^="div-gpt-"])
 quotidianodipuglia.it###mp-placeholder
 quotidianodipuglia.it,leggo.it,ilmessaggero.it,ilmattino.it##.elu-modal
+quotidianomolise.com#%#//scriptlet('trusted-create-element', 'body', 'script', '', '"use strict";setTimeout(()=>{const CookieNode=document.querySelector(\'#cookies-policy form[data-cookie-action="accept.essentials"]\');if(CookieNode instanceof HTMLFormElement&&typeof CookieNode.submit===\'function\'){CookieNode.submit()}},5000);')
+quotidianomolise.com#@##cookies-policy
 quotidianopiemontese.it##.mvp-post-soc-wrap
 quotr.net##a[href^=" https://track.quotr.net/"]
 qushucheng.com##.appguide-wrap
@@ -141060,6 +141068,7 @@ teknoblog.com##a[href="https://www.patreon.com/teknoblog"] > img[src$="/teknoblo
 teknoblog.com#$#.wpb_wrapper { min-height: unset!important; }
 teknoblog.com#?#.wpb_wrapper > div.tdm_block:has(> div.td-block-width > div.td-block-row > div.tdm-col > div.tds-button > a[href="https://goo.gl/TKXKuq"])
 teknoblog.com#?#a[href^="https://news.google.com/publications/"] > img
+teknoburada.net##.tb-premium-news-btn
 teknoistan.com,kwansei.ac.jp,techdergi.net,24u.app,bankadunyasi.com,gazikent27.com,mansetebak.com,url-decode.com,birsenaltuntas.com,teknoinfo.com.tr,iplocation.io,engelli.com,cheatermad.com,arabateknik.com,dizihastasi.com,zamaninvarken.com,kriptoradar.com,korsanedebiyat.com,stakingrewards.com,hockerty.de,izlemedia.com,tilki.net,mustafabukulmez.com,konuneydi.com,ozgunbilgi.com,bilisimogretmeni.com,azbuz.org,teknobird.com,ultrabilgi.com,aksaelektrik.com.tr,ergo.de,fosforludusunceler.com,denizcilikbilgileri.com,dnschecker.org,krombacher.de###cookie-box
 teknokutu.com,i-kolobrzeg.pl#%#//scriptlet('set-cookie-reload', 'cookieConsent', 'accepted')
 teknolojioku.com,f5haber.com,supercarblondie.com,phonearena.com,cnbce.com,dunya.com,noktagazetesi.com.tr,aydinlik.com.tr,halktv.com.tr,yenicaggazetesi.com##.google-news-follow

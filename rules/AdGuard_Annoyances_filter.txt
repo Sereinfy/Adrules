@@ -2015,7 +2015,7 @@
 /cookie-check.js
 /cookie-compliance.
 /cookie-consent.
-/cookie-consent/*$domain=~geenstijl.nl|~argeweb.nl|~europa.eu|~linkedin.com|~shelly-forum.com
+/cookie-consent/*$domain=~geenstijl.nl|~argeweb.nl|~europa.eu|~linkedin.com|~shelly-forum.com|~quotidianomolise.com
 /cookie-control.
 /cookie-disclaimer.
 /cookie-disclaimer/*
@@ -2677,6 +2677,9 @@ aquamelior.pl,e-hortico.pl,sklep.doppelherz.pl,jestemwbajce.pl,greentouch.pl,4zy
 !
 ! NOTE: Regular rules
 !
+almalaurea.it#%#//scriptlet('trusted-set-cookie', 'alma-cookie-agreed', '-1')
+almalaurea.it#%#//scriptlet('trusted-set-cookie', 'alma-cookie-agreed-categories', '["necessari"]')
+quotidianomolise.com#%#//scriptlet('trusted-create-element', 'body', 'script', '', '"use strict";setTimeout(()=>{const CookieNode=document.querySelector(\'#cookies-policy form[data-cookie-action="accept.essentials"]\');if(CookieNode instanceof HTMLFormElement&&typeof CookieNode.submit===\'function\'){CookieNode.submit()}},5000);')
 valorfinal.com.br##.vf-cookie-tarja
 ||static.drimify.com/wp-content/themes/*/assets/cookieconsent/
 rebrandly.com###rb-consent-shell
@@ -20035,6 +20038,11 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ||geolocation.onetrust.com/cookieconsentpub/*/geo/location$xmlhttprequest,redirect-rule=noopjson
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/244956
+@@||hs-scripts.com^$script,domain=almalaurea.it
+almalaurea.it#@#.eu-cookie-compliance-banner:not(body):not(html)
+! https://github.com/AdguardTeam/AdguardFilters/issues/244941
+quotidianomolise.com#@##cookies-policy
 ! https://github.com/uBlockOrigin/uAssets/issues/34951
 @@||cdn.fps.ms/assets/cookieConsent-$domain=panel.fps.ms
 ! https://github.com/AdguardTeam/AdguardFilters/issues/244678
@@ -39278,6 +39286,9 @@ creativebloq.com,space.com,nokiapoweruser.com,russianemirates.com,egw.news,andro
 !
 ! SECTION: Subscriptions - Regular rules
 !
+newsdig.tbs.co.jp##[id^="appbanner_"][target]
+newsdig.tbs.co.jp##.m-banner-item__link[target="_blank"]:has(img[src^="https://newsdig.ismcdn.jp/mwimgs/e/b/"])
+teknoburada.net##.tb-premium-news-btn
 creativebloq.com##.flcw-popup-position
 creativebloq.com##.newsletter-pop-up-trigger
 csmonitor.com##.megawhy-block
