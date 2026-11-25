@@ -105,7 +105,6 @@ dns_urls=(
   #adguard-Social
   "https://filters.adtidy.org/windows/filters/4.txt"
   #Fuck Tracking
-  "https://easylist-downloads.adblockplus.org/easyprivacy.txt"
   "https://filters.adtidy.org/windows/filters/3.txt"
   #xinggsf
   "https://raw.githubusercontent.com/xinggsf/Adblock-Plus-Rule/master/mv.txt"
@@ -113,8 +112,7 @@ dns_urls=(
   "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/annoyances-others.txt"
   "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/badware.txt"
   "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters.txt"
-  "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/privacy.txt"
-  #Me
+  #Cats-Team
   "https://raw.githubusercontent.com/Cats-Team/dns-filter/main/abp.txt"
 )
 
