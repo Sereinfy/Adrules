@@ -27,7 +27,7 @@ process_version() {
     local input_files=("$@")
 
     log_info "正在处理 ${version} 版本..."
-    
+
     local temp_pre="${TMP_DIR}/${version}_pre.txt"
     local temp_final="${TMP_DIR}/${version}_final.txt"
 
@@ -75,22 +75,22 @@ process_version() {
 # 1. Lite 版本
 lite_files=(
     "${MOD_DIR}/rules/adblock-rules.txt"
-    ${CONTENT_DIR}/*_jiekouAD.txt
-    ${CONTENT_DIR}/*_224.txt
-    ${CONTENT_DIR}/*_NoAppDownload.txt
-    ${CONTENT_DIR}/*_cjx-annoyance.txt
-    ${CONTENT_DIR}/*_anti-adblock-killer-filters.txt
-    ${CONTENT_DIR}/*_antiadblockfilters.txt
-    ${CONTENT_DIR}/*_abp-filters-anti-cv.txt
+    ${CONTENT_DIR}/*_AWAvenue-Ads-Rule-Adblock.txt
+    ${CONTENT_DIR}/*_11.txt
+    ${CONTENT_DIR}/*_easylistchina.txt
 )
 process_version "lite" "adblock_lite.txt" "${lite_files[@]}"
 
 # 2. Normal 版本 (基于 Lite)
 normal_files=(
     "${ROOT_DIR}/adblock_lite.txt"
-    ${CONTENT_DIR}/*_2_optimized.txt
-    ${CONTENT_DIR}/*_clear_urls_uboified.txt
+    ${CONTENT_DIR}/*17ba74de_easylist.txt
     ${CONTENT_DIR}/*_easyprivacy.txt
+    ${CONTENT_DIR}/*_privacy.txt
+    ${CONTENT_DIR}/*_14.txt
+    ${CONTENT_DIR}/*_fanboy-cookiemonster.txt
+    ${CONTENT_DIR}/*_nocoin.txt
+    ${CONTENT_DIR}/*c424800e_easylist.txt
 )
 process_version "normal" "adblock.txt" "${normal_files[@]}"
 
